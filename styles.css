@@ -1,0 +1,8 @@
+body {
+  background-image: url("images/cloudbg.jpg");
+  text-align: center;
+}
+
+table, th, td {
+  text-align: center;
+}
