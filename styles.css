@@ -8,27 +8,40 @@ table, tr, th, td {
   text-align: center;
 }
 
-
-
 a:link {
  font-weight: bold;
  text-decoration: underline;
  color: #0000FF;
  }
+ 
 a:visited {
  font-weight: bold;
  text-decoration: underline;
  color: #800080;
  }
+ 
 a:hover {
  font-weight: bold;
- text-decoration: none;
- color: #ffffff;
- background: #ADD8E6;
+ text-decoration: underline;
+ color: #00FFFF;
  }
+ 
 a:active {
- font-weight: normal;
- text-decoration: none;
- color: #ffffff;
- background: #00008b;
+ font-weight: bold;
+ text-decoration: underline;
+ color: #00008b;
  }
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
