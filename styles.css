@@ -1,5 +1,6 @@
 body {
   background-image: url("images/cloudbg.jpg");
+  background-size: cover;
   text-align: center;
 }
 
