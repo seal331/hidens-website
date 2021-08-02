@@ -33,10 +33,15 @@ a:active {
  }
 
 .footer {
+  margin-top: 5px;
+  background-color: #000099;
+  padding: 10px;
+  clear: both;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
+  background-color: #85C9EE;
 }
 
 .header {
