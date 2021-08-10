@@ -21,6 +21,12 @@ table, tr, th, td {
   text-align: center;
 }
 
+a {
+  font-size: 17px;
+  font-weight: bold;  
+  font-family: Verdana;
+}
+  
 a:link {
  font-weight: bold;
  text-decoration: underline;
