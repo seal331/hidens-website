@@ -1,8 +1,6 @@
 body {
   background-image: url("images/cloudbg.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
-  background-size: 100%;
   background-attachment: fixed;
   text-align: center;
 }
