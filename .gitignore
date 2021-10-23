@@ -1,4 +1,5 @@
-
-*.db
+_vti_*
+*.ini
+filelist.xml
 *.db
 images/Thumbs.db
