@@ -7,43 +7,36 @@
 <meta http-equiv="Content-Language" content="en-us">
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
 <meta name="viewport" content="width=device=width, initial-scale=1.0">
-<link rel="File-List" href="index_files/filelist.xml">
 
 <title>HIDEN's site</title>
-
 </head>
 <body>
 <h1><img border=0 width=609 height=203
-src="index_files/image001.gif" alt="HIDEN64's website of yesteryear" v:shapes="_x0000_s1025"><![endif]></h1>
+src="index_files/image001.gif" alt="HIDEN64's website of yesteryear"></h1>
 <h1><font face="Arial Black">My stuff:</font></h1>
 <center>
-<div class="container">
-<table border="1" width="608" height="480">
+<div class="container" style="width: 608px; height: 452px">
+<table border="1" width="608" height="318">
 	<tr>
 		<td>
 		<a href="projects.html">My Projects</a></td>
-		<td height="74">
+		<td height="92">
 		<p>Check out my projects here.</p></td>
 	</tr>
 	<tr>
 		<td><a href="news.html">News</a></td>
-		<td height="74">
+		<td height="93">
 		<p>News about this website, my projects, or things that I'm interested in.</p></td>
 	</tr>
 	<tr>
-		<td><a href="https://github.com/epictaco302/epictacos-website">Source Code</a></td>
-		<td height="74">
-		<p>The source code to this website.</p></td>
-	</tr>
-	<tr>
 		<td><a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-32120-c5">My Guestbook</a></td>
-		<td height="74">
+		<td height="119">
 		<p>Check out this website's guestbook.</p></td>
 	</tr>
 	<tr>
-		<td><a href="http://pepsisupremacy.ddns.net">Pepsi Supremacy</a></td>
-		<td height="74">
-		<p>Pepsi supremacy is a server that was made out of HIDEN's computer. The info for the availble services can be accessed on the website.</p>
+		<td><a href="links.html">Links</a></td>
+		<td height="119">
+		<b><font face="Verdana" style="font-size: 13pt">Links to various sites.</font></b></td>
 	</tr>
 </table>
 </div>
@@ -55,7 +48,7 @@ src="index_files/image001.gif" alt="HIDEN64's website of yesteryear" v:shapes="_
 <br>
 </center>
 <!-- this is fine this is fine don't worry about it it's a good fix for a simple problemmmmmmmmmmmmmm aAaAAAAAAAAAAAAAAAAA -->
-<div class="footer">
+<footer style="position: fixed;">
 	
 	<img src="images/browser.gif" alt="browser.gif">
 	
@@ -89,7 +82,19 @@ src="index_files/image001.gif" alt="HIDEN64's website of yesteryear" v:shapes="_
 	
 	<img src="images/hatems.jpg" alt="hatems.jpg">
 	
-</div>	
+	<p id="funfact">Enable JavaScript, or update your browser to see a fun fact.</p>
+	<script>
+		var num = Math.random();
+		if (num < 0.3)
+			document.getElementById("funfact").innerHTML = "Fun fact: The creator of this website is 14 years old.";
+		else if (num < 0.4)
+			document.getElementById("funfact").innerHTML = "Fun fact: This website, up until 6/26/21, was hosted on HM's secondary laptop.";
+		else if (num < 0.6)
+			document.getElementById("funfact").innerHTML = "Fun fact: The creator of this website uses Windows 8.1 on her PC.";	
+		else
+			document.getElementById("funfact").innerHTML = 'Fun fact: This website was created on 5/10/21. It has evolved greatly since then. View a glimpse of what that looked like <a href="old stuff/frontpageindex.html">here.</a>';
+	</script>
+</footer>	
 
 	
 </body>
