@@ -8,10 +8,12 @@ body {
 h1 {
   font-size: 35px;
 	font-family: Verdana;
+  font-weight: bold;
 }
 
 h2 {
   font-family: Verdana;
+  font-weight: bold;
 }
 
 p {
