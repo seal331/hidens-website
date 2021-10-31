@@ -6,8 +6,12 @@ body {
 }
 
 h1 {
-    font-size: 35px;
+  font-size: 35px;
 	font-family: Verdana;
+}
+
+h2 {
+  font-family: Verdana;
 }
 
 p {
