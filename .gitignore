@@ -3,3 +3,5 @@ _vti_*
 filelist.xml
 *.db
 images/Thumbs.db
+_private
+
