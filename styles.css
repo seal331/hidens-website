@@ -16,6 +16,12 @@ h2 {
   font-weight: bold;
 }
 
+li {
+  font-size: 17px;
+  font-weight: bold;  
+  font-family: Verdana;
+}
+	
 p {
   font-size: 17px;
   font-weight: bold;  
@@ -110,8 +116,8 @@ footer:before {
 }
 
 .container2 {
-  width: 78.3rem;
-  height: 143rem;
+  width: 78rem;
+  height: 153rem;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
   border-radius: 5px;
   position: relative;
