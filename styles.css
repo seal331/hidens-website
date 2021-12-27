@@ -94,13 +94,6 @@ footer:before {
   margin: -20px;
 }
 
-/*.mainpagetable {
-  margin-left: auto;
-  margin-right: auto;
-  width: 608px; 
-  height: 318px;
-}*/
-  
 .indextable {
   width: 38rem;
   height: 28.14rem;
@@ -142,6 +135,33 @@ footer:before {
 }
 
 .projectstable:before {
+  content: “ ”;
+  background: inherit; 
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0; 
+  bottom: 0;
+  box-shadow: inset 0 0 0 2000px rgba(255,255,255,0.3);
+  filter: blur(10px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.linkstable {
+  width: 648px; 
+  height: 542px;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5); 
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+  background: inherit;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.linkstable:before {
   content: “ ”;
   background: inherit; 
   position: absolute;
