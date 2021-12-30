@@ -1,5 +1,5 @@
 body {
-  background-image: url("images/cloudbg.jpg");
+  background-image: url("/static/cloudbg.jpg");
   background-size: cover;
   background-attachment: fixed;
   text-align: center;
@@ -96,7 +96,7 @@ footer:before {
 
 .indextable {
   width: 38rem;
-  height: 28.14rem;
+  height: 31.94rem;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5); 
   border-radius: 5px;
   position: relative;
@@ -177,7 +177,7 @@ footer:before {
 
 .newsbox {
   width: 60rem;
-  height: 173.5rem;
+  height: 192.5rem;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5); 
   border-radius: 5px;
   position: relative;
