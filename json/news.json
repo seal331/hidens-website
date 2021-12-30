@@ -1,0 +1,64 @@
+{
+    "2021-12-30T00:00:00": [
+        "The site has been rewritten to utilize jinja (an HTML templating engine for Python). The goal with this is to clean up the code, as well as allow for more possibilities than what you can have with just static pages.",
+        "The actual content of the site is mostly unchanged as of now, but I plan on rewriting the site to utilize Bootstrap in 2022.",
+        "News now supports RSS. This feature is still W.I.P., we'll post a feed URL once it's ready."
+    ],
+
+    "2021-12-26T00:00:00": [
+        "The footer now appears on every page.",
+        "The news page was heavily reworked.",
+        "Tables and site logos have been heavily reworked to utilize CSS instead of the archaic in-HTML style definitions.",
+        "Many other visual tweaks have been added.",
+        "The site logo has been updated, as this isn't really a ''90s-designed site'' anymore.",
+        "I'm also cleaning up a bunch of things on the pages themselves, to fix issues and all that jazz."
+    ],
+
+    "2021-12-25T00:00:00": [
+        "Merry Christmas! Our gift for this year is the revival of the website after ~1 month of letting it rot. We're sorry about that.",
+        "Footer facts have also been removed as they are pretty bloaty and unessecary.",
+        "TacoBot has been rebranded as Epiphany and is now hosted on GitLab.",
+        "This was unveiled while the website was down, but we're introducing a new project. Horizon: Multiple chat protocols implemented as frontends running on a single generic backend, and allowing them to communicate with one another. Based on <a href=\"https://www.escargot.chat\">Escargot</a> and keeping the original goal going."
+    ],
+    
+    "2021-11-05T00:00:00": [
+        "This website and Pepsi Supremacy have merged. It's more efficent and causes less confusion that way."
+    ],
+
+    "2021-10-30T00:00:00": [
+        "Happy (early) Halloween! Nothing huge today, just moving around and removing some things; fixing issues with the fonts, removing the RetroSite ad, removing the license (since it's pointless anyway), changing up some text, removing mentions of HM/XPCat besides one footer fact, moving unused images to old stuff, etc. Minor bug fixes too."
+    ],
+
+    "2021-10-23T00:00:00": [
+        "There's a new page (links). No outside news, because I'm dropping that. This section is only for website and project updates from now on."
+    ],
+
+    "2021-10-05T00:00:00": [
+        "The redesign plan has been shelved (No longer the case, disregard). Instead, I'll opt for updating the current design."
+    ],
+
+    "2021-08-09T00:00:00": [
+        "I've added some prelimnary parts of the redesign that I was planning for a while."
+    ],
+
+    "2021-08-06T00:00:00": [
+        "TacoBot is back (See above). I've also added a new link to the homepage."
+    ],
+
+    "2021-07-18T00:00:00": [
+        "New major changes as well as minor changes to the website. <br> The background has been changed, there is now a footer, hyperlinks now have their own colors, <br> and I also have been squashing some bugs and making some slight tweaks visually."        
+    ],
+
+    "2021-07-11T00:00:00": [
+        "Happy slurpee day! To celebrate, I made a major internal change to most of the webpages here. Most of the code was unorganized and bloated... until today!"
+    ],
+
+    "2021-06-26T00:00:00": [
+        "This website has moved to a new home. It is now being hosted on GitHub Pages instead of HM's secondary laptop (Now hosted on my own hardware)."
+    ],
+
+    "2021-06-22T00:00:00": [
+        "The website is now open source. You can grab the source code <a href=\"https://github.com/epictaco302/epictacos-website\">here</a>. I am also planning to do a redesign of the site in the future.",
+        "I also cleaned up the index page a bit."
+    ]
+}
