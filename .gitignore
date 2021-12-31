@@ -5,3 +5,4 @@ filelist.xml
 images/Thumbs.db
 _private
 settings_local.py
+*.pyc
