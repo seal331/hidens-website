@@ -5,4 +5,5 @@ filelist.xml
 images/Thumbs.db
 _private
 settings_local.py
-*.pyc
+__pycache__/site_ctrl.cpython-37.pyc
+__pycache__/settings.cpython-37.pyc
