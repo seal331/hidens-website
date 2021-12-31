@@ -67,7 +67,10 @@ async def page_links(req):
 	})
 
 async def handle_404(req):
-	return render(req, '404.html', { 'title': 'Page not found' }, status = 404)
+	return render(req, '404.html', { 
+		'title': 'Page not found' 
+		}, status = 404
+	)
 
 async def rss_news(req):
 	with open('json/news.json', 'rb') as f:
@@ -97,7 +100,7 @@ if settings.ENABLE_HTTPS == True:
 	ssl_context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
 	ssl_context.load_cert_chain('domain_srv.crt', 'domain_srv.key')
 
-def render(req, tmpl, ctxt = None, status = 200):
+def render(req, tmpl, ctcx = None, status = 200):
 	tmpl = req.app.jinja_env.get_template(tmpl)
-	content = tmpl.render(**ctxt)
+	content = tmpl.render(**ctcx)
 	return web.Response(status = status, content_type = 'text/html', text = content)
