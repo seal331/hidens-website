@@ -13,8 +13,7 @@ import dateutil.parser
 from functools import lru_cache
 from markupsafe import Markup
 import asyncio
-import lxml
-import struct
+import ssl
 
 import settings
 
@@ -99,6 +98,9 @@ async def rss_news(req):
 	)
 	
 	return web.Response(status = 200, content_type = 'text/xml', text = rss.to_xml(encoding = 'utf-8'))
+
+ssl_context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
+ssl_context.load_cert_chain('domain_srv.crt', 'domain_srv.key')
 
 def render(req, tmpl, ctxt = None, status = 200):
 	tmpl = req.app.jinja_env.get_template(tmpl)
