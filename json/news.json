@@ -2,7 +2,7 @@
     "2021-12-30T00:00:00": [
         "The site has been rewritten to utilize jinja (an HTML templating engine for Python). The goal with this is to clean up the code, as well as allow for more possibilities than what you can have with just static pages.",
         "The actual content of the site is mostly unchanged as of now, but I plan on rewriting the site to utilize Bootstrap in 2022.",
-        "News now supports RSS. This feature is still W.I.P., we'll post a feed URL once it's ready."
+        "News now supports RSS."
     ],
 
     "2021-12-26T00:00:00": [
