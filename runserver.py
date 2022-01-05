@@ -3,7 +3,10 @@ from site_ctrl import run_site
 
 import settings
 
+# TODO: Add a logging feature
+
 def main():
+	# TODO: Fix HTTPS so that it detects the certificate files correctly
 	if settings.ENABLE_HTTPS == True:
 		from site_ctrl import ssl_context
 		app = run_site(serve_static = True)
