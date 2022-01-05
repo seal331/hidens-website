@@ -1,4 +1,10 @@
 {
+    "2022-01-05T00:00:00": [
+        "Happy (late) new year!",
+        "Sorry about the extended downtime, I had an issue with my router that wasn't fixed until today.",
+        "Development of Horizon will start back up soon, I took a break from it to focus on other things."
+    ],
+
     "2021-12-30T00:00:00": [
         "The site has been rewritten to utilize jinja (an HTML templating engine for Python). The goal with this is to clean up the code, as well as allow for more possibilities than what you can have with just static pages.",
         "The actual content of the site is mostly unchanged as of now, but I plan on rewriting the site to utilize Bootstrap in 2022.",
