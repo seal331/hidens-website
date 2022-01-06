@@ -96,8 +96,6 @@ async def rss_news(req):
 	
 	return web.Response(status = 200, content_type = 'text/xml', text = rss.to_xml(encoding = 'utf-8'))
 
-# TODO: Add a logging feature
-
 if settings.ENABLE_HTTPS == True:
 	# TODO: Fix HTTPS so that it detects the certificate files correctly
 	ssl_context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)

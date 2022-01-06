@@ -1,20 +1,23 @@
 from aiohttp import web
 from site_ctrl import run_site
-
+import sys
+import logging 
 import settings
 
-# TODO: Add a logging feature
-
-def main():
+def main(*, bool = False):
+	app = run_site(serve_static = True)
+	logging.basicConfig(level=logging.DEBUG)
+	web.run_app(app, port = settings.PORT)
 	# TODO: Fix HTTPS so that it detects the certificate files correctly
+
 	if settings.ENABLE_HTTPS == True:
 		from site_ctrl import ssl_context
-		app = run_site(serve_static = True)
-		web.run_app(app, ssl_context=ssl_context, port = settings.PORT)
+		ssl_context=ssl_context
 
-	else:
-		app = run_site(serve_static = True)
-		web.run_app(app, port = settings.PORT)
+# TODO: Make logging optional
+#	if settings.ENABLE_LOGGING == True:
+#		import logging 
+#		logging.basicConfig(level=logging.DEBUG)
 
 if __name__ == '__main__':
 	main()
