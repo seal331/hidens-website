@@ -68,12 +68,12 @@ footer {
   width: 2.1rem;
   height: 3.8rem;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5); 
-  border-radius: 5px;
+  border-radius: 10px;
   z-index: 1;
   background: inherit;
-  overflow: hidden;
-  padding: 12.5px;
-  clear: both;
+  overflow: visible;
+  padding: 13.5px;
+  clear: none;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -96,9 +96,9 @@ footer:before {
 
 .indextable {
   width: 38rem;
-  height: 31.94rem;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5); 
-  border-radius: 5px;
+  height: 32rem;
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); 
+  border-radius: 10px;
   position: relative;
   z-index: 1;
   background: inherit;
@@ -122,10 +122,10 @@ footer:before {
 }
 
 .projectstable {
-  width: 508px; 
+  width: 558px; 
   height: 86px;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5); 
-  border-radius: 5px;
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); 
+  border-radius: 10px;
   position: relative;
   z-index: 1;
   background: inherit;
@@ -150,9 +150,9 @@ footer:before {
 
 .linkstable {
   width: 648px; 
-  height: 346px;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5); 
-  border-radius: 5px;
+  height: 311px;
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); 
+  border-radius: 10px;
   position: relative;
   z-index: 1;
   background: inherit;
@@ -176,10 +176,10 @@ footer:before {
 }
 
 .newsbox {
-  width: 60rem;
+  width: 74rem;
   height: 192.5rem;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5); 
-  border-radius: 5px;
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); 
+  border-radius: 10px;
   position: relative;
   z-index: 1;
   text-align: center;
