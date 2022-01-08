@@ -72,7 +72,7 @@ footer {
   background: inherit;
   overflow: visible;
   padding: 13.5px;
-  clear: both;
+  clear: inline-start;
   position: fixed;
   left: 0;
   bottom: 0;
