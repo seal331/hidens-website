@@ -5,7 +5,6 @@ from aiohttp import web
 from markupsafe import Markup
 from datetime import datetime
 import dateutil.parser
-from functools import lru_cache
 from markupsafe import Markup
 import ssl
 
@@ -98,9 +97,8 @@ async def rss_news(req):
 	
 	return web.Response(status = 200, content_type = 'text/xml', text = rss.to_xml(encoding = 'utf-8'))
 
-if settings.ENABLE_HTTPS == True:
-	# TODO: Fix HTTPS so that it detects the certificate files correctly
-	ssl_context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
+ssl_context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
+if settings.ENABLE_HTTPS:
 	ssl_context.load_cert_chain('domain_srv.crt', 'domain_srv.key')
 
 def render(req, tmpl, ctcx = None, status = 200):

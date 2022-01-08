@@ -70,7 +70,7 @@ footer {
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5); 
   z-index: 1;
   background: inherit;
-  overflow: visible;
+  overflow: hidden;
   padding: 13.5px;
   clear: inline-start;
   position: fixed;
