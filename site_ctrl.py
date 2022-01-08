@@ -11,7 +11,7 @@ import ssl
 
 import settings
 
-def run_site(*, serve_static = True):
+def run_site(*, serve_static = False, serve_storage = False):
 	app = App()
 
 	app.router.add_get('/', page_index)
@@ -21,6 +21,8 @@ def run_site(*, serve_static = True):
 	app.router.add_get('/links', page_links)
 	if serve_static:
 		app.router.add_static('/static', 'static')
+	if serve_storage:
+		app.router.add_static('/storage', 'storage')
 	app.router.add_route('*', '/{path:.*}', handle_404)
 	app.jinja_env = jinja2.Environment(
 		loader = jinja2.FileSystemLoader('tmpl'),

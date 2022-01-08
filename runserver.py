@@ -5,7 +5,7 @@ import logging
 import settings
 
 def main(*, bool = False):
-	app = run_site(serve_static = True)
+	app = run_site(serve_static = settings.SERVE_STATIC, serve_storage = settings.SERVE_STORAGE)
 	logging.basicConfig(level=logging.DEBUG)
 	web.run_app(app, port = settings.PORT)
 	# TODO: Fix HTTPS so that it detects the certificate files correctly
