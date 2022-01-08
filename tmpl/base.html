@@ -23,6 +23,18 @@
 </body>
 
 <footer>
+<script>
+    
+var clone = $('#this').clone()
+    .css({'position':'absolute','visibility':'hidden','height':'auto'})
+    .addClass('slideClone')
+    .appendTo('body');
+
+var newHeight = $(".slideClone").height();
+$(".slideClone").remove();
+$('#this').css('height',newHeight + 'px')
+
+</script>
 <img src="static/footer/browser.gif" alt="browser.gif">
 	
 <a href="https://www.koolaid.com/">
