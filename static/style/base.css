@@ -97,7 +97,7 @@ footer:before {
   width: 38rem;
   height: 32rem;
   box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); 
-  border-radius: 10px;
+  border-radius: 4px;
   position: relative;
   z-index: 1;
   background: inherit;
@@ -124,7 +124,7 @@ footer:before {
   width: 558px; 
   height: 86px;
   box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); 
-  border-radius: 10px;
+  border-radius: 4px;
   position: relative;
   z-index: 1;
   background: inherit;
@@ -151,7 +151,7 @@ footer:before {
   width: 648px; 
   height: 311px;
   box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); 
-  border-radius: 10px;
+  border-radius: 4px;
   position: relative;
   z-index: 1;
   background: inherit;
