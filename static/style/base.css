@@ -211,3 +211,8 @@ footer:before {
   height: 100px;
 }
 
+.siteimg404 {
+  width: 282px;
+  height: 147px;
+  filter: drop-shadow(5px 5px 5px #666666);
+}
