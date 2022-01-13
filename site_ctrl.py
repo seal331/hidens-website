@@ -14,6 +14,7 @@ import settings
 def run_site(*, serve_static = False, serve_storage = False):
 	app = App()
 
+	# Defines the pages and directories that will be served
 	app.router.add_get('/', page_index)
 	app.router.add_get('/news', page_news)
 	app.router.add_get('/news/rss', rss_news)
@@ -40,12 +41,14 @@ async def page_index(req):
 	})
 
 async def page_news(req):
+	# Open and read the contents of the news.json file
 	with open('json/news.json', 'rb') as f:
 		news_json = json.loads(f.read())
 		f.close()
 	
 	entries = []
 	
+	# Defines how to lay out the news entries on the actual webpage
 	for date, items in news_json.items():
 		tmpl = req.app.jinja_env.get_template('news.entry.item.html')
 		items_markup = [tmpl.render(item = Markup(item)) for item in items]
@@ -75,10 +78,12 @@ async def handle_404(req):
 	)
 
 async def rss_news(req):
+	# Open and read the contents of the news.json file
 	with open('json/news.json', 'rb') as f:
 		news_json = json.loads(f.read())
 		f.close()
 	
+	# Set up the RSS feed
 	rss = PyRSS2Gen.RSS2(
 		title = "HIDEN's RSS Feed",
 		link = "https://hiden.ooguy.com/news",
@@ -87,10 +92,11 @@ async def rss_news(req):
 		
 		lastBuildDate = datetime.utcnow(),
 		
+		# Defines how the JSON contents should be lied out for RSS
 		items = [
 			PyRSS2Gen.RSSItem(
 				title = dateutil.parser.isoparse(date).strftime('%Y-%m-%d'),
-				description = ''.join(['<li>{}</li>\n'.format(entry) for entry in entries]),
+				description = ''.join(['{}\n'.format(entry) for entry in entries]),
 				pubDate = dateutil.parser.isoparse(date),
 			) for date, entries in news_json.items()
 		]
@@ -98,14 +104,16 @@ async def rss_news(req):
 	
 	return web.Response(status = 200, content_type = 'text/xml', text = rss.to_xml(encoding = 'utf-8'))
 
+# ssl_context is None if HTTPS is disabled
 ssl_context = None
 
+# HTTPS enabled
 if settings.ENABLE_HTTPS:
 	ssl_context = ssl.create_default_context(cafile='domain_srv.crt')
 	r = _SessionRequestContextManager.get('https://' + settings.TARGET_HOST, ssl=ssl_context)
 	ssl_context.load_cert_chain('domain_srv.pem', 'domain_srv.key')
 
-
+# Page renderer
 def render(req, tmpl, ctcx = None, status = 200):
 	tmpl = req.app.jinja_env.get_template(tmpl)
 	content = tmpl.render(**ctcx)
