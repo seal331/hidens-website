@@ -1,8 +1,14 @@
 {
+    "2022-01-13T00:00:00":[
+        "I may have found a fix for HTTPS with this website. If I did, HTTPS will be enabled soon-ish.",
+        "The new Intel Celeron's single core performance outperforms that of the Core i9-10900K, which is impressive. But of course, it's a Celeron, so it had to be kneecapped in some way. That way is that it's only 2 core, 2 threads. So single core wise, it outperforms the i9-10900K, but for anything multicore, the i9 curb stomps the Celeron."
+    ],
+
     "2022-01-11T00:00:00":[
-        "A new code formatting standard was introduced for this website, in an effort to make it look more organized.",
+        "A new code formatting standard was introduced for this website's code, in an effort to make it look more organized.",
         "A new page <em>might</em> be coming soon."
     ],
+
     "2022-01-08T00:00:00": [
         "Many visual updates were added to the site."
     ],

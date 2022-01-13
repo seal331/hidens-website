@@ -1,3 +1,4 @@
+from aiohttp.client import _SessionRequestContextManager
 import jinja2
 import json
 import PyRSS2Gen
@@ -97,11 +98,21 @@ async def rss_news(req):
 	
 	return web.Response(status = 200, content_type = 'text/xml', text = rss.to_xml(encoding = 'utf-8'))
 
-ssl_context = ssl.create_default_context(ssl.Purpose.CLIENT_AUTH)
+ssl_context = None
+
 if settings.ENABLE_HTTPS:
-	ssl_context.load_cert_chain('domain_srv.crt', 'domain_srv.key')
+	ssl_context = ssl.create_default_context(cafile='domain_srv.crt')
+	r = _SessionRequestContextManager.get('https://' + settings.TARGET_HOST, ssl=ssl_context)
+	ssl_context.load_cert_chain('domain_srv.pem', 'domain_srv.key')
+
 
 def render(req, tmpl, ctcx = None, status = 200):
 	tmpl = req.app.jinja_env.get_template(tmpl)
 	content = tmpl.render(**ctcx)
 	return web.Response(status = status, content_type = 'text/html', text = content)
+
+# Supposed to be a custom error handler, will be finished later
+#async def handler(request):
+#	try:
+#		text = await request.text()
+#	except OSError:
