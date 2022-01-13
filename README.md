@@ -11,6 +11,7 @@ ENABLE_HTTPS = False (Default is False. Currently nonfunctional for unknown reas
 ENABLE_LOGGING = False (Default is false. Logs every connection to the server in the terminal ouput. Set this to true if you want this.)
 SERVE_STATIC = False (Default is false. If you want to serve static content such as CSS stylesheets or images, set this to True)
 SERVE_STORAGE = False (Default is false. If you want to serve items in storage such as installers, set this to True)
+TARGET_HOST = hiden.ooguy.com (Default is hiden.ooguy.com. It's meant for SSL/TLS verification, although I have not verified if this works properly yet.)
 ```
 
 After that, run the site with "python runserver.py".
