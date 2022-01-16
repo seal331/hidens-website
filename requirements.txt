@@ -3,3 +3,4 @@ aiohttp
 PyRSS2Gen
 attrs
 python-dateutil
+cryptography

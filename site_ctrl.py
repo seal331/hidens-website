@@ -2,12 +2,18 @@ from aiohttp.client import _SessionRequestContextManager
 import jinja2
 import json
 import PyRSS2Gen
+#from abc import ABCMeta, abstractmethod
+#import asyncio
 from aiohttp import web
 from markupsafe import Markup
 from datetime import datetime
 import dateutil.parser
 from markupsafe import Markup
 import ssl
+#import functools
+#import itertools
+#import traceback
+#from typing import FrozenSet, Any, Iterable, Optional, TypeVar, List, Dict, Tuple, Generic, TYPE_CHECKING
 
 import settings
 
@@ -31,9 +37,54 @@ def run_site(*, serve_static = False, serve_storage = False):
 	)
 	return app
 
+# UNUSED SPAGHETTI 	
+#class Runner(metaclass = ABCMeta):
+#	__slots__ = ('host', 'port', 'ssl_context', 'ssl_only')
+#	
+#	host: str
+#	port: int
+#	ssl_context: Optional[ssl.SSLContext]
+#	ssl_only: bool
+#	
+#	def __init__(self, host: str, port: int, *, ssl_context: Optional[ssl.SSLContext] = None, ssl_only: bool = False) -> None:
+#		self.host = host
+#		self.port = port
+#		self.ssl_context = ssl_context
+#		self.ssl_only = ssl_only
+#	
+#	@abstractmethod
+#	def create_servers(self, loop: asyncio.AbstractEventLoop) -> List[Any]: pass
+#	
+#	def teardown(self, loop: asyncio.AbstractEventLoop) -> Any:
+#		pass
+
 class App(web.Application):
 	def __init__(self, *args, **kwargs):
 		super().__init__(*args, **kwargs)
+
+# UNUSED SPAGHETTI 	
+#	def __init__(self, *args, ssl_context: Optional[ssl.SSLContext] = None, ssl_only: bool = False) -> None:
+#		super().__init__(self, *args, ssl_context = ssl_context, ssl_only = ssl_only)
+#
+#	def create_server(self, loop: asyncio.AbstractEventLoop) -> List[Any]:
+#		assert self._handler is None
+#		self._handler = self.app.make_handler(loop = loop)
+#		loop.run_until_complete(self.app.startup())
+#		
+#		ret = []
+#		if not self.ssl_only:
+#			ret.append(loop.create_server(self._handler, self.host, self.port, ssl = None))
+#		if self.ssl_context is not None:
+#			ret.append(loop.create_server(self._handler, self.host, (self.port if self.ssl_only else 443), ssl = self.ssl_context))
+#		return ret
+#
+#	def teardown(self, loop: asyncio.AbstractEventLoop) -> None:
+#		handler = self._handler
+#		assert handler is not None
+#		self._handler = None
+#		loop.run_until_complete(self.app.shutdown())
+#		loop.run_until_complete(handler.shutdown(60))
+#		loop.run_until_complete(self.app.cleanup())
 
 async def page_index(req):
 	return render(req, 'index.html', {
@@ -104,10 +155,8 @@ async def rss_news(req):
 	
 	return web.Response(status = 200, content_type = 'text/xml', text = rss.to_xml(encoding = 'utf-8'))
 
-# ssl_context is None if HTTPS is disabled
 ssl_context = None
 
-# HTTPS enabled
 if settings.ENABLE_HTTPS:
 	ssl_context = ssl.create_default_context(cafile='domain_srv.crt')
 	r = _SessionRequestContextManager.get('https://' + settings.TARGET_HOST, ssl=ssl_context)
