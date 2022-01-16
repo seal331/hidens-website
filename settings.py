@@ -4,6 +4,8 @@ ENABLE_HTTPS = False
 ENABLE_LOGGING = False
 SERVE_STATIC = False
 SERVE_STORAGE = False
+CERT_DIR = 'path/to/cert'
+CERT_ROOT = 'CERT_ROOT'
 TARGET_HOST = 'hiden.ooguy.com'
 
 # Import settings from settings_local.py. If settings_local.py is not present, terminate

@@ -1,5 +1,5 @@
 from aiohttp import web
-from site_ctrl import run_site, ssl_context
+from site_ctrl import run_site, TLSContext
 import logging 
 import settings
 
@@ -11,7 +11,7 @@ def main(*, bool = False):
 	# Import ssl_context from site_ctrl if HTTPS is enabled
 	if settings.ENABLE_HTTPS:
 		# TODO: Find a more efficient way of running with HTTPS enabled, hopefully without calling run_site for a second time
-		app = run_site(serve_static = settings.SERVE_STATIC, ssl_context=ssl_context, serve_storage = settings.SERVE_STORAGE)
+		app = run_site(serve_static = settings.SERVE_STATIC, ssl_context = TLSContext(settings.CERT_ROOT, settings.CERT_DIR).create_ssl_context(), serve_storage = settings.SERVE_STORAGE)
 
 	# Log requests to console if logging is enabled
 	if settings.ENABLE_LOGGING:

@@ -2,18 +2,17 @@ from aiohttp.client import _SessionRequestContextManager
 import jinja2
 import json
 import PyRSS2Gen
-#from abc import ABCMeta, abstractmethod
-#import asyncio
 from aiohttp import web
 from markupsafe import Markup
-from datetime import datetime
+from datetime import datetime, timedelta
 import dateutil.parser
 from markupsafe import Markup
 import ssl
-#import functools
-#import itertools
-#import traceback
-#from typing import FrozenSet, Any, Iterable, Optional, TypeVar, List, Dict, Tuple, Generic, TYPE_CHECKING
+from typing import Dict, Tuple, Any, Optional
+from pathlib import Path
+
+from cryptography import x509
+from cryptography.hazmat.backends import default_backend
 
 import settings
 
@@ -37,54 +36,9 @@ def run_site(*, serve_static = False, serve_storage = False):
 	)
 	return app
 
-# UNUSED SPAGHETTI 	
-#class Runner(metaclass = ABCMeta):
-#	__slots__ = ('host', 'port', 'ssl_context', 'ssl_only')
-#	
-#	host: str
-#	port: int
-#	ssl_context: Optional[ssl.SSLContext]
-#	ssl_only: bool
-#	
-#	def __init__(self, host: str, port: int, *, ssl_context: Optional[ssl.SSLContext] = None, ssl_only: bool = False) -> None:
-#		self.host = host
-#		self.port = port
-#		self.ssl_context = ssl_context
-#		self.ssl_only = ssl_only
-#	
-#	@abstractmethod
-#	def create_servers(self, loop: asyncio.AbstractEventLoop) -> List[Any]: pass
-#	
-#	def teardown(self, loop: asyncio.AbstractEventLoop) -> Any:
-#		pass
-
 class App(web.Application):
 	def __init__(self, *args, **kwargs):
 		super().__init__(*args, **kwargs)
-
-# UNUSED SPAGHETTI 	
-#	def __init__(self, *args, ssl_context: Optional[ssl.SSLContext] = None, ssl_only: bool = False) -> None:
-#		super().__init__(self, *args, ssl_context = ssl_context, ssl_only = ssl_only)
-#
-#	def create_server(self, loop: asyncio.AbstractEventLoop) -> List[Any]:
-#		assert self._handler is None
-#		self._handler = self.app.make_handler(loop = loop)
-#		loop.run_until_complete(self.app.startup())
-#		
-#		ret = []
-#		if not self.ssl_only:
-#			ret.append(loop.create_server(self._handler, self.host, self.port, ssl = None))
-#		if self.ssl_context is not None:
-#			ret.append(loop.create_server(self._handler, self.host, (self.port if self.ssl_only else 443), ssl = self.ssl_context))
-#		return ret
-#
-#	def teardown(self, loop: asyncio.AbstractEventLoop) -> None:
-#		handler = self._handler
-#		assert handler is not None
-#		self._handler = None
-#		loop.run_until_complete(self.app.shutdown())
-#		loop.run_until_complete(handler.shutdown(60))
-#		loop.run_until_complete(self.app.cleanup())
 
 async def page_index(req):
 	return render(req, 'index.html', {
@@ -155,12 +109,68 @@ async def rss_news(req):
 	
 	return web.Response(status = 200, content_type = 'text/xml', text = rss.to_xml(encoding = 'utf-8'))
 
-ssl_context = None
+if not settings.ENABLE_HTTPS:
+	ssl_context = None
 
-if settings.ENABLE_HTTPS:
-	ssl_context = ssl.create_default_context(cafile='domain_srv.crt')
-	r = _SessionRequestContextManager.get('https://' + settings.TARGET_HOST, ssl=ssl_context)
-	ssl_context.load_cert_chain('domain_srv.pem', 'domain_srv.key')
+class TLSContext:
+	def __init__(self, cert_root: str, cert_dir: str) -> None:
+		self.cert_dir = Path(cert_dir)
+		self.cert_root = cert_root
+		self._cert_cache = {} # type: Dict[str, ssl.SSLContext]
+	
+	def create_ssl_context(self) -> ssl.SSLContext:
+		self._get_root_cert()
+		
+		ssl_context = ssl.create_default_context(purpose = ssl.Purpose.CLIENT_AUTH)
+		
+		cache = self._cert_cache
+		def servername_callback(socket: Any, domain: Optional[str], ssl_context: ssl.SSLSocket) -> Optional[int]:
+			if domain is None:
+				domain = 'no-domain'
+			if domain not in cache:
+				ctxt = ssl.create_default_context(purpose = ssl.Purpose.CLIENT_AUTH)
+				p_crt, p_key = self._get_cert(domain)
+				ctxt.load_cert_chain(str(p_crt), keyfile = str(p_key))
+				cache[domain] = ctxt
+			socket.context = cache[domain]
+			return None
+		
+		ssl_context.set_servername_callback(servername_callback)
+		return ssl_context
+	
+	def _get_cert(self, domain: str) -> Tuple[Path, Path]:
+		p_crt = self.cert_dir / '{}.crt'.format(domain)
+		p_key = self.cert_dir / '{}.key'.format(domain)
+		
+		if not exists_and_valid(p_crt, p_key):
+			raise ssl.CertificateError()
+		
+		return p_crt, p_key
+	
+	def _get_root_cert(self) -> Tuple[Path, Path]:
+		assert self.cert_root is not None
+		
+		p_crt = self.cert_dir / '{}.crt'.format(self.cert_root)
+		p_key = self.cert_dir / '{}.key'.format(self.cert_root)
+		
+		if not exists_and_valid(p_crt, p_key):
+			raise ssl.CertificateError()
+		
+		return p_crt, p_key
+
+def exists_and_valid(p_crt: Path, p_key: Path) -> bool:
+	if not p_crt.exists(): return False
+	if not p_key.exists(): return False
+	backend = default_backend()
+	with p_crt.open('rb') as fh:
+		crt = x509.load_pem_x509_certificate(fh.read(), backend)
+	
+	now = datetime.utcnow()
+	if now < crt.not_valid_before: return False
+	near_future = now + timedelta(days = 1)
+	if near_future > crt.not_valid_after: return False
+	return True
+
 
 # Page renderer
 def render(req, tmpl, ctcx = None, status = 200):
