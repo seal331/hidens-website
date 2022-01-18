@@ -1,4 +1,7 @@
 {
+    "2021-01-18T00:00:00": [
+        "We've migrated domains to <a href=\"http://hiden64.duckdns.org\", because apparently the domain we used before was being flagged as malware by some AVs and websites."
+    ],
     "2022-01-13T00:00:00":[
         "I may have found a fix for HTTPS with this website. If I did, HTTPS will be enabled soon-ish.",
         "The new Intel Celeron's single core performance outperforms that of the Core i9-10900K, which is impressive. But of course, it's a Celeron, so it had to be kneecapped in some way. That way is that it's only 2 core, 2 threads. So single core wise, it outperforms the i9-10900K, but for anything multicore, the i9 curb stomps the Celeron."
