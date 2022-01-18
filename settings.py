@@ -1,5 +1,5 @@
 # Default settings file for the website
-PORT = 8080
+PORT = 80
 ENABLE_HTTPS = False
 ENABLE_LOGGING = False
 SERVE_STATIC = False
