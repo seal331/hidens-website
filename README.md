@@ -6,7 +6,7 @@ To run, install the requirements using pip: `pip install -r requirements .txt`. 
 Then, create `settings_local.py`, and add the following options:
 
 ```
-PORT = 80 (Default is 80, change it to something else if you want to)
+PORT = 8080 (Default is 8080, change it to something else if you want to)
 ENABLE_HTTPS = False (Default is False. Currently nonfunctional for unknown reasons, but this is supposed to enable HTTPS support)
 ENABLE_LOGGING = False (Default is false. Logs every connection to the server in the terminal ouput. Set this to true if you want this.)
 SERVE_STATIC = False (Default is false. If you want to serve static content such as CSS stylesheets or images, set this to True)
