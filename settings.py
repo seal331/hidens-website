@@ -6,7 +6,7 @@ SERVE_STATIC = False
 SERVE_STORAGE = False
 CERT_DIR = 'path/to/cert'
 CERT_ROOT = 'CERT_ROOT'
-TARGET_HOST = 'hiden.ooguy.com'
+TARGET_HOST = 'hiden.duckdns.org'
 
 # Import settings from settings_local.py. If settings_local.py is not present, terminate
 try:
