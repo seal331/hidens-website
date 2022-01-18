@@ -28,13 +28,9 @@ p {
   font-family: Verdana;
 }
 
-tr, th, td {
+table, tr, th, td {
   border: 1px solid black;
   text-align: center;
-}
-
-table {
-  border: 1px solid black;
 }
 
 a {
