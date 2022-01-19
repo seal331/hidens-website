@@ -1,6 +1,6 @@
 {
     "2022-01-18T00:00:00": [
-        "I've migrated the site to <a href=\"http://hiden64.duckdns.org\">a new domain</a>, because apparently the domain we used before was being flagged as malware by some AVs and websites.",
+        "I've migrated the site to <a href=\"http://hiden64.duckdns.org\">a new domain</a>, because apparently the domain I used before was being flagged as malware by some AVs and websites.",
         "A lot of visual improvements were slapped onto here too."
     ],
     "2022-01-13T00:00:00":[
@@ -74,7 +74,9 @@
     ],
 
     "2021-07-18T00:00:00": [
-        "New major changes as well as minor changes to the website. <br> The background has been changed, there is now a footer, hyperlinks now have their own colors, <br> and I also have been squashing some bugs and making some slight tweaks visually."        
+        "New major changes as well as minor changes to the website.",
+        "The background has been changed, there is now a footer, hyperlinks now have their own colors.",
+        "I also have been squashing some bugs and making some slight tweaks visually."        
     ],
 
     "2021-07-11T00:00:00": [
@@ -87,6 +89,6 @@
 
     "2021-06-22T00:00:00": [
         "The website is now open source. You can grab the source code <a href=\"https://github.com/epictaco302/epictacos-website\">here</a>. I am also planning to do a redesign of the site in the future.",
-        "I also cleaned up the index page a bit."
+        "I also cleaned up the home page a bit."
     ]
 }

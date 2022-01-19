@@ -34,6 +34,10 @@ table, tr, th, td {
   text-align: center;
 }
 
+ul {
+  display: inline-block;
+}
+
 a {
   font-size: 17px;
   font-weight: bold;  
@@ -177,7 +181,7 @@ footer:before {
 
 .newsbox {
   width: 74rem;
-  height: 227.5rem;
+  height: 249.5rem;
   box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); 
   border-radius: 10px;
   position: relative;
