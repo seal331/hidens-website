@@ -85,7 +85,6 @@ footer {
 }
 
 footer:before {
-  content: "";
   position: absolute;
   background: inherit;
   z-index: -1;
@@ -112,7 +111,6 @@ footer:before {
 }
 
 .indextable:before {
-  content: “ ”;
   background: inherit; 
   position: absolute;
   left: 0;
@@ -139,7 +137,6 @@ footer:before {
 }
 
 .projectstable:before {
-  content: “ ”;
   background: inherit; 
   position: absolute;
   left: 0;
@@ -166,7 +163,6 @@ footer:before {
 }
 
 .linkstable:before {
-  content: “ ”;
   background: inherit; 
   position: absolute;
   left: 0;
@@ -180,8 +176,8 @@ footer:before {
 }
 
 .newsbox {
-  width: 74rem;
-  height: 249.5rem;
+  width: 59rem;
+  height: 264.5rem;
   box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); 
   border-radius: 10px;
   position: relative;
@@ -193,7 +189,6 @@ footer:before {
 }
 
 .newsbox:before {
-  content: "";
   position: absolute;
   background: inherit;
   z-index: -1;
