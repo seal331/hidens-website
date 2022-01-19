@@ -179,7 +179,7 @@ footer:before {
   width: 59rem;
   height: 281.5rem;
   box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); 
-  border-radius: 10px;
+  border-radius: 5.5px;
   position: relative;
   z-index: 1;
   text-align: center;
