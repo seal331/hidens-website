@@ -1,8 +1,10 @@
-from aiohttp.client import _SessionRequestContextManager
 import jinja2
+import re
 import json
 import PyRSS2Gen
 from aiohttp import web
+#from aiohttp.web import HTTPException
+#from aiohttp_middlewares import cors_middleware, default_error_handler, error_context, error_middleware
 from markupsafe import Markup
 from datetime import datetime, timedelta
 import dateutil.parser
@@ -30,6 +32,7 @@ def run_site(*, serve_static = False, serve_storage = False):
 	if serve_storage:
 		app.router.add_static('/storage', 'storage')
 	app.router.add_route('*', '/{path:.*}', handle_404)
+	#app.router.add_route('*', '/', handle_500)
 	app.jinja_env = jinja2.Environment(
 		loader = jinja2.FileSystemLoader('tmpl'),
 		autoescape = jinja2.select_autoescape(default = True),
@@ -37,8 +40,35 @@ def run_site(*, serve_static = False, serve_storage = False):
 	return app
 
 class App(web.Application):
+
+#	middlewares=(
+#        cors_middleware(origins=("http://localhost",)),
+#        error_middleware(),
+#	)
+
 	def __init__(self, *args, **kwargs):
 		super().__init__(*args, **kwargs)
+
+#def create_error_middleware(self, overrides):
+#    @web.middleware
+#    async def error_middleware(request, handler):
+#        try:
+#            response = await handler(request)
+#            status = response.status
+#            override = overrides.get(status)
+#            if override:
+#                response = await override(request)
+#                response.headers.update(self.headers)
+#                response.set_status(status)
+#                return response
+#            return response
+#        except web.HTTPException as ex:
+#            override = overrides.get(ex.status)
+#            if override:
+#                return await override(request)
+#            raise
+#
+#    return error_middleware 
 
 async def page_index(req):
 	return render(req, 'index.html', {
@@ -82,6 +112,12 @@ async def handle_404(req):
 		}, status = 404
 	)
 
+#async def handle_500(req):
+#	return render(req, '50x.html', {
+#		'title': 'Server error'
+#		}, status = 500
+#	)
+	
 async def rss_news(req):
 	# Open and read the contents of the news.json file
 	with open('json/news.json', 'rb') as f:
@@ -178,8 +214,3 @@ def render(req, tmpl, ctcx = None, status = 200):
 	content = tmpl.render(**ctcx)
 	return web.Response(status = status, content_type = 'text/html', text = content)
 
-# Supposed to be a custom error handler, will be finished later
-#async def handler(request):
-#	try:
-#		text = await request.text()
-#	except OSError:

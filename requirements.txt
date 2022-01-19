@@ -1,5 +1,6 @@
 jinja2
 aiohttp
+aiohttp_middlewares
 PyRSS2Gen
 attrs
 python-dateutil
