@@ -1,6 +1,7 @@
 {
-    "2021-01-18T00:00:00": [
-        "I've migrated the site to <a href=\"http://hiden64.duckdns.org\">a new domain</a>, because apparently the domain we used before was being flagged as malware by some AVs and websites."
+    "2022-01-18T00:00:00": [
+        "I've migrated the site to <a href=\"http://hiden64.duckdns.org\">a new domain</a>, because apparently the domain we used before was being flagged as malware by some AVs and websites.",
+        "A lot of visual improvements were slapped onto here too."
     ],
     "2022-01-13T00:00:00":[
         "I may have found a fix for HTTPS with this website. If I did, HTTPS will be enabled soon-ish.",

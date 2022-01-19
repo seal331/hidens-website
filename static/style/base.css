@@ -7,11 +7,12 @@ body {
 
 h1 {
   font-size: 35px;
-font-family: Verdana;
+  font-family: Verdana;
   font-weight: bold;
 }
 
 h2 {
+  font-size: 25px;
   font-family: Verdana;
   font-weight: bold;
 }
