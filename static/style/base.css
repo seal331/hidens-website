@@ -12,7 +12,7 @@ h1 {
 }
 
 h2 {
-  font-size: 26px;
+  font-size: 24.5px;
   font-family: Verdana;
   font-weight: bold;
 }
@@ -36,8 +36,7 @@ p {
 }
 
 table, tr, th, td {
-  border: 1px solid black;
-  text-align: center;
+  border: 1px solid darkslategrey;
 }
 
 ul {
@@ -60,19 +59,19 @@ a:link {
 a:visited {
  font-weight: bold;
  text-decoration: none;
- color: #800080;
+ color: #7305bd;
 }
  
 a:hover {
  font-weight: bold;
  text-decoration: none;
- color: #00FFFF;
+ color: #0059ff;
 }
  
 a:active {
  font-weight: bold;
  text-decoration: none;
- color: #00008b;
+ color: #0b0ba8;
 }
 
 footer {
@@ -81,7 +80,7 @@ footer {
   z-index: 1;
   background: inherit;
   overflow: hidden;
-  padding: 5.5px;
+  padding: 5px;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -205,7 +204,7 @@ footer:before {
 }
 
 .newsbox {
-  width: 59rem;
+  width: 63rem;
   box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); 
   border-radius: 5.5px;
   position: relative;
