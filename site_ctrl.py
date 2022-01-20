@@ -179,8 +179,8 @@ def exists_and_valid(p_crt: Path, p_key: Path) -> bool:
 
 
 # Page renderer
-def render(req, tmpl, ctcx = None, status = 200):
+def render(req, tmpl, ctxt = None, status = 200):
 	tmpl = req.app.jinja_env.get_template(tmpl)
-	content = tmpl.render(**ctcx)
+	content = tmpl.render(**ctxt)
 	return web.Response(status = status, content_type = 'text/html', text = content)
 
