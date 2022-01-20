@@ -1,5 +1,7 @@
 {
     "2022-01-19T00:00:00": [
+        "There's a <a href=\"downloads\">new page</a>. This is to help reduce some clutter.",
+        "The guestbook link was moved to the links page.",
         "The news page has been tweaked visually to help with performance.",
         "The blur effect was reduced because it started causing eye strain for me.",
         "Some parts of the website were tweaked to comply with the W3C standards. I'm not Microsoft."

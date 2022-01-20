@@ -25,6 +25,7 @@ def run_site(*, serve_static = False, serve_storage = False):
 	app.router.add_get('/news/rss', rss_news)
 	app.router.add_get('/projects', page_projects)
 	app.router.add_get('/links', page_links)
+	app.router.add_get('/downloads', page_downloads)
 	if serve_static:
 		app.router.add_static('/static', 'static')
 	if serve_storage:
@@ -74,6 +75,11 @@ async def page_projects(req):
 async def page_links(req):
 	return render(req, 'links.html', {
 		'title': 'Links'
+	})
+
+async def page_downloads(req):
+	return render(req, 'downloads.html', {
+		'title': 'Downloads'
 	})
 
 async def handle_404(req):
