@@ -1,4 +1,9 @@
-{
+{   
+    "2022-01-20T00:00:00": [
+        "Added a few more visual updates.",
+        "I'm now utlizing a more efficient way of updating the news and footer without having to manually change the size of those elements."
+    ],
+
     "2022-01-19T00:00:00": [
         "There's a <a href=\"downloads\">new page</a>. This is to help reduce some clutter.",
         "The guestbook link was moved to the links page.",

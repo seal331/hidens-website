@@ -12,7 +12,13 @@ h1 {
 }
 
 h2 {
-  font-size: 25px;
+  font-size: 26px;
+  font-family: Verdana;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 20px;
   font-family: Verdana;
   font-weight: bold;
 }
@@ -25,7 +31,7 @@ li {
 	
 p {
   font-size: 17px;
-  font-weight: bold;  
+  font-weight: bold;
   font-family: Verdana;
 }
 
@@ -71,13 +77,11 @@ a:active {
 
 footer {
   margin-top: 5px;
-  width: 2.1rem;
-  height: 4.55rem;
-  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5); 
+  box-shadow: 0 0 1.7rem 0 rgba(0, 0, 0, .5); 
   z-index: 1;
   background: inherit;
   overflow: hidden;
-  padding: 10.5px;
+  padding: 5.5px;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -97,10 +101,10 @@ footer:before {
   margin: -20px;
 }
 
-.indextable {
-  width: 38rem;
+.hometable {
+  width: 38.3rem;
   height: 28rem;
-  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); 
+  box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
   border-radius: 4px;
   position: relative;
   z-index: 1;
@@ -110,7 +114,7 @@ footer:before {
   margin-right: auto;
 }
 
-.indextable:before {
+.hometable:before {
   background: inherit; 
   position: absolute;
   left: 0;
@@ -124,9 +128,9 @@ footer:before {
 }
 
 .projectstable {
-  width: 458px; 
-  height: 86px;
-  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); 
+  width: 658px; 
+  height: 226px;
+  box-shadow: 0 0 3rem 0 rgba(0, 0, 0, .5); 
   border-radius: 4px;
   position: relative;
   z-index: 1;
@@ -150,9 +154,8 @@ footer:before {
 }
 
 .linkstable {
-  width: 678px; 
-  height: 541px;
-  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); 
+  width: 728px; 
+  box-shadow: 0 0 3rem 0 rgba(0, 0, 0, .5); 
   border-radius: 4px;
   position: relative;
   z-index: 1;
@@ -176,9 +179,9 @@ footer:before {
 }
 
 .downloadstable {
-  width: 688px; 
-  height: 341px;
-  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); 
+  width: 693px; 
+  height: 505px;
+  box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
   border-radius: 4px;
   position: relative;
   z-index: 1;
@@ -203,7 +206,6 @@ footer:before {
 
 .newsbox {
   width: 59rem;
-  height: 295.5rem;
   box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); 
   border-radius: 5.5px;
   position: relative;
@@ -247,4 +249,11 @@ footer:before {
   filter: drop-shadow(5px 5px 5px #666666);
   width: 217px;
   height: 97px;
+}
+
+.link404 {
+  font-size: 20px;
+  font-weight: bold;  
+  font-family: Verdana;
+  text-decoration: none;  
 }

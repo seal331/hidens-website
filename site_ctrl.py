@@ -16,7 +16,7 @@ from cryptography.hazmat.backends import default_backend
 
 import settings
 
-def run_site(*, serve_static = False, serve_storage = False):
+def RunServ(*, serve_static = False, serve_storage = False):
 	app = App()
 
 	# Defines the pages and directories that will be served
@@ -114,6 +114,9 @@ async def rss_news(req):
 	)
 	
 	return web.Response(status = 200, content_type = 'text/xml', text = rss.to_xml(encoding = 'utf-8'))
+
+
+# HTTPS stuff, haven't verfied that this works yet
 
 if not settings.ENABLE_HTTPS:
 	ssl_context = None
