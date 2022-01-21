@@ -1,4 +1,9 @@
 {   
+    "2021-01-21T00:00:00":[
+        "Programs on <a href=\"downloads\">downloads</a> now have icons, so they're more recognizeable. I added a new download for Netscape there too.",
+        "Twitter launched an NFT integration feature...............",
+        "Is there any good alternatives to Twitter?"
+    ],
     "2022-01-20T00:00:00": [
         "Added a few more visual updates.",
         "I'm now utlizing a more efficient way of updating the news and footer without having to manually change the size of those elements."
