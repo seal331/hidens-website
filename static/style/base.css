@@ -1,5 +1,5 @@
 body {
-  background-image: url("/static/cloudbg.jpg");
+  background:linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)),  url("/static/bg.jpg");
   background-size: cover;
   background-attachment: fixed;
   text-align: center;
@@ -49,7 +49,11 @@ a {
   font-family: Verdana;
   text-decoration: none;
 }
-  
+
+img {
+  filter: drop-shadow(5px 5px 5px #666666);
+}
+
 a:link {
  font-weight: bold;
  text-decoration: none;
@@ -291,6 +295,7 @@ footer:before {
 }
 
 .downloadicon {
+  filter: drop-shadow(5px 5px 5px #666666);
   width: 64px;
   height: 64px;
 }

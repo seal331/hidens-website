@@ -27,14 +27,13 @@ def RunServ(*, serve_static = False, serve_storage = False):
 	app.router.add_get('/links', page_links)
 	app.router.add_get('/downloads', page_downloads)
 	app.router.add_get('/favorites', page_favorites)
-	#app.router.add_get('/favorites/software', page_favorite_software)
-	#app.router.add_get('/favorites/software/oses', page_favorite_oses)
-	#app.router.add_get('/favorites/software/oses/windows', page_favorite_windows)
-	#app.router.add_get('/favorites/software/oses/linux', page_favorite_linux)
-	#app.router.add_get('/favorites/software/browsers', page_favorite_browsers)
-	#app.router.add_get('/favorites/software/mediaplayers', page_favorite_media_players)
-	#app.router.add_get('/favorites/music', page_favorite_music)
-	#app.router.add_get('/about', page_about_me)
+	app.router.add_get('/favorites/software', page_favorite_software)
+	app.router.add_get('/favorites/software/oses', page_favorite_oses)
+	app.router.add_get('/favorites/software/oses/windows', page_favorite_windows)
+	app.router.add_get('/favorites/software/oses/linux', page_favorite_linux)
+	app.router.add_get('/favorites/software/browsers', page_favorite_browsers)
+	app.router.add_get('/favorites/music', page_favorite_music)
+	app.router.add_get('/about', page_about_me)
 	app.router.add_get('/computers', page_my_computers)
 
 	if serve_static:
@@ -78,6 +77,50 @@ async def page_news(req):
 		'entries': Markup('\n'.join(entries))
 	})
 
+
+# INCOMING SPAGHETTI
+
+async def page_about_me(req):
+	return render(req, 'aboutme.html', {
+		'title': 'About me'
+	})
+
+async def page_favorites(req):
+	return render(req, 'favorites.html', {
+		'title': 'My favorite stuff'
+	})
+
+async def page_favorite_software(req):
+	return render(req, 'favorite.software.html', {
+		'title': 'My favorite software'
+	})
+
+async def page_favorite_oses(req):
+	return render(req, 'favorite.oses.html', {
+		'title': 'My favorite OSes'
+	})
+
+async def page_favorite_windows(req):
+	return render(req, 'favorite.oses.windows.html', {
+		'title': 'My favorite versions of Windows'
+	})
+
+async def page_favorite_linux(req):
+	return render(req, 'favorite.oses.linux.html', {
+		'title': 'My favorite Linux distributions'
+	})
+
+async def page_favorite_browsers(req):
+	return render(req, 'favorite.browsers.html', {
+		'title': 'My favorite web browsers'
+	})
+
+async def page_favorite_music(req):
+	return render(req, 'favorite.music.html', {
+		'title': 'My favorite web browsers'
+	})
+
+
 async def page_projects(req):
 	return render(req, 'projects.html', {
 		'title': 'Projects'
@@ -91,12 +134,6 @@ async def page_links(req):
 async def page_downloads(req):
 	return render(req, 'downloads.html', {
 		'title': 'Downloads'
-	})
-
-
-async def page_favorites(req):
-	return render(req, 'favorites.html', {
-		'title': 'My favorite stuff'
 	})
 
 async def page_my_computers(req):
