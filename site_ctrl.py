@@ -26,6 +26,17 @@ def RunServ(*, serve_static = False, serve_storage = False):
 	app.router.add_get('/projects', page_projects)
 	app.router.add_get('/links', page_links)
 	app.router.add_get('/downloads', page_downloads)
+	#app.router.add_get('/favorites', page_favorites)
+	#app.router.add_get('/favorites/software', page_favorite_software)
+	#app.router.add_get('/favorites/software/oses', page_favorite_oses)
+	#app.router.add_get('/favorites/software/oses/windows', page_favorite_windows)
+	#app.router.add_get('/favorites/software/oses/linux', page_favorite_linux)
+	#app.router.add_get('/favorites/software/browsers', page_favorite_browsers)
+	#app.router.add_get('/favorites/software/mediaplayers', page_favorite_media_players)
+	#app.router.add_get('/favorites/music', page_favorite_music)
+	#app.router.add_get('/about', page_about_me)
+	#app,router.add_get('/computers', page_my_computers)
+
 	if serve_static:
 		app.router.add_static('/static', 'static')
 	if serve_storage:
@@ -43,7 +54,7 @@ class App(web.Application):
 
 async def page_index(req):
 	return render(req, 'index.html', {
-		'title': 'Homepage'
+		'title': 'Home'
 	})
 
 async def page_news(req):
@@ -81,6 +92,12 @@ async def page_downloads(req):
 	return render(req, 'downloads.html', {
 		'title': 'Downloads'
 	})
+
+
+#async def page_favorites(req):
+#	return render(req, 'favorites.html', {
+#		'title': 'My favorite stuff'
+#	})
 
 async def handle_404(req):
 	return render(req, '404.html', { 
