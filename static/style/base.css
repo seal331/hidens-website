@@ -233,6 +233,30 @@ footer:before {
   margin-right: auto;
 }
 
+.favoritestable {
+  width: 666px; 
+  box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
+  border: 0;
+  position: relative;
+  z-index: 1;
+  background: inherit;
+  overflow: scroll;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.favoritestable:before {
+  background: inherit; 
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0; 
+  bottom: 0;
+  box-shadow: inset 0 0 0 2000px rgba(255,255,255,0.3);
+  filter: blur(10px);
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .newsbox {
   width: 63rem;
@@ -259,18 +283,12 @@ footer:before {
   margin: -20px;
 }
 
-.siteimg {
-  filter: drop-shadow(5px 5px 5px #666666);
-}
-
 .siteimghome {
-  filter: drop-shadow(5px 5px 5px #666666);
   width: 609px; 
   height: 105px;
 }
 
 .siteimglinks {
-  filter: drop-shadow(5px 5px 5px #666666);
   width: 191px; 
   height: 100px;
 }
@@ -278,11 +296,9 @@ footer:before {
 .siteimg404 {
   width: 282px;
   height: 147px;
-  filter: drop-shadow(5px 5px 5px #666666);
 }
 
 .siteimgdownloads {
-  filter: drop-shadow(5px 5px 5px #666666);
   width: 217px;
   height: 97px;
 }
@@ -295,7 +311,6 @@ footer:before {
 }
 
 .downloadicon {
-  filter: drop-shadow(5px 5px 5px #666666);
   width: 64px;
   height: 64px;
 }
@@ -305,13 +320,17 @@ footer:before {
 }
 
 .comptableheadertext {
-  font-size: 13px;
+  font-size: 12.5px;
   height: 10px;
   color: #FFFFFF
 }
 
 .comptablecontent {
   background-color: #E3FFA3;
+}
+
+.comptablecontenttext {
+  font-size: 15px;
 }
 
 .aboutgamelist {

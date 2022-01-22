@@ -80,10 +80,7 @@ async def page_news(req):
 
 # INCOMING SPAGHETTI
 
-async def page_about_me(req):
-	return render(req, 'aboutme.html', {
-		'title': 'About me'
-	})
+
 
 async def page_favorites(req):
 	return render(req, 'favorites.html', {
@@ -117,9 +114,13 @@ async def page_favorite_browsers(req):
 
 async def page_favorite_music(req):
 	return render(req, 'favorite.music.html', {
-		'title': 'My favorite web browsers'
+		'title': 'My favorite web music generes/artists'
 	})
 
+async def page_about_me(req):
+	return render(req, 'aboutme.html', {
+		'title': 'About me'
+	})
 
 async def page_projects(req):
 	return render(req, 'projects.html', {
