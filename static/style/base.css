@@ -233,6 +233,12 @@ footer:before {
   filter: drop-shadow(5px 5px 5px #666666);
 }
 
+.siteimghome {
+  filter: drop-shadow(5px 5px 5px #666666);
+  width: 609px; 
+  height: 105px;
+}
+
 .siteimglinks {
   filter: drop-shadow(5px 5px 5px #666666);
   width: 191px; 
