@@ -1,19 +1,17 @@
 {   
-    "2022-01-22T00:00:00":[
+    "2022-01-22T09:20:52":[
         "Lots of new pages are coming soon™."
     ],
 
-    "2022-01-21T00:00:00":[
+    "2022-01-21T14:48:00":[
         "Programs on <a href=\"downloads\">downloads</a> now have icons, so they're more recognizeable. I added a new download for Netscape there too.",
         "Twitter launched an NFT integration feature...............",
         "Is there any good alternatives to Twitter?"
     ],
-    "2022-01-20T00:00:00": [
-        "Added a few more visual updates.",
-        "I'm now utlizing a more efficient way of updating the news and footer without having to manually change the size of those elements."
-    ],
 
-    "2022-01-19T00:00:00": [
+    "2022-01-20T11:29:00": [
+        "Added a few more visual updates.",
+        "I'm now utlizing a more efficient way of updating the news and footer without having to manually change the size of those elements.",
         "There's a <a href=\"downloads\">new page</a>. This is to help reduce some clutter.",
         "The guestbook link was moved to the links page.",
         "The news page has been tweaked visually to help with performance.",
@@ -21,42 +19,42 @@
         "Some parts of the website were tweaked to comply with the W3C standards. I'm not Microsoft."
     ],
 
-    "2022-01-18T00:00:00": [
+    "2022-01-18T06:42:00": [
         "I've migrated the site to <a href=\"http://hiden64.duckdns.org\">a new domain</a>, because apparently the domain I used before was being flagged as malware by some AVs and websites.",
         "A lot of visual improvements were slapped onto here too.",
         "Apparently, Microsoft bought Activision... for whatever reason. They're going to have a total monopoly on gaming in the future just like they do with PCs, I know it."
     ],
-    "2022-01-13T00:00:00":[
+    "2022-01-13T22:01:00":[
         "I may have found a fix for HTTPS with this website. If I did, HTTPS will be enabled soon-ish.",
         "The new Intel Celeron's single core performance outperforms that of the Core i9-10900K, which is impressive. But of course, it's a Celeron, so it had to be kneecapped in some way. That way is that it's only 2 core, 2 threads. So single core wise, it outperforms the i9-10900K, but for anything multicore, the i9 curb stomps the Celeron."
     ],
 
-    "2022-01-11T00:00:00":[
+    "2022-01-12T00:26:00":[
         "A new code formatting standard was introduced for this website's code, in an effort to make it look more organized.",
         "A new page <em>might</em> be coming soon."
     ],
 
-    "2022-01-08T00:00:00": [
+    "2022-01-08T07:53:00": [
         "Many visual updates were added to the site."
     ],
     
-    "2022-01-06T00:00:00": [
+    "2022-01-07T05:40:00": [
         "A logging feature was added to this site to detect spam/bot requests."
     ],
 
-    "2022-01-05T00:00:00": [
+    "2022-01-05T23:18:00": [
         "Happy (late) new year!",
         "Sorry about the extended downtime, I had an issue with my router that wasn't fixed until today.",
         "Development of Horizon will start back up soon, I took a break from it to focus on other things."
     ],
 
-    "2021-12-30T00:00:00": [
+    "2021-12-31T01:22:00": [
         "The site has been rewritten to utilize jinja (an HTML templating engine for Python). The goal with this is to clean up the code, as well as allow for more possibilities than what you can have with just static pages.",
         "The actual content of the site is mostly unchanged as of now, but I plan on rewriting the site to utilize Bootstrap in 2022.",
         "News now supports RSS."
     ],
 
-    "2021-12-26T00:00:00": [
+    "2021-12-27T05:58:00": [
         "The footer now appears on every page.",
         "The news page was heavily reworked.",
         "Tables and site logos have been heavily reworked to utilize CSS instead of the archaic in-HTML style definitions.",
@@ -65,52 +63,52 @@
         "I'm also cleaning up a bunch of things on the pages themselves, to fix issues and all that jazz."
     ],
 
-    "2021-12-25T00:00:00": [
+    "2021-12-25T14:24:00": [
         "Merry Christmas! Our gift for this year is the revival of the website after ~1 month of letting it rot. We're sorry about that.",
         "Footer facts have also been removed as they are pretty bloaty and unessecary.",
         "TacoBot has been rebranded as Epiphany and is now hosted on GitLab.",
         "This was unveiled while the website was down, but we're introducing a new project. Horizon: Multiple chat protocols implemented as frontends running on a single generic backend, and allowing them to communicate with one another. Based on <a href=\"https://www.escargot.chat\">Escargot</a> and keeping the original goal going."
     ],
     
-    "2021-11-05T00:00:00": [
+    "2021-11-05T06:26:00": [
         "This website and Pepsi Supremacy have merged. It's more efficent and causes less confusion that way."
     ],
 
-    "2021-10-30T00:00:00": [
-        "Happy (early) Halloween! Nothing huge today, just moving around and removing some things; fixing issues with the fonts, removing the RetroSite ad, removing the license (since it's pointless anyway), changing up some text, removing mentions of HM/XPCat besides one footer fact, moving unused images to old stuff, etc. Minor bug fixes too."
+    "2021-10-31T04:31:00": [
+        "Happy Halloween! Nothing huge today, just moving around and removing some things; fixing issues with the fonts, removing the RetroSite ad, removing the license (since it's pointless anyway), changing up some text, removing mentions of HM/XPCat besides one footer fact, moving unused images to old stuff, etc. Minor bug fixes too."
     ],
 
-    "2021-10-23T00:00:00": [
-        "There's a new page (links)."
+    "2021-10-23T08:47:00": [
+        "There's a <a href=\"links\">new page."
     ],
 
-    "2021-10-05T00:00:00": [
+    "2021-10-06T02:45:00": [
         "The redesign plan has been shelved (No longer the case, disregard). Instead, I'll opt for updating the current design."
     ],
 
-    "2021-08-09T00:00:00": [
+    "2021-08-10T05:41:00": [
         "I've added some prelimnary parts of the redesign that I was planning for a while."
     ],
 
-    "2021-08-06T00:00:00": [
+    "2021-08-07T02:00:00": [
         "TacoBot is back (See above). I've also added a new link to the homepage."
     ],
 
-    "2021-07-18T00:00:00": [
+    "2021-07-19T04:30:00": [
         "New major changes as well as minor changes to the website.",
         "The background has been changed, there is now a footer, hyperlinks now have their own colors.",
         "I also have been squashing some bugs and making some slight tweaks visually."        
     ],
 
-    "2021-07-11T00:00:00": [
-        "Happy slurpee day! To celebrate, I made a major internal change to most of the webpages here. Most of the code was unorganized and bloated... until today!"
+    "2021-07-12T02:30:00": [
+        "I made a major internal change to most of the webpages here. Most of the code was unorganized and bloated... until today!"
     ],
 
-    "2021-06-26T00:00:00": [
+    "2021-06-26T19:38:50": [
         "This website has moved to a new home. It is now being hosted on GitHub Pages instead of HM's secondary laptop (Now hosted on my own hardware)."
     ],
 
-    "2021-06-22T00:00:00": [
+    "2021-06-22T21:23:29": [
         "The website is now open source. You can grab the source code <a href=\"https://github.com/epictaco302/epictacos-website\">here</a>. I am also planning to do a redesign of the site in the future.",
         "I also cleaned up the home page a bit."
     ]
