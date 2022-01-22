@@ -35,7 +35,7 @@ def RunServ(*, serve_static = False, serve_storage = False):
 	#app.router.add_get('/favorites/software/mediaplayers', page_favorite_media_players)
 	#app.router.add_get('/favorites/music', page_favorite_music)
 	#app.router.add_get('/about', page_about_me)
-	#app,router.add_get('/computers', page_my_computers)
+	app.router.add_get('/computers', page_my_computers)
 
 	if serve_static:
 		app.router.add_static('/static', 'static')
@@ -98,6 +98,11 @@ async def page_downloads(req):
 #	return render(req, 'favorites.html', {
 #		'title': 'My favorite stuff'
 #	})
+
+async def page_my_computers(req):
+	return render(req, 'computers.html', {
+		'title': 'My computers'
+	})
 
 async def handle_404(req):
 	return render(req, '404.html', { 
