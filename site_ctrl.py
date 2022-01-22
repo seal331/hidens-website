@@ -26,7 +26,7 @@ def RunServ(*, serve_static = False, serve_storage = False):
 	app.router.add_get('/projects', page_projects)
 	app.router.add_get('/links', page_links)
 	app.router.add_get('/downloads', page_downloads)
-	#app.router.add_get('/favorites', page_favorites)
+	app.router.add_get('/favorites', page_favorites)
 	#app.router.add_get('/favorites/software', page_favorite_software)
 	#app.router.add_get('/favorites/software/oses', page_favorite_oses)
 	#app.router.add_get('/favorites/software/oses/windows', page_favorite_windows)
@@ -94,10 +94,10 @@ async def page_downloads(req):
 	})
 
 
-#async def page_favorites(req):
-#	return render(req, 'favorites.html', {
-#		'title': 'My favorite stuff'
-#	})
+async def page_favorites(req):
+	return render(req, 'favorites.html', {
+		'title': 'My favorite stuff'
+	})
 
 async def page_my_computers(req):
 	return render(req, 'computers.html', {
