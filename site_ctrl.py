@@ -32,6 +32,7 @@ def RunServ(*, serve_static = False, serve_storage = False):
 	app.router.add_get('/favorites/software/oses/windows', page_favorite_windows)
 	app.router.add_get('/favorites/software/oses/linux', page_favorite_linux)
 	app.router.add_get('/favorites/software/browsers', page_favorite_browsers)
+	app.router.add_get('/favorites/software/misc', page_favorite_misc_software)
 	app.router.add_get('/favorites/music', page_favorite_music)
 	app.router.add_get('/about', page_about_me)
 	app.router.add_get('/computers', page_my_computers)
@@ -107,6 +108,11 @@ async def page_favorite_linux(req):
 		'title': 'My favorite Linux distributions'
 	})
 
+async def page_favorite_misc_software(req):
+	return render(req, 'favorite.software.misc.html', {
+		'title': 'My favorite miscellaneous software'
+	})
+	
 async def page_favorite_browsers(req):
 	return render(req, 'favorite.browsers.html', {
 		'title': 'My favorite web browsers'

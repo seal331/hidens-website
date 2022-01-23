@@ -17,3 +17,5 @@ CERT_ROOT = 'CERT_ROOT' (Set this to your root certificate. Required for HTTPS.)
 ```
 
 After that, run the site with "python runserver.py".
+
+Please file any bugs you find in the "Issues" tab of this repository, or contact me.
