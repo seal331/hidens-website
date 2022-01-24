@@ -2,4 +2,4 @@
 *.db
 settings_local.py
 __pycache__
-
+desktop.files.json

@@ -1,4 +1,10 @@
 {   
+    "2022-01-24T21:44:04": [
+        "I'm doing a lot of moving around internally, so sorry if stuff works and/or looks like crap right now.",
+        "There's now a <a href=\"http://hiden64.duckdns.org:3001/status\">service status</a> page, that keeps track of when and why the site and other services I host go down.",
+        "There's also a ton of new pages in development, plus a planned website rewrite. Which ever comes first is TBD as of now."        
+    ],
+
     "2022-01-23T12:10:21": [
         "Lots of the pages were given an update.",
         "A new download was added to <a href=\"downloads\">the Downloads page</a>.",
@@ -34,6 +40,7 @@
         "A lot of visual improvements were slapped onto here too.",
         "Apparently, Microsoft bought Activision... for whatever reason. They're going to have a total monopoly on gaming in the future just like they do with PCs, I know it."
     ],
+
     "2022-01-13T22:01:00":[
         "I may have found a fix for HTTPS with this website. If I did, HTTPS will be enabled soon-ish.",
         "The new Intel Celeron's single core performance outperforms that of the Core i9-10900K, which is impressive. But of course, it's a Celeron, so it had to be kneecapped in some way. That way is that it's only 2 core, 2 threads. So single core wise, it outperforms the i9-10900K, but for anything multicore, the i9 curb stomps the Celeron."

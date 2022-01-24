@@ -19,21 +19,19 @@ import settings
 def RunServ(*, serve_static = False, serve_storage = False):
 	app = App()
 
-	# Defines the pages and directories that will be served
 	app.router.add_get('/', page_index)
 	app.router.add_get('/news', page_news)
 	app.router.add_get('/news/rss', rss_news)
 	app.router.add_get('/projects', page_projects)
 	app.router.add_get('/links', page_links)
 	app.router.add_get('/downloads', page_downloads)
-	app.router.add_get('/favorites', page_favorites)
-	app.router.add_get('/favorites/software', page_favorite_software)
-	app.router.add_get('/favorites/software/oses', page_favorite_oses)
-	app.router.add_get('/favorites/software/oses/windows', page_favorite_windows)
-	app.router.add_get('/favorites/software/oses/linux', page_favorite_linux)
-	app.router.add_get('/favorites/software/browsers', page_favorite_browsers)
-	app.router.add_get('/favorites/software/misc', page_favorite_misc_software)
-	app.router.add_get('/favorites/music', page_favorite_music)
+	app.router.add_get('/favoritestuff', page_favorite_stuff)
+	app.router.add_get('/favoritesoftware', page_favorite_software)
+	app.router.add_get('/favoritewindows', page_favorite_windows)
+	app.router.add_get('/favoritelinux', page_favorite_linux)
+	app.router.add_get('/favoritesbrowsers', page_favorite_browsers)
+	app.router.add_get('/favoritesmiscsoftware', page_favorite_misc_software)
+	app.router.add_get('/favoritemusic', page_favorite_music)
 	app.router.add_get('/about', page_about_me)
 	app.router.add_get('/computers', page_my_computers)
 
@@ -58,14 +56,12 @@ async def page_index(req):
 	})
 
 async def page_news(req):
-	# Open and read the contents of the news.json file
 	with open('json/news.json', 'rb') as f:
 		news_json = json.loads(f.read())
 		f.close()
 	
 	entries = []
 	
-	# Defines how to lay out the news entries on the actual webpage
 	for date, items in news_json.items():
 		tmpl = req.app.jinja_env.get_template('news.entry.item.html')
 		items_markup = [tmpl.render(item = Markup(item)) for item in items]
@@ -79,11 +75,29 @@ async def page_news(req):
 	})
 
 
-# INCOMING SPAGHETTI
+#### INCOMING SPAGHETTI ####
 
+async def page_projects(req):
+	return render(req, 'projects.html', {
+		'title': 'Projects'
+	})
 
+async def page_links(req):
+	return render(req, 'links.html', {
+		'title': 'Links'
+	})
 
-async def page_favorites(req):
+async def page_downloads(req):
+	return render(req, 'downloads.html', {
+		'title': 'Downloads'
+	})
+
+async def page_my_computers(req):
+	return render(req, 'computers.html', {
+		'title': 'My computers'
+	})
+
+async def page_favorite_stuff(req):
 	return render(req, 'favorites.html', {
 		'title': 'My favorite stuff'
 	})
@@ -91,11 +105,6 @@ async def page_favorites(req):
 async def page_favorite_software(req):
 	return render(req, 'favorite.software.html', {
 		'title': 'My favorite software'
-	})
-
-async def page_favorite_oses(req):
-	return render(req, 'favorite.oses.html', {
-		'title': 'My favorite OSes'
 	})
 
 async def page_favorite_windows(req):
@@ -128,26 +137,6 @@ async def page_about_me(req):
 		'title': 'About me'
 	})
 
-async def page_projects(req):
-	return render(req, 'projects.html', {
-		'title': 'Projects'
-	})
-
-async def page_links(req):
-	return render(req, 'links.html', {
-		'title': 'Links'
-	})
-
-async def page_downloads(req):
-	return render(req, 'downloads.html', {
-		'title': 'Downloads'
-	})
-
-async def page_my_computers(req):
-	return render(req, 'computers.html', {
-		'title': 'My computers'
-	})
-
 async def handle_404(req):
 	return render(req, '404.html', { 
 		'title': 'Page not found' 
@@ -155,12 +144,10 @@ async def handle_404(req):
 	)
 
 async def rss_news(req):
-	# Open and read the contents of the news.json file
 	with open('json/news.json', 'rb') as f:
 		news_json = json.loads(f.read())
 		f.close()
 	
-	# Set up the RSS feed
 	rss = PyRSS2Gen.RSS2(
 		title = "HIDEN's RSS Feed",
 		link = "https://hiden64.duckdns.org/news",
@@ -169,7 +156,6 @@ async def rss_news(req):
 		
 		lastBuildDate = datetime.utcnow(),
 		
-		# Defines how the JSON contents should be lied out for RSS
 		items = [
 			PyRSS2Gen.RSSItem(
 				title = dateutil.parser.isoparse(date).strftime('%Y-%m-%d'),
@@ -182,7 +168,7 @@ async def rss_news(req):
 	return web.Response(status = 200, content_type = 'text/xml', text = rss.to_xml(encoding = 'utf-8'))
 
 
-# HTTPS stuff, haven't verfied that this works yet
+# Haven't verfied that this works yet
 
 if not settings.ENABLE_HTTPS:
 	ssl_context = None
@@ -246,8 +232,6 @@ def exists_and_valid(p_crt: Path, p_key: Path) -> bool:
 	if near_future > crt.not_valid_after: return False
 	return True
 
-
-# Page renderer
 def render(req, tmpl, ctxt = None, status = 200):
 	tmpl = req.app.jinja_env.get_template(tmpl)
 	if ctxt is None:
