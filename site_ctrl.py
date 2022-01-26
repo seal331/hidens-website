@@ -16,7 +16,7 @@ from cryptography.hazmat.backends import default_backend
 
 import settings
 
-def RunServ(*, serve_static = False, serve_storage = False):
+def RunServ(*, serve_static = False, serve_storage = False, serve_js = False):
 	app = App()
 
 	app.router.add_get('/', page_index)
@@ -39,6 +39,8 @@ def RunServ(*, serve_static = False, serve_storage = False):
 		app.router.add_static('/static', 'static')
 	if serve_storage:
 		app.router.add_static('/storage', 'storage')
+	if serve_js:
+		app.router.add_static('/js', 'js')
 	app.router.add_route('*', '/{path:.*}', handle_404)
 	app.jinja_env = jinja2.Environment(
 		loader = jinja2.FileSystemLoader('tmpl'),

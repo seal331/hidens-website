@@ -18,6 +18,7 @@ ENABLE_HTTPS = False (Default is False. Currently nonfunctional for unknown reas
 ENABLE_LOGGING = False (Default is false. Logs every connection to the server in the terminal ouput. Set this to true if you want this.)
 SERVE_STATIC = False (Default is false. If you want to serve static content such as CSS stylesheets or images, set this to True)
 SERVE_STORAGE = False (Default is false. If you want to serve items in storage such as installers, set this to True)
+SERVE_JS = False (Default is false. Some functions of the website will be disabled if this is left on False, so set it to True if you want to enable those)
 TARGET_HOST = hiden64.duckdns.org (Default is hiden64.duckdns.org. It's meant for SSL/TLS verification, although I have not verified if this works properly yet.)
 CERT_DIR = 'path/to/cert' (Set this to the directory of your certificate. Required for HTTPS.)
 CERT_ROOT = 'CERT_ROOT' (Set this to your root certificate. Required for HTTPS.)

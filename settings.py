@@ -4,6 +4,7 @@ ENABLE_HTTPS = False
 ENABLE_LOGGING = False
 SERVE_STATIC = False
 SERVE_STORAGE = False
+SERVE_JS = False
 CERT_DIR = 'path/to/cert'
 CERT_ROOT = 'CERT_ROOT'
 TARGET_HOST = 'hiden64.duckdns.org'
