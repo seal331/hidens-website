@@ -40,7 +40,7 @@ def RunServ(*, serve_static = False, serve_storage = False, serve_js = False):
 	if serve_storage:
 		app.router.add_static('/storage', 'storage')
 	if serve_js:
-		app.router.add_static('/js', 'js')
+		app.router.add_static('/js', 'javascript')
 	app.router.add_route('*', '/{path:.*}', handle_404)
 	app.jinja_env = jinja2.Environment(
 		loader = jinja2.FileSystemLoader('tmpl'),

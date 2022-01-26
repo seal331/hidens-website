@@ -1,4 +1,8 @@
 {   
+    "2022-01-26T08:42:28": [
+        "The website is being rewritten due to it becoming a bit unmaintainable."
+    ],
+
     "2022-01-24T21:44:04": [
         "I'm doing a lot of moving around internally, so sorry if stuff works and/or looks like crap right now.",
         "There's now a <a href=\"http://hiden64.duckdns.org:3001/status\">service status</a> page, that keeps track of when and why the site and other services I host go down.",
