@@ -9,7 +9,7 @@ StartLimitBurst=5
 User=websiterunner
 Group=websiterunner
 WorkingDirectory=/var/www/website/hidens-website
-ExecStart=/usr/bin/python3 runserver.py > log2.txt
+ExecStart=python3 runserver.py > log2.txt
 
 [Install]
 WantedBy=multi-user.target
