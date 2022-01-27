@@ -16,6 +16,7 @@ Then, create `settings_local.py`, and add the following options:
 PORT = 80 (Default is 80, change it to something else if you want to)
 ENABLE_HTTPS = False (Default is False. Currently nonfunctional for unknown reasons, but this is supposed to enable HTTPS support)
 ENABLE_LOGGING = False (Default is false. Logs every connection to the server in the terminal ouput. Set this to true if you want this.)
+ENABLE_LOGGING_TO_FILE = False (Default is false. Set this to true and ENABLE_LOGGING to true if you want to output logs to a file.)
 SERVE_STATIC = False (Default is false. If you want to serve static content such as CSS stylesheets or images, set this to True)
 SERVE_STORAGE = False (Default is false. If you want to serve items in storage such as installers, set this to True)
 SERVE_JS = False (Default is false. Some functions of the website will be disabled if this is left on False, so set it to True if you want to enable those)
