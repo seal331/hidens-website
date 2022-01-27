@@ -23,6 +23,12 @@ h3 {
   font-weight: bold;
 }
 
+h4 {
+  font-size: 19.5px;
+  font-family: Verdana;
+  font-weight: bold;
+}
+
 li {
   font-size: 16.5px;
   font-weight: bold;  
@@ -337,9 +343,13 @@ footer:before {
 }
 
 .newstime {
-  font-size: 29.5px;
+  font-size: 27.5px;
 }
 
 .newsentry {
-  font-size: 18.65px;
+  font-size: 16.45px;
+}
+
+.newsrssbutton {
+  font-size: 21.5px;
 }
