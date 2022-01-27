@@ -135,12 +135,12 @@ async def page_my_computers(req):
 #	return render(req, 'favorite.music.html', {
 #		'title': 'My favorite web music generes/artists'
 #	})
-#
-#async def page_about_me(req):
-#	return render(req, 'aboutme.html', {
-#		'title': 'About me'
-#	})
-#
+
+async def page_about_me(req):
+	return render(req, 'aboutme.html', {
+		'title': 'About me'
+	})
+
 async def handle_404(req):
 	return render(req, '404.html', { 
 		'title': 'Page not found' 
