@@ -337,5 +337,9 @@ footer:before {
 }
 
 .newstime {
-  font-size: 28.5px;
+  font-size: 29.5px;
+}
+
+.newsentry {
+  font-size: 18.65px;
 }
