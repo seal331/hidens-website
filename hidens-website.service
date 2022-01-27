@@ -6,8 +6,8 @@ Wants=network-online.target systemd-networkd-wait-online.service
 Restart=on-failure
 StartLimitInterval=3600
 StartLimitBurst=5
-User=root
-Group=root
+User=websiterunner
+Group=websiterunner
 WorkingDirectory=/var/www/website/hidens-website
 ExecStart=/usr/bin/python3 runserver.py > log2.txt
 
