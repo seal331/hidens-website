@@ -3,3 +3,5 @@
 settings_local.py
 __pycache__
 desktop.files.json
+log.txt
+log2.txt
