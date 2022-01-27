@@ -1,5 +1,7 @@
 {
-
+    "2022-01-27T17:35:01": [
+        "Sorry about the long downtime. A lot of issues came up in with the server. I was trying to create a systemd service to run the site with, but it fails and doesn't tell me why <a href=\"https://github.com/HIDEN64/hidens-website/issues/2\">(more details here)</a>, and then a website bug appeared, and then the server kernel panicked. I hope this is the end of the weird issues today."
+    ],
     "2022-01-24T21:44:04": [
         "I'm doing a lot of moving around internally, so sorry if stuff works and/or looks like crap right now.",
         "There's now a <a href=\"http://hiden64.duckdns.org:3001/status\">service status</a> page, that keeps track of when and why the site and other services I host go down.",
