@@ -4,9 +4,9 @@
 
 function randInt(size) {
     return Math.ceil(Math.random()*size);
-  }
-      function getJoke(jNum)
-      {
+}
+      function getJoke(jNum) {
+
           var mtJokes = new Array();
           mtJokes[1] = "What's the difference between a well-dressed person on a bicycle and a poorly dressed person on a tricycle?	Attire.";
           mtJokes[2] = "Wenn ist das Nunstuck git und Slotermeyer? Ja! Beiherhund das Oder die Flipperwaldt gersput!";
@@ -60,8 +60,9 @@ function randInt(size) {
           mtJokes[50] = "succ is dead. no succ.";
           mtJokes[51] = "You wouldn't right click an NFT."
           mtJokes[52] = "norton is love. norton is life."
+          mtJokes[53] = "gentoo is succ"
   
-                  
           return mtJokes[jNum];
-      }
-      document.write(getJoke(randInt(52)));
+    }
+
+document.write(getJoke(randInt(53)));
