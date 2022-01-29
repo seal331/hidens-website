@@ -1,4 +1,11 @@
 {
+    "2022-01-29T22:03:14": [
+        "Sorry about the long downtime of the service status page (irony), I had to do a reinstallation of both the OS and the Uptime Kuma instance itself.",
+        "Apple is deprecating and removing Python 2 in macOS 12.3. Update ya damn code to use Python 3.",
+        "Microsoft is soon going to cancel Xbox Game Pass subscriptions that haven't been utlizied in a long time, just to avoid draining the bank account of the buyer.",
+        "And Google accdidentally confirmed the Pixel 6a. They should, y'know, fix Android 12 before doing something like that."
+    ],
+
     "2022-01-27T17:45:06": [
         "Sorry about the long downtime. A lot of issues came up in with the server. I was trying to create a systemd service to run the site, but it fails and doesn't tell me why <a href=\"https://github.com/HIDEN64/hidens-website/issues/2\">(more details here)</a>, and then the server had a kernel panic. Hopefully this is the end of this.",
         "On the bright side, the server appears to run a lot faster, but this might just be a fluke.",
