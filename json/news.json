@@ -1,4 +1,9 @@
 {
+    "2022-01-30T16:00:23": [
+        "The server was down last night for a hardware upgrade (4GB -> 6GB of RAM), but things didn't exactly go to plan originally. After the upgrade, it only went to a black screen, no beeping, no special lights, no HDD activity, nothing. Reseating both RAM sticks fixed it.",
+        "Because of that, it was down for much longer than expected. Sorry about that."
+    ],
+
     "2022-01-29T22:03:14": [
         "Sorry about the long downtime of the service status page (irony), I had to do a reinstallation of both the OS and the Uptime Kuma instance itself.",
         "Apple is deprecating and removing Python 2 in macOS 12.3. Update ya damn code to use Python 3.",
