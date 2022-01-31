@@ -25,7 +25,7 @@ def RunServ(*, serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/links', page_links)
 	app.router.add_get('/downloads', page_downloads)
 	app.router.add_get('/favorite', page_favorite_stuff)
-	app.router.add_get('/favoritewindows', page_favorite_windows)
+	app.router.add_get('/windowsranking', page_windows_ranking)
 	app.router.add_get('/favoritelinux', page_favorite_linux)
 	app.router.add_get('/favoritemiscsoftware', page_favorite_misc_software)
 	app.router.add_get('/favoritemusic', page_favorite_music)
@@ -103,9 +103,9 @@ async def page_favorite_stuff(req):
 		'title': 'My favorite stuff'
 	})
 
-async def page_favorite_windows(req):
-	return render(req, 'favorite.oses.windows.html', {
-		'title': 'My favorite versions of Windows'
+async def page_windows_ranking(req):
+	return render(req, 'windows.ranking.html', {
+		'title': 'What I think about versions of Windows'
 	})
 
 async def page_favorite_linux(req):
