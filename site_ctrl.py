@@ -25,18 +25,15 @@ def RunServ(*, serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/links', page_links)
 	app.router.add_get('/downloads', page_downloads)
 	app.router.add_get('/favorite', page_favorite_stuff)
-	app.router.add_get('/favoritesoftware', page_favorite_software)
 	app.router.add_get('/favoritewindows', page_favorite_windows)
 	app.router.add_get('/favoritelinux', page_favorite_linux)
-	app.router.add_get('/favoritesbrowsers', page_favorite_browsers)
-	app.router.add_get('/favoritesmiscsoftware', page_favorite_misc_software)
+	app.router.add_get('/favoritemiscsoftware', page_favorite_misc_software)
 	app.router.add_get('/favoritemusic', page_favorite_music)
 	app.router.add_get('/about', page_about_me)
 	app.router.add_get('/computers', page_my_computers)
 
 	if settings.ENABLE_TESTPAGE:
 		app.router.add_get('/testing', page_testpage)
-
 
 	if serve_static:
 		app.router.add_static('/static', 'static')
@@ -106,11 +103,6 @@ async def page_favorite_stuff(req):
 		'title': 'My favorite stuff'
 	})
 
-async def page_favorite_software(req):
-	return render(req, 'favorite.software.html', {
-		'title': 'My favorite software'
-	})
-
 async def page_favorite_windows(req):
 	return render(req, 'favorite.oses.windows.html', {
 		'title': 'My favorite versions of Windows'
@@ -126,11 +118,6 @@ async def page_favorite_misc_software(req):
 		'title': 'My favorite miscellaneous software'
 	})
 	
-async def page_favorite_browsers(req):
-	return render(req, 'favorite.browsers.html', {
-		'title': 'My favorite web browsers'
-	})
-
 async def page_favorite_music(req):
 	return render(req, 'favorite.music.html', {
 		'title': 'My favorite web music generes/artists'
