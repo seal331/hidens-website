@@ -1,5 +1,4 @@
 import jinja2
-import re
 import json
 import PyRSS2Gen
 from aiohttp import web
@@ -25,7 +24,7 @@ def RunServ(*, serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/projects', page_projects)
 	app.router.add_get('/links', page_links)
 	app.router.add_get('/downloads', page_downloads)
-	app.router.add_get('/favoritestuff', page_favorite_stuff)
+	app.router.add_get('/favorite', page_favorite_stuff)
 	app.router.add_get('/favoritesoftware', page_favorite_software)
 	app.router.add_get('/favoritewindows', page_favorite_windows)
 	app.router.add_get('/favoritelinux', page_favorite_linux)
@@ -103,7 +102,7 @@ async def page_my_computers(req):
 	})
 
 async def page_favorite_stuff(req):
-	return render(req, 'favorites.html', {
+	return render(req, 'favorite.html', {
 		'title': 'My favorite stuff'
 	})
 
