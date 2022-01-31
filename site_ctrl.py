@@ -61,9 +61,7 @@ class App(web.Application):
 # TODO: Find out a more efficient way of doing this without having spaghetti code, if possible
 
 async def page_index(req):
-	return render(req, 'index.html', {
-		'title': 'Home'
-	})
+	return render(req, 'index.html')
 
 async def page_news(req):
 	with open('json/news.json', 'rb') as f:
