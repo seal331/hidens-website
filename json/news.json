@@ -1,4 +1,8 @@
 {
+    "2022-02-01T19:00:37": [
+        "This site will be rewritten with Bootstrap 5 later on this year."
+    ],
+    
     "2022-01-30T16:00:23": [
         "The server was down last night for a hardware upgrade (4GB -> 6GB of RAM), but things didn't exactly go to plan originally. After the upgrade, it only went to a black screen, no beeping, no special lights, no HDD activity, nothing. Reseating both RAM sticks fixed it.",
         "Because of that, it was down for much longer than expected. Sorry about that."
