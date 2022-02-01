@@ -31,6 +31,7 @@ def RunServ(*, serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/favoritemusic', page_favorite_music)
 	app.router.add_get('/about', page_about_me)
 	app.router.add_get('/computers', page_my_computers)
+	#app.router.add_get('/sidebar', sidebar)
 
 	if settings.ENABLE_TESTPAGE:
 		app.router.add_get('/testing', page_testpage)
@@ -55,6 +56,9 @@ class App(web.Application):
 
 
 # TODO: Find out a more efficient way of doing this without having spaghetti code, if possible
+
+#async def sidebar(req):
+#	return render(req, 'sidebar.html')
 
 async def page_index(req):
 	return render(req, 'index.html')

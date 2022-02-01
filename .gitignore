@@ -5,3 +5,4 @@ __pycache__
 desktop.files.json
 log.txt
 log2.txt
+*.map
