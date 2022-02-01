@@ -11,7 +11,7 @@ def main(*, bool = False):
 		app = RunServ(serve_static = settings.SERVE_STATIC, ssl_context = TLSContext(settings.CERT_ROOT, settings.CERT_DIR).create_ssl_context(), serve_storage = settings.SERVE_STORAGE, serve_js = settings.SERVE_JS)
 
 	if settings.ENABLE_LOGGING:
-		if settings.ENABLE_LOGGING_TO_FILE:
+		if settings.LOG_TO_FILE:
 			logging.basicConfig (
 				filename='log.txt',
             	filemode='a',

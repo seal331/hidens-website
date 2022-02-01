@@ -20,7 +20,7 @@ ENABLE_HTTPS = False (Default is False. Don't know if the reimplementation works
 
 ENABLE_LOGGING = False (Default is false. Logs every connection to the server in the terminal ouput. Set this to true if you want this.)
 
-ENABLE_LOGGING_TO_FILE = False (Default is false. Set this to true and ENABLE_LOGGING to true if you want to output logs to a file.)
+LOG_TO_FILE = False (Default is false. Set this to true and ENABLE_LOGGING to true if you want to output connection and process logs to a file.)
 
 ENABLE_TESTPAGE = False (Default is false. Set this to true if you want to view stuff that's in development, and experiements that I'm screwing around with.)
 
@@ -40,6 +40,6 @@ CERT_ROOT = 'CERT_ROOT' (Set this to your root certificate. Required for HTTPS.)
 Creating `settings_local.py` is mandatory, but adding content to the file is optional. If `settings_local.py` is blank, then the server uses the default settings.
 
 
-After that, run the site with `python runserver.py` (or if on Debian-based Linux distributions, `python3 runserver.py`".
+After that, run the site with `python runserver.py`.
 
 Please file any bugs you find in the "Issues" tab of this repository, or contact me using the provided info on the "about" page.

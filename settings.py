@@ -2,7 +2,7 @@
 PORT = 80
 ENABLE_HTTPS = False
 ENABLE_LOGGING = False
-ENABLE_LOGGING_TO_FILE = False
+LOG_TO_FILE = False
 ENABLE_TESTPAGE = False
 SERVE_STATIC = False
 SERVE_STORAGE = False
@@ -15,4 +15,4 @@ TARGET_HOST = 'hiden64.duckdns.org'
 try:
 	from settings_local import *
 except ImportError:
-	raise Exception("Please create settings_local.py")
+	raise Exception("settings_local.py not found, please create it.")

@@ -11,7 +11,7 @@ from typing import Dict, Tuple, Any, Optional
 from pathlib import Path
 
 from cryptography import x509
-from cryptography.hazmat.backends import default_backend
+from cryptography.hazmat.backends import default_backend as secure_backend
 
 import settings
 
@@ -27,11 +27,10 @@ def RunServ(*, serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/favorite', page_favorite_stuff)
 	app.router.add_get('/windowsranking', page_windows_ranking)
 	app.router.add_get('/favoritelinux', page_favorite_linux)
-	app.router.add_get('/favoritemiscsoftware', page_favorite_misc_software)
+	app.router.add_get('/favoritesoftware', page_favorite_misc_software)
 	app.router.add_get('/favoritemusic', page_favorite_music)
 	app.router.add_get('/about', page_about_me)
 	app.router.add_get('/computers', page_my_computers)
-	#app.router.add_get('/sidebar', sidebar)
 
 	if settings.ENABLE_TESTPAGE:
 		app.router.add_get('/testing', page_testpage)
@@ -55,10 +54,7 @@ class App(web.Application):
 		super().__init__(*args, **kwargs)
 
 
-# TODO: Find out a more efficient way of doing this without having spaghetti code, if possible
-
-#async def sidebar(req):
-#	return render(req, 'sidebar.html')
+# YandereDev code g o
 
 async def page_index(req):
 	return render(req, 'index.html')
@@ -169,7 +165,7 @@ async def rss_news(req):
 	return web.Response(status = 200, content_type = 'text/xml', text = rss.to_xml(encoding = 'utf-8'))
 
 
-# Haven't verfied that this works yet
+# Haven't verfied that this works yet, will test it when I stop being lazy
 
 if not settings.ENABLE_HTTPS:
 	ssl_context = None
@@ -223,7 +219,7 @@ class TLSContext:
 def exists_and_valid(p_crt: Path, p_key: Path) -> bool:
 	if not p_crt.exists(): return False
 	if not p_key.exists(): return False
-	backend = default_backend()
+	backend = secure_backend()
 	with p_crt.open('rb') as fh:
 		crt = x509.load_pem_x509_certificate(fh.read(), backend)
 	

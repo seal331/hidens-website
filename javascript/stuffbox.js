@@ -61,6 +61,7 @@ function randInt(size) {
           mtJokes[51] = "You wouldn't right click an NFT."
           mtJokes[52] = "norton is love. norton is life."
           mtJokes[53] = "gentoo is succ"
+          //mtJokes[54] = ""
   
           return mtJokes[jNum];
     }
