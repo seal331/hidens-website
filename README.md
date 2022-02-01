@@ -37,7 +37,7 @@ CERT_DIR = 'path/to/cert' (Set this to the directory of your certificate. Requir
 CERT_ROOT = 'CERT_ROOT' (Set this to your root certificate. Required for HTTPS.)
 ```
 
-Create `settings_local.py` is mandatory, but adding content to the file is optional. If `settings_local.py` is blank, then the server uses the default settings.
+Creating `settings_local.py` is mandatory, but adding content to the file is optional. If `settings_local.py` is blank, then the server uses the default settings.
 
 
 After that, run the site with `python runserver.py` (or if on Debian-based Linux distributions, `python3 runserver.py`".
