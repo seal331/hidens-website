@@ -31,6 +31,7 @@ def RunServ(*, serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/favoritemusic', page_favorite_music)
 	app.router.add_get('/about', page_about_me)
 	app.router.add_get('/computers', page_my_computers)
+	app.router.add_get('/gameservers', page_game_servers)
 
 	if settings.ENABLE_TESTPAGE:
 		app.router.add_get('/testing', page_testpage)
@@ -46,6 +47,7 @@ def RunServ(*, serve_static = False, serve_storage = False, serve_js = False):
 		loader = jinja2.FileSystemLoader('tmpl'),
 		autoescape = jinja2.select_autoescape(default = True),
 	)
+
 	return app
 	
 
@@ -60,9 +62,9 @@ async def page_index(req):
 	return render(req, 'index.html')
 
 async def page_news(req):
-	with open('json/news.json', 'rb') as f:
-		news_json = json.loads(f.read())
-		f.close()
+	with open('json/news.json', 'rb') as news:
+		news_json = json.loads(news.read())
+		news.close()
 	
 	entries = []
 	
@@ -128,6 +130,11 @@ async def page_about_me(req):
 		'title': 'About me'
 	})
 
+async def page_game_servers(req):
+	return render(req, 'game.servers.html', {
+		'title': 'My game servers'
+	})
+
 if settings.ENABLE_TESTPAGE:
 	async def page_testpage(req):
 		return render(req, 'testing.html', {
@@ -141,9 +148,9 @@ async def handle_404(req):
 	)
 
 async def rss_news(req):
-	with open('json/news.json', 'rb') as f:
-		news_json = json.loads(f.read())
-		f.close()
+	with open('json/news.json', 'rb') as news:
+		news_json = json.loads(news.read())
+		news.close()
 	
 	rss = PyRSS2Gen.RSS2(
 		title = "HIDEN's RSS Feed",
