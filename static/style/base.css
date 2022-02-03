@@ -57,7 +57,7 @@ a {
 }
 
 img {
-  filter: drop-shadow(5px 5px 5px #666666);
+  filter: drop-shadow(4.5px 4.5px 4.5px #666666);
 }
 
 a:link {
@@ -263,6 +263,58 @@ footer:before {
   margin-right: auto;
 }
 
+.gamesrvtable {
+  width: 38.7rem;
+  height: 3rem;
+  box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
+  border-radius: 4px;
+  position: relative;
+  z-index: 1;
+  background: inherit;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gamesrvtable:before {
+  background: inherit; 
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0; 
+  bottom: 0;
+  box-shadow: inset 0 0 0 2000px rgba(255,255,255,0.3);
+  filter: blur(10px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mcsrvtable {
+  width: 38.7rem;
+  height: 15rem;
+  box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
+  border-radius: 4px;
+  position: relative;
+  z-index: 1;
+  background: inherit;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mcsrvtable:before {
+  background: inherit; 
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0; 
+  bottom: 0;
+  box-shadow: inset 0 0 0 2000px rgba(255,255,255,0.3);
+  filter: blur(10px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .newsbox {
   width: 69rem;
   box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); 
@@ -357,4 +409,8 @@ footer:before {
 .windowsicon {
   height: 16px;
   width: 16px;
+}
+
+.mcsrvrule {
+  font-size: 18.5px;
 }

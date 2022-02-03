@@ -32,6 +32,8 @@ def RunServ(*, serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/about', page_about_me)
 	app.router.add_get('/computers', page_my_computers)
 	app.router.add_get('/gameservers', page_game_servers)
+	app.router.add_get('/mcsrvinfo', page_mc_info)
+	app.router.add_get('/mcsrvrules', page_mc_rules)
 
 	if settings.ENABLE_TESTPAGE:
 		app.router.add_get('/testing', page_testpage)
@@ -126,13 +128,23 @@ async def page_favorite_music(req):
 	})
 
 async def page_about_me(req):
-	return render(req, 'aboutme.html', {
+	return render(req, 'about.me.html', {
 		'title': 'About me'
 	})
 
 async def page_game_servers(req):
 	return render(req, 'game.servers.html', {
 		'title': 'My game servers'
+	})
+
+async def page_mc_info(req):
+	return render(req, 'minecraft.info.html', {
+		'title': 'Minecraft Server'
+	})
+
+async def page_mc_rules(req):
+	return render(req, 'minecraft.rules.html', {
+		'title': 'Minecraft Server rules',
 	})
 
 if settings.ENABLE_TESTPAGE:
