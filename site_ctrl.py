@@ -18,6 +18,8 @@ import settings
 def RunServ(*, serve_static = False, serve_storage = False, serve_js = False):
 	app = App()
 
+	# YandereDev code g o
+
 	app.router.add_get('/', page_index)
 	app.router.add_get('/news', page_news)
 	app.router.add_get('/news/rss', rss_news)
@@ -25,15 +27,18 @@ def RunServ(*, serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/links', page_links)
 	app.router.add_get('/downloads', page_downloads)
 	app.router.add_get('/favorite', page_favorite_stuff)
-	app.router.add_get('/windowsranking', page_windows_ranking)
-	app.router.add_get('/favoritelinux', page_favorite_linux)
-	app.router.add_get('/favoritesoftware', page_favorite_misc_software)
-	app.router.add_get('/favoritemusic', page_favorite_music)
+	app.router.add_get('/favorite/windowsranking', page_windows_ranking)
+	app.router.add_get('/favorite/linux', page_favorite_linux)
+	app.router.add_get('/favorite/software', page_favorite_misc_software)
+	app.router.add_get('/favorite/music', page_favorite_music)
 	app.router.add_get('/about', page_about_me)
 	app.router.add_get('/computers', page_my_computers)
-	app.router.add_get('/gameservers', page_game_servers)
-	app.router.add_get('/mcsrvinfo', page_mc_info)
-	app.router.add_get('/mcsrvrules', page_mc_rules)
+	app.router.add_get('/gamesrv', page_game_srv)
+	app.router.add_get('/gamesrv/mc', page_mc_srv)
+	app.router.add_get('/gamesrv/mc/rules', page_mc_srv_rules)
+	app.router.add_get('/gamesrv/tf2', page_tf2_srv)
+	app.router.add_get('/gamesrv/tf2/rules', page_tf2_srv_rules)
+	app.router.add_get('/gamesrv/tf2/map', page_tf2_map_rotate)
 
 	if settings.ENABLE_TESTPAGE:
 		app.router.add_get('/testing', page_testpage)
@@ -108,7 +113,7 @@ async def page_favorite_stuff(req):
 	})
 
 async def page_windows_ranking(req):
-	return render(req, 'windows.ranking.html', {
+	return render(req, 'favorite.windows.ranking.html', {
 		'title': 'What I think about versions of Windows'
 	})
 
@@ -132,20 +137,35 @@ async def page_about_me(req):
 		'title': 'About me'
 	})
 
-async def page_game_servers(req):
+async def page_game_srv(req):
 	return render(req, 'game.servers.html', {
 		'title': 'My game servers'
 	})
 
-async def page_mc_info(req):
-	return render(req, 'minecraft.info.html', {
-		'title': 'Minecraft Server'
+async def page_mc_srv(req):
+	return render(req, 'minecraft.srv.html', {
+		'title': 'Minecraft server'
 	})
 
-async def page_mc_rules(req):
+async def page_mc_srv_rules(req):
 	return render(req, 'minecraft.rules.html', {
-		'title': 'Minecraft Server rules',
+		'title': 'Minecraft rules',
 	})
+
+async def page_tf2_srv(req):
+	return render(req, 'tf2.srv.html', {
+		'title': 'Team Fortress 2 server'
+	})
+
+async def page_tf2_srv_rules(req):
+	return render(req, 'tf2.rules.html', {
+		'title': 'TF2 rules'
+	})
+
+async def page_tf2_map_rotate(req):
+	return render(req, 'tf2.map.rotate.html', {
+		'title': 'TF2 map rotation'
+	})	
 
 if settings.ENABLE_TESTPAGE:
 	async def page_testpage(req):
@@ -167,7 +187,7 @@ async def rss_news(req):
 	rss = PyRSS2Gen.RSS2(
 		title = "HIDEN's RSS Feed",
 		link = "https://hiden64.duckdns.org/news",
-		description = "The latest news on HIDEN's website.",
+		description = "News about my website, projects, and whatever's on my mind.",
 		docs = "",
 		
 		lastBuildDate = datetime.utcnow(),
