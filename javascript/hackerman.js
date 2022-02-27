@@ -5,7 +5,7 @@
 function randInt(size) {
     return Math.ceil(Math.random()*size);
   }
-      function getJoke(jNum)
+      function getHackerman(jNum)
       {
           var mtTagline = new Array();
           mtTagline[1] = "I'm breaking into the shell access terminals with a server transdimensional phasing device";
@@ -18,7 +18,9 @@ function randInt(size) {
           mtTagline[8] = "I'm breaking into the network routing device with non-rotatable disk microprocessors";
           mtTagline[9] = "I've gained effective root access to your network routing device with x86 IBM tremmy pipes";
           mtTagline[10] = "I've hacked the with multidimension network security access vulnerabilities with a network routing device";
+          mtTagline[11]= "I'm gaining root access to multiphase process memorizer with network routing device x86 IBM level architecture microprocessor architecture side fumbling CPU";
+          mtTagline[12]= "I'm gaining root access to oc6 level optical line with oc6 level optical line Linux system minecraft server processor";
                   
           return mtTagline[jNum];
       }
-      document.write(getJoke(randInt(10)));
+      document.write(getHackerman(randInt(12)));

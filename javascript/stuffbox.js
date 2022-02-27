@@ -59,11 +59,12 @@ function randInt(size) {
           mtJokes[49] = "You in the butter zone now, baby";
           mtJokes[50] = "succ is dead. no succ.";
           mtJokes[51] = "You wouldn't right click an NFT."
-          mtJokes[52] = "norton is love. norton is life."
+          mtJokes[52] = "norton"
           mtJokes[53] = "gentoo is succ"
           mtJokes[54] = "H"
+          mtJokes[55] = "pointless text g o"
   
           return mtJokes[jNum];
     }
 
-document.write(getJoke(randInt(54)));
+document.write(getJoke(randInt(55)));

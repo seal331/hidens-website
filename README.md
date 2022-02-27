@@ -5,7 +5,7 @@ This the source code to my personal website, which you can find at http://hiden6
 ## Requirements:
 - Python 3 (tested to work with 3.6 - 3.10, may not work with other versions)
 - pip (Installed by default on Windows, install it with your distrubition's package manager on Linux, unsure about macOS)
-- A *nix environment is preferred as the live instance uses Ubuntu, but it has been tested to work with Windows too
+- A *nix environment is preferred as the live instance uses Fedora, but it has been tested to work with Windows too
 
 
 ## Running:

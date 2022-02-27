@@ -26,6 +26,8 @@ def RunServ(*, serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/projects', page_projects)
 	app.router.add_get('/links', page_links)
 	app.router.add_get('/downloads', page_downloads)
+	app.router.add_get('/downloads/programs', page_downloads_programs)
+	app.router.add_get('/downloads/cursors', page_downloads_cursors)
 	app.router.add_get('/favorite', page_favorite_stuff)
 	app.router.add_get('/favorite/windowsranking', page_windows_ranking)
 	app.router.add_get('/favorite/linux', page_favorite_linux)
@@ -42,7 +44,7 @@ def RunServ(*, serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/gamesrv/tf2/map', page_tf2_map_rotate)
 	
 
-	if settings.ENABLE_TESTPAGE:
+	if settings.SERVE_TESTPAGE:
 		app.router.add_get('/testing', page_testpage)
 
 	if serve_static:
@@ -102,6 +104,16 @@ async def page_links(req):
 async def page_downloads(req):
 	return render(req, 'downloads.html', {
 		'title': 'Downloads'
+	})
+
+async def page_downloads_programs(req):
+	return render(req, 'downloads.programs.html', {
+		'title': 'Downloads | Programs'
+	})
+
+async def page_downloads_cursors(req):
+	return render(req, 'downloads.cursors.html', {
+		'title': 'Downloads | Cursors'
 	})
 
 async def page_my_computers(req):
@@ -174,7 +186,7 @@ async def page_tf2_map_rotate(req):
 		'title': 'TF2 map rotation'
 	})	
 
-if settings.ENABLE_TESTPAGE:
+if settings.SERVE_TESTPAGE:
 	async def page_testpage(req):
 		return render(req, 'testing.html', {
 			'title': 'Testing'
@@ -211,7 +223,7 @@ async def rss_news(req):
 	return web.Response(status = 200, content_type = 'text/xml', text = rss.to_xml(encoding = 'utf-8'))
 
 
-# Haven't verfied that this works yet, will test it when I stop being lazy
+# Probably doesn't work
 
 if not settings.ENABLE_HTTPS:
 	ssl_context = None
