@@ -21,8 +21,6 @@ def RunServ(*, serve_static = False, serve_storage = False, serve_js = False):
 	# YandereDev code g o
 
 	app.router.add_get('/', page_index)
-	app.router.add_get('/news', page_news)
-	app.router.add_get('/news/rss', rss_news)
 	app.router.add_get('/projects', page_projects)
 	app.router.add_get('/links', page_links)
 	app.router.add_get('/downloads', page_downloads)
@@ -33,6 +31,7 @@ def RunServ(*, serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/gamesrv', page_game_srv)
 	app.router.add_get('/gamesrv/mc', page_mc_srv)
 	app.router.add_get('/gamesrv/mc/rules', page_mc_srv_rules)
+	app.router.add_get('/gamesrv/mc/plugins', page_mc_srv_plugins)
 	app.router.add_get('/gamesrv/tf2', page_tf2_srv)
 	app.router.add_get('/gamesrv/tf2/rules', page_tf2_srv_rules)
 	app.router.add_get('/gamesrv/tf2/map', page_tf2_map_rotate)
@@ -65,25 +64,6 @@ class App(web.Application):
 
 async def page_index(req):
 	return render(req, 'index.html')
-
-async def page_news(req):
-	with open('json/news.json', 'rb') as news:
-		news_json = json.loads(news.read())
-		news.close()
-	
-	entries = []
-	
-	for date, items in news_json.items():
-		tmpl = req.app.jinja_env.get_template('news.entry.item.html')
-		items_markup = [tmpl.render(item = Markup(item)) for item in items]
-		
-		tmpl = req.app.jinja_env.get_template('news.entry.html')
-		entries.append(tmpl.render(date = dateutil.parser.isoparse(date).strftime('%Y-%m-%d'), items = Markup('\n'.join(items_markup))))
-	
-	return render(req, 'news.html', {
-		'title': 'News',
-		'entries': Markup('\n'.join(entries))
-	})
 
 async def page_projects(req):
 	return render(req, 'projects.html', {
@@ -135,6 +115,11 @@ async def page_mc_srv_rules(req):
 		'title': 'Minecraft rules',
 	})
 
+async def page_mc_srv_plugins(req):
+	return render(req, 'minecraft.plugins.html', {
+		'title': 'Minecraft plugins',
+	})
+
 async def page_tf2_srv(req):
 	return render(req, 'tf2.srv.html', {
 		'title': 'Team Fortress 2 server'
@@ -161,31 +146,6 @@ async def handle_404(req):
 		'title': 'Page not found' 
 		}, status = 404
 	)
-
-async def rss_news(req):
-	with open('json/news.json', 'rb') as news:
-		news_json = json.loads(news.read())
-		news.close()
-	
-	rss = PyRSS2Gen.RSS2(
-		title = "HIDEN's RSS Feed",
-		link = "https://hiden64.duckdns.org/news",
-		description = "News about my website, projects, and whatever's on my mind.",
-		docs = "",
-		
-		lastBuildDate = datetime.utcnow(),
-		
-		items = [
-			PyRSS2Gen.RSSItem(
-				title = dateutil.parser.isoparse(date).strftime('%Y-%m-%d'),
-				description = ''.join(['{}\n'.format(entry) for entry in entries]),
-				pubDate = dateutil.parser.isoparse(date),
-			) for date, entries in news_json.items()
-		]
-	)
-	
-	return web.Response(status = 200, content_type = 'text/xml', text = rss.to_xml(encoding = 'utf-8'))
-
 
 # Probably doesn't work
 
