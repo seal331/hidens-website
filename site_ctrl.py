@@ -28,12 +28,6 @@ def RunServ(*, serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/downloads', page_downloads)
 	app.router.add_get('/downloads/programs', page_downloads_programs)
 	app.router.add_get('/downloads/cursors', page_downloads_cursors)
-	app.router.add_get('/favorite', page_favorite_stuff)
-	app.router.add_get('/favorite/windowsranking', page_windows_ranking)
-	app.router.add_get('/favorite/linux', page_favorite_linux)
-	app.router.add_get('/favorite/software', page_favorite_software)
-	app.router.add_get('/favorite/music', page_favorite_music)
-	app.router.add_get('/favorite/games', page_favorite_games)
 	app.router.add_get('/about', page_about_me)
 	app.router.add_get('/computers', page_my_computers)
 	app.router.add_get('/gamesrv', page_game_srv)
@@ -119,36 +113,6 @@ async def page_downloads_cursors(req):
 async def page_my_computers(req):
 	return render(req, 'computers.html', {
 		'title': 'My computers'
-	})
-
-async def page_favorite_stuff(req):
-	return render(req, 'favorite.html', {
-		'title': 'My favorite stuff'
-	})
-
-async def page_windows_ranking(req):
-	return render(req, 'windows.ranking.html', {
-		'title': 'What I think about versions of Windows'
-	})
-
-async def page_favorite_linux(req):
-	return render(req, 'favorite.linux.html', {
-		'title': 'My favorite Linux distributions'
-	})
-
-async def page_favorite_software(req):
-	return render(req, 'favorite.software.html', {
-		'title': 'My favorite miscellaneous software'
-	})
-	
-async def page_favorite_music(req):
-	return render(req, 'favorite.music.html', {
-		'title': 'My favorite web music generes/artists'
-	})
-
-async def page_favorite_games(req):
-	return render(req, 'favorite.games.html', {
-		'title': 'My favorite games'
 	})
 
 async def page_about_me(req):
