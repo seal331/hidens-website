@@ -1,5 +1,3 @@
 jinja2
 aiohttp
-PyRSS2Gen
-python-dateutil
-cryptography
+

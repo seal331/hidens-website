@@ -16,8 +16,6 @@ Then, create `settings_local.py`, and add the following options:
  ```
 PORT = 80 (Default is 80, change it to something else if you want to)
 
-ENABLE_HTTPS = False (Default is False. Don't know if the reimplementation works yet, but this is supposed to enable HTTPS support)
-
 ENABLE_LOGGING = False (Default is false. Logs every connection to the server in the terminal ouput. Set this to true if you want this.)
 
 LOG_TO_FILE = False (Default is false. Set this to true and ENABLE_LOGGING to true if you want to output connection and process logs to a file.)
@@ -30,11 +28,6 @@ SERVE_STORAGE = False (Default is false. If you want to serve items in storage s
 
 SERVE_JS = False (Default is false. Some functions of the website will be disabled if this is left on False, so set it to True if you want to enable those)
 
-TARGET_HOST = hiden64.duckdns.org (Default is hiden64.duckdns.org. It's meant for SSL/TLS verification, although I have not verified if this works properly yet.)
-
-CERT_DIR = 'path/to/cert' (Set this to the directory of your certificate. Required for HTTPS.)
-
-CERT_ROOT = 'CERT_ROOT' (Set this to your root certificate. Required for HTTPS.)
 ```
 
 Creating `settings_local.py` is mandatory, but adding content to the file is optional. If `settings_local.py` is blank, then the server uses the default settings.
