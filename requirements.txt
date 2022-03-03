@@ -1,3 +1,4 @@
 jinja2
 aiohttp
-
+python-dateutil
+PyRSS2Gen
