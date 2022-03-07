@@ -29,14 +29,4 @@ year = now.getYear();
 
 if (year < 1000) year += 1900
 
-document.write(
-  "<br>" +
-    day[now.getDay()] +
-    ", " +
-    month[now.getMonth()] +
-    " " +
-    now.getDate() +
-    ", " +
-    year
-)
-
+document.write("<br>" + day[now.getDay()] + ", " + month[now.getMonth()] + " " + now.getDate() + ", " + year);
