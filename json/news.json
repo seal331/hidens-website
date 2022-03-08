@@ -11,24 +11,24 @@
     ],
 
     "2022-02-18T10:07:27": [
-        "Sorry about the down time. I switched the server's OS to Fedora from Ubuntu."
+        "Sorry about the downtime. I switched the server's OS to Fedora from Ubuntu."
     ],
     
     "2022-02-10T06:28:29": [
         "I'm opening a Team Fortress 2 server soon.",
-        "The service status page has been removed for now.",
-        "There's a bunch of pages detailing my favorite crap in development. It's still in the early stages, though.",
+        "(NO LONGER THE CASE) <strike>The service status page has been removed for now.</strike>",
+        "(NO LONGER THE CASE, IT HAS BEEN SCRAPPED) <strike>There's a bunch of pages detailing my favorite crap in development. It's still in the early stages, though.</strike>",
         "You can view early, in development stuff, as well as experiements at <a href=\"/testing\">the testing page</a>.",
         "The pre-release code scattered all over the pages is being reloacated to the afformentioned page."
     ],
 
     "2022-02-07T10:11:39": [
-        "Quality of life changes and other improvments were added to many of the pages."
+        "Quality of life changes and many other improvments were added to many of the pages."
     ],
 
     "2022-02-03T22:02:36": [
         "There's a <a href=\"gameservers\">new page</a>.",
-        "Meta (AKA Facebook) has seen a their first full-blown user loss on Facebook.",
+        "Meta (AKA Facebook) has seen their first full-blown user loss on Facebook.",
         "Good."
     ],
 
@@ -63,7 +63,7 @@
 
     "2022-01-24T21:44:04": [
         "I'm doing a lot of moving around internally, so sorry if stuff works and/or looks like crap right now.",
-        "There's now a <a href=\"http://hiden64.duckdns.org:3001/status\">service status</a> page (no longer available), that keeps track of when and why the site and other services I host go down.",
+        "There's now a <a href=\"http://hiden64.duckdns.org:3001/status\">service status</a> page, that keeps track of when and why the site and other services I host go down.",
         "There's also a ton of new pages in development, plus a planned website rewrite. Which ever comes first is TBD as of now."        
     ],
 
@@ -82,7 +82,7 @@
     ],
 
     "2022-01-21T14:48:00":[
-        "Programs on <a href=\"downloads\">downloads</a> now have icons, so they're more recognizeable. I added a new download for Netscape there too.",
+        "Programs on <a href=\"/downloads/software\">the software downloads page</a> now have icons, so they're more recognizeable. I added a new download for Netscape there too.",
         "Twitter launched an NFT integration feature...............",
         "Is there any good alternatives to Twitter?"
     ],
@@ -91,7 +91,7 @@
         "Added a few more visual updates.",
         "I'm now utlizing a more efficient way of updating the news and footer without having to manually change the size of those elements.",
         "There's a <a href=\"downloads\">new page</a>. This is to help reduce some clutter.",
-        "The guestbook link was moved to the links page.",
+        "(NO LONGER THE CASE) <strike>The guestbook link was moved to the links page.</strike>",
         "The news page has been tweaked visually to help with performance.",
         "The blur effect was reduced because it started causing eye strain for me.",
         "Some parts of the website were tweaked to comply with the W3C standards. I'm not Microsoft."
@@ -149,10 +149,6 @@
         "This was unveiled while the website was down, but we're introducing a new project. Horizon: Multiple chat protocols implemented as frontends running on a single generic backend, and allowing them to communicate with one another. Based on <a href=\"https://www.escargot.chat\">Escargot</a> and keeping the original goal going."
     ],
     
-    "2021-11-05T06:26:00": [
-        "This website and Pepsi Supremacy have merged. It's more efficent and causes less confusion that way."
-    ],
-
     "2021-10-31T04:31:00": [
         "Happy Halloween! Nothing huge today, just moving around and removing some things; fixing issues with the fonts, removing the RetroSite ad, removing the license (since it's pointless anyway), changing up some text, removing mentions of HM/XPCat besides one footer fact, moving unused images to old stuff, etc. Minor bug fixes too."
     ],
