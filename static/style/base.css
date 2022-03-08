@@ -112,7 +112,6 @@ footer:before {
 
 .hometable {
   width: 40.7rem;
-  height: 32rem;
   box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
   border-radius: 4px;
   position: relative;
@@ -138,7 +137,6 @@ footer:before {
 
 .projectstable {
   width: 658px; 
-  height: 326px;
   box-shadow: 0 0 3rem 0 rgba(0, 0, 0, .5); 
   border-radius: 4px;
   position: relative;
@@ -189,7 +187,6 @@ footer:before {
 
 .softwaretable {
   width: 693px; 
-  height: 505px;
   box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
   border-radius: 4px;
   position: relative;
@@ -213,8 +210,31 @@ footer:before {
   margin-right: auto;
 }
 
+.cursortable {
+  box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
+  border-radius: 4px;
+  position: relative;
+  z-index: 1;
+  background: inherit;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cursortable:before {
+  background: inherit; 
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0; 
+  bottom: 0;
+  box-shadow: inset 0 0 0 2000px rgba(255,255,255,0.3);
+  filter: blur(10px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .computerstable {
-  width: 1262px; 
   box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
   border: 0;
   position: relative;
@@ -239,8 +259,6 @@ footer:before {
 }
 
 .gamesrvtable {
-  width: 38.7rem;
-  height: 3rem;
   box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
   border-radius: 4px;
   position: relative;
@@ -266,7 +284,6 @@ footer:before {
 
 .mcsrvtable {
   width: 38.7rem;
-  height: 15rem;
   box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
   border-radius: 4px;
   position: relative;
@@ -316,8 +333,8 @@ footer:before {
 }
 
 .siteimgcursors {
-  width: 356.5px;
-  height: 74px;
+  width: 436.5px;
+  height: 82px;
 }
 
 .link404 {
@@ -330,6 +347,11 @@ footer:before {
 .softwareicon {
   width: 64px;
   height: 64px;
+}
+
+.cursoricon {
+  width: 32px;
+  height: 32px;
 }
 
 .comptableheader {
