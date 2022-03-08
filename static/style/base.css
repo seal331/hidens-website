@@ -290,31 +290,6 @@ footer:before {
   margin-right: auto;
 }
 
-.newsbox {
-  width: 69rem;
-  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, .5); 
-  border-radius: 5.5px;
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  margin: auto;
-  background: inherit;
-  overflow: hidden;
-}
-
-.newsbox:before {
-  position: absolute;
-  background: inherit;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
-  filter: blur(10px);
-  margin: -20px;
-}
-
 .siteimghome {
   width: 539px; 
   height: 103px;
@@ -390,7 +365,6 @@ footer:before {
 .newsrssbutton {
   font-size: 14.5px;
 }
-
 
 .gamesrvrule {
   font-size: 18.5px;
