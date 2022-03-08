@@ -187,7 +187,7 @@ footer:before {
   margin-right: auto;
 }
 
-.downloadstable {
+.softwaretable {
   width: 693px; 
   height: 505px;
   box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
@@ -200,7 +200,7 @@ footer:before {
   margin-right: auto;
 }
 
-.downloadstable:before {
+.softwaretable:before {
   background: inherit; 
   position: absolute;
   left: 0;
@@ -326,13 +326,23 @@ footer:before {
 }
 
 .siteimg404 {
-  width: 312px;
-  height: 113px;
+  width: 392px;
+  height: 108px;
 }
 
 .siteimgdownloads {
-  width: 217px;
-  height: 97px;
+  width: 367px;
+  height: 87px;
+}
+
+.siteimgsoftware {
+  width: 454.5px;
+  height: 56.5px;
+}
+
+.siteimgcursors {
+  width: 356.5px;
+  height: 74px;
 }
 
 .link404 {
@@ -342,7 +352,7 @@ footer:before {
   text-decoration: none;  
 }
 
-.downloadicon {
+.softwareicon {
   width: 64px;
   height: 64px;
 }
