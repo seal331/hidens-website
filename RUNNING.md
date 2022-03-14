@@ -1,4 +1,5 @@
 # Running the server
+This document describes instructions on how to start the server, and what it requires.
 
 ## Requirements:
 - Python 3 (tested to work with 3.6 - 3.10, may not work with other versions)
