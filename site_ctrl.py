@@ -25,15 +25,16 @@ def RunServ(*, serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/gamesrv/mc', page_mc_srv)
 	app.router.add_get('/gamesrv/mc/rules', page_mc_srv_rules)
 	app.router.add_get('/gamesrv/mc/plugins', page_mc_srv_plugins)
-	#app.router.add_get('/gamesrv/tf2', page_tf2_srv)
-	#app.router.add_get('/gamesrv/tf2/rules', page_tf2_srv_rules)
-	#app.router.add_get('/gamesrv/tf2/map', page_tf2_map_rotate)
+	app.router.add_get('/gamesrv/tf2', page_tf2_srv)
+	app.router.add_get('/gamesrv/tf2/rules', page_tf2_srv_rules)
+	app.router.add_get('/gamesrv/tf2/map', page_tf2_map_rotate)
 	app.router.add_get('/news', page_news)
 	app.router.add_get('/news/rss', rss_news)
 	
 
-	if settings.SERVE_TESTPAGE:
-		app.router.add_get('/testing', page_testpage)
+	if settings.TESTING:
+		app.router.add_get('/testing', page_testing)
+		app.router.add_get('/testing/too', page_testing_too)
 
 	if serve_static:
 		app.router.add_static('/static', 'static')
@@ -117,20 +118,20 @@ async def page_mc_srv_plugins(req):
 		'title': 'Minecraft plugins',
 	})
 
-#async def page_tf2_srv(req):
-#	return render(req, 'tf2.srv.html', {
-#		'title': 'Team Fortress 2 server'
-#	})
-#
-#async def page_tf2_srv_rules(req):
-#	return render(req, 'tf2.rules.html', {
-#		'title': 'TF2 rules'
-#	})
-#
-#async def page_tf2_map_rotate(req):
-#	return render(req, 'tf2.map.rotate.html', {
-#		'title': 'TF2 map rotation'
-#	})	
+async def page_tf2_srv(req):
+	return render(req, 'tf2.srv.html', {
+		'title': 'Team Fortress 2 server'
+	})
+
+async def page_tf2_srv_rules(req):
+	return render(req, 'tf2.rules.html', {
+		'title': 'TF2 rules'
+	})
+
+async def page_tf2_map_rotate(req):
+	return render(req, 'tf2.map.rotate.html', {
+		'title': 'TF2 map rotation'
+	})	
 
 async def page_news(req):
 	with open('json/news.json', 'rb') as news:
@@ -175,11 +176,16 @@ async def rss_news(req):
 	
 	return web.Response(status = 200, content_type = 'text/xml', text = rss.to_xml(encoding = 'utf-8'))
 
-if settings.SERVE_TESTPAGE:
-	async def page_testpage(req):
+if settings.TESTING:
+	async def page_testing(req):
 		return render(req, 'testing.html', {
-			'title': 'Testing'
+			'title': 'Testing | Page 1'
  		})
+
+	async def page_testing_too(req): 
+		return render(req, 'testing.too.html', {
+			'title': 'Testing | Page 2'
+		})
 
 async def handle_404(req):
 	return render(req, '404.html', { 

@@ -19,7 +19,7 @@ ENABLE_LOGGING = False (Default is false. Logs every connection to the server in
 
 LOG_TO_FILE = False (Default is false. Set this to true and ENABLE_LOGGING to true if you want to output connection and process logs to a file.)
 
-SERVE_TESTPAGE = False (Default is false. Set this to true if you want to view stuff that's in development, and experiements that I'm screwing around with.)
+TESTING = False (Default is false. Set this to true if you want to view stuff that's in development, and experiements that I'm screwing around with.)
 
 SERVE_STATIC = False (Default is false. If you want to serve static content such as CSS stylesheets or images, set this to True)
 
