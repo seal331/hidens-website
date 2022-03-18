@@ -111,7 +111,6 @@ footer:before {
 }
 
 .hometable {
-  width: 40.7rem;
   box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
   border-radius: 4px;
   position: relative;
@@ -186,7 +185,7 @@ footer:before {
 }
 
 .softwaretable {
-  width: 693px; 
+  width: 723px; 
   box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
   border-radius: 4px;
   position: relative;
@@ -235,8 +234,6 @@ footer:before {
 }
 
 .computerstable {
-  width: 1361px;
-  height: 500px;
   box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
   border: 0;
   position: relative;
@@ -285,7 +282,8 @@ footer:before {
 }
 
 .mcsrvtable {
-  width: 38.7rem;
+  width: 660px;
+  height: 420px;
   box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
   border-radius: 4px;
   position: relative;
@@ -310,8 +308,7 @@ footer:before {
 }
 
 .testtable {
-  width: 42rem;
-  height: 29rem;
+  width: 48rem;
   box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
   border-radius: 4px;
   position: relative;
