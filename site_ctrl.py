@@ -61,7 +61,14 @@ class App(web.Application):
 # YanDev code g o
 
 async def page_index(req):
-	return render(req, 'index.html')
+	old_domain = False
+	referer = req.headers.get('Referer')
+	if referer:
+		old_domain = (referer.startswith('http://hiden64.duckdns,org'))
+
+	return render(req, 'index.html', {
+		'old_domain': old_domain,
+	})
 
 async def page_projects(req):
 	return render(req, 'projects.html', {
