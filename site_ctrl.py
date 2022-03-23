@@ -11,7 +11,7 @@ import settings
 def RunServ(*, serve_static = False, serve_storage = False, serve_js = False):
 	app = App()
 
-	# YandereDev code g o
+	# YanDev code g o
 
 	app.router.add_get('/', page_index)
 	app.router.add_get('/projects', page_projects)
@@ -58,7 +58,7 @@ class App(web.Application):
 		super().__init__(*args, **kwargs)
 
 
-# YandereDev code g o
+# YanDev code g o
 
 async def page_index(req):
 	return render(req, 'index.html')
