@@ -431,62 +431,12 @@ footer:before {
 }
 
 .backbutton {
-  display: inline-block;
-  border-radius: 4px;
-  background-color: #2E2EFF;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 19px;
-  padding: 10px;
-  width: 188px;
-  transition: all 0.75s;
-  cursor: pointer;
-  margin: 5px;
-}
-
-.backbutton span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.75s;
-}
-
-.backbutton span:after {
-  content: '\00ab';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.75s;
-}
-
-.backbutton:hover span {
-  padding-right: 25px;
-}
-
-.backbutton:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-.backbutton2 {
   cursor: pointer;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
 }
 
-.backbutton2:hover {
-  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-.backbutton3 {
-  cursor: pointer;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-}
-
-.backbutton3:hover {
+.backbutton {
   color: black;
   padding: 15px 32px;
   text-align: center;
