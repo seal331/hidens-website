@@ -159,7 +159,7 @@ async def rss_news(req):
 	
 	rss = PyRSS2Gen.RSS2(
 		title = "HIDEN's RSS Feed",
-		link = "https://hiden64.duckdns.org/news",
+		link = "https://hiden64.ddns.net/news",
 		description = "News about my website, projects, and whatever's on my mind.",
 		docs = "",
 		
