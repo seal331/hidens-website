@@ -58,13 +58,15 @@ function randInt(size) {
         mtJokes[48] = "you wouldn't piracy";
         mtJokes[49] = "You in the butter zone now, baby";
         mtJokes[50] = "succ is dead. no succ.";
-        mtJokes[51] = "You wouldn't right click an NFT."
-        mtJokes[52] = "norton"
-        mtJokes[53] = "gentoo is succ"
-        mtJokes[54] = "H"
-        mtJokes[55] = "pointless text g o"
-  
+        mtJokes[51] = "You wouldn't right click an NFT.";
+        mtJokes[52] = "norton";
+        mtJokes[53] = "gentoo is succ";
+        mtJokes[54] = "H";
+        mtJokes[55] = "pointless text g o";
+        mtJokes[56] = "Thangs";
+        mtJokes[57] = "The best way to combat overheating is by drilling holes directly into your laptop. That'll give it more air to breathe instead of it suffocating and dying.";
+        
         return mtJokes[jNum];
     }
 
-document.write(getJoke(randInt(55)));
+document.write(getJoke(randInt(57)));

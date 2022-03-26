@@ -27,7 +27,6 @@ def RunServ(*, serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/gamesrv/mc/plugins', page_mc_srv_plugins)
 	app.router.add_get('/gamesrv/tf2', page_tf2_srv)
 	app.router.add_get('/gamesrv/tf2/rules', page_tf2_srv_rules)
-	app.router.add_get('/gamesrv/tf2/map', page_tf2_map_rotate)
 	app.router.add_get('/news', page_news)
 	app.router.add_get('/news/rss', rss_news)
 	
@@ -127,11 +126,6 @@ async def page_tf2_srv_rules(req):
 	return render(req, 'tf2.rules.html', {
 		'title': 'TF2 rules'
 	})
-
-async def page_tf2_map_rotate(req):
-	return render(req, 'tf2.map.rotate.html', {
-		'title': 'TF2 map rotation'
-	})	
 
 async def page_news(req):
 	with open('json/news.json', 'rb') as news:
