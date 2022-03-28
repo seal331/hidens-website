@@ -1,4 +1,9 @@
 {
+    "2022-03-28T16:02:54": [
+        "I have a new project available. <a href=\"/projects\">Check it out.</a>",
+        "On top of that, the site is getting many adjustments to it's appearance and functioanlity. Check those out."
+    ],
+
     "2022-03-26T02:30:35": [
         "An update was just released for the site. A new download was added, some text across the pages was changed, and a few bugs were fixed (the computers link appearing weirdly on Safari and GNOME Web, links pointing to the old domain, old and out of date info, etc)."
     ],
