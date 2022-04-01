@@ -60,7 +60,10 @@ class App(web.Application):
 # YanDev code g o
 
 async def page_index(req):
-	return render(req, 'index.html')
+	if settings.APRILFOOLS_MODE:
+		return render(req, 'index.aprilfools.html')
+	else:
+		return render(req, 'index.html')
 
 async def page_projects(req):
 	return render(req, 'projects.html', {
