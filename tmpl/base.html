@@ -3,13 +3,15 @@
 <html lang=en>
 
 <head>
+    {%- block meta -%}
     <meta http-equiv=Content-Type content=text/html; charset=utf-8>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {%- block meta -%}{%- endblock -%}
+    {%- endblock -%}
 
-    {%- block head_end -%}{%- endblock -%}
-    <link rel=stylesheet href=/././static/style/base.css/>
+    {%- block head_end -%}
+    <link rel=stylesheet href=/././static/style/style.css/>
     <link rel=icon href=/././static/favicon.ico/>
+    {%- endblock -%}
 
     <title>
     {% if title %}{{ title }} | {% endif %}HIDEN's personal website
