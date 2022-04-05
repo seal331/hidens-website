@@ -19,15 +19,25 @@
 
 </head>
 
-<body>
+<div class=sidenav>
+    <p class=sidebartxt><i>HIDEN's website</i></p>
+    <a href=/>Home</a>
+    <a href=/about>About</a>
+    <a href=/computers>Computers</a>
+    <a href=/news>News</a>
+    <a href=/downloads>Downloads</a>
+    <a href=/links>Favorite sites</a>
+    <a href=/mcsrv>Minecraft server</a>
+    <a href=http://hiden64.ddns.net:3001/status>Server status</a>
+    <a href=https://discord.com/invite/zH9kMEzEYM>Discord server</a>
+</div>
 
+<body>
+<div class=main>
     {% block content %}
 
     {% endblock %}
-    
-<!-- spaget, thanks weird resolutions -->
-<br><br><br><br><br><br><br><br><br><br>
+</div>
 
-{%- extends 'footer.html' -%}
 
 </body>
