@@ -1,5 +1,5 @@
 # Default settings file for the website
-PORT = 80
+PORT = 8080
 ENABLE_LOGGING = False
 LOG_TO_FILE = False
 TESTING = False
