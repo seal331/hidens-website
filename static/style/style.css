@@ -159,7 +159,7 @@ footer:before {
   margin-right: auto;
 }
 
-.linkstable {
+.placestable {
   width: 652.7px; 
   box-shadow: 0 0 3rem 0 rgba(0, 0, 0, .5); 
   border-radius: 4px;
@@ -171,7 +171,7 @@ footer:before {
   margin-right: auto;
 }
 
-.linkstable:before {
+.placestable:before {
   background: inherit; 
   position: absolute;
   left: 0;
@@ -337,9 +337,9 @@ footer:before {
   height: 103px;
 }
 
-.siteimglinks {
-  width: 191px; 
-  height: 100px;
+.siteimgplaces {
+  width: 436px; 
+  height: 88px;
 }
 
 .siteimg404 {

@@ -15,7 +15,7 @@ def RunServ(*, serve_static = False, serve_storage = False, serve_js = False):
 
 	app.router.add_get('/', page_index)
 	app.router.add_get('/projects', page_projects)
-	app.router.add_get('/links', page_links)
+	app.router.add_get('/places', page_places)
 	app.router.add_get('/downloads', page_downloads)
 	app.router.add_get('/downloads/software', page_downloads_software)
 	app.router.add_get('/downloads/cursors', page_downloads_cursors)
@@ -67,9 +67,9 @@ async def page_projects(req):
 		'title': 'Projects'
 	})
 
-async def page_links(req):
-	return render(req, 'links.html', {
-		'title': 'Links'
+async def page_places(req):
+	return render(req, 'places.html', {
+		'title': 'Places'
 	})
 
 async def page_downloads(req):

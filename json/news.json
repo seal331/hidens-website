@@ -109,7 +109,7 @@
         "Added a few more visual updates.",
         "I'm now utlizing a more efficient way of updating the news and footer without having to manually change the size of those elements.",
         "There's a <a href=\"downloads\">new page</a>. This is to help reduce some clutter.",
-        "(NO LONGER THE CASE) <strike>The guestbook link was moved to the links page.</strike>",
+        "(NO LONGER THE CASE) <strike>The guestbook link was moved to the places page.</strike>",
         "The news page has been tweaked visually to help with performance.",
         "The blur effect was reduced because it started causing eye strain for me.",
         "Some parts of the website were tweaked to comply with the W3C standards. I'm not Microsoft."
@@ -172,7 +172,7 @@
     ],
 
     "2021-10-23T08:47:00": [
-        "There's a <a href=\"links\">new page.</a>"
+        "There's a <a href=\"places\">new page.</a>"
     ],
 
     "2021-10-06T02:45:00": [
