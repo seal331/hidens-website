@@ -15,7 +15,7 @@ def RunServ(*, serve_static = False, serve_storage = False, serve_js = False):
 
 	app.router.add_get('/', page_index)
 	app.router.add_get('/projects', page_projects)
-	app.router.add_get('/links', page_links)
+	app.router.add_get('/places', page_links)
 	app.router.add_get('/downloads', page_downloads)
 	app.router.add_get('/downloads/software', page_downloads_software)
 	app.router.add_get('/downloads/cursors', page_downloads_cursors)

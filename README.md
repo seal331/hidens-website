@@ -1,5 +1,5 @@
-# HIDEN's personal website
-This the source code to my personal website, which you can find at http://hiden64.ddns.net.
+# A cancelled rework
+This is a cancelled rework to my personal website, which you can find at http://hiden64.ddns.net.
 
 
 See [RUNNING.md](/RUNNING.md) for details on running the server.
