@@ -1,6 +1,6 @@
 {
     "2022-04-14T00:28:13": [
-        "The site now supports HTTPS (thanks <a href=\"https://dkay.xyz\">dkay</a>.",
+        "The site now supports HTTPS (thanks <a href=\"https://dkay.xyz\">dkay</a>).",
         "HTTP is still avaliable for now while I sort out cipher compatibility with older systems, however I strongly recommend against using it for security and privacy reasons.",
         "On top of this, all links that use HTTP and also support HTTPS have been changed to link to the HTTPS version.",
         "It is now powered under an Nginx reverse proxy to help achieve this.",
