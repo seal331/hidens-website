@@ -3,19 +3,18 @@
 <html lang=en>
 
 <head>
-    {%- block meta -%}
+    
     <meta http-equiv=Content-Type content=text/html; charset=utf-8>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {%- endblock -%}
-
-    {%- block head_end -%}
-    <link rel=stylesheet href=/././static/style/style.css/>
-    <link rel=icon href=/././static/favicon.ico/>
-    {%- endblock -%}
+    {%- block meta -%}{%- endblock -%}
 
     <title>
-    {% if title %}{{ title }} | {% endif %}HIDEN's personal website
+        {% if title %}{{ title }} | {% endif %}HIDEN's personal website
     </title>
+    
+    <link rel=stylesheet href=/././static/style/style.css/>
+    <link rel=icon href=/././static/favicon.ico/>
+    {%- block head_end -%}{%- endblock -%}
 
 </head>
 
