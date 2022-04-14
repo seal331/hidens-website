@@ -1,6 +1,18 @@
 {
+    "2022-04-14T00:28:13": [
+        "The site now supports HTTPS (thanks <a href=\"https://dkay.xyz\">dkay</a>. On top of that, all links on the site that also support HTTPS have been changed accordingly.",
+        "HTTP is still avaliable for now while I sort out cipher compatibility with older systems, however I strongly recommend against using it for security and privacy reasons.",
+        "On top of this, all links that use HTTP and also support HTTPS have been changed to link to the HTTPS version.",
+        "It is now powered under an Nginx reverse proxy to help achieve this.",
+        "Service status was removed because it's a pain to maintain with my current server setup.",
+        "Links was rebranded to Places.",
+        "The site design will change to accomodate holidays (as evident by the April Fools one not too long ago).",
+        "Game servers other than Minecraft is cancelled for now, although I am considering hosting servers of things other than games.",
+        "Sorry about the lack of updates. This is pretty much everything that's happened since the last post."
+    ],
+
     "2022-03-28T16:02:54": [
-        "I have a new project available, called PubSite. <a href=\"http://pubsite.cf\">Check it out.</a>",
+        "I have a new project available, called PubSite. <a href=\"https://pubsite.cf\">Check it out.</a>",
         "On top of that, the site is getting many adjustments to it's appearance and functioanlity. Check those out."
     ],
 
@@ -34,7 +46,7 @@
     
     "2022-02-10T06:28:29": [
         "I'm opening a Team Fortress 2 server soon.",
-        "(NO LONGER THE CASE) <strike>The service status page has been removed for now.</strike>",
+        "(The service status page has been removed for now.",
         "(NO LONGER THE CASE, IT HAS BEEN SCRAPPED) <strike>There's a bunch of pages detailing my favorite crap in development. It's still in the early stages, though.</strike>",
         "You can view early, in development stuff, as well as experiements at <a href=\"/testing\">the testing page</a>.",
         "The pre-release code scattered all over the pages is being reloacated to the afformentioned page."
