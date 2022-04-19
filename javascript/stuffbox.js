@@ -5,6 +5,7 @@
 function randInt(size) {
     return Math.ceil(Math.random()*size);
 }
+
     function getJoke(jNum) {
         var mtJokes = new Array();
 
