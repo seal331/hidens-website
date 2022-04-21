@@ -23,7 +23,7 @@ def main(*, bool = False):
 	if settings.USE_PORT:
 		web.run_app(app, port = settings.PORT)
 	elif settings.USE_SOCK:
-		web.run_app(app, sock = settings.SOCK)
+		web.run_app(app, path = settings.SOCK)
 	else:
 		raise Exception("Please set either USE_PORT or USE_SOCK to true in settings_local.py")
 
