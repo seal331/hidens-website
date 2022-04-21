@@ -1,3 +1,5 @@
+#!/bin/env python3
+
 from aiohttp import web
 from site_ctrl import RunServ
 import logging 
