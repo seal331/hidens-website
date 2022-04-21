@@ -1,8 +1,4 @@
 {
-    "2022-04-21T04:03:27": [
-        "Due to unreliable hardware and software problems, the server this site and other services have been running on has been decommissioned as a server. A new server has been provided by <a href=\"https://dkay.xyz\">dkay</a> as a temporary solution."
-    ],
-    
     "2022-04-20T06:44:27": [
         "Sorry about the downtime. It was caused by a failed upgrade to Linux 5.15 which then spiraled into a hardware failure that somehow fixed itself.",
         "The Dynmap for the Minecraft server has been removed for now."

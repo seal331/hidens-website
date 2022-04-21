@@ -21,9 +21,9 @@ def RunServ(*, serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/downloads/cursors', page_downloads_cursors)
 	app.router.add_get('/about', page_about_me)
 	app.router.add_get('/computers', page_my_computers)
-	#app.router.add_get('/mcsrv', page_mc_srv)
-	#app.router.add_get('/mcsrv/rules', page_mc_srv_rules)
-	#app.router.add_get('/mcsrv/plugins', page_mc_srv_plugins)
+	app.router.add_get('/mcsrv', page_mc_srv)
+	app.router.add_get('/mcsrv/rules', page_mc_srv_rules)
+	app.router.add_get('/mcsrv/plugins', page_mc_srv_plugins)
 	app.router.add_get('/news', page_news)
 	app.router.add_get('/news/rss', rss_news)
 	
