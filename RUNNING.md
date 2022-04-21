@@ -13,7 +13,9 @@ To run, install the requirements using pip: `pip install -r requirements .txt`. 
 Then, create `settings_local.py`, and add the following options:
 
  ```
-PORT = 80 (Default is 80, change it to something else if you want to)
+PORT = 80 (Default is 80. Enable USE_PORT to use it. Change it to something else if you want to)
+
+SOCK = "SET/SOMETHING/HERE" (Enable USE_SOCK to use it. Change it to the path of your Unix sock.)
 
 ENABLE_LOGGING = False (Default is false. Logs every connection to the server in the terminal ouput. Set this to true if you want this.)
 

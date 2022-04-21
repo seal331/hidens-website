@@ -20,7 +20,13 @@ def main(*, bool = False):
 		else:
 			logging.basicConfig(level=logging.DEBUG)
 
-	web.run_app(app, port = settings.PORT)
+	if settings.USE_PORT:
+		web.run_app(app, port = settings.PORT)
+	elif settings.USE_SOCK:
+		web.run_app(app, sock = settings.SOCK)
+	else:
+		raise Exception("Please set either USE_PORT or USE_SOCK to true in settings_local.py")
+
 
 if __name__ == '__main__':
 	main()

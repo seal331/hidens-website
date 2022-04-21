@@ -1,5 +1,8 @@
 # Default settings file for the website
-PORT = 8080
+PORT = 80
+SOCK = "SET/SOMETHING/HERE"
+USE_SOCK = False
+USE_PORT = False
 ENABLE_LOGGING = False
 LOG_TO_FILE = False
 TESTING = False
