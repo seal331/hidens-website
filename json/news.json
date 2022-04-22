@@ -1,4 +1,8 @@
 {
+    "2022-04-22T:21:10:07": [
+        "The server now runs Fedora."
+    ],
+
     "2022-04-20T06:44:27": [
         "Sorry about the downtime. It was caused by a failed upgrade to Linux 5.15 which then spiraled into a hardware failure that somehow fixed itself.",
         "The Dynmap for the Minecraft server has been removed for now."
