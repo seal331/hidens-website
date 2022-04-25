@@ -30,7 +30,7 @@
         "HTTP is still avaliable for now while I sort out cipher compatibility with older systems, however I strongly recommend against using it for security and privacy reasons.",
         "On top of this, all links that use HTTP and also support HTTPS have been changed to link to the HTTPS version.",
         "It is now powered under an Nginx reverse proxy to help achieve this.",
-        "Service status was removed because it's a pain to maintain with my current server setup.",
+        "Service status was removed because it's a pain to maintain with my current server setup. The best way to know about outages is through my <a href=\"https://discord.gg/zH9kMEzEYM\">my Discord server</a>.",
         "Links was rebranded to Places.",
         "The site design will change to accomodate holidays (as evident by the April Fools one not too long ago).",
         "Game servers other than Minecraft is cancelled for now, although I am considering hosting servers of things other than games.",
