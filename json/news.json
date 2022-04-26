@@ -22,7 +22,7 @@
     "2022-04-14T06:00:18": [
         "HTTPS is now forced, you may use TLSv1 - TLSv1.3. For older browsers you may need to add the <a href=\"https://letsencrypt.org/certs/lets-encrypt-r3.pem\">Let's Encrypt certificate</a> to your browser.",
         "Nginx now caches static content for a more <em>sped</em> browsing experience.",
-        "<a href=\"https://dkay.xyz\">-dkay</a>"
+        "<em><a href=\"https://dkay.xyz\">dkay</a></em>"
     ],
 
     "2022-04-13T18:28:13": [
@@ -71,9 +71,9 @@
     ],
     
     "2022-02-10T06:28:29": [
-        "I'm opening a Team Fortress 2 server soon.",
-        "(The service status page has been removed for now.",
-        "(NO LONGER THE CASE, IT HAS BEEN SCRAPPED) <strike>There's a bunch of pages detailing my favorite crap in development. It's still in the early stages, though.</strike>",
+        "(NO LONGER THE CASE, IT HAS BEEN CANCELLED) <strike>I'm opening a Team Fortress 2 server soon.</strike>",
+        "The service status page has been removed for now.",
+        "(NO LONGER THE CASE, THEY WERE SCRAPPED) <strike>There's a bunch of pages detailing my favorite crap in development. It's still in the early stages, though.</strike>",
         "You can view early, in development stuff, as well as experiements at <a href=\"/testing\">the testing page</a>.",
         "The pre-release code scattered all over the pages is being reloacated to the afformentioned page."
     ],
@@ -83,9 +83,8 @@
     ],
 
     "2022-02-03T22:02:36": [
-        "There's a <a href=\"gameservers\">new page</a>.",
-        "Meta (AKA Facebook) has seen their first full-blown user loss on Facebook.",
-        "Good."
+        "(MULTIPLE GAME SEREVRS HAS BEEN CANCELLED FOR NOW) <strike>There's a <a href=\"gameservers\">new page</a>.</strike>",
+        "Meta (AKA Facebook) has seen their first full-blown user loss on Facebook... good."
     ],
 
     "2022-02-02T20:22:33": [
@@ -95,7 +94,7 @@
     ],
 
     "2022-02-01T19:00:37": [
-        "This site will be rewritten with Bootstrap 5 later on this year."
+        "(NO LONGER THE CASE) <strike>This site will be rewritten with Bootstrap 5 later on this year.</strike>"
     ],
     
     "2022-01-30T16:00:23": [
@@ -112,7 +111,7 @@
 
     "2022-01-27T17:45:06": [
         "Sorry about the long downtime. A lot of issues came up in with the server. I was trying to create a systemd service to run the site, but it fails and doesn't tell me why <a href=\"https://github.com/HIDEN64/hidens-website/issues/2\">(more details here)</a>, and then the server had a kernel panic. Hopefully this is the end of this.",
-        "On the bright side, the server appears to run a lot faster, but this might just be a fluke.",
+        "On the bright side, the server appears to run a lot faster, but this might just be placebo.",
         "Spotify stock is dropping significantly thanks to them promoting conspiracy theroies. Joe Rogan ramped up his attacks against the COVID-19 vaccine on the platform, and Spotify paid him $100m to do so.",
         "I can't believe I have to say this on <em>a tech-focused website</em> of all things, but please, get vaccinated and wear a mask. And don't start with that \"THEY DON'T WORK!!!!!1111111111\" bullshit, because they've been proven time and time again to work."
     ],
@@ -120,7 +119,7 @@
     "2022-01-24T21:44:04": [
         "I'm doing a lot of moving around internally, so sorry if stuff works and/or looks like crap right now.",
         "There's now a <a href=\"http://hiden64.ddns.net:3001/status\">service status</a> page, that keeps track of when and why the site and other services I host go down.",
-        "There's also a ton of new pages in development, plus a planned website rewrite. Which ever comes first is TBD as of now."        
+        "There's also a ton of new pages in development, (CANCELLED) <strike>plus a planned website rewrite</strike>. Which ever comes first is TBD as of now."        
     ],
 
     "2022-01-23T12:10:21": [
@@ -165,7 +164,7 @@
     ],
 
     "2022-01-12T00:26:00":[
-        "A new code formatting standard was introduced for this website's code, in an effort to make it look more organized.",
+        "A new code formatting standard was introduced for this website's code, in an effort to make it organized and not a mess of spaghetti.",
         "A new page <em>might</em> be coming soon."
     ],
 
@@ -174,13 +173,13 @@
     ],
     
     "2022-01-07T05:40:00": [
-        "A logging feature was added to this site to detect spam/bot requests."
+        "A logging feature was added to this site to monitor the requests, to make sure it's not from bots and/or spammers."
     ],
 
     "2022-01-05T23:18:00": [
         "Happy (late) new year!",
         "Sorry about the extended downtime, I had an issue with my router that wasn't fixed until today.",
-        "Development of Horizon will start back up soon, I took a break from it to focus on other things."
+        "(HORIZON IS PROBABLY CANCELLED) <strike>Development of Horizon will start back up soon, I took a break from it to focus on other things.</strike>"
     ],
 
     "2021-12-31T01:22:00": [
@@ -200,9 +199,7 @@
 
     "2021-12-25T14:24:00": [
         "Merry Christmas! Our gift for this year is the revival of the website after ~1 month of letting it rot. We're sorry about that.",
-        "Footer facts have also been removed as they are pretty bloaty and unessecary.",
-        "TacoBot has been rebranded as Epiphany and is now hosted on GitLab.",
-        "This was unveiled while the website was down, but we're introducing a new project. Horizon: Multiple chat protocols implemented as frontends running on a single generic backend, and allowing them to communicate with one another. Based on <a href=\"https://www.escargot.chat\">Escargot</a> and keeping the original goal going."
+        "Footer facts have also been removed as they are pretty bloaty and unessecary."
     ],
     
     "2021-10-31T04:31:00": [
@@ -214,7 +211,7 @@
     ],
 
     "2021-10-06T02:45:00": [
-        "The redesign plan has been shelved (No longer the case, disregard). Instead, I'll opt for updating the current design."
+        "The redesign plan has been shelved. Instead, I'll opt for updating the current design."
     ],
 
     "2021-08-10T05:41:00": [
@@ -240,7 +237,7 @@
     ],
 
     "2021-06-22T21:23:29": [
-        "The website is now open source. You can grab the source code <a href=\"https://github.com/epictaco302/epictacos-website\">here</a>. I am also planning to do a redesign of the site in the future.",
+        "The website is now open source. You can grab the source code <a href=\"https://github.com/hiden64/hidens-website\">here</a>. I am also planning to do a redesign of the site in the future.",
         "I also cleaned up the home page a bit."
     ]
 }
