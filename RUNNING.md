@@ -2,9 +2,10 @@
 This document describes instructions on how to start the server, and what it requires.
 
 ## Requirements:
-- Python 3 (tested to work with 3.6 - 3.10, may not work with other versions)
+- Python 3.7 - 3.10 is recommended, may work on older versions but these are what it's tested with
 - pip (Installed by default on Windows, install it with your distrubition's package manager on Linux, unsure about macOS)
-- A *nix environment is preferred as the live instance uses Ubuntu, but it has been tested to work with Windows too
+- A *nix environment is preferred as the live instance uses Fedora, but it has been tested to work with Windows too
+- An Nginx reverse proxy is also recommended, however it does work without one
 
 
 ## Running:
