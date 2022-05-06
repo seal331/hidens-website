@@ -8,7 +8,7 @@ import json
 
 import settings
 
-def RunServ(*, serve_static = False, serve_storage = False, serve_js = False):
+def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app = App()
 
 	# YanDev code g o
@@ -145,7 +145,7 @@ async def rss_news(req):
 	rss = PyRSS2Gen.RSS2(
 		title = "HIDEN's RSS Feed",
 		link = "https://hiden64.ddns.net/news",
-		description = "News about my website, projects, and whatever's on my mind.",
+		description = "News about whatever, whenever.",
 		docs = "",
 		
 		lastBuildDate = datetime.utcnow(),

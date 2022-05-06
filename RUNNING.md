@@ -2,7 +2,7 @@
 This document describes instructions on how to start the server, and what it requires.
 
 ## Requirements:
-- Python 3.7 - 3.10 is recommended, may work on older versions but these are what it's tested with
+- Python 3.7 - 3.10 is recommended, the server may work on older versions but these versions are what it has been tested with
 - pip (Installed by default on Windows, install it with your distrubition's package manager on Linux, unsure about macOS)
 - A *nix environment is preferred as the live instance uses Fedora, but it has been tested to work with Windows too
 - An Nginx reverse proxy is also recommended, however it does work without one
@@ -14,9 +14,7 @@ To run, install the requirements using pip: `pip install -r requirements .txt`. 
 Then, create `settings_local.py`, and add the following options:
 
  ```
-PORT = 80 (Default is 80. Enable USE_PORT to use it. Change it to something else if you want to)
-
-SOCK = "SET/SOMETHING/HERE" (Enable USE_SOCK to use it. Change it to the path of your Unix sock.)
+PORT = 80 (Default is 80. Change it to something else if you want to)
 
 ENABLE_LOGGING = False (Default is false. Logs every connection to the server in the terminal ouput. Set this to true if you want this.)
 
