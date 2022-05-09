@@ -41,6 +41,12 @@ p {
   font-family: Verdana;
 }
 
+.jserr {
+  font-size: 16.5px;
+  font-weight: bold;
+  font-family: Verdana;
+}
+
 table, tr, th, td {
   border: 1px solid darkslategrey;
 }
