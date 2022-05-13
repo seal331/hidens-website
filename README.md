@@ -1,5 +1,5 @@
 # HIDEN's personal website
-This the source code to my personal website, which you can find at https://hiden64.ddns.net.
+This the source code to my personal website, which you can find at https://hiden.pw.
 
 
 See [RUNNING.md](/RUNNING.md) for details on running the server.

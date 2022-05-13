@@ -45,7 +45,6 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 		loader = jinja2.FileSystemLoader('tmpl'),
 		autoescape = jinja2.select_autoescape(default = True),
 	)
-	#app.jinja_env.filters['settings'] = settings
 
 	return app
 	
@@ -145,7 +144,7 @@ async def rss_news(req):
 	
 	rss = PyRSS2Gen.RSS2(
 		title = "HIDEN's RSS Feed",
-		link = "https://hiden64.ddns.net/news",
+		link = "https://hiden.pw/news",
 		description = "News about whatever, whenever.",
 		docs = "",
 		

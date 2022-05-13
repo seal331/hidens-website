@@ -1,12 +1,11 @@
 # Running the server
-This document describes instructions on how to start the server, and what it requires.
+This document provides instructions on how to run the server.
 
 ## Requirements:
 - Python 3.7 - 3.10 is recommended, the server may work on older versions but these versions are what it has been tested with
 - pip (Installed by default on Windows, install it with your distrubition's package manager on Linux, unsure about macOS)
 - A *nix environment is preferred as the live instance uses Fedora, but it has been tested to work with Windows too
 - An Nginx reverse proxy is also recommended, however it does work without one
-
 
 ## Running:
 To run, install the requirements using pip: `pip install -r requirements .txt`. If you don't have pip, check requirement #2 above.
