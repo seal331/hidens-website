@@ -1,4 +1,9 @@
 {
+	"2022-05-14T16:18:04": [
+		"The server was down from upgrading to Fedora 36 (and me falling asleep before restoring the services).",
+		"The upgrade went smoothly; I haven't faced any issues so far, besides having to recompile the IRC-Discord relay for .NET 6, due to Fedora 36 not having a package for .NET 5 in it's repos."
+	],
+	
 	"2022-05-13T13:30:28": [
 		"The site was moved to <a href=\"https://hiden.pw\">a new domain, <em>again</em></a>, courtesy of dkay.",
 		"The old domain will continue to work as a redirect until May 23, 2022. If you link my site on your own site, please update the link by then."
