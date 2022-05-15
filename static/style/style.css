@@ -344,8 +344,8 @@ footer:before {
 }
 
 .siteimgplaces {
-  width: 436px; 
-  height: 88px;
+  width: 202px; 
+  height: 77px;
 }
 
 .siteimg404 {
@@ -456,14 +456,3 @@ footer:before {
   font-size: 22px;
 }
 
-.abuseipdbbutton {
-  width: 254px;
-  border-radius: 5px;
-  border-top: 5px solid #058403;
-  border-right: 5px solid #111;
-  border-bottom: 5px solid #111;
-  border-left: 5px solid #058403;
-  background: #35c246 linear-gradient(rgba(255,255,255,0), rgba(255,255,255,.3) 50%, rgba(0,0,0,.2) 51%, rgba(0,0,0,0));
-  padding: 5px;
-  box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, .2);
-}
