@@ -19,13 +19,26 @@
 </head>
 
 <body>
+<!--
+	<div class=sidebar>
     
-    {% block content %}
+	{%- block sidebar -%}
+	
+	{%- endblock -%}
+	
+	</div>
 
-    {% endblock %}
+	<div class=content>
     
-<!-- spaget, thanks weird resolutions -->
-<br><br><br><br><br><br><br><br><br><br>
+	</div>
+-->
+
+    {%- block content -%}
+
+    {%- endblock -%}
+	
+	<!-- spaget, thanks weird resolutions -->
+	<br><br><br><br><br><br><br><br><br><br>
 
 {%- extends 'footer.html' -%}
 
