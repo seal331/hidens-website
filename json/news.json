@@ -1,4 +1,8 @@
 {
+	"2022-05-24T14:32:26": [
+		"The old domain has been shut down as of yesterday. If you have any links to my website, update them now."
+	],
+	
 	"2022-05-14T16:18:04": [
 		"The server was down from upgrading to Fedora 36 (and me falling asleep before restoring the services).",
 		"The upgrade went smoothly; I haven't faced any issues so far, besides having to recompile the IRC-Discord relay for .NET 6, due to Fedora 36 not having a package for .NET 5 in it's repos."
