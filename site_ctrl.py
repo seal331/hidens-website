@@ -57,10 +57,7 @@ class App(web.Application):
 # YanDev code g o
 
 async def page_index(req):
-	if settings.HOLIDAY_APRILFOOLS:
-		return render(req, 'index.aprilfools.html')
-	else:
-		return render(req, 'index.html')
+	return render(req, 'index.html')
 
 async def page_projects(req):
 	return render(req, 'projects.html', {

@@ -6,7 +6,6 @@ TESTING = False
 SERVE_STATIC = False
 SERVE_STORAGE = False
 SERVE_JS = False
-HOLIDAY_APRILFOOLS = False
 
 # Import settings from settings_local.py. If settings_local.py is not present, terminate
 try:
