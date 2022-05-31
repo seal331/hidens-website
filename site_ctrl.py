@@ -26,6 +26,7 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/mcsrv/plugins', page_mc_srv_plugins)
 	app.router.add_get('/news', page_news)
 	app.router.add_get('/news/rss', rss_news)
+	app.router.add_get('/discord', page_discord_server_redir)
 	
 
 	if settings.TESTING:
@@ -114,6 +115,10 @@ async def page_mc_srv_plugins(req):
 		'title': 'Minecraft plugins',
 	})
 
+async def page_discord_server_redir(req):
+    return render(req, 'discord.html', {
+        'title': 'Discord server',
+    })
 
 async def page_news(req):
 	with open('json/news.json', 'rb') as news:
