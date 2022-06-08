@@ -24,8 +24,8 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/mcsrv', page_mc_srv)
 	app.router.add_get('/mcsrv/rules', page_mc_srv_rules)
 	app.router.add_get('/mcsrv/plugins', page_mc_srv_plugins)
-	app.router.add_get('/news', page_news)
-	app.router.add_get('/news/rss', rss_news)
+	app.router.add_get('/blog', page_blog)
+	app.router.add_get('/blog/rss', blog_rss)
 	app.router.add_get('/discord', page_discord_server_redir)
 	
 
@@ -120,34 +120,34 @@ async def page_discord_server_redir(req):
         'title': 'Discord server',
     })
 
-async def page_news(req):
-	with open('json/news.json', 'rb') as news:
-		news_json = json.loads(news.read())
-		news.close()
+async def page_blog(req):
+	with open('json/posts.json', 'rb') as bp:
+		bp_json = json.loads(bp.read())
+		bp.close()
 	
 	entries = []
 	
-	for date, items in news_json.items():
-		tmpl = req.app.jinja_env.get_template('news.entry.item.html')
+	for date, items in bp_json.items():
+		tmpl = req.app.jinja_env.get_template('blog.post.item.html')
 		items_markup = [tmpl.render(item = Markup(item)) for item in items]
 		
-		tmpl = req.app.jinja_env.get_template('news.entry.html')
+		tmpl = req.app.jinja_env.get_template('blog.post.html')
 		entries.append(tmpl.render(date = dateutil.parser.isoparse(date).strftime('%Y-%m-%d'), items = Markup('\n'.join(items_markup))))
 	
-	return render(req, 'news.html', {
-		'title': 'News',
+	return render(req, 'blog.html', {
+		'title': 'Blog',
 		'entries': Markup('\n'.join(entries))
 	})
 
-async def rss_news(req):
-	with open('json/news.json', 'rb') as news:
-		news_json = json.loads(news.read())
-		news.close()
+async def blog_rss(req):
+	with open('json/posts.json', 'rb') as bp:
+		bp_json = json.loads(bp.read())
+		bp.close()
 	
 	rss = PyRSS2Gen.RSS2(
-		title = "HIDEN's RSS Feed",
-		link = "https://hiden.pw/news",
-		description = "News about whatever, whenever.",
+		title = "HIDEN's Blog",
+		link = "https://hiden.pw/blog",
+		description = "My blog, where I post about things.",
 		docs = "",
 		
 		lastBuildDate = datetime.utcnow(),
@@ -157,7 +157,7 @@ async def rss_news(req):
 				title = dateutil.parser.isoparse(date).strftime('%Y-%m-%d'),
 				description = ''.join(['{}\n'.format(entry) for entry in entries]),
 				pubDate = dateutil.parser.isoparse(date),
-			) for date, entries in news_json.items()
+			) for date, entries in bp_json.items()
 		]
 	)
 	

@@ -355,8 +355,8 @@ footer:before {
 }
 
 .siteimg404 {
-  width: 392px;
-  height: 108px;
+  width: 312px;
+  height: 101px;
 }
 
 .siteimgdownloads {
@@ -413,15 +413,15 @@ footer:before {
   font-size: 20px;
 }
 
-.newsdate {
+.bpdate {
   font-size: 32px;
 }
 
-.newsentry {
+.blogpost {
   font-size: 16.70px;
 }
 
-.newsrss {
+.blogrss {
   font-size: 19px;
 }
 
