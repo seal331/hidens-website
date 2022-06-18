@@ -19,7 +19,7 @@ ENABLE_LOGGING = False (Logs every connection to the server in the terminal oupu
 
 LOG_TO_FILE = False (Set this to true and ENABLE_LOGGING to true if you want to output connection and process logs to a file)
 
-TESTING = False (Set this to true if you want to view stuff that's in development, and experiements that I'm screwing around with)
+TESTING = False (Set this to true if you want to view stuff that's in development, and experiements that I'm screwing around with, once that's enabled, go to /testing)
 
 SERVE_STATIC = False (If you want to serve static content such as CSS stylesheets or images, set this to True)
 
