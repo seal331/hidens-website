@@ -5,7 +5,11 @@ import settings
 
 def main():
 
-	app = RunServ(serve_static = settings.SERVE_STATIC, serve_storage = settings.SERVE_STORAGE, serve_js = settings.SERVE_JS)
+	app = RunServ(
+		serve_static = settings.SERVE_STATIC, 
+		serve_storage = settings.SERVE_STORAGE, 
+		serve_js = settings.SERVE_JS
+	)
 
 	if settings.ENABLE_LOGGING:
 		if settings.LOG_TO_FILE:

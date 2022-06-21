@@ -1,5 +1,5 @@
 # HIDEN's personal website
-This the source code to my personal website, which you can find at https://hiden.pw.
+This is the source code to my personal website, which you can find at https://hiden.pw. Because why not.
 
 
 See [RUNNING.md](/RUNNING.md) for details on running the server.

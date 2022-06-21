@@ -1,9 +1,9 @@
-# Running the server
+# Getting the server up and running
 This document provides instructions on how to run the server.
 
 ## Requirements:
-- Python 3.6 - 3.10 is required, the server may work on older versions but these versions are what it has been tested with
-- pip; Installed by default on Windows, install it with your distrubition's package manager on Linux, install it on macOS with [get-pip.py](https://bootstrap.pypa.io/get-pip.py)
+- Python 3.6 or newer is required, the server may work on older versions but these versions are what it has been tested with
+- pip; Should be installed by default on Windows, install it with your distrubition's package manager on Linux, install it on macOS with [get-pip.py](https://bootstrap.pypa.io/get-pip.py)
 - A *nix environment is preferred, but it has been tested to work with Windows too
 - An Nginx reverse proxy is recommended for production enviornments, however it is not needed for development enviornments
 
@@ -13,7 +13,7 @@ To run, install the requirements using pip: `pip install -r requirements .txt`. 
 Then, create `settings_local.py`, and add the following options as :
 
  ```
-PORT = 80 (Change it to something else if you want to)
+PORT = 80 (On *nix, this causes a permissions error if not ran as root, change the port or run it as root to resolve this)
 
 ENABLE_LOGGING = False (Logs every connection to the server in the terminal ouput. Set this to True if you want this)
 
@@ -29,9 +29,8 @@ SERVE_JS = False (Some experiements on the afformentioned testing pages will be 
 
 ```
 
-Creating `settings_local.py` is mandatory, but adding content to the file is optional. If `settings_local.py` is blank, then the server uses what's listed in `settings.py` instead.
-
+Creating `settings_local.py` is required, but adding content to the file is optional. If `settings_local.py` is blank, then the server uses what's listed in `settings.py` instead.
 
 After that, run the site with `python runserver.py`.
 
-Please file any bugs you find in the "Issues" tab of this repository, or contact me using the provided info on the `About me` page, so I can more easily find and patch them.
+Please file any bugs you find in the Issues tab of this repository, or contact me using the provided info [here](https://hiden.pw/about), so I can more easily find and fix them.

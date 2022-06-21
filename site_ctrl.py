@@ -2,7 +2,7 @@ import jinja2
 import PyRSS2Gen
 from aiohttp import web
 from markupsafe import Markup
-from datetime import datetime, timedelta
+from datetime import datetime
 import dateutil.parser
 import json
 
@@ -19,6 +19,7 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/downloads', page_downloads)
 	app.router.add_get('/downloads/software', page_downloads_software)
 	app.router.add_get('/downloads/cursors', page_downloads_cursors)
+    # TODO: Split about me into multiple pages
 	app.router.add_get('/about', page_about_me)
 	app.router.add_get('/computers', page_my_computers)
 	app.router.add_get('/mcsrv', page_mc_srv)
