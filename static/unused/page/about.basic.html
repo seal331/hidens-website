@@ -1,15 +1,13 @@
 {%- extends 'base.html' -%}
 
 {%- block meta -%}
-	<meta name="description" content="Some info about me."/>
+	<meta name="description" content="A bio thing, or something idk."/>
 {%- endblock -%}
 
 {%- block content -%}
-<img class=abouttitle src=/static/title/about.gif alt="About me"><br><br>
+<img src=/static/title/basicinfo.gif>
 
-<h3>Things about me:</h3>
-
-<table class=abouttable>
+<table class=basicinfotable>
 
 	<tr>
 		<td>
@@ -31,26 +29,13 @@
 	
 	<tr>
 		<td>
-			<p>Favorite games</p>
-		</td>
-		<td>
-			<p>Team Fortress 2, Minecraft, Garry's Mod, Most DOOM games (1, 2, 2016, Eternal), all Half-Life games, PC Building Simulator, People Playground, Game Dev Tycoon, Worldbox, Unreal Tornument 99 and 2004, and BeamNG.drive.</p>
-		</td>
-	</tr>
-	
-	<tr>
-		<td>
 			<a href=/about/contacts>Contact info</a>
 		</td>
 		<td>
 			<p>Visit the link that's... well... linked for my contact info.
 		</td>
 	</tr>
-	
-</table>
 
-<br><br>
-<button class=backbutton onclick="history.back()"><span>Back to previous page</span></button>
-<p><noscript>This button will not work until you enable JavaScript, or upgrade your browser to one that supports JavaScript.</noscript></p>
+</table>
 
 {%- endblock -%}
