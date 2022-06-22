@@ -512,12 +512,12 @@ footer:before {
 	font-size: 18.75px;
 }
 
-.abouttitle {
-	width: 285px;
-	height: 72px;
+.siteimgabout {
+	width: 245px;
+	height: 65px;
 }
 
-.contactstitle {
+.siteimgcontacts {
 	width: 327px;
 	height: 92px;
 }
