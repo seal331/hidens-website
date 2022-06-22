@@ -1,75 +1,75 @@
 * {
-  box-sizing: border-box;
-  margin: 1;
-  padding: 1;
+	box-sizing: border-box;
+	margin: 1;
+	padding: 1;
 }
 
 body {
-  background: url("/static/background.png");
-  background-size: cover;
-  background-attachment: fixed;
-  text-align: center;
+	background: url("/static/background.png");
+	background-size: cover;
+	background-attachment: fixed;
+	text-align: center;
 }
 
 h1 {
-  font-size: 35px;
-  font-family: Verdana;
-  font-weight: bold;
+	font-size: 35px;
+	font-family: Verdana;
+	font-weight: bold;
 }
 
 h2 {
-  font-size: 26px;
-  font-family: Verdana;
-  font-weight: bold;
+	font-size: 26px;
+	font-family: Verdana;
+	font-weight: bold;
 }
 
 h3 {
-  font-size: 21px;
-  font-family: Verdana;
-  font-weight: bold;
+	font-size: 21px;
+	font-family: Verdana;
+	font-weight: bold;
 }
 
 h4 {
-  font-size: 19px;
-  font-family: Verdana;
-  font-weight: bold;
+	font-size: 19px;
+	font-family: Verdana;
+	font-weight: bold;
 }
 
 li {
-  font-size: 16.5px;
-  font-weight: bold;  
-  font-family: Verdana;
+	font-size: 16.5px;
+	font-weight: bold;	
+	font-family: Verdana;
 }
 	
 p {
-  font-size: 16.5px;
-  font-weight: bold;
-  font-family: Verdana;
+	font-size: 16.5px;
+	font-weight: bold;
+	font-family: Verdana;
 }
 
 .jserr {
-  font-size: 16.5px;
-  font-weight: bold;
-  font-family: Verdana;
+	font-size: 16.5px;
+	font-weight: bold;
+	font-family: Verdana;
 }
 
 table, tr, th, td {
-  border: 1px solid darkslategrey;
+	border: 1px solid darkslategrey;
 }
 
 ul {
-  display: inline-block;
+	display: inline-block;
 }
 
 a {
-  font-size: 16.5px;
-  font-weight: bold;  
-  font-family: Verdana;
-  text-decoration: none;
+	font-size: 16.5px;
+	font-weight: bold;	
+	font-family: Verdana;
+	text-decoration: none;
 }
 
 img {
-  filter: drop-shadow(4.5px 4.5px 4.5px #666666);
+	filter: drop-shadow(4.5px 4.5px 4.5px #666666);
 }
 
 a:link {
@@ -97,368 +97,412 @@ a:active {
 }
 
 footer {
-  margin-top: 5px;
-  box-shadow: 0 0 0.6rem 0 rgba(0, 0, 0, .5); 
-  z-index: 1;
-  background: inherit;
-  overflow: hidden;
-  padding: 5px;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+	margin-top: 5px;
+	box-shadow: 0 0 0.6rem 0 rgba(0, 0, 0, .5); 
+	z-index: 1;
+	background: inherit;
+	overflow: hidden;
+	padding: 5px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
 }
 
 footer:before {
-  position: absolute;
-  background: inherit;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
-  filter: blur(10px);
-  margin: -20px;
+	position: absolute;
+	background: inherit;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
+	filter: blur(10px);
+	margin: -20px;
 }
 
 .hometable {
-  box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
-  border-radius: 4px;
-  position: relative;
-  z-index: 1;
-  background: inherit;
-  overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
+	box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
+	border-radius: 4px;
+	position: relative;
+	z-index: 1;
+	background: inherit;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .hometable:before {
-  background: inherit; 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0; 
-  bottom: 0;
-  box-shadow: inset 0 0 0 2000px rgba(255,255,255,0.3);
-  filter: blur(10px);
-  margin-left: auto;
-  margin-right: auto;
+	background: inherit; 
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0; 
+	bottom: 0;
+	box-shadow: inset 0 0 0 2000px rgba(255,255,255,0.3);
+	filter: blur(10px);
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .projectstable {
-  width: 658px; 
-  box-shadow: 0 0 3rem 0 rgba(0, 0, 0, .5); 
-  border-radius: 4px;
-  position: relative;
-  z-index: 1;
-  background: inherit;
-  overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
+	width: 658px; 
+	box-shadow: 0 0 3rem 0 rgba(0, 0, 0, .5); 
+	border-radius: 4px;
+	position: relative;
+	z-index: 1;
+	background: inherit;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .projectstable:before {
-  background: inherit; 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0; 
-  bottom: 0;
-  box-shadow: inset 0 0 0 2000px rgba(255,255,255,0.3);
-  filter: blur(10px);
-  margin-left: auto;
-  margin-right: auto;
+	background: inherit; 
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0; 
+	bottom: 0;
+	box-shadow: inset 0 0 0 2000px rgba(255,255,255,0.3);
+	filter: blur(10px);
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .placestable {
-  width: 652.7px; 
-  box-shadow: 0 0 3rem 0 rgba(0, 0, 0, .5); 
-  border-radius: 4px;
-  position: relative;
-  z-index: 1;
-  background: inherit;
-  overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
+	width: 652.7px; 
+	box-shadow: 0 0 3rem 0 rgba(0, 0, 0, .5); 
+	border-radius: 4px;
+	position: relative;
+	z-index: 1;
+	background: inherit;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .placestable:before {
-  background: inherit; 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0; 
-  bottom: 0;
-  box-shadow: inset 0 0 0 2000px rgba(255,255,255,0.3);
-  filter: blur(10px);
-  margin-left: auto;
-  margin-right: auto;
+	background: inherit; 
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0; 
+	bottom: 0;
+	box-shadow: inset 0 0 0 2000px rgba(255,255,255,0.3);
+	filter: blur(10px);
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .softwaretable {
-  width: 771px; 
-  box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
-  border-radius: 4px;
-  position: relative;
-  z-index: 1;
-  background: inherit;
-  overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
+	width: 771px; 
+	box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
+	border-radius: 4px;
+	position: relative;
+	z-index: 1;
+	background: inherit;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .softwaretable:before {
-  background: inherit; 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0; 
-  bottom: 0;
-  box-shadow: inset 0 0 0 2000px rgba(255,255,255,0.3);
-  filter: blur(10px);
-  margin-left: auto;
-  margin-right: auto;
+	background: inherit; 
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0; 
+	bottom: 0;
+	box-shadow: inset 0 0 0 2000px rgba(255,255,255,0.3);
+	filter: blur(10px);
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .cursortable {
-  box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
-  border-radius: 4px;
-  position: relative;
-  z-index: 1;
-  background: inherit;
-  overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
+	box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
+	border-radius: 4px;
+	position: relative;
+	z-index: 1;
+	background: inherit;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .cursortable:before {
-  background: inherit; 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0; 
-  bottom: 0;
-  box-shadow: inset 0 0 0 2000px rgba(255,255,255,0.3);
-  filter: blur(10px);
-  margin-left: auto;
-  margin-right: auto;
+	background: inherit; 
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0; 
+	bottom: 0;
+	box-shadow: inset 0 0 0 2000px rgba(255,255,255,0.3);
+	filter: blur(10px);
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .computerstable {
-  box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
-  border: 0;
-  position: relative;
-  z-index: 1;
-  background: inherit;
-  overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
+	box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
+	border: 0;
+	position: relative;
+	z-index: 1;
+	background: inherit;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .computerstable:before {
-  background: inherit; 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0; 
-  bottom: 0;
-  box-shadow: inset 0 0 0 2000px rgba(255,255,255,0.3);
-  filter: blur(10px);
-  margin-left: auto;
-  margin-right: auto;
+	background: inherit; 
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0; 
+	bottom: 0;
+	box-shadow: inset 0 0 0 2000px rgba(255,255,255,0.3);
+	filter: blur(10px);
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .gamesrvtable {
-  box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
-  border-radius: 4px;
-  position: relative;
-  z-index: 1;
-  background: inherit;
-  overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
+	box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
+	border-radius: 4px;
+	position: relative;
+	z-index: 1;
+	background: inherit;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .gamesrvtable:before {
-  background: inherit; 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0; 
-  bottom: 0;
-  box-shadow: inset 0 0 0 2000px rgba(255,255,255,0.3);
-  filter: blur(10px);
-  margin-left: auto;
-  margin-right: auto;
+	background: inherit; 
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0; 
+	bottom: 0;
+	box-shadow: inset 0 0 0 2000px rgba(255,255,255,0.3);
+	filter: blur(10px);
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .mcsrvtable {
-  width: 660px;
-  height: 420px;
-  box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
-  border-radius: 4px;
-  position: relative;
-  z-index: 1;
-  background: inherit;
-  overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
+	width: 660px;
+	height: 420px;
+	box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
+	border-radius: 4px;
+	position: relative;
+	z-index: 1;
+	background: inherit;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .mcsrvtable:before {
-  background: inherit; 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0; 
-  bottom: 0;
-  box-shadow: inset 0 0 0 2000px rgba(255,255,255,0.3);
-  filter: blur(10px);
-  margin-left: auto;
-  margin-right: auto;
+	background: inherit; 
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0; 
+	bottom: 0;
+	box-shadow: inset 0 0 0 2000px rgba(255,255,255,0.3);
+	filter: blur(10px);
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .testtable {
-  width: 48rem;
-  box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
-  border-radius: 4px;
-  position: relative;
-  z-index: 1;
-  background: inherit;
-  overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
+	width: 48rem;
+	box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
+	border-radius: 4px;
+	position: relative;
+	z-index: 1;
+	background: inherit;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .testtable:before {
-  background: inherit; 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0; 
-  bottom: 0;
-  box-shadow: inset 0 0 0 2000px rgba(255,255,255,0.3);
-  filter: blur(10px);
-  margin-left: auto;
-  margin-right: auto;
+	background: inherit; 
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0; 
+	bottom: 0;
+	box-shadow: inset 0 0 0 2000px rgba(255,255,255,0.3);
+	filter: blur(10px);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.contactstable {
+	width: 725px;
+	box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
+	border-radius: 4px;
+	position: relative;
+	z-index: 1;
+	background: inherit;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.contactstable:before {
+	background: inherit; 
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0; 
+	bottom: 0;
+	box-shadow: inset 0 0 0 2000px rgba(255,255,255,0.3);
+	filter: blur(10px);
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .siteimghome {
-  width: 539px; 
-  height: 103px;
+	width: 539px; 
+	height: 103px;
 }
 
 .siteimgplaces {
-  width: 202px; 
-  height: 77px;
+	width: 202px; 
+	height: 77px;
 }
 
 .siteimg404 {
-  width: 312px;
-  height: 101px;
+	width: 312px;
+	height: 101px;
 }
 
 .siteimgdownloads {
-  width: 367px;
-  height: 87px;
+	width: 367px;
+	height: 87px;
 }
 
 .siteimgsoftware {
-  width: 454.5px;
-  height: 56.5px;
+	width: 454.5px;
+	height: 56.5px;
 }
 
 .siteimgcursors {
-  width: 436.5px;
-  height: 82px;
+	width: 436.5px;
+	height: 82px;
 }
 
 .link404 {
-  font-size: 17.75px;
-  font-weight: bold;  
-  font-family: Verdana;
-  text-decoration: none;  
+	font-size: 17.75px;
+	font-weight: bold;	
+	font-family: Verdana;
+	text-decoration: none;	
 }
 
 .softwareicon {
-  width: 64px;
-  height: 64px;
+	width: 64px;
+	height: 64px;
 }
 
 .cursoricon {
-  width: 32px;
-  height: 32px;
+	width: 32px;
+	height: 32px;
 }
 
 .comptableheader {
-  background-color: #6286f39a;
+	background-color: #6286f39a;
 }
 
 .comptableheadertext {
-  height: 18px;
-  font-size: 13.5px;
-  color: #FFFFFF
+	height: 18px;
+	font-size: 13.5px;
+	color: #FFFFFF
 }
 
 .comptablecontent {
-  background-color: #bfca5b9c;
+	background-color: #bfca5b9c;
 }
 
 .comptablecontenttext {
-  font-size: 14px;
+	font-size: 14px;
 }
 
 .aboutlist {
-  font-size: 20px;
+	font-size: 20px;
 }
 
 .bpdate {
-  font-size: 32px;
+	font-size: 32px;
 }
 
 .blogpost {
-  font-size: 16.70px;
+	font-size: 16.70px;
 }
 
 .blogrss {
-  font-size: 19px;
+	font-size: 19px;
 }
 
 .gamesrvrule {
-  font-size: 18.5px;
+	font-size: 18.5px;
 }
 
 .hackerman {
-  width: 167px;
-  height: 28px;
+	width: 167px;
+	height: 28px;
 }
 
 .linkdownloads {
-  font-size: 21px;
+	font-size: 21px;
 }
 
 .testchangelink {
-  font-size: 22px;
+	font-size: 22px;
 }
 
 .backbutton {
-  cursor: pointer;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
+	cursor: pointer;
+	-webkit-transition-duration: 0.4s; /* Safari workaround */
+	transition-duration: 0.4s;
 }
 
 .backbutton:hover {
-  color: black;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin: 4px 2px;
-  box-shadow: 0 22px 36px 0 rgba(0,0,0,0.24),0 14px 50px 0 rgba(0,0,0,0.19);
+	color: black;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	margin: 4px 2px;
+	box-shadow: 0 22px 36px 0 rgba(0,0,0,0.24),0 14px 50px 0 rgba(0,0,0,0.19);
 }
 
 .plugintxt {
-  font-size: 22px;
+	font-size: 18.75px;
 }
 
+.abouttitle {
+	width: 285px;
+	height: 72px;
+}
+
+.contactstitle {
+	width: 327px;
+	height: 92px;
+}
+
+.twticon {
+	height: 52px;
+	width: 64px;
+}
+
+.discicon {
+	height: 64px;
+	width: 58px;
+}

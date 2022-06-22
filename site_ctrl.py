@@ -19,8 +19,9 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/downloads', page_downloads)
 	app.router.add_get('/downloads/software', page_downloads_software)
 	app.router.add_get('/downloads/cursors', page_downloads_cursors)
-    # TODO: Split about me into multiple pages
-	app.router.add_get('/about', page_about_me)
+	# TODO: Split about me into multiple pages
+	app.router.add_get('/about', page_about)
+	app.router.add_get('/about/contact', page_contact)
 	app.router.add_get('/computers', page_my_computers)
 	app.router.add_get('/mcsrv', page_mc_srv)
 	app.router.add_get('/mcsrv/rules', page_mc_srv_rules)
@@ -46,7 +47,7 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app.jinja_env = jinja2.Environment(
 		loader = jinja2.FileSystemLoader('tmpl'),
 		autoescape = jinja2.select_autoescape(default = True),
-	)
+    )
 
 	return app
 	
@@ -91,11 +92,16 @@ async def page_my_computers(req):
 		'title': 'My computers'
 	})
 
-async def page_about_me(req):
-	return render(req, 'about.me.html', {
+async def page_about(req):
+	return render(req, 'about.html', {
 		'title': 'About me'
 	})
 
+async def page_contact(req):
+	return render(req, 'about.contact.html', {
+		'title': 'Contact info | About me'
+	})
+	
 async def page_game_srv(req):
 	return render(req, 'game.servers.html', {
 		'title': 'My game servers'
@@ -117,9 +123,19 @@ async def page_mc_srv_plugins(req):
 	})
 
 async def page_discord_server_redir(req):
-    return render(req, 'discord.html', {
-        'title': 'Discord server',
-    })
+	return render(req, 'discord.html', {
+		'title': 'Discord server',
+	})
+	
+async def page_testing(req):
+	return render(req, 'testing.html', {
+		'title': 'Testing | Page 1'
+	})
+
+async def page_testing_too(req): 
+	return render(req, 'testing.too.html', {
+		'title': 'Testing | Page 2'
+	})
 
 async def page_blog(req):
 	with open('json/posts.json', 'rb') as bp:
@@ -163,17 +179,6 @@ async def blog_rss(req):
 	)
 	
 	return web.Response(status = 200, content_type = 'text/xml', text = rss.to_xml(encoding = 'utf-8'))
-
-if settings.TESTING:
-	async def page_testing(req):
-		return render(req, 'testing.html', {
-			'title': 'Testing | Page 1'
- 		})
-
-	async def page_testing_too(req): 
-		return render(req, 'testing.too.html', {
-			'title': 'Testing | Page 2'
-		})
 
 async def handle_404(req):
 	return render(req, '404.html', { 
