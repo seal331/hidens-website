@@ -47,251 +47,251 @@
 		"The old domain will continue to work as a redirect until May 23, 2022. If you link my site on your own site, please update the link by then."
 	],
 	
-    "2022-05-03T21:50:38": [
-        "I'm taking a break from Discord.",
-        "There is a long list of reasons why, but it's generally because it's been a burden on my mental health, and I need some time away from that mess.",
-        "I'll still speak in some servers via IRC, including WinWorld and mine."
-    ],
-    
-    "2022-04-25T01:51:30": [
-        "Well, that was a wild few days.",
-        "This server expldoed, the temporary server exploded due to a MobaXterm feature/bug/whatever, and then everything got fixed. Sorry about all of this, I hope that something like this won't happen again.",
-        "Anyway, yeah. Everything's back up now."
-    ],
+	"2022-05-03T21:50:38": [
+		"I'm taking a break from Discord.",
+		"There is a long list of reasons why, but it's generally because it's been a burden on my mental health, and I need some time away from that mess.",
+		"I'll still speak in some servers via IRC, including WinWorld and mine."
+	],
+	
+	"2022-04-25T01:51:30": [
+		"Well, that was a wild few days.",
+		"This server expldoed, the temporary server exploded due to a MobaXterm feature/bug/whatever, and then everything got fixed. Sorry about all of this, I hope that something like this won't happen again.",
+		"Anyway, yeah. Everything's back up now."
+	],
 
-    "2022-04-22T21:10:07": [
-        "The server now runs Fedora."
-    ],
+	"2022-04-22T21:10:07": [
+		"The server now runs Fedora."
+	],
 
-    "2022-04-20T06:44:27": [
-        "Sorry about the downtime. It was caused by a failed upgrade to Linux 5.15 which then spiraled into a hardware failure that somehow fixed itself.",
-        "The Dynmap for the Minecraft server has been removed for now."
-    ],
-    
-    "2022-04-19T10:56:07": [
-        "A bunch of new buttons were added. Mostly older ones that have been readded.",
-        "I'm testing a new experiement."
-    ],
+	"2022-04-20T06:44:27": [
+		"Sorry about the downtime. It was caused by a failed upgrade to Linux 5.15 which then spiraled into a hardware failure that somehow fixed itself.",
+		"The Dynmap for the Minecraft server has been removed for now."
+	],
+	
+	"2022-04-19T10:56:07": [
+		"A bunch of new buttons were added. Mostly older ones that have been readded.",
+		"I'm testing a new experiement."
+	],
 
-    "2022-04-14T06:00:18": [
-        "HTTPS is now forced, you may use TLSv1 - TLSv1.3. For older browsers you may need to add the <a href=\"https://letsencrypt.org/certs/lets-encrypt-r3.pem\">Let's Encrypt certificate</a> to your browser.",
-        "Nginx now caches static content for a more <em>sped</em> browsing experience.",
-        "<em><a href=\"https://dkay.xyz\">dkay</a></em>"
-    ],
+	"2022-04-14T06:00:18": [
+		"HTTPS is now forced, you may use TLSv1 - TLSv1.3. For older browsers you may need to add the <a href=\"https://letsencrypt.org/certs/lets-encrypt-r3.pem\">Let's Encrypt certificate</a> to your browser.",
+		"Nginx now caches static content for a more <em>sped</em> browsing experience.",
+		"<em><a href=\"https://dkay.xyz\">dkay</a></em>"
+	],
 
-    "2022-04-13T18:28:13": [
-        "The site now supports HTTPS (thanks <a href=\"https://dkay.xyz\">dkay</a>).",
-        "HTTP is still avaliable for now while I sort out cipher compatibility with older systems, however I strongly recommend against using it for security and privacy reasons.",
-        "On top of this, all links that use HTTP and also support HTTPS have been changed to link to the HTTPS version.",
-        "It is now powered under an Nginx reverse proxy to help achieve this.",
-        "Service status was removed because it's a pain to maintain with my current server setup. The best way to know about outages is through my <a href=\"https://discord.gg/zH9kMEzEYM\">my Discord server</a>.",
-        "Links was rebranded to Places.",
-        "The site design will change to accomodate holidays (as evident by the April Fools one not too long ago).",
-        "Game servers other than Minecraft is cancelled for now, although I am considering hosting servers of things other than games.",
-        "Sorry about the lack of updates. This is pretty much everything that's happened since the last post."
-    ],
+	"2022-04-13T18:28:13": [
+		"The site now supports HTTPS (thanks <a href=\"https://dkay.xyz\">dkay</a>).",
+		"HTTP is still avaliable for now while I sort out cipher compatibility with older systems, however I strongly recommend against using it for security and privacy reasons.",
+		"On top of this, all links that use HTTP and also support HTTPS have been changed to link to the HTTPS version.",
+		"It is now powered under an Nginx reverse proxy to help achieve this.",
+		"Service status was removed because it's a pain to maintain with my current server setup. The best way to know about outages is through my <a href=\"https://discord.gg/zH9kMEzEYM\">my Discord server</a>.",
+		"Links was rebranded to Places.",
+		"The site design will change to accomodate holidays (as evident by the April Fools one not too long ago).",
+		"Game servers other than Minecraft is cancelled for now, although I am considering hosting servers of things other than games.",
+		"Sorry about the lack of updates. This is pretty much everything that's happened since the last post."
+	],
 
-    "2022-03-28T16:02:54": [
-        "I have a new project available, called PubSite. <a href=\"https://pubsite.cf\">Check it out.</a>",
-        "On top of that, the site is getting many adjustments to it's appearance and functioanlity. Check those out."
-    ],
+	"2022-03-28T16:02:54": [
+		"I have a new project available, called PubSite. <a href=\"https://pubsite.cf\">Check it out.</a>",
+		"On top of that, the site is getting many adjustments to it's appearance and functioanlity. Check those out."
+	],
 
-    "2022-03-26T02:30:35": [
-        "An update was just released for the site. A new download was added, some text across the pages was changed, and a few bugs were fixed (the computers link appearing weirdly on Safari and GNOME Web, links pointing to the old domain, old and out of date info, etc)."
-    ],
+	"2022-03-26T02:30:35": [
+		"An update was just released for the site. A new download was added, some text across the pages was changed, and a few bugs were fixed (the computers link appearing weirdly on Safari and GNOME Web, links pointing to the old domain, old and out of date info, etc)."
+	],
 
-    "2022-03-21T19:00:48": [
-        "Something's on fire! Please wait while I see what the problem is."
-    ],
-    
-    "2022-03-08T18:20:52": [
-        "A <a href=\"/downloads/cursors\">new page</a> is available.",
-	    "Many visual adjustments were added."
-    ],
+	"2022-03-21T19:00:48": [
+		"Something's on fire! Please wait while I see what the problem is."
+	],
+	
+	"2022-03-08T18:20:52": [
+		"A <a href=\"/downloads/cursors\">new page</a> is available.",
+		"Many visual adjustments were added."
+	],
 
-    "2022-03-03T01:52:39": [
-        "News was briefly removed, and then readded.",
-        "The code is seeing heavy cleanup from unused/nonfunctional things.",
-        "A TF2 server is coming soon."
-    ],
+	"2022-03-03T01:52:39": [
+		"News was briefly removed, and then readded.",
+		"The code is seeing heavy cleanup from unused/nonfunctional things.",
+		"A TF2 server is coming soon."
+	],
 
-    "2022-02-27T20:08:02": [
-        "Sorry about the downtime. There was a power outage in my area caused by a winter storm, which took down some power lines.",
-        "The Downloads page has been revamped."
-    ],
+	"2022-02-27T20:08:02": [
+		"Sorry about the downtime. There was a power outage in my area caused by a winter storm, which took down some power lines.",
+		"The Downloads page has been revamped."
+	],
 
-    "2022-02-18T10:07:27": [
-        "Sorry about the downtime. I switched the server's OS to Fedora from Ubuntu."
-    ],
-    
-    "2022-02-10T06:28:29": [
-        "(NO LONGER THE CASE, IT HAS BEEN CANCELLED) <strike>I'm opening a Team Fortress 2 server soon.</strike>",
-        "The service status page has been removed for now.",
-        "(NO LONGER THE CASE, THEY WERE SCRAPPED) <strike>There's a bunch of pages detailing my favorite crap in development. It's still in the early stages, though.</strike>",
-        "You can view early, in development stuff, as well as experiements at <a href=\"/testing\">the testing page</a>.",
-        "The pre-release code scattered all over the pages is being reloacated to the afformentioned page."
-    ],
+	"2022-02-18T10:07:27": [
+		"Sorry about the downtime. I switched the server's OS to Fedora from Ubuntu."
+	],
+	
+	"2022-02-10T06:28:29": [
+		"(NO LONGER THE CASE, IT HAS BEEN CANCELLED) <strike>I'm opening a Team Fortress 2 server soon.</strike>",
+		"The service status page has been removed for now.",
+		"(NO LONGER THE CASE, THEY WERE SCRAPPED) <strike>There's a bunch of pages detailing my favorite crap in development. It's still in the early stages, though.</strike>",
+		"You can view early, in development stuff, as well as experiements at <a href=\"/testing\">the testing page</a>.",
+		"The pre-release code scattered all over the pages is being reloacated to the afformentioned page."
+	],
 
-    "2022-02-07T10:11:39": [
-        "Quality of life changes and many other improvments were added to many of the pages."
-    ],
+	"2022-02-07T10:11:39": [
+		"Quality of life changes and many other improvments were added to many of the pages."
+	],
 
-    "2022-02-03T22:02:36": [
-        "(MULTIPLE GAME SEREVRS HAS BEEN CANCELLED FOR NOW) <strike>There's a <a href=\"gameservers\">new page</a>.</strike>",
-        "Meta (AKA Facebook) has seen their first full-blown user loss on Facebook... good."
-    ],
+	"2022-02-03T22:02:36": [
+		"(MULTIPLE GAME SEREVRS HAS BEEN CANCELLED FOR NOW) <strike>There's a <a href=\"gameservers\">new page</a>.</strike>",
+		"Meta (AKA Facebook) has seen their first full-blown user loss on Facebook... good."
+	],
 
-    "2022-02-02T20:22:33": [
-        "The service status page is permenantly shut down, as I don't have a sufficient host for it.",
-        "There's also going to be a very bad ice storm in my area later on tonight, so the server will certainly be down for at least 2 - 9 days.",
-        "The server was restarted due to a Linux kernel update."
-    ],
+	"2022-02-02T20:22:33": [
+		"The service status page is permenantly shut down, as I don't have a sufficient host for it.",
+		"There's also going to be a very bad ice storm in my area later on tonight, so the server will certainly be down for at least 2 - 9 days.",
+		"The server was restarted due to a Linux kernel update."
+	],
 
-    "2022-02-01T19:00:37": [
-        "(NO LONGER THE CASE) <strike>This site will be rewritten with Bootstrap 5 later on this year.</strike>"
-    ],
-    
-    "2022-01-30T16:00:23": [
-        "The server was down last night for a hardware upgrade (4GB -> 6GB of RAM), but things didn't exactly go to plan originally. After the upgrade, it only went to a black screen, no beeping, no special lights, no HDD activity, nothing. Reseating both RAM sticks fixed it.",
-        "Because of that, it was down for much longer than expected. Sorry about that."
-    ],
+	"2022-02-01T19:00:37": [
+		"(NO LONGER THE CASE) <strike>This site will be rewritten with Bootstrap 5 later on this year.</strike>"
+	],
+	
+	"2022-01-30T16:00:23": [
+		"The server was down last night for a hardware upgrade (4GB -> 6GB of RAM), but things didn't exactly go to plan originally. After the upgrade, it only went to a black screen, no beeping, no special lights, no HDD activity, nothing. Reseating both RAM sticks fixed it.",
+		"Because of that, it was down for much longer than expected. Sorry about that."
+	],
 
-    "2022-01-29T22:03:14": [
-        "Sorry about the long downtime of the service status page (irony), I had to do a reinstallation of both the OS and the Uptime Kuma instance itself.",
-        "Apple is deprecating and removing Python 2 in macOS 12.3. Update ya damn code to use Python 3.",
-        "Microsoft is soon going to cancel Xbox Game Pass subscriptions that haven't been utlizied in a long time, just to avoid draining the bank account of the buyer.",
-        "And Google accdidentally confirmed the Pixel 6a. They should, y'know, fix Android 12 before doing something like that."
-    ],
+	"2022-01-29T22:03:14": [
+		"Sorry about the long downtime of the service status page (irony), I had to do a reinstallation of both the OS and the Uptime Kuma instance itself.",
+		"Apple is deprecating and removing Python 2 in macOS 12.3. Update ya damn code to use Python 3.",
+		"Microsoft is soon going to cancel Xbox Game Pass subscriptions that haven't been utlizied in a long time, just to avoid draining the bank account of the buyer.",
+		"And Google accdidentally confirmed the Pixel 6a. They should, y'know, fix Android 12 before doing something like that."
+	],
 
-    "2022-01-27T17:45:06": [
-        "Sorry about the long downtime. A lot of issues came up in with the server. I was trying to create a systemd service to run the site, but it fails and doesn't tell me why <a href=\"https://github.com/HIDEN64/hidens-website/issues/2\">(more details here)</a>, and then the server had a kernel panic. Hopefully this is the end of this.",
-        "On the bright side, the server appears to run a lot faster, but this might just be placebo.",
-        "Spotify stock is dropping significantly thanks to them promoting conspiracy theroies. Joe Rogan ramped up his attacks against the COVID-19 vaccine on the platform, and Spotify paid him $100m to do so.",
-        "I can't believe I have to say this on <em>a tech-focused website</em> of all things, but please, get vaccinated and wear a mask. And don't start with that \"THEY DON'T WORK!!!!!1111111111\" bullshit, because they've been proven time and time again to work."
-    ],
+	"2022-01-27T17:45:06": [
+		"Sorry about the long downtime. A lot of issues came up in with the server. I was trying to create a systemd service to run the site, but it fails and doesn't tell me why <a href=\"https://github.com/HIDEN64/hidens-website/issues/2\">(more details here)</a>, and then the server had a kernel panic. Hopefully this is the end of this.",
+		"On the bright side, the server appears to run a lot faster, but this might just be placebo.",
+		"Spotify stock is dropping significantly thanks to them promoting conspiracy theroies. Joe Rogan ramped up his attacks against the COVID-19 vaccine on the platform, and Spotify paid him $100m to do so.",
+		"I can't believe I have to say this on <em>a tech-focused website</em> of all things, but please, get vaccinated and wear a mask. And don't start with that \"THEY DON'T WORK!!!!!1111111111\" bullshit, because they've been proven time and time again to work."
+	],
 
-    "2022-01-24T21:44:04": [
-        "I'm doing a lot of moving around internally, so sorry if stuff works and/or looks like crap right now.",
-        "There's now a <a href=\"http://hiden64.ddns.net:3001/status\">service status</a> page, that keeps track of when and why the site and other services I host go down.",
-        "There's also a ton of new pages in development, (CANCELLED) <strike>plus a planned website rewrite</strike>. Which ever comes first is TBD as of now."        
-    ],
+	"2022-01-24T21:44:04": [
+		"I'm doing a lot of moving around internally, so sorry if stuff works and/or looks like crap right now.",
+		"There's now a <a href=\"http://hiden64.ddns.net:3001/status\">service status</a> page, that keeps track of when and why the site and other services I host go down.",
+		"There's also a ton of new pages in development, (CANCELLED) <strike>plus a planned website rewrite</strike>. Which ever comes first is TBD as of now."		
+	],
 
-    "2022-01-23T12:10:21": [
-        "Lots of the pages were given an update.",
-        "A new download was added to <a href=\"downloads\">the Downloads page</a>.",
-        "My contact information is now available on the <a href=\"about\">about me page</a>, in case you ever need to contact me, or just want to have a chat with me.",
-        "The code of the pages is also being cleaned up quite a bit."
-    ],
+	"2022-01-23T12:10:21": [
+		"Lots of the pages were given an update.",
+		"A new download was added to <a href=\"downloads\">the Downloads page</a>.",
+		"My contact information is now available on the <a href=\"about\">about me page</a>, in case you ever need to contact me, or just want to have a chat with me.",
+		"The code of the pages is also being cleaned up quite a bit."
+	],
 
-    "2022-01-22T12:32:03":[
-        "Major visual updates were added.",
-        "2 <a href=\"computers\">new</a> <a href=\"about\">pages</a> were added. There will be more new pages soon™.",
-        "The cryptocurrency market has crashed and burned...............",
-        "TIME TO CELEBRATE YAYAYAYAYAAYAYAYAYAY-"
-    ],
+	"2022-01-22T12:32:03":[
+		"Major visual updates were added.",
+		"2 <a href=\"computers\">new</a> <a href=\"about\">pages</a> were added. There will be more new pages soon™.",
+		"The cryptocurrency market has crashed and burned...............",
+		"TIME TO CELEBRATE YAYAYAYAYAAYAYAYAYAY-"
+	],
 
-    "2022-01-21T14:48:00":[
-        "Programs on <a href=\"/downloads/software\">the software downloads page</a> now have icons, so they're more recognizeable. I added a new download for Netscape there too.",
-        "Twitter launched an NFT integration feature...............",
-        "Is there any good alternatives to Twitter?"
-    ],
+	"2022-01-21T14:48:00":[
+		"Programs on <a href=\"/downloads/software\">the software downloads page</a> now have icons, so they're more recognizeable. I added a new download for Netscape there too.",
+		"Twitter launched an NFT integration feature...............",
+		"Is there any good alternatives to Twitter?"
+	],
 
-    "2022-01-20T11:29:00": [
-        "Added a few more visual updates.",
-        "I'm now utlizing a more efficient way of updating the news and footer without having to manually change the size of those elements.",
-        "There's a <a href=\"downloads\">new page</a>. This is to help reduce some clutter.",
-        "(NO LONGER THE CASE) <strike>The guestbook link was moved to the places page.</strike>",
-        "The news page has been tweaked visually to help with performance.",
-        "The blur effect was reduced because it started causing eye strain for me.",
-        "Some parts of the website were tweaked to comply with the W3C standards. I'm not Microsoft."
-    ],
+	"2022-01-20T11:29:00": [
+		"Added a few more visual updates.",
+		"I'm now utlizing a more efficient way of updating the news and footer without having to manually change the size of those elements.",
+		"There's a <a href=\"downloads\">new page</a>. This is to help reduce some clutter.",
+		"(NO LONGER THE CASE) <strike>The guestbook link was moved to the places page.</strike>",
+		"The news page has been tweaked visually to help with performance.",
+		"The blur effect was reduced because it started causing eye strain for me.",
+		"Some parts of the website were tweaked to comply with the W3C standards. I'm not Microsoft."
+	],
 
-    "2022-01-18T06:42:00": [
-        "I've migrated the site to <a href=\"http://hiden64.ddns.net\">a new domain</a>, because apparently the domain I used before was being flagged as malware by some AVs and websites.",
-        "A lot of visual improvements were slapped onto here too.",
-        "Microsoft purchased Activision... for whatever reason. They're going to have a total monopoly on gaming in the future just like they do with PCs, I know it."
-    ],
+	"2022-01-18T06:42:00": [
+		"I've migrated the site to <a href=\"http://hiden64.ddns.net\">a new domain</a>, because apparently the domain I used before was being flagged as malware by some AVs and websites.",
+		"A lot of visual improvements were slapped onto here too.",
+		"Microsoft purchased Activision... for whatever reason. They're going to have a total monopoly on gaming in the future just like they do with PCs, I know it."
+	],
 
-    "2022-01-13T22:01:00":[
-        "I may have found a fix for HTTPS with this website. If I did, HTTPS will be enabled soon-ish.",
-        "The new Intel Celeron's single core performance outperforms that of the Core i9-10900K, which is impressive. But of course, it's a Celeron, so it had to be kneecapped in some way. That way is that it's only 2 core, 2 threads. So single core wise, it outperforms the i9-10900K, but for anything multicore, the i9 curb stomps the Celeron."
-    ],
+	"2022-01-13T22:01:00":[
+		"I may have found a fix for HTTPS with this website. If I did, HTTPS will be enabled soon-ish.",
+		"The new Intel Celeron's single core performance outperforms that of the Core i9-10900K, which is impressive. But of course, it's a Celeron, so it had to be kneecapped in some way. That way is that it's only 2 core, 2 threads. So single core wise, it outperforms the i9-10900K, but for anything multicore, the i9 curb stomps the Celeron."
+	],
 
-    "2022-01-12T00:26:00":[
-        "A new code formatting standard was introduced for this website's code, in an effort to make it organized and not a mess of spaghetti.",
-        "A new page <em>might</em> be coming soon."
-    ],
+	"2022-01-12T00:26:00":[
+		"A new code formatting standard was introduced for this website's code, in an effort to make it organized and not a mess of spaghetti.",
+		"A new page <em>might</em> be coming soon."
+	],
 
-    "2022-01-08T07:53:00": [
-        "Many visual updates were added to the site."
-    ],
-    
-    "2022-01-07T05:40:00": [
-        "A logging feature was added to this site to monitor the requests, to make sure it's not from bots and/or spammers."
-    ],
+	"2022-01-08T07:53:00": [
+		"Many visual updates were added to the site."
+	],
+	
+	"2022-01-07T05:40:00": [
+		"A logging feature was added to this site to monitor the requests, to make sure it's not from bots and/or spammers."
+	],
 
-    "2022-01-05T23:18:00": [
-        "Happy (late) new year!",
-        "Sorry about the extended downtime, I had an issue with my router that wasn't fixed until today.",
-        "(HORIZON IS PROBABLY CANCELLED) <strike>Development of Horizon will start back up soon, I took a break from it to focus on other things.</strike>"
-    ],
+	"2022-01-05T23:18:00": [
+		"Happy (late) new year!",
+		"Sorry about the extended downtime, I had an issue with my router that wasn't fixed until today.",
+		"(HORIZON IS PROBABLY CANCELLED) <strike>Development of Horizon will start back up soon, I took a break from it to focus on other things.</strike>"
+	],
 
-    "2021-12-31T01:22:00": [
-        "The site has been rewritten to utilize jinja (an HTML templating engine for Python). The goal with this is to clean up the code, as well as allow for more possibilities than what you can have with just static pages.",
-        "The actual content of the site is mostly unchanged as of now, but I plan on rewriting the site to utilize Bootstrap in 2022.",
-        "News now supports RSS."
-    ],
+	"2021-12-31T01:22:00": [
+		"The site has been rewritten to utilize jinja (an HTML templating engine for Python). The goal with this is to clean up the code, as well as allow for more possibilities than what you can have with just static pages.",
+		"The actual content of the site is mostly unchanged as of now, but I plan on rewriting the site to utilize Bootstrap in 2022.",
+		"News now supports RSS."
+	],
 
-    "2021-12-27T05:58:00": [
-        "The footer now appears on every page.",
-        "The news page was heavily reworked.",
-        "Tables and site logos have been heavily reworked to utilize CSS instead of the archaic in-HTML style definitions.",
-        "Many other visual tweaks have been added.",
-        "The site logo has been updated, as this isn't really a ''90s-designed site'' anymore.",
-        "I'm also cleaning up a bunch of things on the pages themselves, to fix issues and all that jazz."
-    ],
+	"2021-12-27T05:58:00": [
+		"The footer now appears on every page.",
+		"The news page was heavily reworked.",
+		"Tables and site logos have been heavily reworked to utilize CSS instead of the archaic in-HTML style definitions.",
+		"Many other visual tweaks have been added.",
+		"The site logo has been updated, as this isn't really a ''90s-designed site'' anymore.",
+		"I'm also cleaning up a bunch of things on the pages themselves, to fix issues and all that jazz."
+	],
 
-    "2021-12-25T14:24:00": [
-        "Merry Christmas! Our gift for this year is the revival of the website after ~1 month of letting it rot. We're sorry about that.",
-        "Footer facts have also been removed as they are pretty bloaty and unessecary."
-    ],
-    
-    "2021-10-31T04:31:00": [
-        "Happy Halloween! Nothing huge today, just moving around and removing some things; fixing issues with the fonts, removing the RetroSite ad, removing the license (since it's pointless anyway), changing up some text, removing mentions of HM/XPCat besides one footer fact, moving unused images to old stuff, etc. Minor bug fixes too."
-    ],
+	"2021-12-25T14:24:00": [
+		"Merry Christmas! Our gift for this year is the revival of the website after ~1 month of letting it rot. We're sorry about that.",
+		"Footer facts have also been removed as they are pretty bloaty and unessecary."
+	],
+	
+	"2021-10-31T04:31:00": [
+		"Happy Halloween! Nothing huge today, just moving around and removing some things; fixing issues with the fonts, removing the RetroSite ad, removing the license (since it's pointless anyway), changing up some text, removing mentions of HM/XPCat besides one footer fact, moving unused images to old stuff, etc. Minor bug fixes too."
+	],
 
-    "2021-10-23T08:47:00": [
-        "There's a <a href=\"places\">new page.</a>"
-    ],
+	"2021-10-23T08:47:00": [
+		"There's a <a href=\"places\">new page.</a>"
+	],
 
-    "2021-10-06T02:45:00": [
-        "The redesign plan has been shelved. Instead, I'll opt for updating the current design."
-    ],
+	"2021-10-06T02:45:00": [
+		"The redesign plan has been shelved. Instead, I'll opt for updating the current design."
+	],
 
-    "2021-08-10T05:41:00": [
-        "I've added some prelimnary parts of the redesign that I was planning for a while."
-    ],
+	"2021-08-10T05:41:00": [
+		"I've added some prelimnary parts of the redesign that I was planning for a while."
+	],
 
-    "2021-08-07T02:00:00": [
-        "TacoBot is back (See above). I've also added a new link to the homepage."
-    ],
+	"2021-08-07T02:00:00": [
+		"TacoBot is back (See above). I've also added a new link to the homepage."
+	],
 
-    "2021-07-19T04:30:00": [
-        "New major changes as well as minor changes to the website.",
-        "The background has been changed, there is now a footer, hyperlinks now have their own colors.",
-        "I also have been squashing some bugs and making some slight tweaks visually."        
-    ],
+	"2021-07-19T04:30:00": [
+		"New major changes as well as minor changes to the website.",
+		"The background has been changed, there is now a footer, hyperlinks now have their own colors.",
+		"I also have been squashing some bugs and making some slight tweaks visually."		
+	],
 
-    "2021-07-12T02:30:00": [
-        "I made a major internal change to most of the webpages here. Most of the code was unorganized and bloated... until today!"
-    ],
+	"2021-07-12T02:30:00": [
+		"I made a major internal change to most of the webpages here. Most of the code was unorganized and bloated... until today!"
+	],
 
-    "2021-06-26T19:38:50": [
-        "This website has moved to a new home. It is now being hosted on GitHub Pages instead of HM's secondary laptop (Now hosted on my own hardware)."
-    ],
+	"2021-06-26T19:38:50": [
+		"This website has moved to a new home. It is now being hosted on GitHub Pages instead of HM's secondary laptop (Now hosted on my own hardware)."
+	],
 
-    "2021-06-22T21:23:29": [
-        "The website is now open source. You can grab the source code <a href=\"https://github.com/hiden64/hidens-website\">here</a>. I am also planning to do a redesign of the site in the future.",
-        "I also cleaned up the home page a bit."
-    ]
+	"2021-06-22T21:23:29": [
+		"The website is now open source. You can grab the source code <a href=\"https://github.com/hiden64/hidens-website\">here</a>. I am also planning to do a redesign of the site in the future.",
+		"I also cleaned up the home page a bit."
+	]
 }
