@@ -1,5 +1,5 @@
 # A cancelled rework
-This is a cancelled rework to my personal website, which you can find at http://hiden64.ddns.net.
+This is a cancelled rework to my personal website, which you can find at https://hiden.pw
 
 
 See [RUNNING.md](/RUNNING.md) for details on running the server.
