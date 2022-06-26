@@ -1,4 +1,12 @@
 {
+	"2022-06-26T21:20:45": [
+		"A new computer has come into my posession. <br><br> <img class=blogimg src=/././static/blog/2022-06-26/image.jpg>",
+		"The specs are on the <a href=/computers>computers</a> page.",
+		"It's an HP Pavilion TS 17-e169nr. It's a hand-me-down that my sister gave to me. Right now, I'm not sure of what to do with it. Maybe I'll use it as a secondary laptop? I don't know. That's how I'm using it right now, I don't know if it's going to stay that way.",
+		"Another thing I've considered is replacing my crappy server with it, but it seems to run hot very fast in some cases, so I don't know how well that'll play out.",
+		"Hell, I'm thinking of throwing Windows Vista on it and using it as some sort of retro gaming machine. I'm conflicted, lol."
+	],
+
 	"2022-06-25T04:27:29": [
 		"I installed every version of Windows from 98 - 11, excluding Me, in a VM for testing a bunch of software I have. Just as some experimentation to fuel my data hoarding addiction :P."
 	],
@@ -22,7 +30,7 @@
 	],
 	
 	"2022-06-12T20:01:38": [
-		"My birthday went really well. One of the things I got from it was a dual monitor setup (I bought a DisplayPort-to-HDMI adapter). Here's what it looks like: <br><br> <img width=750px height=500px src=/static/blog/2022-06-12/image.png alt=image.png> <br><br> So far, it has worked very well. I'm very happy with this.",
+		"My birthday went really well. One of the things I got from it was a dual monitor setup (I bought a DisplayPort-to-HDMI adapter). Here's what it looks like: <br><br> <img class=blogimg src=/static/blog/2022-06-12/image.png alt=image.png> <br><br> So far, it has worked very well. I'm very happy with this.",
 		"I also bought some other things, such as an external 4TB HDD so I don't have to go through partitioning hell when reinstalling OSes.",
 		"All and all, I'm very happy with how it turned out."
 	],

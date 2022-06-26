@@ -546,3 +546,8 @@ footer:before {
 	height: 64px;
 	width: 49px;
 }
+
+.blogimg {
+	height: 500px;
+	width: 750px;
+}
