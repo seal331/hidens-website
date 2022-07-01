@@ -157,8 +157,7 @@ async def blog_rss(req):
 	rss = PyRSS2Gen.RSS2(
 		title = "HIDEN's Blog",
 		link = "https://hiden.pw/blog",
-		description = "My blog, where I post about things.",
-		docs = "",
+		description = "My blog, where I post about... well... things.",
 		
 		lastBuildDate = datetime.utcnow(),
 		
