@@ -1,9 +1,3 @@
-* {
-	box-sizing: border-box;
-	margin: 1;
-	padding: 1;
-}
-
 body {
 	background: url("/static/background.png");
 	background-size: cover;
@@ -106,7 +100,6 @@ footer {
 	position: fixed;
 	left: 0;
 	bottom: 0;
-	width: 100%;
 }
 
 footer:before {
@@ -495,6 +488,8 @@ footer:before {
 .backbutton {
 	cursor: pointer;
 	-webkit-transition-duration: 0.4s; /* Safari workaround */
+	-moz-transition-duration: 0.4s;
+	-o-transition-duration: 0.4s;
 	transition-duration: 0.4s;
 }
 
