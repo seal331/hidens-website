@@ -20,7 +20,7 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/downloads/software', page_downloads_software)
 	app.router.add_get('/downloads/cursors', page_downloads_cursors)
 	app.router.add_get('/about', page_about)
-	#app.router.add_get('/about/contact', page_contact)
+	app.router.add_get('/about/contact', page_contact)
 	app.router.add_get('/computers', page_my_computers)
 	app.router.add_get('/mcsrv', page_mc_srv)
 	app.router.add_get('/mcsrv/rules', page_mc_srv_rules)
@@ -95,10 +95,10 @@ async def page_about(req):
 		'title': 'About me'
 	})
 
-#async def page_contact(req):
-#	return render(req, 'about.contact.html', {
-#		'title': 'Contact info | About me'
-#	})
+async def page_contact(req):
+	return render(req, 'about.contact.html', {
+		'title': 'Contact info | About me'
+	})
 
 async def page_mc_srv(req):
 	return render(req, 'minecraft.srv.html', {
