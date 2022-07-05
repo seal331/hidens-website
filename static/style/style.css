@@ -405,9 +405,9 @@ footer:before {
 	height: 82px;
 }
 
-.siteimgmcsrv {
-	width: 200px;
-	height: 40px;
+.siteimgmc {
+	width: 383px;
+	height: 85.5px;
 }
 
 .link404 {
@@ -458,8 +458,9 @@ footer:before {
 	font-size: 17px;
 }
 
-.gamesrvrule {
+.mcrule {
 	font-size: 18.5px;
+	padding: 2px;
 }
 
 .hackerman {
@@ -495,6 +496,7 @@ footer:before {
 
 .plugintxt {
 	font-size: 18.75px;
+	padding: 2px;
 }
 
 .siteimgabout {
