@@ -158,6 +158,10 @@ async def blog_rss(req):
 		title = "HIDEN's Blog",
 		link = "https://hiden.pw/blog",
 		description = "My blog, where I post about... well... things.",
+		generator = "PyRSS2Gen",
+		docs = "https://validator.w3.org/feed/docs/rss2.html",
+		language = "en-us",
+		webMaster = "hiden64@protonmail.com",
 		
 		lastBuildDate = datetime.utcnow(),
 		
