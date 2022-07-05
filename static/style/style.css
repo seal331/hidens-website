@@ -3,48 +3,40 @@ body {
 	background-size: cover;
 	background-attachment: fixed;
 	text-align: center;
+	font-family: Verdana;
+	font-weight: bold;
 }
 
 h1 {
 	font-size: 35px;
-	font-family: Verdana;
-	font-weight: bold;
 }
 
 h2 {
 	font-size: 26px;
-	font-family: Verdana;
-	font-weight: bold;
 }
 
 h3 {
 	font-size: 21px;
-	font-family: Verdana;
-	font-weight: bold;
 }
 
 h4 {
 	font-size: 19px;
-	font-family: Verdana;
-	font-weight: bold;
+}
+
+h5 {
+	font-size: 17px;
 }
 
 li {
 	font-size: 16.5px;
-	font-weight: bold;	
-	font-family: Verdana;
 }
 	
 p {
 	font-size: 16.5px;
-	font-weight: bold;
-	font-family: Verdana;
 }
 
 .jserr {
 	font-size: 16.5px;
-	font-weight: bold;
-	font-family: Verdana;
 }
 
 table, tr, th, td {
@@ -57,8 +49,6 @@ ul {
 
 a {
 	font-size: 16.5px;
-	font-weight: bold;	
-	font-family: Verdana;
 	text-decoration: none;
 }
 
@@ -67,27 +57,23 @@ img {
 }
 
 a:link {
- font-weight: bold;
- text-decoration: none;
- color: #0000FF;
+	text-decoration: none;
+	color: #0000FF;
 }
  
 a:visited {
- font-weight: bold;
- text-decoration: none;
- color: #7305bd;
+	text-decoration: none;
+	color: #7305bd;
 }
  
 a:hover {
- font-weight: bold;
- text-decoration: none;
- color: #0059ff;
+	text-decoration: none;
+	color: #0059ff;
 }
  
 a:active {
- font-weight: bold;
- text-decoration: none;
- color: #0b0ba8;
+	text-decoration: none;
+	color: #0b0ba8;
 }
 
 footer {
@@ -419,9 +405,6 @@ footer:before {
 
 .link404 {
 	font-size: 17.75px;
-	font-weight: bold;	
-	font-family: Verdana;
-	text-decoration: none;	
 }
 
 .softwareicon {
@@ -465,7 +448,7 @@ footer:before {
 }
 
 .blogrss {
-	font-size: 19px;
+	font-size: 17px;
 }
 
 .gamesrvrule {

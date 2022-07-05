@@ -33,4 +33,4 @@ Creating `settings_local.py` is required, but adding content to the file is opti
 
 After that, run the site with `python runserver.py`.
 
-Please file any bugs you find in the Issues tab of this repository, or contact me using the provided info [here](https://hiden.pw/about/contact), so I can more easily find and fix them.
+Please file any bugs you find in the Issues tab of this repository.<!--,  or contact me using the provided info [here](https://hiden.pw/about/contact), so I can more easily find and fix them.-->
