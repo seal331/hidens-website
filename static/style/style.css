@@ -45,6 +45,8 @@ table, tr, th, td {
 
 ul {
 	display: inline-block;
+	margin: 0;
+	padding: 0;
 }
 
 a {
@@ -151,7 +153,7 @@ footer:before {
 }
 
 .placestable {
-	width: 652.7px; 
+	width: 788.8px; 
 	box-shadow: 0 0 3rem 0 rgba(0, 0, 0, .5); 
 	border-radius: 4px;
 	position: relative;
@@ -379,8 +381,8 @@ footer:before {
 }
 
 .siteimgplaces {
-	width: 202px; 
-	height: 77px;
+	width: 191px; 
+	height: 71px;
 }
 
 .siteimg404 {
@@ -401,6 +403,11 @@ footer:before {
 .siteimgcursors {
 	width: 436.5px;
 	height: 82px;
+}
+
+.siteimgmcsrv {
+	width: 200px;
+	height: 40px;
 }
 
 .link404 {
