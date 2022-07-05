@@ -6,6 +6,7 @@ from datetime import datetime
 import dateutil.parser
 import json
 
+#from init import inittime
 import settings
 
 def RunServ(serve_static = False, serve_storage = False, serve_js = False):
@@ -159,7 +160,7 @@ async def blog_rss(req):
 		link = "https://hiden.pw/blog",
 		description = "My blog, where I post about... well... things.",
 		
-		lastBuildDate = datetime.utcnow(),
+		lastBuildDate = datetime.utcnow,
 		
 		items = [
 			PyRSS2Gen.RSSItem(

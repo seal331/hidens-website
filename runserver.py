@@ -2,6 +2,7 @@ from aiohttp import web
 from site_ctrl import RunServ
 import logging 
 import settings
+#import init
 
 def main():
 
@@ -25,5 +26,8 @@ def main():
 
 	web.run_app(app, port = settings.PORT)
 
+#init()
+
 if __name__ == '__main__':
+	#inittime = time.clock()
 	main()
