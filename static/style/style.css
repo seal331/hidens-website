@@ -50,7 +50,6 @@ ul {
 }
 
 a {
-	/* cursor: default; */ /* Unsure if I'll add this */
 	font-size: 16.5px;
 	text-decoration: none;
 }
@@ -478,7 +477,6 @@ footer:before {
 }
 
 .backbutton {
-	/* cursor: default; */ /* Unsure if I'll add this */
 	cursor: pointer;
 	-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
 	-moz-transition-duration: 0.5s; /* Gecko workaround */
