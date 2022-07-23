@@ -4,7 +4,7 @@ This document provides instructions on how to run the server.
 ## Requirements:
 - Python 3.6 or newer
 - pip
-- A *nix environment, although Windows works too
+- Preferably a *nix environment, although Windows works too
 
 ## Running:
 To run, install the requirements using pip: `pip install -r requirements .txt`. If you don't have pip, check requirement #2 above.
