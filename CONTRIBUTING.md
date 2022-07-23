@@ -37,7 +37,7 @@ If you'd like to mimic [the production enviornment](https://hiden.pw), you can s
 
 ## Reporting issues:
 
-Please file any bugs you find in the `Issues` tab of this repository,  or contact me using the provided info [at /about/contact](https://hiden.pw/about/contact).
+Please file any bugs you find in the `Issues` tab of this repository,  or contact me using the provided info at [/about/contact](https://hiden.pw/about/contact).
 
 Here's an example template you could use:
 ```
