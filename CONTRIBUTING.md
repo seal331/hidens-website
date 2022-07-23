@@ -30,9 +30,10 @@ Create `settings_local.py`. The avaliable options are as follows:
 
 You must create `settings_local.py` to start the server. However, you do not need to add content the the file.
 
-Once confiugration is done, run the server with `python runserver.py`.
+### Post-configuration
+Once confiugration is done, run the server with `runserver.py`.
 
-If you'd like to mimic the production enviornment, you can set up an Nginx reverse proxy. [Apache is not recommended for this use case.](https://github.com/aio-libs/aiohttp/issues/2687)
+If you'd like to mimic [the production enviornment](https://hiden.pw), you can set up an Nginx reverse proxy. [Apache is not recommended for this use case.](https://github.com/aio-libs/aiohttp/issues/2687)
 
 ## Reporting issues:
 
