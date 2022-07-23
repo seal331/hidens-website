@@ -2,10 +2,9 @@
 This document provides instructions on how to run the server.
 
 ## Requirements:
-- Python 3.6 or newer is required, the server may work on older versions but these versions are what it has been tested with
-- pip; Should be installed by default on Windows, install it with your distrubition's package manager on Linux, install it on macOS with [get-pip.py](https://bootstrap.pypa.io/get-pip.py)
-- A *nix environment is preferred, but it has been tested to work with Windows too
-- An Nginx reverse proxy is recommended for production enviornments, however it is not needed for development enviornments
+- Python 3.6 or newer
+- pip
+- A *nix environment, although Windows works too
 
 ## Running:
 To run, install the requirements using pip: `pip install -r requirements .txt`. If you don't have pip, check requirement #2 above.
