@@ -46,7 +46,7 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app.jinja_env = jinja2.Environment(
 		loader = jinja2.FileSystemLoader('tmpl'),
 		autoescape = jinja2.select_autoescape(default = True),
-    )
+	)
 
 	return app
 	
