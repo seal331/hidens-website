@@ -26,7 +26,7 @@ Create `settings_local.py`. The avaliable options are as follows:
 
 `SERVE_STORAGE`, Serves the `/storage` directory (software, cursors).
 
-`SERVE_JS`, Serves JavaScript content. This content is only used for experiements on `/testing`, so unless `TESTING` is enabled too, it's pretty much useless.
+`SERVE_JS`, Serves JavaScript content. 
 
 You must create `settings_local.py` to start the server. However, you do not need to add content the the file.
 

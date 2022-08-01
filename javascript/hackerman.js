@@ -6,10 +6,10 @@ var jargon = actions[(Math.ceil(Math.random() * actions.length) - 1)]
 var length = 5;
 
 for (var i = 0; i <= length; i++) {
-    if (i <= 1) {
-        jargon = jargon + "with ";
-     };
-     jargon = jargon + things[(Math.ceil(Math.random() * things.length) - 1)] + " ";
+	if (i <= 1) {
+		jargon = jargon + "with ";
+	};
+	jargon = jargon + things[(Math.ceil(Math.random() * things.length) - 1)] + " ";
 };
 
 document.write("<p style=\"display: inline;\">" + jargon + "</p>")

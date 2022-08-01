@@ -1,4 +1,4 @@
-var txt = ['WHAT H', 'Foo', 'Bar', 'h', 'H', 'Test-Text-For-A-Test-Thing'];
+var txt = ['WHAT H', 'Foo', 'Bar', 'h', 'H', 'Test-Text-For-A-Test-Thing', 'gentoo balls'];
 	textSequence(0);
 	function textSequence(i) {
 		if (txt.length > i) {

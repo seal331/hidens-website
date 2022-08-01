@@ -5,6 +5,8 @@ import settings
 
 def main():
 
+	print("Starting server...")
+	
 	app = RunServ(
 		serve_static = settings.SERVE_STATIC, 
 		serve_storage = settings.SERVE_STORAGE, 
@@ -22,9 +24,10 @@ def main():
 			)
 		else:
 			logging.basicConfig(level=logging.DEBUG)
-
+			
 	web.run_app(app, port = settings.PORT)
 
 
 if __name__ == '__main__':
 	main()
+

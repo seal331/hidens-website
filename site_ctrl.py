@@ -115,10 +115,10 @@ async def page_mc_srv_plugins(req):
 		'title': 'MC plugins',
 	})
 
-#async def page_discord_server_redir(req):
-#	return render(req, 'discord.html', {
-#		'title': 'Discord server',
-#	})
+async def page_discord_server_redir(req):
+	return render(req, 'discord.html', {
+		'title': 'Discord server',
+	})
 	
 async def page_testing(req):
 	return render(req, 'testing.html', {
