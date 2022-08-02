@@ -27,9 +27,8 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/mcsrv/plugins', page_mc_srv_plugins)
 	app.router.add_get('/blog', page_blog)
 	app.router.add_get('/blog/rss', blog_rss)
-	#app.router.add_get('/discord', page_discord_server_redir)
+	app.router.add_get('/discord', page_discord_server_redir)
 	
-
 	if settings.TESTING:
 		app.router.add_get('/testing', page_testing)
 		app.router.add_get('/testing/too', page_testing_too)
