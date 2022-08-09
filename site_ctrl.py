@@ -32,6 +32,7 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	if settings.TESTING:
 		app.router.add_get('/testing', page_testing)
 		app.router.add_get('/testing/too', page_testing_too)
+		app.router.add_get('/testing/projects/pubsite', page_pubsite_details)
 
 	if serve_static:
 		app.router.add_static('/static', 'static')
@@ -63,7 +64,7 @@ async def page_projects(req):
 	return render(req, 'projects.html', {
 		'title': 'Projects'
 	})
-
+	
 async def page_places(req):
 	return render(req, 'places.html', {
 		'title': 'Places'
@@ -119,6 +120,11 @@ async def page_discord_server_redir(req):
 		'title': 'Discord server',
 	})
 	
+async def page_pubsite_details(req):
+	return render(req, 'projects.pubsite.html', {
+		'title': 'Pubsite | Projects'
+	})
+	
 async def page_testing(req):
 	return render(req, 'testing.html', {
 		'title': 'Testing | Page 1'
@@ -128,7 +134,7 @@ async def page_testing_too(req):
 	return render(req, 'testing.too.html', {
 		'title': 'Testing | Page 2'
 	})
-
+	
 async def page_blog(req):
 	with open('json/posts.json', 'rb') as bp:
 		bp_json = json.loads(bp.read())
