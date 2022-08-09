@@ -33,6 +33,7 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 		app.router.add_get('/testing', page_testing)
 		app.router.add_get('/testing/too', page_testing_too)
 		app.router.add_get('/testing/projects/pubsite', page_pubsite_details)
+		app.router.add_get('/testing/projects/pubsite/ssgallery', page_pubsite_ssgallery)
 
 	if serve_static:
 		app.router.add_static('/static', 'static')
@@ -123,6 +124,11 @@ async def page_discord_server_redir(req):
 async def page_pubsite_details(req):
 	return render(req, 'projects.pubsite.html', {
 		'title': 'Pubsite | Projects'
+	})
+	
+async def page_pubsite_ssgallery(req):
+	return render(req, 'projects.pubsite.ssgallery.html', {
+		'title': 'Screenshot Gallery | Pubsite | Projects'
 	})
 	
 async def page_testing(req):
