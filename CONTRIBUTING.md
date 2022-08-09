@@ -1,7 +1,7 @@
 # Contributing to the site
 This document provides ways on how you could countribute to the site.
 
-## Running the server:
+## Running the server
 
 ### Requirements:
 - Python 3.6 or newer
@@ -35,7 +35,7 @@ Once confiugration is done, run the server with `runserver.py`.
 
 If you'd like to mimic [the production enviornment](https://hiden.pw), you can set up an Nginx reverse proxy. [Apache is not recommended for this use case.](https://github.com/aio-libs/aiohttp/issues/2687)
 
-## Reporting issues:
+## Reporting issues
 
 Please file any bugs you find in the `Issues` tab of this repository,  or contact me using the provided info at [/about/contact](https://hiden.pw/about/contact).
 
