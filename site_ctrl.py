@@ -28,12 +28,12 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/blog', page_blog)
 	app.router.add_get('/blog/rss', blog_rss)
 	app.router.add_get('/discord', page_discord_server_redir)
+	app.router.add_get('/projects/pubsite', page_pubsite_details)
+	app.router.add_get('/projects/pubsite/ssgallery', page_pubsite_ssgallery)
 	
 	if settings.TESTING:
 		app.router.add_get('/testing', page_testing)
 		app.router.add_get('/testing/too', page_testing_too)
-		app.router.add_get('/testing/projects/pubsite', page_pubsite_details)
-		app.router.add_get('/testing/projects/pubsite/ssgallery', page_pubsite_ssgallery)
 
 	if serve_static:
 		app.router.add_static('/static', 'static')
