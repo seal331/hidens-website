@@ -567,3 +567,8 @@ footer:before {
 	width: 723px;
 	height: 520px;
 }
+
+str {
+	font-size: 16.70px;
+	text-decoration: line-through;
+}
