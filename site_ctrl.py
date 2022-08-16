@@ -36,6 +36,8 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 		app.router.add_get('/testing/too', page_testing_too)
 		app.router.add_get('/testing/music', page_music_collection)
 		app.router.add_get('/testing/spam', page_spam)
+		app.router.add_get('/testing/projects/randomapp1', page_randomapp1_details)
+		app.router.add_get('/testing/projects/hbot', page_hbot_details)
 
 	if serve_static:
 		app.router.add_static('/static', 'static')
@@ -131,6 +133,16 @@ async def page_pubsite_details(req):
 async def page_pubsite_ssgallery(req):
 	return render(req, 'projects.pubsite.ssgallery.html', {
 		'title': 'Screenshot Gallery | Pubsite | Projects'
+	})
+
+async def page_randomapp1_details(req):
+	return render(req, 'projects.randomapp1.html', {
+		'title': 'RandomApp1 | Projects'
+	})
+
+async def page_hbot_details(req):
+	return render(req, 'projects.hbot.html', {
+		'title': 'H-Bot | Projects'
 	})
 
 async def page_music_collection(req):
