@@ -30,14 +30,14 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/discord', page_discord_server_redir)
 	app.router.add_get('/projects/pubsite', page_pubsite_details)
 	app.router.add_get('/projects/pubsite/ssgallery', page_pubsite_ssgallery)
+	app.router.add_get('/projects/randomapp1', page_randomapp1_details)
+	app.router.add_get('/projects/hbot', page_hbot_details)
 	
 	if settings.TESTING:
 		app.router.add_get('/testing', page_testing)
 		app.router.add_get('/testing/too', page_testing_too)
 		app.router.add_get('/testing/music', page_music_collection)
 		app.router.add_get('/testing/spam', page_spam)
-		app.router.add_get('/testing/projects/randomapp1', page_randomapp1_details)
-		app.router.add_get('/testing/projects/hbot', page_hbot_details)
 
 	if serve_static:
 		app.router.add_static('/static', 'static')
