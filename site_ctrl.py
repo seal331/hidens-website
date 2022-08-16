@@ -34,6 +34,8 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	if settings.TESTING:
 		app.router.add_get('/testing', page_testing)
 		app.router.add_get('/testing/too', page_testing_too)
+		app.router.add_get('/testing/music', page_music_collection)
+		app.router.add_get('/testing/spam', page_spam)
 
 	if serve_static:
 		app.router.add_static('/static', 'static')
@@ -129,6 +131,16 @@ async def page_pubsite_details(req):
 async def page_pubsite_ssgallery(req):
 	return render(req, 'projects.pubsite.ssgallery.html', {
 		'title': 'Screenshot Gallery | Pubsite | Projects'
+	})
+
+async def page_music_collection(req):
+	return render (req, 'music.collection.html', {
+		'title': 'Music Collection | Home'
+	})
+
+async def page_spam(req):
+	return render(req, 'spam.html', {
+		'title': 'Spam'
 	})
 	
 async def page_testing(req):
