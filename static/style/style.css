@@ -1,5 +1,5 @@
 body {
-	background: url("/static/background.png");
+	background: url("/static/misc/bg.png");
 	background-size: cover;
 	background-attachment: fixed;
 	text-align: center;
@@ -459,11 +459,6 @@ footer:before {
 .siteimgplaces {
 	width: 191px; 
 	height: 71px;
-}
-
-.siteimg404 {
-	width: 312px;
-	height: 101px;
 }
 
 .siteimgdownloads {
