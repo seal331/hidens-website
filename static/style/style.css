@@ -547,24 +547,6 @@ footer:before {
 	font-size: 22px;
 }
 
-.backbutton {
-	cursor: pointer;
-	-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
-	-moz-transition-duration: 0.5s; /* Gecko workaround */
-	-o-transition-duration: 0.5s; /* Presto workaround */
-	transition-duration: 0.5s;
-}
-
-.backbutton:hover {
-	color: black;
-	padding: 10px 38px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	margin: 4px 2px;
-	box-shadow: 0 22px 36px 0 rgba(0,0,0,0.24),0 14px 50px 0 rgba(0,0,0,0.19);
-}
-
 .plugintxt {
 	font-size: 18.75px;
 	padding: 2px;
