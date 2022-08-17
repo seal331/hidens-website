@@ -48,18 +48,13 @@ footer:before {
 .sidenav a {
     padding: 6px 8px 6px 16px;
     text-decoration: none;
-    font-size: 19px;
+    font-size: 17.5px;
     color: #ffdf4e;
     display: block;
 }
 
 .sidenav a:hover {
     color: #d9ff00;
-}
-
-.main {
-    font-size: 20px;
-    padding: 0px 10px;
 }
 
 @media screen and (max-height: 450px) {
