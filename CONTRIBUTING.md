@@ -28,6 +28,8 @@ Create `settings_local.py`. The avaliable options are as follows:
 
 `SERVE_JS`, Serves JavaScript content. 
 
+`APRILFOOLS`, Enables the April Fools day holiday page.
+
 You must create `settings_local.py` to start the server. However, you do not need to add content the the file.
 
 ### Post-configuration
