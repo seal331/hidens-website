@@ -37,6 +37,7 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 		app.router.add_get('/testing', page_testing)
 		app.router.add_get('/testing/too', page_testing_too)
 		app.router.add_get('/testing/music', page_music)
+		app.router.add_get('/testing/music/metallica', page_music_metallica)
 		app.router.add_get('/testing/spam', page_spam)
 
 	if serve_static:
@@ -150,8 +151,13 @@ async def page_hbot_details(req):
 	})
 
 async def page_music(req):
-	return render (req, 'music.html', {
-		'title': 'Music Collection | Home'
+	return render(req, 'music.html', {
+		'title': 'Home | Music'
+	})
+
+async def page_music_metallica(req):
+	return render(req, 'music.metallica.html', {
+		'title': 'Metallica | Music'
 	})
 
 async def page_spam(req):
