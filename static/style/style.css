@@ -452,8 +452,8 @@ footer:before {
 
 
 .siteimghome {
-	width: 539px; 
-	height: 103px;
+	width: 568px; 
+	height: 98px;
 }
 
 .siteimgplaces {
@@ -608,16 +608,34 @@ str {
 
 .stuffbox {
 	margin-top: -595px; /* very hacky but it works */
-	margin-left: 25px;
+	margin-left: 20px;
 	float: left;
 	box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
 	width: 240px;
 }
 
 .stuffboxhead {
-	background-color: #d8cd698e;
+	background-color: #93b9629f;
+}
+
+.stuffboxheadtxt {
+	font-size: 12px;
+}
+
+.stuffboxcontenttxt {
+	font-size: 13.25px;
 }
 
 .stuffboxcontent {
-	background-color: rgba(206, 202, 0, 0.384);
+	background-color: rgba(175, 173, 20, 0.384);
+}
+
+.hitscounter {
+	margin-top: -155px;
+	margin-right: 20px;
+	float: right;
+}
+
+.hitcounternotice {
+	font-size: 9px;
 }
