@@ -1,4 +1,11 @@
 {
+	"2022-08-23T17:41:39": [
+		"I removed the number from my username. I did this because it's much easier for me to say \"HIDEN\" without the number. 64 can be a mouthful to say quickly. :P",
+		"That HP laptop is in my possession again. It was given back to me after I informed the person I've given it to the that HDD is starting to die (it's S.M.A.R.T. status in CrystalDiskInfo is \"Caution\").",
+		"A thing was added to the homepage called The Stuff Box™. It pulls a random thing from a file of 57 other things. It was in testing limbo for a very long time because I didn't know how to implement it... but now I do, and I did it :P.",
+		"On a semi-related note, fuck CSS."
+	],
+
 	"2022-08-17T23:40:07": [
 		"HTTP was re-enabled on the site for compatibility reasons.",
 		"I still strongly recommend you use HTTPS if you have the option to.",

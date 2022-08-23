@@ -605,3 +605,19 @@ str {
 	width: 48px;
 	height: 48px;
 }
+
+.stuffbox {
+	margin-top: -595px; /* very hacky but it works */
+	margin-left: 25px;
+	float: left;
+	box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
+	width: 240px;
+}
+
+.stuffboxhead {
+	background-color: #d8cd698e;
+}
+
+.stuffboxcontent {
+	background-color: rgba(206, 202, 0, 0.384);
+}

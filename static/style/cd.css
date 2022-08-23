@@ -3,7 +3,7 @@ body {
 	text-align: center;
 	font-family: Verdana;
 	font-weight: bold;
-    margin-left: 210px; 
+    margin-left: 225.3px; 
     color: #FFFFFF
 }
 
@@ -34,7 +34,7 @@ footer:before {
 
 .sidenav {
     height: 100%;
-    width: 210px;
+    width: 225.3px;
     position: fixed;
     z-index: 1;
     top: 0;
