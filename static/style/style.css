@@ -639,3 +639,8 @@ str {
 .hitcounternotice {
 	font-size: 9px;
 }
+
+.footerbtn {
+	width: 88px;
+	height: 31px;
+}
