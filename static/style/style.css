@@ -611,7 +611,7 @@ str {
 	margin-left: 20px;
 	float: left;
 	box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
-	width: 240px;
+	width: 270px;
 }
 
 .stuffboxhead {
@@ -643,4 +643,30 @@ str {
 .footerbtn {
 	width: 88px;
 	height: 31px;
+}
+
+.factbox {
+	margin-top: -202px;
+	margin-left: 55px;
+	float: left;
+	box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
+	width: 240px;
+}
+
+.factboxhead {
+	background-color: #750ba775;
+}
+
+.factboxheadtxt {
+	font-size: 12px;
+	color: white;
+}
+
+.factboxcontenttxt {
+	font-size: 13.25px;
+	color: white;
+}
+
+.factboxcontent {
+	background-color: rgba(58, 33, 78, 0.719);
 }
