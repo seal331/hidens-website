@@ -1,4 +1,9 @@
 {
+	"2022-09-03T01:52:38": [
+		"Apologies about the down-time. The install of Fedora running on the server stopped working, and no other Linux distributions would work (including Fedora itself). I had to install Windows on the server just to get it to work, and I spent 2 days configuring everything.",
+		"The Discord-IRC relay is currently dead due to bugs with Discord.NET on Windows. It's in the process of being replaced by Matterbridge."
+	],
+
 	"2022-08-31T09:14:10": [
 		"Apologies about the long downtime. The file system on the server was corrupt and then took a long time to repair."
 	],
