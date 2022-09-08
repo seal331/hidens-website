@@ -1,4 +1,9 @@
 {
+	"2022-09-08T18:19:03": [
+		"So... <a href=https://en.wikipedia.org/wiki/Elizabeth_II>the queen</a> died. I'm... speechless to say the least.",
+		"And there's a bunch of idiots joking about it. Well, trolls will be trolls I guess."
+	],
+
 	"2022-09-03T01:52:38": [
 		"Apologies about the down-time. The install of Fedora running on the server stopped working, and no other Linux distributions would work (including Fedora itself). I had to install Windows on the server just to get it to work, and I spent 2 days configuring everything.",
 		"The Discord-IRC relay is currently dead due to bugs with Discord.NET on Windows. It's in the process of being replaced by Matterbridge."
