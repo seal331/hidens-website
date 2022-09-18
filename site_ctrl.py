@@ -29,8 +29,9 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/blog/rss', blog_rss)
 	app.router.add_get('/discord', page_discord_server_redir)
 	app.router.add_get('/projects/pubsite', page_pubsite_details)
-	app.router.add_get('/projects/pubsite/ssgallery', page_pubsite_ssgallery)
+	app.router.add_get('/projects/pubsite/ssg', page_pubsite_ssgallery)
 	app.router.add_get('/projects/randomapp1', page_randomapp1_details)
+	app.router.add_get('/projects/randomapp1/ssg', page_randomapp1_ssgallery)
 	app.router.add_get('/projects/hbot', page_hbot_details)
 	
 	if settings.TESTING:
@@ -39,6 +40,7 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 		app.router.add_get('/testing/music', page_music)
 		app.router.add_get('/testing/music/metallica', page_music_metallica)
 		app.router.add_get('/testing/spam', page_spam)
+		app.router.add_get('/projects/website', page_website_details)
 
 	if serve_static:
 		app.router.add_static('/static', 'static')
@@ -145,11 +147,21 @@ async def page_randomapp1_details(req):
 		'title': 'RandomApp1 | Projects'
 	})
 
+async def page_randomapp1_ssgallery(req):
+	return render(req, 'projects.randomapp1.ssgallery.html', {
+		'title': 'Screenshot Gallery | RandomApp1 | Projects'
+	})
+
 async def page_hbot_details(req):
 	return render(req, 'projects.hbot.html', {
 		'title': 'H-Bot | Projects'
 	})
 
+async def page_website_details(req):
+	return render(req, 'projects.website.html', {
+		'title': 'Website | Projects'
+	})
+	
 async def page_music(req):
 	return render(req, 'music.html', {
 		'title': 'Home | Music'
