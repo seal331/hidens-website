@@ -450,6 +450,35 @@ footer:before {
 	margin-right: auto;
 }
 
+.webdetailstable {
+	width: 698px;
+	box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
+	border-radius: 4px;
+	position: relative;
+	z-index: 1;
+	background: inherit;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.webdetailstable:before {
+	background: inherit; 
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0; 
+	bottom: 0;
+	box-shadow: inset 0 0 0 2000px rgba(255,255,255,0.3);
+	filter: blur(10px);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.webtitle {
+	width: 215px;
+	height: 130px;
+}
 
 .siteimghome {
 	width: 568px; 
@@ -613,6 +642,14 @@ footer:before {
 
 .ssdisc {
 	font-size: 11.5px;
+}
+
+.webtxt {
+	font-size: 14px;
+}
+
+.webtxt2 {
+	font-size: 12.5px;
 }
 
 str {
