@@ -1,0 +1,4 @@
+This is from a scrapped error 50x page. It was scrapped due to me not knowing how to set a custom page for those errors for AIOHTTP.
+
+Creation date: 2022-01-19
+Scrapped/removal date: 2022-01-19/20

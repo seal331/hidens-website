@@ -1,0 +1,4 @@
+This is the first iteration of this site that wasn't a shitpost-for-testing-NGINX.
+
+Creation date: 2021-05-10
+Removal date: 2021-05-12

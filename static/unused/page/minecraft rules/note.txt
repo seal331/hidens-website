@@ -1,0 +1,4 @@
+This would've been a rewrite of the Minecraft rules page to utilise a similar technology that the blog page uses. It was scrapped due to me being stumped on actually getting it working properly
+
+Creation date: 2022-02-03
+Scrapped/removal date: 2022-02-03
