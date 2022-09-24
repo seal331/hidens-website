@@ -563,11 +563,6 @@ footer:before {
 	padding: 2px;
 }
 
-.hackerman {
-	width: 167px;
-	height: 28px;
-}
-
 .linkdownloads {
 	font-size: 21px;
 }
@@ -664,10 +659,10 @@ str {
 
 .stuffbox {
 	margin-top: -595px; /* very hacky but it works */
-	margin-left: 20px;
+	margin-left: 23px;
 	float: left;
 	box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
-	width: 270px;
+	width: 250px;
 }
 
 .stuffboxhead {
@@ -688,7 +683,7 @@ str {
 
 .hitscounter {
 	margin-top: -155px;
-	margin-right: 20px;
+	margin-right: 37px;
 	float: right;
 }
 
@@ -702,8 +697,8 @@ str {
 }
 
 .factbox {
-	margin-top: -202px;
-	margin-left: 55px;
+	margin-top: -143px;
+	margin-left: 45px;
 	float: left;
 	box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
 	width: 240px;
@@ -725,4 +720,30 @@ str {
 
 .factboxcontent {
 	background-color: rgba(58, 33, 78, 0.719);
+}
+
+.jargonbox {
+	margin-top: -535px;
+	margin-right: 35px;
+	float: right;
+	box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
+	width: 240px;
+}
+
+.jargonhead {
+	background-color: #1863c5a4;
+}
+
+.jargonheadimg {
+	width: 173.5px;
+	height: 35px;
+}
+
+.jargoncontenttxt {
+	font-size: 13.5px;
+	color: black;
+}
+
+.jargoncontent {
+	background-color: rgba(15, 107, 247, 0.452);
 }

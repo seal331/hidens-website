@@ -12,4 +12,4 @@ for (var i = 0; i <= length; i++) {
 	jargon = jargon + things[(Math.ceil(Math.random() * things.length) - 1)] + " ";
 };
 
-document.write("<p style=\"display: inline;\">" + jargon + "</p>")
+document.write("<p class=jargoncontenttxt style=\"display: inline;\">" + jargon + "</p>")
