@@ -45,6 +45,7 @@ table, tr, th, td {
 
 ul {
 	display: inline-block;
+	list-style-position: inside;
 	margin: 0;
 	padding: 0;
 }
@@ -685,6 +686,7 @@ str {
 	margin-top: -155px;
 	margin-right: 37px;
 	float: right;
+	border: 0;
 }
 
 .hitcounternotice {
