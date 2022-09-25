@@ -8,7 +8,7 @@ body {
 }
 
 h1 {
-	font-size: 35px;
+	font-size: 32px;
 }
 
 h2 {
@@ -748,4 +748,8 @@ str {
 
 .jargoncontent {
 	background-color: rgba(15, 107, 247, 0.452);
+}
+
+.winamptxt {
+	font-size: 32px;
 }

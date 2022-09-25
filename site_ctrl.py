@@ -14,6 +14,7 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	# YanDev code g o
 
 	app.router.add_get('/', page_index)
+	app.router.add_get('/winamp', page_winamp)
 	app.router.add_get('/projects', page_projects)
 	app.router.add_get('/places', page_places)
 	app.router.add_get('/downloads', page_downloads)
@@ -72,6 +73,11 @@ async def page_index(req):
 		return render(req, 'index.html')
 
 
+async def page_winamp(req):
+	return render(req, 'winamp.html', {
+		'title': 'Winamp selection'
+	})
+	
 async def page_projects(req):
 	return render(req, 'projects.html', {
 		'title': 'Projects'
