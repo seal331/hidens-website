@@ -50,13 +50,21 @@ ul {
 	padding: 0;
 }
 
-a {
-	font-size: 16.5px;
-	text-decoration: none;
-}
 
 img {
 	filter: drop-shadow(4.5px 4.5px 4.5px #666666);
+}
+
+code {
+	font-family: monospace;
+	background-color: #17389434;
+	font-size: 85%;
+	padding: 2.75px;
+}
+
+a {
+	font-size: 16.5px;
+	text-decoration: none;
 }
 
 a:link {
@@ -751,5 +759,5 @@ str {
 }
 
 .winamptxt {
-	font-size: 32px;
+	font-size: 26px;
 }
