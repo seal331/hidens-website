@@ -39,6 +39,7 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	if settings.TESTING:
 		app.router.add_get('/testing', page_testing)
 		app.router.add_get('/testing/too', page_testing_too)
+		# TODO: Finish these
 		app.router.add_get('/testing/music', page_music)
 		app.router.add_get('/testing/music/metallica', page_music_metallica)
 		app.router.add_get('/testing/spam', page_spam)
