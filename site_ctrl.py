@@ -35,6 +35,7 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/projects/randomapp1/ssg', page_randomapp1_ssgallery)
 	app.router.add_get('/projects/hbot', page_hbot_details)
 	app.router.add_get('/projects/website', page_website_details)
+	app.router.add_get('/projects/website/compatlist', page_website_compatlist)
 	
 	if settings.TESTING:
 		app.router.add_get('/testing', page_testing)
@@ -43,7 +44,6 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 		app.router.add_get('/testing/music', page_music)
 		app.router.add_get('/testing/music/metallica', page_music_metallica)
 		app.router.add_get('/testing/spam', page_spam)
-		#app.router.add_get('/projects/website/compatlist' page_website_compatlist) # TODO: Implement this in a bit
 
 	if serve_static:
 		app.router.add_static('/static', 'static')
@@ -168,6 +168,11 @@ async def page_hbot_details(req):
 async def page_website_details(req):
 	return render(req, 'projects.website.html', {
 		'title': 'Website | Projects'
+	})
+
+async def page_website_compatlist(req): 
+	return render(req, 'projects.website.compatlist.html', {
+		'title': 'Compatibility list | Website | Projects'
 	})
 	
 async def page_music(req):
