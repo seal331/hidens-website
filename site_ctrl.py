@@ -43,6 +43,7 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 		app.router.add_get('/testing/music', page_music)
 		app.router.add_get('/testing/music/metallica', page_music_metallica)
 		app.router.add_get('/testing/spam', page_spam)
+		#app.router.add_get('/projects/website/compatlist' page_website_compatlist) # TODO: Implement this in a bit
 
 	if serve_static:
 		app.router.add_static('/static', 'static')
