@@ -470,6 +470,7 @@ footer:before {
 	overflow: hidden;
 	margin-left: auto;
 	margin-right: auto;
+	table-layout: inherit;
 }
 
 .webcompattable:before {
@@ -577,6 +578,18 @@ footer:before {
 
 .fc {
 	background-color: #54b347;
+}
+
+.fcb {
+	background-color: #eac000;
+}
+
+.fcmb {
+	background-color: #ea7900;
+}
+
+.brk {
+	background-color: #ea2600;
 }
 
 .aboutlist {
