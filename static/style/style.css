@@ -88,7 +88,6 @@ a:active {
 }
 
 footer {
-	margin-top: 5px;
 	box-shadow: 0 0 0.6rem 0 rgba(0, 0, 0, .5); 
 	z-index: 1;
 	background: inherit;
@@ -110,6 +109,27 @@ footer:before {
 	box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
 	filter: blur(10px);
 	margin: -20px;
+}
+
+footer img {
+	transition-timing-function: ease-in-out;
+	-webkit-transition-duration: 0.35s; /* WebKit/Blink workaround */
+	-moz-transition-duration: 0.35s; /* Gecko workaround */
+	-o-transition-duration: 0.35s; /* Presto workaround */
+	transition-duration: 0.35s;
+	width: 81px;
+	height: 33px;
+}
+
+footer img:hover {
+	transition-timing-function: ease-in-out;
+	-webkit-transition-duration: 0.35s; /* WebKit/Blink workaround */
+	-moz-transition-duration: 0.35s; /* Gecko workaround */
+	-o-transition-duration: 0.35s; /* Presto workaround */
+	transition-duration: 0.35s;
+	height: 42.9px;
+	width: 114.4px;
+	margain: 4px 2px;
 }
 
 .hometable {
@@ -745,11 +765,6 @@ str {
 	font-size: 9px;
 }
 
-.footerbtn {
-	width: 88px;
-	height: 31px;
-}
-
 .factbox {
 	margin-top: -143px;
 	margin-left: 45px;
@@ -805,4 +820,3 @@ str {
 .winamptxt {
 	font-size: 26px;
 }
-
