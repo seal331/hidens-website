@@ -2,14 +2,14 @@ var things = new Array("non-rotatable disk", "side fumbling CPU", "processor", "
 
 var actions = new Array("I've hacked into your ", "I'm breaking into the ", "I've hacked the ", "I've gained effective root access to your ", "I'm gaining root access to ", "I've hacked the ", "I broke into the ");
 
-var jargon = actions[Math.ceil(Math.random() * actions.length)]
+var jargon = actions[Math.floor(Math.random() * actions.length)]
 var length = 5;
 
 for (var i = 0; i <= length; i++) {
 	if (i <= 1) {
 		jargon += "with ";
 	}
-	jargon += things[Math.ceil(Math.random() * things.length)] + " ";
+	jargon += things[Math.floor(Math.random() * things.length)] + " ";
 }
 
 document.write("<p class=jargoncontenttxt style=\"display: inline;\">" + jargon + "</p>");
