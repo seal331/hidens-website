@@ -22,6 +22,7 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/downloads/cursors', page_downloads_cursors)
 	app.router.add_get('/about', page_about)
 	app.router.add_get('/about/contact', page_contact)
+	app.router.add_get('/about/faq', page_faq)
 	app.router.add_get('/computers', page_my_computers)
 	app.router.add_get('/mcsrv', page_mc_srv)
 	app.router.add_get('/mcsrv/rules', page_mc_srv_rules)
@@ -41,9 +42,9 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 		app.router.add_get('/testing', page_testing)
 		app.router.add_get('/testing/too', page_testing_too)
 		# TODO: Finish these
-		app.router.add_get('/testing/music', page_music)
-		app.router.add_get('/testing/music/metallica', page_music_metallica)
-		app.router.add_get('/testing/spam', page_spam)
+		app.router.add_get('/music', page_music)
+		app.router.add_get('/music/metallica', page_music_metallica)
+		app.router.add_get('/spam', page_spam)
 
 	if serve_static:
 		app.router.add_static('/static', 'static')
@@ -118,6 +119,11 @@ async def page_about(req):
 async def page_contact(req):
 	return render(req, 'about.contact.html', {
 		'title': 'Contact info | About me'
+	})
+
+async def page_faq(req):
+	return render(req, 'about.faq.html', {
+		'title': 'Frequently Asked Questions | About me'
 	})
 
 async def page_mc_srv(req):

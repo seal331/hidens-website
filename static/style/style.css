@@ -824,3 +824,8 @@ str {
 .speakoniainstructlist {
 	line-height: 155%;
 }
+
+.faqtxt {
+	text-align: left;
+	margin-left: 125px;
+}
