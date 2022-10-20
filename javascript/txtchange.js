@@ -4,7 +4,7 @@ var i = 0;
 document.getElementById("sequence").innerHTML = txt[i];
         
 setInterval(function() {
-    if (i < txt.length) {
+    if (i < txt.length - 1) {
         i++;
     } else {
         i = 0;
