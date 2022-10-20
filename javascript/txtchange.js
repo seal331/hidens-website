@@ -1,12 +1,11 @@
 var txt = ['WHAT H', 'Foo', 'Bar', 'h', 'H', 'Test-Text-For-A-Test-Thing', 'gentoo balls'];
-	textSequence(0);
-	function textSequence(i) {
-		if (txt.length > i) {
-			setTimeout(function() {
-				document.getElementById("sequence").innerHTML = txt[i];
-				textSequence(++i);
-			}, 1000); 
-		} else if (txt.length == i) {
-			textSequence(0);
-		}
-	}
+var i = 0;
+
+setTimeout(function() {
+    if (txt.length < i) {
+        document.getElementById("sequence").innerHTML = txt[i];
+        i++;
+    } else {
+        i = 0;
+    }
+}, 1000);
