@@ -7,7 +7,7 @@ var length = 5;
 
 for (var i = 0; i <= length; i++) {
 	if (i <= 1) {
-		jargon += "with";
+		jargon += "with ";
 	}
 	jargon += things[Math.ceil(Math.random() * things.length)] + " ";
 }
