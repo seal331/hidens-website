@@ -129,7 +129,7 @@ footer img:hover {
 	transition-duration: 0.35s;
 	height: 42.9px;
 	width: 114.4px;
-	margain: 4px 2px;
+	margin: 4px 2px;
 }
 
 .hometable {
@@ -819,4 +819,8 @@ str {
 
 .winamptxt {
 	font-size: 26px;
+}
+
+.speakoniainstructlist {
+	line-height: 155%;
 }
