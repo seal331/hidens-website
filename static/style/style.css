@@ -813,6 +813,26 @@ str {
 	color: black;
 }
 
+a.jargoncontenttxt:link {
+	text-decoration: none;
+	color: #77ddf7;
+}
+ 
+a.jargoncontenttxt:visited {
+	text-decoration: none;
+	color: #f069de;
+}
+ 
+a.jargoncontenttxt:hover {
+	text-decoration: none;
+	color: #00f7ff;
+}
+ 
+a.jargoncontenttxt:active {
+	text-decoration: none;
+	color: #0b96a8;
+}
+
 .jargoncontent {
 	background-color: rgba(15, 107, 247, 0.452);
 }

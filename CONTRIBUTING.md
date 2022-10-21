@@ -28,7 +28,9 @@ Create `settings_local.py`. The avaliable options are as follows:
 
 `SERVE_JS`, Serves JavaScript content. 
 
-`APRILFOOLS`, Enables the April Fools day holiday page.
+`APRILFOOLS_2022`, Enables the April Fools day holiday page that was used in 2022.
+
+`APRILFOOLS_2023`, Enables the April Fools day holiday page that will be used in 2023.
 
 You must create `settings_local.py` to start the server. However, you do not need to add content the the file.
 

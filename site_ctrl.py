@@ -46,6 +46,9 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 		app.router.add_get('/music/metallica', page_music_metallica)
 		app.router.add_get('/spam', page_spam)
 
+	if settings.APRILFOOLS_2023:
+		app.router.add_get('/why', page_why_af23)
+
 	if serve_static:
 		app.router.add_static('/static', 'static')
 	if serve_storage:
@@ -70,8 +73,10 @@ class App(web.Application):
 # YanDev code g o
 
 async def page_index(req):
-	if settings.APRILFOOLS:
-		return render(req, 'index.aprilfools.html')
+	if settings.APRILFOOLS_2022:
+		return render(req, 'index.aprilfools.2022.html')
+	elif settings.APRILFOOLS_2023:
+		return render(req, 'index.aprilfools.2023.html')
 	else:
 		return render(req, 'index.html')
 
@@ -205,6 +210,9 @@ async def page_testing_too(req):
 	return render(req, 'testing.too.html', {
 		'title': 'Testing | Page 2'
 	})
+
+async def page_why_af23(req): 
+	return render(req, 'why.aprilfools.2023.html')
 	
 async def page_blog(req):
 	with open('json/posts.json', 'rb') as bp:
