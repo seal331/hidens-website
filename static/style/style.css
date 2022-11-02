@@ -802,6 +802,26 @@ str {
 	background-color: rgba(58, 33, 78, 0.719);
 }
 
+a.factboxcontenttxt:link {
+	text-decoration: none;
+	color: #77ddf7;
+}
+ 
+a.factboxcontenttxt:visited {
+	text-decoration: none;
+	color: #f069de;
+}
+ 
+a.factboxcontenttxt:hover {
+	text-decoration: none;
+	color: #00f7ff;
+}
+ 
+a.factboxcontenttxt:active {
+	text-decoration: none;
+	color: #0b96a8;
+}
+
 .jargonbox {
 	margin-top: -535px;
 	margin-right: 35px;
@@ -822,26 +842,6 @@ str {
 .jargoncontenttxt {
 	font-size: 13.5px;
 	color: black;
-}
-
-a.jargoncontenttxt:link {
-	text-decoration: none;
-	color: #77ddf7;
-}
- 
-a.jargoncontenttxt:visited {
-	text-decoration: none;
-	color: #f069de;
-}
- 
-a.jargoncontenttxt:hover {
-	text-decoration: none;
-	color: #00f7ff;
-}
- 
-a.jargoncontenttxt:active {
-	text-decoration: none;
-	color: #0b96a8;
 }
 
 .jargoncontent {
