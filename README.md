@@ -14,7 +14,7 @@ Install the requirements using pip: `pip install -r requirements .txt`. If you d
 ### Configuration
 Create `settings_local.py`. The avaliable options are as follows:
 
-`PORT`: The port that the server will use. Change this to something else on *nix if you do not have root privileges, or if you have something running on port 80 already.
+`PORT`: The port that the server will use. Change this to something else if you already have something running on port 80, or if you do not have root privileges on *nix.
 
 `ENABLE_LOGGING`: Logs every connection to the server in the terminal ouput.
 
