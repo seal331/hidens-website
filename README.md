@@ -14,34 +14,34 @@ Install the requirements using pip: `pip install -r requirements .txt`. If you d
 ### Configuration
 Create `settings_local.py`. The avaliable options are as follows:
 
-`PORT`, What port shall the server run on. Change this to something else if on *nix (or run it as root), due to a permissions error.
+`PORT`: The port that the server will use. Change this to something else on *nix if you do not have root privileges, or if you have something running on port 80 already.
 
-`ENABLE_LOGGING`, Logs every connection to the server in the terminal ouput.
+`ENABLE_LOGGING`: Logs every connection to the server in the terminal ouput.
 
-`LOG_TO_FILE`, Outputs the afformentioned connection logs to a file instead. You must set ENABLE_LOGGING to True as well to use this.
+`LOG_TO_FILE`: Outputs the afformentioned connection logs to a file instead. You must set `ENABLE_LOGGING` to `True` as well to use this.
 
-`TESTING`, Enables W.I.P. pages and experiements. Pretty much just an on/off toggle for running W.I.P./beta code. The pages are served under `/testing`.
+`TESTING`: Enables W.I.P. and/or experiemental content. The content is served at `/testing`.
 
-`SERVE_STATIC`, Serves the `/static` directory (images, CSS stylesheets, old stuff).
+`SERVE_STATIC`: Serves the `/static` directory (images, CSS stylesheets, old stuff).
 
-`SERVE_STORAGE`, Serves the `/storage` directory (software, cursors).
+`SERVE_STORAGE`: Serves the `/storage` directory (software, cursors).
 
-`SERVE_JS`, Serves JavaScript content. 
+`SERVE_JS`: Serves JavaScript content. 
 
-`APRILFOOLS_2022`, Enables the April Fools day holiday page that was used in 2022.
+`APRILFOOLS_2022`: Enables the April Fools day holiday page that was used in 2022.
 
-`APRILFOOLS_2023`, Enables the April Fools day holiday page that will be used in 2023.
+`APRILFOOLS_2023`: Enables the April Fools day holiday page that will be used in 2023.
 
-You must create `settings_local.py` to start the server. However, you do not need to add content the the file.
+You must create `settings_local.py` to start the server. However, you do not need to add content the the file. If the file is empty, the default options in `settings.py` will be used instead.
 
 ### Post-configuration
-Once confiugration is done, run the server with `runserver.py`.
+Once confiugration is done, start the server with `runserver.py`.
 
-If you'd like to mimic [the production enviornment](https://hiden.pw), you can set up an Nginx reverse proxy. [Apache is not recommended for this use case.](https://github.com/aio-libs/aiohttp/issues/2687)
+If you'd like to mimic [the production enviornment](https://hiden.pw), you can set up an Nginx reverse proxy. [I do not recommend Apache for this.](https://github.com/aio-libs/aiohttp/issues/2687)
 
 ## Reporting problems
 
-Please file any bugs you find in the `Issues` tab of this repository,  or contact me using the provided info at [/about/contact](https://hiden.pw/about/contact).
+Please file any bugs you find in the `Issues` tab of this repository, or shoot me a message using the provided info at [/about/contact](https://hiden.pw/about/contact).
 
 Here's an example template you could use (intended for an issue with the backend):
 ```
