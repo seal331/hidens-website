@@ -19,7 +19,7 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/downloads', page_downloads)
 	app.router.add_get('/downloads/software', page_downloads_software)
 	app.router.add_get('/downloads/cursors', page_downloads_cursors)
-    app.router.add_get('/downloads/software/winamp', page_winamp)
+	app.router.add_get('/downloads/software/winamp', page_winamp)
 	app.router.add_get('/about', page_about)
 	app.router.add_get('/about/contact', page_contact)
 	app.router.add_get('/about/faq', page_faq)
