@@ -280,8 +280,7 @@ footer img:hover {
 }
 
 .mcsrvtable {
-	width: 660px;
-	height: 420px;
+	width: 720px;
 	box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
 	border-radius: 4px;
 	position: relative;

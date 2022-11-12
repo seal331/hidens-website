@@ -14,12 +14,12 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	# YanDev code g o
 
 	app.router.add_get('/', page_index)
-	app.router.add_get('/winamp', page_winamp)
 	app.router.add_get('/projects', page_projects)
 	app.router.add_get('/places', page_places)
 	app.router.add_get('/downloads', page_downloads)
 	app.router.add_get('/downloads/software', page_downloads_software)
 	app.router.add_get('/downloads/cursors', page_downloads_cursors)
+    app.router.add_get('/downloads/software/winamp', page_winamp)
 	app.router.add_get('/about', page_about)
 	app.router.add_get('/about/contact', page_contact)
 	app.router.add_get('/about/faq', page_faq)
@@ -34,7 +34,7 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/projects/pubsite/ssg', page_pubsite_ssgallery)
 	app.router.add_get('/projects/randomapp1', page_randomapp1_details)
 	app.router.add_get('/projects/randomapp1/ssg', page_randomapp1_ssgallery)
-	app.router.add_get('/projects/hbot', page_hbot_details)
+	#app.router.add_get('/projects/hbot', page_hbot_details)
 	app.router.add_get('/projects/website', page_website_details)
 	app.router.add_get('/projects/website/compatlist', page_website_compatlist)
 	
@@ -170,10 +170,10 @@ async def page_randomapp1_ssgallery(req):
 		'title': 'Screenshot Gallery | RandomApp1 | Projects'
 	})
 
-async def page_hbot_details(req):
-	return render(req, 'projects.hbot.html', {
-		'title': 'H-Bot | Projects'
-	})
+#async def page_hbot_details(req):
+#	return render(req, 'projects.hbot.html', {
+#		'title': 'H-Bot | Projects'
+#	})
 
 async def page_website_details(req):
 	return render(req, 'projects.website.html', {
