@@ -44,7 +44,6 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 		# TODO: Finish these
 		app.router.add_get('/music', page_music)
 		app.router.add_get('/music/metallica', page_music_metallica)
-		app.router.add_get('/spam', page_spam)
 
 	if settings.APRILFOOLS_2023:
 		app.router.add_get('/why', page_why_af23)
@@ -196,11 +195,6 @@ async def page_music_metallica(req):
 		'title': 'Metallica | Music'
 	})
 
-async def page_spam(req):
-	return render(req, 'spam.html', {
-		'title': 'Spam'
-	})
-	
 async def page_testing(req):
 	return render(req, 'testing.html', {
 		'title': 'Testing | Page 1'
