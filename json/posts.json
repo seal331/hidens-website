@@ -232,9 +232,9 @@
 	],
 	
 	"2022-02-10T06:28:29": [
-		"(NO LONGER THE CASE, IT HAS BEEN CANCELLED) <str>I'm opening a Team Fortress 2 server soon.</str>",
+		"(NO LONGER THE CASE, IT HAS BEEN CANCELLED) <s>I'm opening a Team Fortress 2 server soon.</s>",
 		"The service status page has been removed for now.",
-		"(NO LONGER THE CASE, THEY WERE SCRAPPED) <str>There's a bunch of pages detailing my favorite crap in development. It's still in the early stages, though. (CANCELLED)</str>",
+		"(NO LONGER THE CASE, THEY WERE SCRAPPED) <s>There's a bunch of pages detailing my favorite crap in development. It's still in the early stages, though. (CANCELLED)</s>",
 		"You can view early, in development stuff, as well as experiements at <a href=\"/testing\">the testing page</a>.",
 		"The pre-release code scattered all over the pages is being reloacated to the afformentioned page."
 	],
@@ -244,7 +244,7 @@
 	],
 
 	"2022-02-03T22:02:36": [
-		"(MULTIPLE GAME SEREVRS HAS BEEN CANCELLED FOR NOW) <str>There's a <a href=\"gameservers\">new page</a>.</str>",
+		"(MULTIPLE GAME SEREVRS HAS BEEN CANCELLED FOR NOW) <s>There's a <a href=\"gameservers\">new page</a>.</s>",
 		"Meta (AKA Facebook) has seen their first full-blown user loss on Facebook... good."
 	],
 
@@ -255,7 +255,7 @@
 	],
 
 	"2022-02-01T19:00:37": [
-		"(NO LONGER THE CASE) <str>This site will be rewritten with Bootstrap 5 later on this year.</str>"
+		"(NO LONGER THE CASE) <s>This site will be rewritten with Bootstrap 5 later on this year.</s>"
 	],
 	
 	"2022-01-30T16:00:23": [
@@ -280,7 +280,7 @@
 	"2022-01-24T21:44:04": [
 		"I'm doing a lot of moving around internally, so sorry if stuff works and/or looks like crap right now.",
 		"There's now a <a href=\"http://hiden64.ddns.net:3001/status\">service status</a> page, that keeps track of when and why the site and other services I host go down.",
-		"There's also a ton of new pages in development, (CANCELLED) <str>plus a planned website rewrite</str>. Which ever comes first is TBD as of now."		
+		"There's also a ton of new pages in development, (CANCELLED) <s>plus a planned website rewrite</s>. Which ever comes first is TBD as of now."		
 	],
 
 	"2022-01-23T12:10:21": [
@@ -307,7 +307,7 @@
 		"Added a few more visual updates.",
 		"I'm now utlizing a more efficient way of updating the news and footer without having to manually change the size of those elements.",
 		"There's a <a href=\"downloads\">new page</a>. This is to help reduce some clutter.",
-		"(NO LONGER THE CASE) <str>The guestbook link was moved to the links (now places) page.</str>",
+		"(NO LONGER THE CASE) <s>The guestbook link was moved to the links (now places) page.</s>",
 		"The news page has been tweaked visually to help with performance.",
 		"The blur effect was reduced because it started causing eye strain for me.",
 		"Some parts of the website were tweaked to comply with the W3C standards. I'm not Microsoft."
@@ -340,7 +340,7 @@
 	"2022-01-05T23:18:00": [
 		"Happy (late) new year!",
 		"Sorry about the extended downtime, I had an issue with my router that wasn't fixed until today.",
-		"(HORIZON IS CANCELLED) <str>Development of Horizon will start back up soon, I took a break from it to focus on other things.</str>"
+		"(HORIZON IS CANCELLED) <s>Development of Horizon will start back up soon, I took a break from it to focus on other things.</s>"
 	],
 
 	"2021-12-31T01:22:00": [
