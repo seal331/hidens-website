@@ -26,7 +26,6 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/computers', page_my_computers)
 	app.router.add_get('/mcsrv', page_mc_srv)
 	app.router.add_get('/mcsrv/rules', page_mc_srv_rules)
-	app.router.add_get('/mcsrv/plugins', page_mc_srv_plugins)
 	app.router.add_get('/blog', page_blog)
 	app.router.add_get('/blog/rss', blog_rss)
 	app.router.add_get('/discord', page_discord_server_redir)
@@ -138,11 +137,6 @@ async def page_mc_srv(req):
 async def page_mc_srv_rules(req):
 	return render(req, 'minecraft.rules.html', {
 		'title': 'MC rules',
-	})
-
-async def page_mc_srv_plugins(req):
-	return render(req, 'minecraft.plugins.html', {
-		'title': 'MC plugins',
 	})
 
 async def page_discord_server_redir(req):
