@@ -24,8 +24,12 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/about/contact', page_contact)
 	app.router.add_get('/about/faq', page_faq)
 	app.router.add_get('/computers', page_my_computers)
-	app.router.add_get('/mcsrv', page_mc_srv)
-	app.router.add_get('/mcsrv/rules', page_mc_srv_rules)
+	app.router.add_get('/gamesrv', page_gamesrv)
+	app.router.add_get('/gamesrv/gmod', page_gmod)
+	app.router.add_get('/gamesrv/gmod/addons', page_gmod_addons)
+	app.router.add_get('/gamesrv/gmod/rules', page_gmod_rules)
+	app.router.add_get('/gamesrv/mc', page_mc)
+	app.router.add_get('/gamesrv/mc/rules', page_mc_rules)
 	app.router.add_get('/blog', page_blog)
 	app.router.add_get('/blog/rss', blog_rss)
 	app.router.add_get('/discord', page_discord_server_redir)
@@ -33,7 +37,7 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/projects/pubsite/ssg', page_pubsite_ssgallery)
 	app.router.add_get('/projects/randomapp1', page_randomapp1_details)
 	app.router.add_get('/projects/randomapp1/ssg', page_randomapp1_ssgallery)
-	#app.router.add_get('/projects/hbot', page_hbot_details)
+	app.router.add_get('/projects/hbot', page_hbot_details)
 	app.router.add_get('/projects/website', page_website_details)
 	app.router.add_get('/projects/website/compatlist', page_website_compatlist)
 	
@@ -128,15 +132,35 @@ async def page_faq(req):
 	return render(req, 'about.faq.html', {
 		'title': 'Frequently Asked Questions | About me'
 	})
-
-async def page_mc_srv(req):
-	return render(req, 'minecraft.srv.html', {
-		'title': 'MC server'
+	
+async def page_gamesrv(req):
+	return render(req, 'gamesrv.html', {    
+		'title': 'Game servers'
+	})
+	
+async def page_gmod(req):
+	return render(req, 'gamesrv.gmod.html', {
+		'title': 'Garry\'s Mod'
+	})
+	
+async def page_gmod_addons(req):
+	return render(req, 'gamesrv.gmod.addons.html', {
+		'title': 'Garry\'s Mod addons | Game servers'
+	})
+	
+async def page_gmod_rules(req):
+	return render(req, 'gamesrv.gmod.rules.html', {
+		'title': 'Garry\'s Mod rules | Game servers'
+	})
+	
+async def page_mc(req):
+	return render(req, 'gamesrv.mc.html', {
+		'title': 'Minecraft server | Game servers'
 	})
 
-async def page_mc_srv_rules(req):
-	return render(req, 'minecraft.rules.html', {
-		'title': 'MC rules',
+async def page_mc_rules(req):
+	return render(req, 'gamesrv.mc.rules.html', {
+		'title': 'Minecraft rules | Game servers',
 	})
 
 async def page_discord_server_redir(req):
@@ -164,10 +188,10 @@ async def page_randomapp1_ssgallery(req):
 		'title': 'Screenshot Gallery | RandomApp1 | Projects'
 	})
 
-#async def page_hbot_details(req):
-#	return render(req, 'projects.hbot.html', {
-#		'title': 'H-Bot | Projects'
-#	})
+async def page_hbot_details(req):
+	return render(req, 'projects.hbot.html', {
+		'title': 'H-Bot | Projects'
+	})
 
 async def page_website_details(req):
 	return render(req, 'projects.website.html', {

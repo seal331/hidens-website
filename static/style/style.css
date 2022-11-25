@@ -548,6 +548,11 @@ footer img:hover {
 	height: 85.5px;
 }
 
+.siteimggmsrv {
+	width: 437px;
+	height: 92px;
+}
+
 .link404 {
 	font-size: 17.75px;
 }
@@ -1024,6 +1029,10 @@ a.factboxcontenttxt:active {
 .faqtxt {
 	text-align: left;
 	margin-left: 125px;
+}
+
+.gamesrvlink {
+	font-size: 35px;
 }
 
 /* Keyframes */
