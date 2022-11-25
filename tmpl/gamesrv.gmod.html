@@ -1,0 +1,49 @@
+{%- extends 'base.html' -%}
+
+{%- block meta -%}
+	<meta name=description content="My Garry's Mod server.">
+{%- endblock -%}
+
+{%- block content -%}
+
+<img src=/static/title-art/gmodsrv.gif alt="Garry's Mod"><br><br>
+
+<table class=gmodsrvtable>
+	<tr>
+		<td>
+			<p>Server address</p>
+		</td>
+		<td>
+			<p>hiden,pw, default port (27015)</p>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+			<p>Connection instructions</p>
+		</td>
+		<td>
+			<p>Open the console, type <code>connect hiden.pw</code>, and press enter</p>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+			<a href=/gamesrv/gmod/addons>Addon list</a>
+		</td>
+		<td>
+			<p>You can find the list of addons here.</p>
+		</td>
+	</tr>
+	
+	<tr>
+		<td>
+			<a href=/gamesrv/gmod/rules>Server rules</a>
+		</td>
+		<td>
+			<p>These are the rules for the server.</p>
+		</td>
+	</tr>
+</table>
+
+{%- endblock -%}
