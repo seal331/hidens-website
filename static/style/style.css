@@ -136,7 +136,7 @@ footer img:hover {
 }
 
 .hometable {
-	width: 625px;
+	width: 650px;
 	box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
 	border-radius: 4px;
 	position: relative;
@@ -359,7 +359,7 @@ footer img:hover {
 }
 
 .contactstable {
-	width: 765px;
+	width: 780px;
 	box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
 	border-radius: 4px;
 	position: relative;
@@ -771,6 +771,26 @@ footer img:hover {
 	transition-duration: 0.5s;
 	height: 62px;
 	width: 86px;
+}
+
+.twticon {
+	transition-timing-function: ease;
+	-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
+	-moz-transition-duration: 0.5; /* Gecko workaround */
+	-o-transition-duration: 0.5s; /* Presto workaround */
+	transition-duration: 0.5s;
+	height: 80px;
+	width: 82px;	
+}
+
+.twticon:hover {
+	transition-timing-function: ease;
+	-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
+	-moz-transition-duration: 0.5; /* Gecko workaround */
+	-o-transition-duration: 0.5s; /* Presto workaround */
+	transition-duration: 0.5s;
+	height: 95px;
+	width: 98px;	
 }
 
 .vpcicon {
