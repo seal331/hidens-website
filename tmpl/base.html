@@ -3,7 +3,7 @@
 <html lang=en>
 
 <head>
-	
+
 	<meta charset=utf-8>
 	<meta name="Author" content="HIDEN">
 	<meta name="GENERATOR" content="Vim, FrontPage 2003, VSCode, Notepad++">
@@ -15,6 +15,8 @@
 	
 	<link rel=stylesheet href=/././static/style/style.css/>
 	<link rel=icon href=/././static/icon/misc/favicon.ico/>
+	<script src=/js/ct-snow.js></script>
+	<script src=/js/ct-lights></script>
 	{%- block head -%}{%- endblock -%}
 
 </head>
@@ -24,7 +26,20 @@
 	{%- block content -%}
 
 	{%- endblock -%}
-	
+
+	<br><br>
+
+	<h1>Happy holidays!</h1>
+
+	<br>
+
+	<h4>Christmas music player:</h4>
+	<script src=/js/ct-music.js></script>
+	<script>
+		document.getElementById('ct-song').play();
+	</script>
+	<p class=ct-disc>NOTE: May not contain Christmas songs</p>
+
 <!-- workaround for small and/or weird display resolutions -->
 <br><br><br><br><br><br><br><br><br><br><br><br>
 
