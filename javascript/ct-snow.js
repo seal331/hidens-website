@@ -7,7 +7,7 @@
 //Configure below to change URL path to the snow image
 var snowsrc = "/./././static/misc/snow.gif"
 // Configure below to change number of snow to render
-var no = 30;
+var no = 25;
 // Configure whether snow should disappear after x seconds (0=never):
 var hidesnowtime = 0;
 // Configure how much snow should drop down before fading ("windowheight" or "pageheight")
