@@ -42,11 +42,9 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/projects/website/compatlist', page_website_compatlist)
 	
 	if settings.TESTING:
+		print("Testing mode enabled! Test content (i.e: unfinished content or experiements) is served under /testing")
 		app.router.add_get('/testing', page_testing)
 		app.router.add_get('/testing/too', page_testing_too)
-		# TODO: Finish these
-		app.router.add_get('/music', page_music)
-		app.router.add_get('/music/metallica', page_music_metallica)
 
 	if settings.APRILFOOLS_2023:
 		app.router.add_get('/why', page_why_af23)
@@ -64,9 +62,9 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 		loader = jinja2.FileSystemLoader('tmpl'),
 		autoescape = jinja2.select_autoescape(default = True),
 	)
-
-	return app
 	
+	return app
+
 	
 class App(web.Application):
 	def __init__(self, *args, **kwargs):
@@ -202,16 +200,6 @@ async def page_website_compatlist(req):
 	return render(req, 'projects.website.compatlist.html', {
 		'title': 'Compatibility list | Website | Projects'
 	})
-	
-async def page_music(req):
-	return render(req, 'music.html', {
-		'title': 'Home | Music'
-	})
-
-async def page_music_metallica(req):
-	return render(req, 'music.metallica.html', {
-		'title': 'Metallica | Music'
-	})
 
 async def page_testing(req):
 	return render(req, 'testing.html', {
@@ -278,10 +266,8 @@ async def handle_404(req):
 		}, status = 404
 	)
 
-def render(req, tmpl, ctxt = None, status = 200):
+def render(req, tmpl, status = 200):
 	tmpl = req.app.jinja_env.get_template(tmpl)
-	if ctxt is None:
-		ctxt = {}
-	content = tmpl.render(**ctxt)
+	content = tmpl.render()
 	return web.Response(status = status, content_type = 'text/html', text = content)
 
