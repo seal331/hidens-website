@@ -266,8 +266,8 @@ async def handle_404(req):
 		}, status = 404
 	)
 
-def render(req, tmpl, status = 200):
+def render(req, tmpl, ctxt = None, status = 200):
 	tmpl = req.app.jinja_env.get_template(tmpl)
-	content = tmpl.render()
+	content = tmpl.render(**ctxt)
 	return web.Response(status = status, content_type = 'text/html', text = content)
 
