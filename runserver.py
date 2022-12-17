@@ -2,8 +2,12 @@ from aiohttp import web
 from site_ctrl import RunServ
 import logging 
 import settings
+import sys
 
 def main():
+
+	if sys.version_info < (3, 6):
+		sys.exit("Unsupported Python version. Please use Python 3.6 or later.")
 
 	print("Starting server...")
 	

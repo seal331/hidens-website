@@ -20,7 +20,7 @@ Create `settings_local.py`. The avaliable options are as follows:
 
 `LOG_TO_FILE`: Outputs the afformentioned connection logs to a file instead. You must set `ENABLE_LOGGING` to `True` as well to use this.
 
-`TESTING`: Enables W.I.P. and/or experiemental content. The content is served at `/testing`.
+`TESTING`: Enables W.I.P. and/or experiemental content. The content is served at `/testing`. **Note for Dev/Beta users: <u>Please enable this setting if you are looking to test out stuff, or help with development!</u>**
 
 `SERVE_STATIC`: Serves the `/static` directory (images, CSS stylesheets, old stuff).
 
