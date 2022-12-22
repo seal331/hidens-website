@@ -1,4 +1,11 @@
 { 
+	"2022-12-22T20:25:28": [
+		"Apologies about the downtime earlier this week. I was a dumbass and forgot the LUKS password to my Linux VMs, so I had to reinstall the OSes on them.",
+		"Also, I'm non-binary, and use they/he (they very greatly perferred but he is fine too I guess).",
+		"My HDD cable died a few days ago as well, which means I couldn't update the site because the source code is stored on there. I got a replacement cable earlier today however.",
+		"That's about it for now, another post is probably coming on Christmas."
+	],
+
 	"2022-12-14T13:07:42": [
 		"I set up a bot in my Discord server to relay posts from here to the announcements channel there. If you want to join, you can do so <a href=/discord>here</a>."
 	],
