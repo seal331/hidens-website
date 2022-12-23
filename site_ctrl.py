@@ -21,6 +21,7 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/downloads/cursors', page_downloads_cursors)
 	app.router.add_get('/downloads/software/winamp', page_winamp)
 	app.router.add_get('/about', page_about)
+	app.router.add_get('/about/socials', page_socials)
 	app.router.add_get('/about/contact', page_contact)
 	app.router.add_get('/about/faq', page_faq)
 	app.router.add_get('/computers', page_my_computers)
@@ -80,11 +81,6 @@ async def page_index(req):
 	else:
 		return render(req, 'index.html')
 
-
-async def page_winamp(req):
-	return render(req, 'winamp.html', {
-		'title': 'Winamp selection'
-	})
 	
 async def page_projects(req):
 	return render(req, 'projects.html', {
@@ -121,10 +117,13 @@ async def page_about(req):
 		'title': 'About me'
 	})
 
-async def page_contact(req):
-	return render(req, 'about.contact.html', {
-		'title': 'Contact info | About me'
+async def page_socials(req):
+	return render(req, 'about.socials.html', {
+		'title': 'Social/Messaging services | About me'
 	})
+
+async def page_contact(req):
+	return render(req, 'about.contact.tempoaryredir.html')
 
 async def page_faq(req):
 	return render(req, 'about.faq.html', {
@@ -158,12 +157,12 @@ async def page_mc(req):
 
 async def page_mc_rules(req):
 	return render(req, 'gamesrv.mc.rules.html', {
-		'title': 'Minecraft rules | Game servers',
+		'title': 'Minecraft rules | Game servers'
 	})
 
 async def page_discord_server_redir(req):
 	return render(req, 'discord.html', {
-		'title': 'Discord server',
+		'title': 'Discord server'
 	})
 	
 async def page_pubsite_details(req):
@@ -199,6 +198,11 @@ async def page_website_details(req):
 async def page_website_compatlist(req): 
 	return render(req, 'projects.website.compatlist.html', {
 		'title': 'Compatibility list | Website | Projects'
+	})
+
+async def page_winamp(req):
+	return render(req, 'winamp.html', {
+		'title': 'Winamp selection'
 	})
 
 async def page_testing(req):
@@ -272,4 +276,3 @@ def render(req, tmpl, ctxt = None, status = 200):
 		ctxt = {}
 	content = tmpl.render(**ctxt)
 	return web.Response(status = status, content_type = 'text/html', text = content)
-
