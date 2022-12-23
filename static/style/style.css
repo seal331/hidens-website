@@ -732,11 +732,6 @@ footer img:hover {
 	height: 67px;
 }
 
-.siteimgsocials {
-	width: 327px;
-	height: 92px;
-}
-
 .discicon {
 	transition-timing-function: ease;
 	-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
