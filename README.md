@@ -41,7 +41,7 @@ If you'd like to mimic [the production enviornment](https://hiden.pw), you can s
 
 ## Reporting problems
 
-Please file any bugs you find in the `Issues` tab of this repository, or shoot me a message using the provided info at [/about/contact](https://hiden.pw/about/contact).
+If you encounter any issues/bugs, put them in the `Issues` tab of this repository, or shoot me a message at one of the services listed at [/about/socials](https://hiden.pw/about/socials).
 
 Here's an example template you could use (intended for an issue with the backend):
 ```
