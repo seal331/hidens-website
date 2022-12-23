@@ -362,7 +362,7 @@ footer img:hover {
 	margin-right: auto;
 }
 
-.contactstable {
+.socialstable {
 	width: 780px;
 	box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
 	border-radius: 4px;
@@ -374,7 +374,7 @@ footer img:hover {
 	margin-right: auto;
 }
 
-.contactstable:before {
+.socialstable:before {
 	background: inherit; 
 	position: absolute;
 	left: 0;
@@ -732,7 +732,7 @@ footer img:hover {
 	height: 67px;
 }
 
-.siteimgcontacts {
+.siteimgsocials {
 	width: 327px;
 	height: 92px;
 }
