@@ -37,7 +37,7 @@ You must create `settings_local.py` to start the server. However, you do not nee
 ### Post-configuration
 Once confiugration is done, start the server with `runserver.py`.
 
-If you'd like to mimic [the production enviornment](https://hiden.pw), you can set up an Nginx reverse proxy. [I do not recommend Apache for this.](https://github.com/aio-libs/aiohttp/issues/2687)
+If you'd like to mimic [the production enviornment](https://hiden.pw), you may set up an NGINX reverse proxy. Caddy works too, although [Apache does not](https://github.com/aio-libs/aiohttp/issues/2687). The one I personally recommend most is NGINX.
 
 ## Reporting problems
 
