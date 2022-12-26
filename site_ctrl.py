@@ -22,7 +22,6 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/downloads/software/winamp', page_winamp)
 	app.router.add_get('/about', page_about)
 	app.router.add_get('/about/socials', page_socials)
-	app.router.add_get('/about/contact', page_contact)
 	app.router.add_get('/about/faq', page_faq)
 	app.router.add_get('/computers', page_my_computers)
 	app.router.add_get('/gamesrv', page_gamesrv)
@@ -121,9 +120,6 @@ async def page_socials(req):
 	return render(req, 'about.socials.html', {
 		'title': 'Social/Messaging services | About me'
 	})
-
-async def page_contact(req):
-	return render(req, 'about.contact.tempoaryredir.html')
 
 async def page_faq(req):
 	return render(req, 'about.faq.html', {

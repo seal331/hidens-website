@@ -10,7 +10,7 @@ function randInt(size) {
 		Fact[3] = "The best letter of the alphabet is objectively H."
 		Fact[4] = "This site had had a total of 6 extended downtimes in the ~1 year it's been active."
 		Fact[5] = "The web server this site runs on is running Debian 11 inside of a KVM."
-		Fact[6] = "The backend of this site has a massive spaghetti code problem. It works, at least."
+		Fact[6] = "Before was was was, was was is."
 		Fact[7] = "Mitochondria is the powerhouse of the cell."
 
 		return Fact[jNum];
