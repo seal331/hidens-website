@@ -56,7 +56,7 @@ ul {
 }
 
 img {
-	filter: drop-shadow(6px 6px 6px #666666);
+	filter: drop-shadow(5px 6.75px 5px #665e5ed8);
 }
 
 code {
@@ -93,7 +93,7 @@ a:active {
 
 footer {
 	animation: 0.65s ease 0s 1 RiseUp;
-	box-shadow: inset 0 0 0 2500px rgba(142, 204, 255, 0.13);
+	box-shadow: 0 0 3rem 0 rgba(0, 0, 0, .5); 
 	z-index: 1;
 	background: inherit;
 	overflow: hidden;
@@ -111,7 +111,6 @@ footer:before {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
 	filter: blur(10px);
 	margin: -20px;
 }
@@ -581,7 +580,7 @@ footer img:hover {
 }
 
 .link404 {
-	font-size: 17.75px;
+	font-size: 22px;
 }
 
 .softwareicon {
@@ -709,7 +708,7 @@ footer img:hover {
 }
 
 .linkdownloads {
-	font-size: 21px;
+	font-size: 22px;
 }
 
 .testlinks {
@@ -1047,6 +1046,7 @@ a.factboxcontenttxt:active {
 }
 
 .jargonheadimg {
+	filter: drop-shadow(0.25px 0.25px 0.25px #665e5ed8);
 	width: 173.5px;
 	height: 35px;
 }
