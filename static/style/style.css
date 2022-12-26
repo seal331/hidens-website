@@ -1,12 +1,10 @@
 body {
-	background: url("/static/misc/ct-bg.png");
-	/*background-size: cover;*/
+	background: url("/static/misc/bg.png");
+	background-size: cover;
 	background-attachment: fixed;
 	border: 17.5px solid transparent;
-	border-image: url("/static/misc/hollyborder.gif") 30 round;
 	text-align: center;
 	font-family: 'Trebuchet MS', sans-serif;
-	color: white;
 }
 
 h1 {
@@ -42,8 +40,8 @@ p {
 }
 
 table, tr, th, td {
-	box-shadow: inset 0 0 0 2000px rgba(134, 26, 26, 0.185);
-	border: 0.75px solid whitesmoke;
+	box-shadow: inset 0 0 0 2500px rgba(123, 178, 223, 0.212);
+	border: 1.25px solid rgb(44, 43, 43);
 }
 
 td {
@@ -63,7 +61,7 @@ img {
 
 code {
 	font-family: monospace;
-	background-color: #17389434;
+	background-color: #5479df34;
 	font-size: 85%;
 	padding: 2.75px;
 }
@@ -75,27 +73,27 @@ a {
 
 a:link {
 	text-decoration: none;
-	color: #00d9ff;
+	color: #037ccc;
 }
  
 a:visited {
 	text-decoration: none;
-	color: #9604f7;
+	color: #9224db;
 }
  
 a:hover {
 	text-decoration: none;
-	color: #0084ff;
+	color: #3b6d9c;
 }
  
 a:active {
 	text-decoration: none;
-	color: #0044ff;
+	color: #00268d;
 }
 
 footer {
 	animation: 0.65s ease 0s 1 RiseUp;
-	box-shadow: inset 0 0 0 2000px rgba(148, 7, 7, 0.466);
+	box-shadow: inset 0 0 0 2500px rgba(142, 204, 255, 0.13);
 	z-index: 1;
 	background: inherit;
 	overflow: hidden;
@@ -991,8 +989,8 @@ footer img:hover {
 }
 
 .factbox {
-	margin-top: -143px;
-	margin-left: 45px;
+	margin-top: -101px;
+	margin-left: 41px;
 	float: left;
 	box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
 	width: 240px;
