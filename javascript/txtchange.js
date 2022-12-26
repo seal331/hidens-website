@@ -1,4 +1,4 @@
-var txt = ['WHAT H', 'Foo', 'Bar', 'h', 'H', 'Test-Text-For-A-Test-Thing', 'gentoo balls'];
+var txt = ['WHAT H', 'Foo', 'Bar', 'h', 'H', 'Test-Text-For-A-Test-Thing', 'gentoo balls', 'Foobar', 'norton'];
 var i = 0;
 
 document.getElementById("sequence").innerHTML = txt[i];
