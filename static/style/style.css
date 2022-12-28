@@ -1084,6 +1084,10 @@ a.factboxcontenttxt:active {
 	font-size: 15.5px;
 }
 
+.codelink {
+	font-size: 85%;
+}
+
 /* Keyframes */
 @keyframes RiseUp {
 	0% {
