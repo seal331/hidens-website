@@ -729,6 +729,27 @@ footer img:hover {
 	height: 67px;
 }
 
+.a5ke4ss {
+	transition-timing-function: ease;
+	-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
+	-moz-transition-duration: 0.5; /* Gecko workaround */
+	-o-transition-duration: 0.5s; /* Presto workaround */
+	transition-duration: 0.5s;
+	width: 1097px;
+	height: 617px;
+}
+
+.a5ke4ss:hover {
+	transition-timing-function: ease;
+	-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
+	-moz-transition-duration: 0.5; /* Gecko workaround */
+	-o-transition-duration: 0.5s; /* Presto workaround */
+	transition-duration: 0.5s;
+	width: 1360px;
+	height: 768px;
+	margin: -10px 15px 25px 20px;
+}
+
 .discicon {
 	transition-timing-function: ease;
 	-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */

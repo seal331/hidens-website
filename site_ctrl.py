@@ -23,7 +23,7 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/about', page_about)
 	app.router.add_get('/about/socials', page_socials)
 	app.router.add_get('/about/faq', page_faq)
-	app.router.add_get('/computers', page_my_computers)
+	app.router.add_get('/computers', page_computers)
 	app.router.add_get('/gamesrv', page_gamesrv)
 	app.router.add_get('/gamesrv/gmod', page_gmod)
 	app.router.add_get('/gamesrv/gmod/addons', page_gmod_addons)
@@ -43,6 +43,7 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	
 	if settings.TESTING:
 		print("Testing mode enabled! Test content (i.e: unfinished content or experiements) is served under /testing")
+		app.router.add_get("/computers/desktops/a5ke4", page_computers_desktop_a5ke4)
 		app.router.add_get('/testing', page_testing)
 		app.router.add_get('/testing/too', page_testing_too)
 
@@ -106,9 +107,14 @@ async def page_downloads_cursors(req):
 		'title': 'Downloads | Cursors'
 	})
 
-async def page_my_computers(req):
+async def page_computers(req):
 	return render(req, 'computers.html', {
 		'title': 'My computers'
+	})
+
+async def page_computers_desktop_a5ke4(req):
+	return render(req, 'computers.desktops.a5ke4.html', {
+		'title': 'AORUS 5 KE4 Desktop | My computers'
 	})
 
 async def page_about(req):
