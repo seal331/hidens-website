@@ -7,7 +7,7 @@ import sys
 def main():
 
 	if sys.version_info < (3, 6):
-		sys.exit("Unsupported Python version. Please use Python 3.6 or later.")
+		raise Exception("Unsupported Python version. Please use Python 3.6 or later.")
 
 	print("Starting server...")
 	

@@ -43,12 +43,19 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/projects/website/compatlist', page_website_compatlist)
 	
 	if settings.TESTING:
-		print("Testing mode enabled! Test content (i.e: unfinished content or experiements) is served under /testing")
+		print("Testing mode enabled! Test content (i.e: unfinished content and experiements) is served under /testing")
 		app.router.add_get('/testing', page_testing)
 		app.router.add_get('/testing/too', page_testing_too)
 
 	if settings.APRILFOOLS_2023:
+		print("April Fools 2023 mode enabled!")
 		app.router.add_get('/why', page_why_af23)
+
+	if settings.APRILFOOLS_2022:
+		print("April Fools 2022 mode enabled!")
+
+	if settings.APRILFOOLS_2023 and settings.APRILFOOLS_2022:
+		raise Exception("You can only have one holiday mode enabled. Terminating.")
 
 	if serve_static:
 		app.router.add_static('/static', 'static')
