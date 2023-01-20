@@ -690,7 +690,7 @@ footer img:hover {
 }
 
 .bpdate {
-	font-size: 34.5px;
+	font-size: 37px;
 }
 
 .blogpost {
@@ -699,7 +699,7 @@ footer img:hover {
 
 .blogrss {
 	font-weight: bold;
-	font-size: 14.25px;
+	font-size: 13.5px;
 }
 
 .gsrule {
@@ -729,7 +729,12 @@ footer img:hover {
 	height: 67px;
 }
 
-.a5ke4ss {
+.siteimgblog {
+	width: 250px;
+	height: 105px;
+}
+
+.deskss {
 	transition-timing-function: ease;
 	-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
 	-moz-transition-duration: 0.5; /* Gecko workaround */
@@ -739,7 +744,7 @@ footer img:hover {
 	height: 617px;
 }
 
-.a5ke4ss:hover {
+.deskss:hover {
 	transition-timing-function: ease;
 	-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
 	-moz-transition-duration: 0.5; /* Gecko workaround */

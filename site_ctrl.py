@@ -28,6 +28,7 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get("/computers/desktops/a5ke4/old", page_computers_desktops_a5ke4_old)
 	app.router.add_get("/computers/desktops/a5ke4/old/2023-01-03", page_comptuers_desktops_a5ke4_20230103)
 	app.router.add_get("/computers/desktops/a5ke4/old/2023-01-16", page_comptuers_desktops_a5ke4_20230116)
+	app.router.add_get("/computers/desktops/hpp23", page_computers_desktop_hpp23)
 	app.router.add_get('/gamesrv', page_gamesrv)
 	app.router.add_get('/gamesrv/gmod', page_gmod)
 	app.router.add_get('/gamesrv/gmod/addons', page_gmod_addons)
@@ -140,6 +141,11 @@ async def page_comptuers_desktops_a5ke4_20230103(req):
 async def page_comptuers_desktops_a5ke4_20230116(req):
 	return render(req, 'computers.desktops.a5ke4.2023-01-16.html', {
 		'title': '2013-01-16 Desktop | AORUS 5 KE4 Desktop | My computers'
+	})
+
+async def page_computers_desktop_hpp23(req):
+	return render(req, 'computers.desktops.hpp23.html', {
+		'title': 'HP Pavilion 23 Desktop | My computers'
 	})
 
 async def page_about(req):
