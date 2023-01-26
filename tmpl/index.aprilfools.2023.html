@@ -1,48 +1,102 @@
 <html>
+  <head>
+    <meta http-equiv="Content-Language" content="en-us">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>Internet Explorer Fan page</title>
+    <meta name="description" content="Internet Explorer is the best browser in the entire universe. Period. Nothing beats the majesty internet Explorer.">
+    <script language="JavaScript">
+      function FP_swapImg() { //v1.0
+        var doc = document,
+          args = arguments,
+          elm, n;
+        doc.$imgSwaps = new Array();
+        for (n = 2; n < args.length; n += 2) {
+          elm = FP_getObjectByID(args[n]);
+          if (elm) {
+            doc.$imgSwaps[doc.$imgSwaps.length] = elm;
+            elm.$src = elm.src;
+            elm.src = args[n + 1];
+          }
+        }
+      }
 
-<head>
-<meta http-equiv="Content-Language" content="en-us">
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<title>Internet Explorer Fan page</title>
-<meta name="description" content="Internet Explorer is the best browser in the entire universe. Period. Nothing beats the majesty internet Explorer.">
-<script language="JavaScript">
-function FP_swapImg() {//v1.0
- var doc=document,args=arguments,elm,n; doc.$imgSwaps=new Array(); for(n=2; n<args.length;
- n+=2) { elm=FP_getObjectByID(args[n]); if(elm) { doc.$imgSwaps[doc.$imgSwaps.length]=elm;
- elm.$src=elm.src; elm.src=args[n+1]; } }
-}
+      function FP_preloadImgs() { //v1.0
+        var d = document,
+          a = arguments;
+        if (!d.FP_imgs) d.FP_imgs = new Array();
+        for (var i = 0; i < a.length; i++) {
+          d.FP_imgs[i] = new Image;
+          d.FP_imgs[i].src = a[i];
+        }
+      }
 
-function FP_preloadImgs() {//v1.0
- var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
- for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
-}
-
-function FP_getObjectByID(id,o) {//v1.0
- var c,el,els,f,m,n; if(!o)o=document; if(o.getElementById) el=o.getElementById(id);
- else if(o.layers) c=o.layers; else if(o.all) el=o.all[id]; if(el) return el;
- if(o.id==id || o.name==id) return o; if(o.childNodes) c=o.childNodes; if(c)
- for(n=0; n<c.length; n++) { el=FP_getObjectByID(id,c[n]); if(el) return el; }
- f=o.forms; if(f) for(n=0; n<f.length; n++) { els=f[n].elements;
- for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
- return null;
-}
-</script>
-</head>
-
-<body background="static/holiday/april_fools/2023/images/Internet_Explorer_gif.gif" onload="FP_preloadImgs(/*url*/'static/holiday/april_fools/2023/images/button8.jpg', /*url*/'static/holiday/april_fools/2023/images/button9.jpg')">
-
-<p><u><b><font size="7" color="#FFFFFF">Internet Explorer Fan Page</font></b></u></p>
-<p>&nbsp;</p>
-<p><b><font color="#FFFFFF" size="5">This is a fan page of the world's most best 
-browser... Internet Explorer! Click the button below to learn why it's the epicest!</font></b></p>
-<p><a href="why">
-<img border="0" id="img1" src="static/holiday/april_fools/2023/images/button7.jpg" height="20" width="100" alt="IE is Epicest" fp-style="fp-btn: Glass Capsule 1" fp-title="IE is Epicest" onmouseover="FP_swapImg(1,0,/*id*/'img1',/*url*/'static/holiday/april_fools/2023/images/button8.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img1',/*url*/'static/holiday/april_fools/2023/images/button7.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img1',/*url*/'static/holiday/april_fools/2023/images/button9.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img1',/*url*/'static/holiday/april_fools/2023/images/button8.jpg')"></a></p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p><img border="0" src="static/holiday/april_fools/2023/images/int_exp.gif" width="88" height="31"><img border="0" src="static/holiday/april_fools/2023/images/iexplorer.gif" width="88" height="31"><img border="0" src="static/holiday/april_fools/2023/images/iexplore.gif" width="88" height="31"><img border="0" src="static/holiday/april_fools/2023/images/iegetms.gif" width="88" height="31"><img border="0" src="static/holiday/april_fools/2023/images/ieget5.gif" width="88" height="31"><img border="0" src="static/holiday/april_fools/2023/images/iebutton.gif" width="88" height="31"><img border="0" src="static/holiday/april_fools/2023/images/ieanime2.gif" width="88" height="31"><img border="0" src="static/holiday/april_fools/2023/images/ie_animated.gif" width="88" height="31"><img border="0" src="static/holiday/april_fools/2023/images/ie_anim.gif" width="88" height="31"><img border="0" src="static/holiday/april_fools/2023/images/ie40.gif" width="88" height="31"><img border="0" src="static/holiday/april_fools/2023/images/ie5.88x31.gif" width="88" height="31"><img border="0" src="static/holiday/april_fools/2023/images/ie5.gif" width="90" height="30"><img border="0" src="static/holiday/april_fools/2023/images/ie4_2.gif" width="88" height="31"><img border="0" src="static/holiday/april_fools/2023/images/ie4.gif" width="97" height="31"><img border="0" src="static/holiday/april_fools/2023/images/ie3.gif" width="88" height="31"><img border="0" src="static/holiday/april_fools/2023/images/ie.gif" width="88" height="31"></p>
-
-</body>
-
+      function FP_getObjectByID(id, o) { //v1.0
+        var c, el, els, f, m, n;
+        if (!o) o = document;
+        if (o.getElementById) el = o.getElementById(id);
+        else if (o.layers) c = o.layers;
+        else if (o.all) el = o.all[id];
+        if (el) return el;
+        if (o.id == id || o.name == id) return o;
+        if (o.childNodes) c = o.childNodes;
+        if (c)
+          for (n = 0; n < c.length; n++) {
+            el = FP_getObjectByID(id, c[n]);
+            if (el) return el;
+          }
+        f = o.forms;
+        if (f)
+          for (n = 0; n < f.length; n++) {
+            els = f[n].elements;
+            for (m = 0; m < els.length; m++) {
+              el = FP_getObjectByID(id, els[n]);
+              if (el) return el;
+            }
+          }
+        return null;
+      }
+    </script>
+  </head>
+  <body background="static/holiday/april_fools/2023/images/Internet_Explorer_gif.gif" onload="FP_preloadImgs(/*url*/'static/holiday/april_fools/2023/images/button8.jpg', /*url*/'static/holiday/april_fools/2023/images/button9.jpg')">
+    <p>
+      <u>
+        <b>
+          <font size="7" color="#FFFFFF">Internet Explorer Fan Page</font>
+        </b>
+      </u>
+    </p>
+    <p>&nbsp;</p>
+    <p>
+      <b>
+        <font color="#FFFFFF" size="5">This is a fan page of the world's most best browser... Internet Explorer! Click the button below to learn why it's the epicest!</font>
+      </b>
+    </p>
+    <p>
+      <a href="why">
+        <img border="0" id="img1" src="static/holiday/april_fools/2023/images/button7.jpg" height="20" width="100" alt="IE is Epicest" fp-style="fp-btn: Glass Capsule 1" fp-title="IE is Epicest" onmouseover="FP_swapImg(1,0,/*id*/'img1',/*url*/'static/holiday/april_fools/2023/images/button8.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img1',/*url*/'static/holiday/april_fools/2023/images/button7.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img1',/*url*/'static/holiday/april_fools/2023/images/button9.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img1',/*url*/'static/holiday/april_fools/2023/images/button8.jpg')">
+      </a>
+    </p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>
+      <img border="0" src="static/holiday/april_fools/2023/images/int_exp.gif" width="88" height="31">
+      <img border="0" src="static/holiday/april_fools/2023/images/iexplorer.gif" width="88" height="31">
+      <img border="0" src="static/holiday/april_fools/2023/images/iexplore.gif" width="88" height="31">
+      <img border="0" src="static/holiday/april_fools/2023/images/iegetms.gif" width="88" height="31">
+      <img border="0" src="static/holiday/april_fools/2023/images/ieget5.gif" width="88" height="31">
+      <img border="0" src="static/holiday/april_fools/2023/images/iebutton.gif" width="88" height="31">
+      <img border="0" src="static/holiday/april_fools/2023/images/ieanime2.gif" width="88" height="31">
+      <img border="0" src="static/holiday/april_fools/2023/images/ie_animated.gif" width="88" height="31">
+      <img border="0" src="static/holiday/april_fools/2023/images/ie_anim.gif" width="88" height="31">
+      <img border="0" src="static/holiday/april_fools/2023/images/ie40.gif" width="88" height="31">
+      <img border="0" src="static/holiday/april_fools/2023/images/ie5.88x31.gif" width="88" height="31">
+      <img border="0" src="static/holiday/april_fools/2023/images/ie5.gif" width="90" height="30">
+      <img border="0" src="static/holiday/april_fools/2023/images/ie4_2.gif" width="88" height="31">
+      <img border="0" src="static/holiday/april_fools/2023/images/ie4.gif" width="97" height="31">
+      <img border="0" src="static/holiday/april_fools/2023/images/ie3.gif" width="88" height="31">
+      <img border="0" src="static/holiday/april_fools/2023/images/ie.gif" width="88" height="31">
+    </p>
+  </body>
 </html>
