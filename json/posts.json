@@ -1,4 +1,12 @@
 { 
+	"2022-01-29T08:30:18": [
+		"Apologies about the down-time. I was doing a little encryptification-ination. Basically, I had to reinstall the OS on all Linux VMs on my server because I didn't feel like going through the hell that is retroactively setting up LVM to set up LUKS.",
+		"So yeah, LUKS and Bitlocker are re-enabled on all VMs. I wrote the decryption keys down somewhere this time, so what happened months ago won't happen again, I promise!",
+		"For the SRCDS VM, it now uses VBS+HVCI for more even more sehcorities.",
+		"Also, I fully switched from Windows to Linux on my daily driver... with some speed bumps of course (because fuck you NVIDIA).",
+		"TLDR: Server VMs are now encrypted and the Windows one now uses VBS+HVCI for sehcorities improvements, I switched to Linux on my daily driver."
+	],
+
 	"2023-01-01T00:10:31": [
 		"It is now 2023 in UTC. Hopefully this year won't be as mid as last year.",
 		"So uh, yeah, 2022 was a complete rollercoaster for me personally. I finally put some effort into improving my mental health, which has gone into the gutter after 2021 (and again around mid-2022), and it has worked extremely well.",
