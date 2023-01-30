@@ -1,10 +1,16 @@
 { 
+	"2023-01-29T22:32:04": [
+		"Alright, so I had to go back to Windows because NVIDIA hates Linux.",
+		"Every time I switch TTYs and then go back to the one running X, the DE becomes a clusterfuck of visual gitches, optimus is a pain in the ass, the latest driver is bugged with Source Engine games, etc.",
+		"So for now, I'm sticking with Windows. Sucks, but I have to, to actually have a working system."
+	],
+
 	"2023-01-29T08:30:18": [
 		"Apologies about the down-time. I was doing a little encryptification-ination. Basically, I had to reinstall the OS on all Linux VMs on my server because I didn't feel like going through the hell that is retroactively setting up LVM to set up LUKS.",
 		"So yeah, LUKS and Bitlocker are re-enabled on all VMs. I wrote the decryption keys down somewhere this time, so what happened months ago won't happen again, I promise!",
 		"For the SRCDS VM, it now uses VBS+HVCI for more even more sehcorities.",
-		"Also, I fully switched from Windows to Linux on my daily driver... with some speed bumps of course (because fuck you NVIDIA).",
-		"TLDR: Server VMs are now encrypted and the Windows one now uses VBS+HVCI for sehcorities improvements, I switched to Linux on my daily driver."
+		"<s>Also, I fully switched from Windows to Linux on my daily driver... with some speed bumps of course (because fuck you NVIDIA).</s>",
+		"TLDR: Server VMs are now encrypted and the Windows one now uses VBS+HVCI for sehcorities improvements, <s>I switched to Linux on my daily driver.</s>"
 	],
 
 	"2023-01-01T00:10:31": [
