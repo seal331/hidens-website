@@ -535,7 +535,7 @@ footer img:hover {
 }
 
 .disctable {
-	width: 620px;
+	width: 670px;
 	box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
 	border: 0;
 	position: relative;
@@ -547,6 +547,31 @@ footer img:hover {
 }
 
 .disctable:before {
+	background: inherit; 
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0; 
+	bottom: 0;
+	box-shadow: inset 0 0 0 2000px rgba(255,255,255,0.3);
+	filter: blur(10px);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.servtable {
+	width: 663px;
+	box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
+	border: 0;
+	position: relative;
+	z-index: 1;
+	background: inherit;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.servtable:before {
 	background: inherit; 
 	position: absolute;
 	left: 0;
@@ -733,7 +758,7 @@ footer img:hover {
 }
 
 .servrule {
-	font-size: 18.5px;
+	font-size: 21.5px;
 	padding: 2px;
 }
 
