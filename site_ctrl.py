@@ -49,12 +49,13 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 		app.router.add_get('/discord/invite', page_discord_server_redir)
 		app.router.add_get('/discord/rules', page_discord_rules)
 		app.router.add_get('/services', page_services)
-		app.router.add_get('/services/gamesrv', page_gamesrv)
+		app.router.add_get('/services/gamesrv', page_game_serv)
 		app.router.add_get('/services/gamesrv/gmod', page_gmod)
 		app.router.add_get('/services/gamesrv/gmod/addons', page_gmod_addons)
 		app.router.add_get('/services/gamesrv/gmod/rules', page_gmod_rules)
-		app.router.add_get('/serviecs/gamesrv/mc', page_mc)
+		app.router.add_get('/services/gamesrv/mc', page_mc)
 		app.router.add_get('/services/gamesrv/mc/rules', page_mc_rules)
+		app.router.add_get('/services/generalsrv', page_general_serv)
 
 	if settings.APRILFOOLS_2023:
 		print("April Fools 2023 mode enabled!")
@@ -183,7 +184,7 @@ async def page_services(req):
 		'title': 'HIDNet services'
 	})
 
-async def page_gamesrv(req):
+async def page_game_serv(req):
 	return render(req, 'services.gamesrv.html', {    
 		'title': 'Game servers | HIDNet services'
 	})
@@ -211,6 +212,11 @@ async def page_mc(req):
 async def page_mc_rules(req):
 	return render(req, 'services.gamesrv.mc.rules.html', {
 		'title': 'Minecraft rules | Game servers | HIDNet services'
+	})
+
+async def page_general_serv(req):
+	return render(req, 'services.generalsrv.html', {    
+		'title': 'General services | HIDNet services'
 	})
 
 async def page_discord(req):
