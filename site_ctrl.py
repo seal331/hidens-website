@@ -31,15 +31,8 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get("/computers/desktops/a5ke4/old/2023-01-18", page_comptuers_desktops_a5ke4_20230118)
 	app.router.add_get("/computers/desktops/a5ke4/old/2023-01-25", page_comptuers_desktops_a5ke4_20230125)
 	app.router.add_get("/computers/desktops/hpp23", page_computers_desktop_hpp23)
-	app.router.add_get('/gamesrv', page_gamesrv)
-	app.router.add_get('/gamesrv/gmod', page_gmod)
-	app.router.add_get('/gamesrv/gmod/addons', page_gmod_addons)
-	app.router.add_get('/gamesrv/gmod/rules', page_gmod_rules)
-	app.router.add_get('/gamesrv/mc', page_mc)
-	app.router.add_get('/gamesrv/mc/rules', page_mc_rules)
 	app.router.add_get('/blog', page_blog)
 	app.router.add_get('/blog/rss', blog_rss)
-	app.router.add_get('/discord', page_discord_server_redir)
 	app.router.add_get('/projects/pubsite', page_pubsite_details)
 	app.router.add_get('/projects/pubsite/ssg', page_pubsite_ssgallery)
 	app.router.add_get('/projects/randomapp1', page_randomapp1_details)
@@ -52,6 +45,16 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 		print("Testing mode enabled! Test content (i.e: unfinished content and experiements) is served under /testing")
 		app.router.add_get('/testing', page_testing)
 		app.router.add_get('/testing/too', page_testing_too)
+		app.router.add_get('/discord', page_discord)
+		app.router.add_get('/discord/invite', page_discord_server_redir)
+		app.router.add_get('/discord/rules', page_discord_rules)
+		app.router.add_get('/services', page_services)
+		app.router.add_get('/services/gamesrv', page_gamesrv)
+		app.router.add_get('/services/gamesrv/gmod', page_gmod)
+		app.router.add_get('/services/gamesrv/gmod/addons', page_gmod_addons)
+		app.router.add_get('/services/gamesrv/gmod/rules', page_gmod_rules)
+		app.router.add_get('/serviecs/gamesrv/mc', page_mc)
+		app.router.add_get('/services/gamesrv/mc/rules', page_mc_rules)
 
 	if settings.APRILFOOLS_2023:
 		print("April Fools 2023 mode enabled!")
@@ -175,39 +178,54 @@ async def page_faq(req):
 		'title': 'Frequently Asked Questions | About me'
 	})
 	
+async def page_services(req):
+	return render(req, 'services.html', {    
+		'title': 'HIDNet services'
+	})
+
 async def page_gamesrv(req):
-	return render(req, 'gamesrv.html', {    
-		'title': 'Game servers'
+	return render(req, 'services.gamesrv.html', {    
+		'title': 'Game servers | HIDNet services'
 	})
 	
 async def page_gmod(req):
-	return render(req, 'gamesrv.gmod.html', {
-		'title': 'Garry\'s Mod'
+	return render(req, 'services.gamesrv.gmod.html', {
+		'title': 'Garry\'s Mod | Game servers | HIDNet services'
 	})
 	
 async def page_gmod_addons(req):
-	return render(req, 'gamesrv.gmod.addons.html', {
-		'title': 'Garry\'s Mod addons | Game servers'
+	return render(req, 'services.gamesrv.gmod.addons.html', {
+		'title': 'Garry\'s Mod addons | Game servers | HIDNet services'
 	})
 	
 async def page_gmod_rules(req):
-	return render(req, 'gamesrv.gmod.rules.html', {
-		'title': 'Garry\'s Mod rules | Game servers'
+	return render(req, 'services.gamesrv.gmod.rules.html', {
+		'title': 'Garry\'s Mod rules | Game servers | HIDNet services'
 	})
 	
 async def page_mc(req):
-	return render(req, 'gamesrv.mc.html', {
-		'title': 'Minecraft server | Game servers'
+	return render(req, 'services.gamesrv.mc.html', {
+		'title': 'Minecraft server | Game servers | HIDNet services'
 	})
 
 async def page_mc_rules(req):
-	return render(req, 'gamesrv.mc.rules.html', {
-		'title': 'Minecraft rules | Game servers'
+	return render(req, 'services.gamesrv.mc.rules.html', {
+		'title': 'Minecraft rules | Game servers | HIDNet services'
+	})
+
+async def page_discord(req):
+	return render(req, 'discord.html', {
+		'title': 'Discord server'
+	})
+
+async def page_discord_rules(req):
+	return render(req, 'discord.rules.html', {
+		'title': 'Rules | Discord server'
 	})
 
 async def page_discord_server_redir(req):
-	return render(req, 'discord.html', {
-		'title': 'Discord server'
+	return render(req, 'discord.serverredir.html', {
+		'title': 'Invite link | Discord server'
 	})
 	
 async def page_pubsite_details(req):
