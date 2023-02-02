@@ -285,7 +285,7 @@ footer img:hover {
 }
 
 .mcsrvtable {
-	width: 697px;
+	width: 663px;
 	box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
 	border-radius: 4px;
 	position: relative;
@@ -1153,8 +1153,12 @@ a.factboxcontenttxt:active {
 	margin-left: 125px;
 }
 
+.gamesrventrytxt {
+	font-size: 25px;
+}
+
 .gamesrvlink {
-	font-size: 35px;
+	font-size: 28px;
 }
 
 .gmodaddonlistemtry {
@@ -1169,8 +1173,8 @@ a.factboxcontenttxt:active {
 	font-size: 85%;
 }
 
-.desktopslink {
-	font-size: 30px;
+.votxt {
+	font-size: 27.5px;
 }
 
 /* Keyframes */

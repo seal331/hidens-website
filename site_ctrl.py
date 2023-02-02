@@ -42,6 +42,9 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/services/gamesrv/gmod/addons', page_gmod_addons)
 	app.router.add_get('/services/gamesrv/gmod/rules', page_gmod_rules)
 	app.router.add_get('/services/gamesrv/mc', page_mc)
+	app.router.add_get('/services/gamesrv/mc/latest', page_mc_latest)
+	app.router.add_get('/services/gamesrv/mc/125', page_mc_125)
+	app.router.add_get('/services/gamesrv/mc/b173', page_mc_b173)
 	app.router.add_get('/services/gamesrv/mc/rules', page_mc_rules)
 	app.router.add_get('/services/generalsrv', page_general_serv)
 	app.router.add_get('/projects/pubsite', page_pubsite_details)
@@ -207,6 +210,21 @@ async def page_gmod_rules(req):
 async def page_mc(req):
 	return render(req, 'services.gamesrv.mc.html', {
 		'title': 'Minecraft server | Game servers | HIDNet services'
+	})
+
+async def page_mc_latest(req):
+	return render(req, 'services.gamesrv.mc.latest.html', {
+		'title': 'MC latest server | Game servers | HIDNet services'
+	})
+
+async def page_mc_125(req):
+	return render(req, 'services.gamesrv.mc.125.html', {
+		'title': 'MC 1.2.5 server | Game servers | HIDNet services'
+	})
+
+async def page_mc_b173(req):
+	return render(req, 'services.gamesrv.mc.b173.html', {
+		'title': 'MC b1.7.3 server | Game servers | HIDNet services'
 	})
 
 async def page_mc_rules(req):
