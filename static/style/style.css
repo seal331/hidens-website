@@ -2,7 +2,6 @@ body {
 	background: url("/static/misc/bg.png");
 	background-size: cover;
 	background-attachment: fixed;
-	border: 17.5px solid transparent;
 	text-align: center;
 	font-family: 'Trebuchet MS', sans-serif;
 }
