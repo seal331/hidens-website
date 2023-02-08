@@ -25,12 +25,6 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/about/faq', page_faq)
 	app.router.add_get('/computers', page_computers)
 	app.router.add_get("/computers/desktops/a5ke4", page_computers_desktop_a5ke4)
-	app.router.add_get("/computers/desktops/a5ke4/old", page_computers_desktops_a5ke4_old)
-	app.router.add_get("/computers/desktops/a5ke4/old/2023-01-03", page_comptuers_desktops_a5ke4_20230103)
-	app.router.add_get("/computers/desktops/a5ke4/old/2023-01-16", page_comptuers_desktops_a5ke4_20230116)
-	app.router.add_get("/computers/desktops/a5ke4/old/2023-01-18", page_comptuers_desktops_a5ke4_20230118)
-	app.router.add_get("/computers/desktops/a5ke4/old/2023-01-25", page_comptuers_desktops_a5ke4_20230125)
-	app.router.add_get("/computers/desktops/a5ke4/old/2023-01-30", page_comptuers_desktops_a5ke4_20230130)
 	app.router.add_get("/computers/desktops/hpp23", page_computers_desktop_hpp23)
 	app.router.add_get('/blog', page_blog)
 	app.router.add_get('/blog/rss', blog_rss)
@@ -136,36 +130,6 @@ async def page_computers(req):
 async def page_computers_desktop_a5ke4(req):
 	return render(req, 'computers.desktops.a5ke4.html', {
 		'title': 'AORUS 5 KE4 Desktop | My computers'
-	})
-
-async def page_computers_desktops_a5ke4_old(req):
-	return render(req, 'computers.desktops.a5ke4.old.html', {
-		'title': 'Old desktops | AORUS 5 KE4 Desktop | My computers'
-	})
-
-async def page_comptuers_desktops_a5ke4_20230103(req):
-	return render(req, 'computers.desktops.a5ke4.2023-01-03.html', {
-		'title': '2013-01-03 Desktop | AORUS 5 KE4 Desktop | My computers'
-	})
-
-async def page_comptuers_desktops_a5ke4_20230116(req):
-	return render(req, 'computers.desktops.a5ke4.2023-01-16.html', {
-		'title': '2013-01-16 Desktop | AORUS 5 KE4 Desktop | My computers'
-	})
-
-async def page_comptuers_desktops_a5ke4_20230118(req):
-	return render(req, 'computers.desktops.a5ke4.2023-01-18.html', {
-		'title': '2013-01-18 Desktop | AORUS 5 KE4 Desktop | My computers'
-	})
-
-async def page_comptuers_desktops_a5ke4_20230125(req):
-	return render(req, 'computers.desktops.a5ke4.2023-01-25.html', {
-		'title': '2013-01-25 Desktop | AORUS 5 KE4 Desktop | My computers'
-	})
-
-async def page_comptuers_desktops_a5ke4_20230130(req):
-	return render(req, 'computers.desktops.a5ke4.2023-01-30.html', {
-		'title': '2013-01-30 Desktop | AORUS 5 KE4 Desktop | My computers'
 	})
 
 async def page_computers_desktop_hpp23(req):
