@@ -136,7 +136,7 @@ footer img:hover {
 }
 
 .hometable {
-	width: 680px;
+	width: 714px;
 	box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
 	border-radius: 4px;
 	position: relative;
@@ -459,7 +459,7 @@ footer img:hover {
 }
 
 .hbdetailstable {
-	width: 628px;
+	width: 678px;
 	box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
 	border-radius: 4px;
 	position: relative;
@@ -994,8 +994,8 @@ footer img:hover {
 	margin: -10px 15px 25px 20px;
 }
 
-.ra1disc {
-	font-size: 11.5px;
+.prodisc {
+	font-size: 13.75px;
 	font-weight: bold;
 }
 
