@@ -1176,6 +1176,11 @@ a.factboxcontenttxt:active {
 	font-size: 27.5px;
 }
 
+.emote {
+	height: 48px;
+	width: 48px;
+}
+
 /* Keyframes */
 @keyframes RiseUp {
 	0% {
