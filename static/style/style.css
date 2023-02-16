@@ -633,6 +633,11 @@ footer img:hover {
 	width: 460px;
 }
 
+.siteimghbot {
+	height: 100px;
+	width: 280px;
+}
+
 .link404 {
 	font-size: 22px;
 }
