@@ -38,7 +38,7 @@
 	],
 
 	"2022-12-14T13:07:42": [
-		"I set up a bot in my Discord server to relay posts from here to the announcements channel there. If you want to join, you can do so <a href=/discord>here</a>."
+		"I set up a bot in my Discord server to relay posts from here to the announcements channel there. If you want to join, you can do so <a class=blogpost href=/discord>here</a>."
 	],
 
 	"2022-12-05T17:34:56": [
@@ -291,7 +291,7 @@
 		"(NO LONGER THE CASE, IT HAS BEEN CANCELLED) <s>I'm opening a Team Fortress 2 server soon.</s>",
 		"The service status page has been removed for now.",
 		"(NO LONGER THE CASE, THEY WERE SCRAPPED) <s>There's a bunch of pages detailing my favorite crap in development. It's still in the early stages, though. (CANCELLED)</s>",
-		"You can view early, in development stuff, as well as experiements at <a href=\"/testing\">the testing page</a>.",
+		"You can view early, in development stuff, as well as experiements at <a class=blogpost href=\"/testing\">the testing page</a>.",
 		"The pre-release code scattered all over the pages is being reloacated to the afformentioned page."
 	],
 
@@ -300,7 +300,7 @@
 	],
 
 	"2022-02-03T22:02:36": [
-		"(MULTIPLE GAME SEREVRS HAS BEEN CANCELLED FOR NOW) <s>There's a <a href=\"gameservers\">new page</a>.</s>",
+		"(MULTIPLE GAME SEREVRS HAS BEEN CANCELLED FOR NOW) <s>There's a <a class=blogpost href=\"gameservers\">new page</a>.</s>",
 		"Meta (AKA Facebook) has seen their first full-blown user loss on Facebook... good."
 	],
 
@@ -327,7 +327,7 @@
 	],
 
 	"2022-01-27T17:45:06": [
-		"Sorry about the long downtime. A lot of issues came up in with the server. I was trying to create a systemd service to run the site, but it fails and doesn't tell me why <a href=\"https://github.com/HIDEN64/hidens-website/issues/2\">(more details here)</a>, and then the server had a kernel panic. Hopefully this is the end of this.",
+		"Sorry about the long downtime. A lot of issues came up in with the server. I was trying to create a systemd service to run the site, but it fails and doesn't tell me why <a class=blogpost href=\"https://github.com/HIDEN64/hidens-website/issues/2\">(more details here)</a>, and then the server had a kernel panic. Hopefully this is the end of this.",
 		"On the bright side, the server appears to run a lot faster, but this might just be placebo.",
 		"Spotify stock is dropping significantly thanks to them promoting conspiracy theroies. Joe Rogan ramped up his attacks against the COVID-19 vaccine on the platform, and Spotify paid him $100m to do so.",
 		"I can't believe I have to say this on <em>a tech-focused website</em> of all things, but please, get vaccinated and wear a mask. And don't start with that \"THEY DON'T WORK!!!!!1111111111\" bullshit, because they've been proven time and time again to work."
@@ -342,13 +342,13 @@
 	"2022-01-23T12:10:21": [
 		"Lots of the pages were given an update.",
 		"A new download was added to <a class=blogpost href=\"downloads\">the Downloads page</a>.",
-		"My contact information is now available on the <a href=\"about\">about me page</a>, in case you ever need to contact me, or just want to have a chat with me.",
+		"My contact information is now available on the <a class=blogpost href=\"about\">about me page</a>, in case you ever need to contact me, or just want to have a chat with me.",
 		"The code of the pages is also being cleaned up quite a bit."
 	],
 
 	"2022-01-22T12:32:03":[
 		"Major visual updates were added.",
-		"2 <a class=blogpost href=\"computers\">new</a> <a href=\"about\">pages</a> were added. There will be more new pages soon™.",
+		"2 <a class=blogpost href=\"computers\">new</a> <a class=blogpost href=\"about\">pages</a> were added. There will be more new pages soon™.",
 		"The cryptocurrency market has crashed and burned...............",
 		"TIME TO CELEBRATE YAYAYAYAYAAYAYAYAYAY-"
 	],
