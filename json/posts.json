@@ -61,7 +61,7 @@
 		"I absolutely fucking ADORE the new server setup, it's so fucking fast compared to the old one, plus it's more flexible, and secure. It utilizes Proxmox VE which lets me have each service has it's own VM, greatly improving security with virtually no performance cost. I sound like I'm being paid to say this like some fucking YouTube sponsorship, but I'm serious. I fucking love it.",
 		"So if you notice everything I host suddenly being a lot faster... well now you know why.",
 		"I've been needing a new computer for a while, and now I have it! I also love this thing!",
-		"Oh, and, thanks to <a href=https://dkay.xyz>dkay</a> for helping out with the web server configuration."
+		"Oh, and, thanks to <a class=blogpost href=https://dkay.xyz>dkay</a> for helping out with the web server configuration."
 	],
 	
 	"2022-10-25T21:38:40": [
@@ -89,7 +89,7 @@
 	],
 
 	"2022-09-08T18:19:03": [
-		"So... <a href=https://en.wikipedia.org/wiki/Elizabeth_II>the queen</a> died. I'm... speechless to say the least.",
+		"So... <a class=blogpost href=https://en.wikipedia.org/wiki/Elizabeth_II>the queen</a> died. I'm... speechless to say the least.",
 		"And there's a bunch of idiots joking about it. Well, trolls will be trolls I guess."
 	],
 
@@ -152,7 +152,7 @@
 
 	"2022-06-26T21:20:45": [
 		"A new computer has come into my posession. <br><br> <img class=blogimg src=/././static/blog/2022-06-26/image.jpg alt=\"HP Pavilion TS 17 laptop from 2013. Shown in my lap; installing updates on Windows 8.1.\" title=\"HP Pavilion TS 17 laptop from 2013. Shown in my lap; installing updates on Windows 8.1.\"> <br><br>",
-		"The specs are on the <a href=/computers>computers</a> page.",
+		"The specs are on the <a class=blogpost href=/computers>computers</a> page.",
 		"It's an HP Pavilion TS 17-e169nr. It's a hand-me-down that my sister gave to me. Right now, I'm not sure of what to do with it. Maybe I'll use it as a secondary laptop? I don't know. That's how I'm using it right now, I don't know if it's going to stay that way.",
 		"Another thing I've considered is replacing my crappy server with it, but it seems to run hot very fast in some cases, so I don't know how well that'll play out.",
 		"Hell, I'm thinking of throwing Windows Vista on it and using it as some sort of retro gaming machine. I'm conflicted, lol."
@@ -176,7 +176,7 @@
 	],
 	
 	"2022-06-16T20:40:30": [
-		"Finally resolved the weird problem with the MC Dynmap subdomain. View that <a href=\"https://mc.hiden.pw\">here.</a>",
+		"Finally resolved the weird problem with the MC Dynmap subdomain. View that <a class=blogpost href=\"https://mc.hiden.pw\">here.</a>",
 		"The Discord server link was changed to one that doesn't link to the staff chat."
 	],
 	
@@ -206,7 +206,7 @@
 	],
 	
 	"2022-05-13T13:30:28": [
-		"The site was moved to <a href=\"https://hiden.pw\">a new domain, <em>again</em></a>, courtesy of dkay.",
+		"The site was moved to <a class=blogpost href=\"https://hiden.pw\">a new domain, <em>again</em></a>, courtesy of dkay.",
 		"The old domain will continue to work as a redirect until May 23, 2022. If you link my site on your own site, please update the link by then."
 	],
 	
@@ -237,13 +237,13 @@
 	],
 
 	"2022-04-14T06:00:18": [
-		"HTTPS is now forced, you may use TLSv1 - TLSv1.3. For older browsers you may need to add the <a href=\"https://letsencrypt.org/certs/lets-encrypt-r3.pem\">Let's Encrypt certificate</a> to your browser.",
+		"HTTPS is now forced, you may use TLSv1 - TLSv1.3. For older browsers you may need to add the <a class=blogpost href=\"https://letsencrypt.org/certs/lets-encrypt-r3.pem\">Let's Encrypt certificate</a> to your browser.",
 		"Nginx now caches static content for a more <em>sped</em> browsing experience.",
-		"<em><a href=\"https://dkay.xyz\">dkay</a></em>"
+		"<em><a class=blogpost href=\"https://dkay.xyz\">dkay</a></em>"
 	],
 
 	"2022-04-13T18:28:13": [
-		"The site now supports HTTPS (thanks <a href=\"https://dkay.xyz\">dkay</a>).",
+		"The site now supports HTTPS (thanks <a class=blogpost href=\"https://dkay.xyz\">dkay</a>).",
 		"HTTP is still avaliable for now while I sort out cipher compatibility with older systems, however I strongly recommend against using it for security and privacy reasons.",
 		"On top of this, all links that use HTTP and also support HTTPS have been changed to link to the HTTPS version.",
 		"It is now powered under an Nginx reverse proxy to help achieve this.",
@@ -255,7 +255,7 @@
 	],
 
 	"2022-03-28T16:02:54": [
-		"I have a new project available, called PubSite. <a href=\"https://pubsite.cf\">Check it out.</a>",
+		"I have a new project available, called PubSite. <a class=blogpost href=\"https://pubsite.cf\">Check it out.</a>",
 		"On top of that, the site is getting many adjustments to it's appearance and functioanlity. Check those out."
 	],
 
@@ -268,7 +268,7 @@
 	],
 	
 	"2022-03-08T18:20:52": [
-		"A <a href=\"/downloads/cursors\">new page</a> is available.",
+		"A <a class=blogpost href=\"/downloads/cursors\">new page</a> is available.",
 		"Many visual adjustments were added."
 	],
 
@@ -335,26 +335,26 @@
 
 	"2022-01-24T21:44:04": [
 		"I'm doing a lot of moving around internally, so sorry if stuff works and/or looks like crap right now.",
-		"There's now a <a href=\"http://hiden64.ddns.net:3001/status\">service status</a> page, that keeps track of when and why the site and other services I host go down.",
+		"There's now a <a class=blogpost href=\"http://hiden64.ddns.net:3001/status\">service status</a> page, that keeps track of when and why the site and other services I host go down.",
 		"There's also a ton of new pages in development, (CANCELLED) <s>plus a planned website rewrite</s>. Which ever comes first is TBD as of now."		
 	],
 
 	"2022-01-23T12:10:21": [
 		"Lots of the pages were given an update.",
-		"A new download was added to <a href=\"downloads\">the Downloads page</a>.",
+		"A new download was added to <a class=blogpost href=\"downloads\">the Downloads page</a>.",
 		"My contact information is now available on the <a href=\"about\">about me page</a>, in case you ever need to contact me, or just want to have a chat with me.",
 		"The code of the pages is also being cleaned up quite a bit."
 	],
 
 	"2022-01-22T12:32:03":[
 		"Major visual updates were added.",
-		"2 <a href=\"computers\">new</a> <a href=\"about\">pages</a> were added. There will be more new pages soon™.",
+		"2 <a class=blogpost href=\"computers\">new</a> <a href=\"about\">pages</a> were added. There will be more new pages soon™.",
 		"The cryptocurrency market has crashed and burned...............",
 		"TIME TO CELEBRATE YAYAYAYAYAAYAYAYAYAY-"
 	],
 
 	"2022-01-21T14:48:00":[
-		"Programs on <a href=\"/downloads/software\">the software downloads page</a> now have icons, so they're more recognizeable. I added a new download for Netscape there too.",
+		"Programs on <a class=blogpost href=\"/downloads/software\">the software downloads page</a> now have icons, so they're more recognizeable. I added a new download for Netscape there too.",
 		"Twitter launched an NFT integration feature...............",
 		"Is there any good alternatives to Twitter?"
 	],
@@ -362,7 +362,7 @@
 	"2022-01-20T11:29:00": [
 		"Added a few more visual updates.",
 		"I'm now utlizing a more efficient way of updating the news and footer without having to manually change the size of those elements.",
-		"There's a <a href=\"downloads\">new page</a>. This is to help reduce some clutter.",
+		"There's a <a class=blogpost href=\"downloads\">new page</a>. This is to help reduce some clutter.",
 		"(NO LONGER THE CASE) <s>The guestbook link was moved to the links (now places) page.</s>",
 		"The news page has been tweaked visually to help with performance.",
 		"The blur effect was reduced because it started causing eye strain for me.",
@@ -370,7 +370,7 @@
 	],
 
 	"2022-01-18T06:42:00": [
-		"I've migrated the site to <a href=\"http://hiden64.ddns.net\">a new domain</a>, because apparently the domain I used before was being flagged as malware by some AVs and websites.",
+		"<s>I've migrated the site to <a class=blogpost href=\"http://hiden64.ddns.net\">a new domain</a>, because apparently the domain I used before was being flagged as malware by some AVs and websites.</s>",
 		"A lot of visual improvements were slapped onto here too.",
 		"Microsoft purchased Activision... for whatever reason. They're going to have a total monopoly on gaming in the future just like they do with PCs, I know it."
 	],
@@ -410,12 +410,12 @@
 		"The news page was heavily reworked.",
 		"Tables and site logos have been heavily reworked to utilize CSS instead of the archaic in-HTML style definitions.",
 		"Many other visual tweaks have been added.",
-		"The site logo has been updated, as this isn't really a ''90s-designed site'' anymore.",
+		"<s>The site logo has been updated, as this isn't really a ''90s-designed site'' anymore.</s>",
 		"I'm also cleaning up a bunch of things on the pages themselves, to fix issues and all that jazz."
 	],
 
 	"2021-12-25T14:24:00": [
-		"Merry Christmas! Our gift for this year is the revival of the website after ~1 month of letting it rot. We're sorry about that.",
+		"Merry Christmas! My gift for this year is the revival of the website after ~1 month of letting it rot. Sorry about that.",
 		"Footer facts have also been removed as they are pretty bloaty and unessecary."
 	],
 	
@@ -424,7 +424,7 @@
 	],
 
 	"2021-10-23T08:47:00": [
-		"There's a <a href=\"places\">new page.</a>"
+		"There's a <a class=blogpost href=\"places\">new page.</a>"
 	],
 
 	"2021-10-06T02:45:00": [
@@ -436,7 +436,7 @@
 	],
 
 	"2021-08-07T02:00:00": [
-		"TacoBot is back (See above). I've also added a new link to the homepage."
+		"<s>TacoBot is back.</s> I've also added a new link to the homepage."
 	],
 
 	"2021-07-19T04:30:00": [
@@ -450,11 +450,11 @@
 	],
 
 	"2021-06-26T19:38:50": [
-		"This website has moved to a new home. It is now being hosted on GitHub Pages instead of HM's secondary laptop (Now hosted on my own hardware)."
+		"<s>This website has moved to a new home. It is now being hosted on GitHub Pages instead of HM's secondary laptop.</s> (Now hosted on my own hardware)"
 	],
 
 	"2021-06-22T21:23:29": [
-		"The website is now open source. You can grab the source code <a href=\"https://github.com/hiden64/hidens-website\">here</a>. I am also planning to do a redesign of the site in the future.",
+		"The website is now open source. You can grab the source code <a class=blogpost href=\"https://github.com/hiden64/hidens-website\">here</a>. I am also planning to do a redesign of the site in the future.",
 		"I also cleaned up the home page a bit."
 	]
 }
