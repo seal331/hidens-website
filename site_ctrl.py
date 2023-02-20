@@ -54,6 +54,10 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 		print("Testing mode enabled! Test content (i.e: unfinished content and experiements) is served under /testing")
 		app.router.add_get('/testing', page_testing)
 		app.router.add_get('/testing/too', page_testing_too)
+		app.router.add_get('/services/vms', page_vmlist)
+
+	if not settings.TESTING:
+		app.router.add_get('/services/vms', page_nrfs)
 
 	if settings.APRILFOOLS_2023:
 		print("April Fools 2023 mode enabled!")
@@ -155,6 +159,11 @@ async def page_faq(req):
 async def page_services(req):
 	return render(req, 'services.html', {    
 		'title': 'HIDNet services'
+	})
+
+async def page_vmlist(req):
+	return render(req, 'services.vmlist.html', {    
+		'title': 'Virtual Machine list | HIDNet services'
 	})
 
 async def page_game_serv(req):
@@ -274,6 +283,11 @@ async def page_testing_too(req):
 
 async def page_why_af23(req): 
 	return render(req, 'why.aprilfools.2023.html')
+
+async def page_nrfs(req):
+	return render(req, 'nrfs.html', {    
+		'title': 'NOT READY YET'
+	})
 	
 async def page_blog(req):
 	with open('json/posts.json', 'rb') as bp:
