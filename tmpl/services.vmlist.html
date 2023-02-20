@@ -1,9 +1,70 @@
 {%- extends 'base.html' -%}
 
-{%- block meta -%}
+{%- block meta -%}  
 	<meta name=description content="All HIDNet services.">
 {%- endblock -%}
 
 {%- block content -%}
 
+<br>
+
+<img src=/static/title-art/vms.gif alt="Virtual Machines"><br><br><br>
+
+<table class=vmtable>
+    <tr class=vmtableheader>
+        <th>
+            <p class=vmtableheadertext>VM</p>
+        </th>
+        <th>
+            <p class=vmtableheadertext>OS</p>
+        </th>
+        <th>
+            <p class=vmtableheadertext>Services</p>
+        </th>
+    </tr>
+    <tr class=vmtablecontent>
+        <td>
+            <p class=vmtablecontenttext>NET1</p>
+        </td>
+        <td>
+            <p class=vmtablecontenttext>Debian 11</p>
+        </td>
+        <td>
+            <p class=vmtablecontenttext>This website, <a href=https://duck.hiden.pw>mine and Duck's website</a>, a private Vaultwarden instance, <a href=https://mc.hiden.pw>MC 1.19's dynmap</a>, ie.best and norton.com for Kommunet</p>
+        </td>
+    </tr>
+    <tr class=vmtablecontent>
+        <td>
+            <p class=vmtablecontenttext>NET2</p>
+        </td>
+        <td>
+            <p class=vmtablecontenttext>OpenSUSE Leap 15.4</p>
+        </td>
+        <td>
+            <p class=vmtablecontenttext>All Minecraft servers</p>
+        </td>
+    </tr>
+    <tr class=vmtablecontent>
+        <td>
+            <p class=vmtablecontenttext>NET3</p>
+        </td>
+        <td>
+            <p class=vmtablecontenttext>Arch Linux</p>
+        </td>
+        <td>
+            <p class=vmtablecontenttext>HIDNet Chat Relay, <a href=/projects/hbot>HBot</a></p>
+        </td>
+    </tr>
+    <tr class=vmtablecontent>
+        <td>
+            <p class=vmtablecontenttext>NET4</p>
+        </td>
+        <td>
+            <p class=vmtablecontenttext>Windows Server 2022 Standard</p>
+        </td>
+        <td>
+            <p class=vmtablecontenttext>All Source/GoldSrc servers (only <a href=/services/gameserv/gmod>GMod Sandbox</a> right now)</p>
+        </td>
+    </tr>
+</table>
 {%- endblock -%}

@@ -583,6 +583,31 @@ footer img:hover {
 	margin-right: auto;
 }
 
+.vmtable {
+	width: 717px;
+	box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
+	border: 0;
+	position: relative;
+	z-index: 1;
+	background: inherit;
+	overflow: hidden;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.vmtable:before {
+	background: inherit; 
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0; 
+	bottom: 0;
+	box-shadow: inset 0 0 0 2000px rgba(255,255,255,0.3);
+	filter: blur(10px);
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .webtitle {
 	width: 215px;
 	height: 130px;
@@ -698,6 +723,23 @@ footer img:hover {
 }
 
 .comptablecontenttext {
+	font-size: 17px;
+}
+
+.vmtableheader {
+	background-color: #b6ac18c0;
+}
+
+.vmtableheadertext {
+	height: 18.5px;
+	font-size: 16px;
+}
+
+.vmtablecontent {
+	background-color: #d6c8058e;
+}
+
+.vmtablecontenttext {
 	font-size: 17px;
 }
 
