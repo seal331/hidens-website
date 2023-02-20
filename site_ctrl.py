@@ -42,6 +42,7 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/services/gamesrv/mc/b173', page_mc_b173)
 	app.router.add_get('/services/gamesrv/mc/rules', page_mc_rules)
 	app.router.add_get('/services/generalsrv', page_general_serv)
+	app.router.add_get('/services/vms', page_vmlist)
 	app.router.add_get('/projects/pubsite', page_pubsite_details)
 	app.router.add_get('/projects/pubsite/ssg', page_pubsite_ssgallery)
 	app.router.add_get('/projects/randomapp1', page_randomapp1_details)
@@ -54,10 +55,9 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 		print("Testing mode enabled! Test content (i.e: unfinished content and experiements) is served under /testing")
 		app.router.add_get('/testing', page_testing)
 		app.router.add_get('/testing/too', page_testing_too)
-		app.router.add_get('/services/vms', page_vmlist)
 
-	if not settings.TESTING:
-		app.router.add_get('/services/vms', page_nrfs)
+	#if not settings.TESTING:
+	#	app.router.add_get('/foo/bar', page_nrfs)
 
 	if settings.APRILFOOLS_2023:
 		print("April Fools 2023 mode enabled!")
