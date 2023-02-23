@@ -1,4 +1,10 @@
-{ 
+{
+	"2023-02-23T12:12:32": [
+		"My Twitter account has been officially retired. My only active account now is for HIDNet updates only, which will also be retired by sometime within the next year.",
+		"For HIDNet updates + everything else, go follow @hiden@mstdn.social on the Fediverse (specifically Mastodon, using the mstdn.social instance) instead.",
+		"Also for a HIDNet update, NET5 has been created. It runs Ubuntu 22.04, and primiarily serves to host messaging/chat/communications/whatever you want to call it services. My main focuses for it right now are IRC and Matrix, which should be fully avaliable by the end of Q1 2023."
+	],
+
 	"2023-02-14T21:32:19": [
 		"Happy Valentines day.",
 		"To those without a SO, hope you have a good day regardless.",
