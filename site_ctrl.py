@@ -253,7 +253,7 @@ async def page_randomapp1_ssgallery(req):
 
 async def page_hbot_details(req):
 	return render(req, 'projects.hbot.html', {
-		'title': 'H-Bot | Projects'
+		'title': 'HBot | Projects'
 	})
 
 async def page_website_details(req):
