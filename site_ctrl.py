@@ -133,7 +133,7 @@ async def page_computers(req):
 
 async def page_computers_desktop_a5ke4(req):
 	return render(req, 'computers.desktops.a5ke4.html', {
-		'title': 'AORUS 5 KE4 Desktop | My computers'
+		'title': 'Gigabyte AORUS 5 KE4 Desktop | My computers'
 	})
 
 async def page_computers_desktop_hpp23(req):
