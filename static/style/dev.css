@@ -136,7 +136,7 @@ footer img:hover {
 	margin: 5.5px 3px;
 }
 
-.sidebar {
+.sidenav {
 	height: 100%;
 	width: 220px;
 	position: fixed;
@@ -150,7 +150,7 @@ footer img:hover {
 	z-index: 1;
 }
 
-.sidebar a {
+.sidenav a {
 	padding: 6px 8px 6px 16px;
 	text-decoration: none;
 	font-size: 17.5px;
@@ -158,8 +158,8 @@ footer img:hover {
 }
 
 @media screen and (max-height: 450px) {
-	.sidebar {padding-top: 15px;}
-	.sidebar a {font-size: 12px;}
+	.sidenav {padding-top: 15px;}
+	.sidenav a {font-size: 12px;}
 }
 
 .sidebartxt {
