@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html lang=en>
+
+<head>
+
+	<meta charset=utf-8>
+	<meta name="Author" content="HIDEN">
+	<meta name="GENERATOR" content="Vim, Nano, FrontPage 2003, VSCode, Notepad++">
+	{%- block meta -%}{%- endblock -%}
+
+	<title>
+		{% if title %}{{ title }} | {% endif %}HIDEN's website
+	</title>
+	
+	<link rel=stylesheet href=/././static/style/dev.css/>
+	<link rel=icon href=/././static/icon/misc/favicon.ico/>
+	{%- block head -%}{%- endblock -%}
+
+</head>
+
+<div class=sidenav>
+	<a href=/>Home</a>
+	<hr>
+	{%- block sidebar -%}
+
+	{%- endblock -%}
+</div>
+
+<body>
+	
+	{%- block content -%}
+
+	{%- endblock -%}
+
+
+{%- extends 'footer.html' -%}
+
+</body>
