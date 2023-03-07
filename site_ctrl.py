@@ -56,8 +56,8 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 		app.router.add_get('/testing', page_testing)
 		app.router.add_get('/testing/too', page_testing_too)
 
-	if not settings.TESTING:
-		app.router.add_get('/foo/bar', page_notready)
+	#if not settings.TESTING:
+	#	app.router.add_get('/foo/bar', page_notready)
 
 	if settings.APRILFOOLS_2023:
 		print("April Fools 2023 mode enabled!")
