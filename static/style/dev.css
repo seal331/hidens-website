@@ -4,7 +4,7 @@ body {
 	background-attachment: fixed;
 	text-align: center;
 	font-family: 'Trebuchet MS', sans-serif;
-	margin-left: 222px; 
+	margin-left: 220px; 
 }
 
 h1 {
@@ -92,7 +92,7 @@ a:active {
 }
 
 footer {
-	animation: 0.6s ease 0s 1 RiseUp;
+	animation: 0.6s ease 0s 1 FooterUp;
 	box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, .5); 
 	z-index: 1;
 	background: inherit;
@@ -136,7 +136,8 @@ footer img:hover {
 	margin: 5.5px 3px;
 }
 
-.sidenav {
+.sidebar {
+	animation: 0.6s ease 0s 1 SidebarUp;
 	height: 100%;
 	width: 220px;
 	position: fixed;
@@ -150,7 +151,7 @@ footer img:hover {
 	z-index: 1;
 }
 
-.sidenav a {
+.sidebar a {
 	padding: 6px 8px 6px 16px;
 	text-decoration: none;
 	font-size: 17.5px;
@@ -158,8 +159,8 @@ footer img:hover {
 }
 
 @media screen and (max-height: 450px) {
-	.sidenav {padding-top: 15px;}
-	.sidenav a {font-size: 12px;}
+	.sidebar {padding-top: 15px;}
+	.sidebar a {font-size: 12px;}
 }
 
 .sidebartxt {
@@ -169,15 +170,6 @@ footer img:hover {
 
 .testlinks {
 	font-size: 22px;
-}
-
-@keyframes RiseUp {
-	0% {
-		transform: translateY(100%);
-	}
-	100% {
-		transform: translateY(0);
-	}
 }
 
 .testtable {
@@ -203,4 +195,22 @@ footer img:hover {
 	filter: blur(10px);
 	margin-left: auto;
 	margin-right: auto;
+}
+
+@keyframes FooterUp {
+	0% {
+		transform: translateY(100%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+@keyframes SidebarUp {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0);
+	}
 }
