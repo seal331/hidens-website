@@ -1,4 +1,16 @@
 {
+	"2023-03-11T07:41:05": [
+		"THE GREAT DATA LOSS OF 2023 - DETAILS:",
+		"On Mar 9, 2023, I made a stupid mistake.",
+		"I was preparing a Linux flash drive to install to a computer I had lying around. However, the Linux install I had on my main laptop, unknowingly to me at first, switched the paths of my OS flash drive, and my external HDD, which houses almost all of my important data (including but not limited to the VM keys).",
+		"So basically, the drive's partition table was nuked. I quickly realized it, and stopped the flashing, but the damage had been done.",
+		"Throughout the day, I had attempted to recover the data, to no avail.",
+		"Therefore, I lost about 1TB of data, just from a stupid mistake that could've been mitigated by running <code>lsblk</code>. I am officially a donut.",
+		"Well, that's how you learn, I guess.",
+		"This explains the ~12 hour long downtime today. There is no easy way to decrypt a LUKS volume if you lost the key (unlike with Bitlocker on Windows), so I had to reinstall the OSes in the Linux VMs.",
+		"I am extremely sorry for this and I'll take steps to make sure this never, <em>ever</em> happens again."
+	],
+
 	"2023-03-06T13:17:04": [
 		"A redesign for this website is being worked on. A W.I.P. version can be found under the <a class=blogpost href=https://github.com/HIDEN64/hidens-website/tree/redesign-2023>redesign-2023 branch</a> on the repository.",
 		"Please test it and give feedback! To give feedback, <a href=/about/socials>contact me</a> or use the guestbook.",
