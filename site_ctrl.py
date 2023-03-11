@@ -18,8 +18,9 @@ def RunServ(serve_static = False, serve_storage = False, serve_js = False):
 	app.router.add_get('/places', page_places)
 	app.router.add_get('/downloads', page_downloads)
 	app.router.add_get('/downloads/software', page_downloads_software)
+	app.router.add_get('/downloads/software/winamp', page_downloads_software_winamp)
+	app.router.add_get('/downloads/software/wmp', page_downloads_software_wmp)
 	app.router.add_get('/downloads/cursors', page_downloads_cursors)
-	app.router.add_get('/downloads/software/winamp', page_winamp)
 	app.router.add_get('/about', page_about)
 	app.router.add_get('/about/socials', page_socials)
 	app.router.add_get('/about/faq', page_faq)
@@ -119,6 +120,16 @@ async def page_downloads(req):
 async def page_downloads_software(req):
 	return render(req, 'downloads.software.html', {
 		'title': 'Downloads | Software'
+	})
+
+async def page_downloads_software_winamp(req):
+	return render(req, 'downloads.software.winamp.html', {
+		'title': 'Winamp build selection'
+	})
+
+async def page_downloads_software_wmp(req):
+	return render(req, 'downloads.software.wmp.html', {
+		'title': 'WMP version selection'
 	})
 
 async def page_downloads_cursors(req):
@@ -264,11 +275,6 @@ async def page_website_details(req):
 async def page_website_compatlist(req): 
 	return render(req, 'projects.website.compatlist.html', {
 		'title': 'Compatibility list | Website | Projects'
-	})
-
-async def page_winamp(req):
-	return render(req, 'winamp.html', {
-		'title': 'Winamp selection'
 	})
 
 async def page_testing(req):
