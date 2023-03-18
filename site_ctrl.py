@@ -92,7 +92,10 @@ class App(web.Application):
 # YanDev code g o
 
 async def page_index(req):
-	return render(req, 'index.aprilfools.2023.html' if settings.APRILFOOLS_2023 else 'index.aprilfools.2022.html' if settings.APRILFOOLS_2022 else 'index.html')
+	context = {
+        'settings': settings
+    }
+	return render(req, 'index.aprilfools.2023.html' if settings.APRILFOOLS_2023 else 'index.aprilfools.2022.html' if settings.APRILFOOLS_2022 else 'index.html', context)
 
 	
 async def page_projects(req):

@@ -16,6 +16,10 @@
 <a href=/discord>Discord server</a>
 <a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-32120-c5">Guestbook</a>
 <a href=https://github.com/hiden64/hidens-website>Source code</a>
+{% if settings.TESTING %}
+<hr>
+<a href=/testing>Testing</a>
+{% endif %}
 {%- endblock -%}
 
 {%- block content -%}
