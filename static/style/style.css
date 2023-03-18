@@ -2,9 +2,9 @@ body {
 	background: url("/static/misc/bg.png");
 	background-size: cover;
 	background-attachment: fixed;
-	text-align: center;
 	font-family: 'Trebuchet MS', sans-serif;
-	margin-left: 220px; 
+	text-align: left;
+	margin-left: 235px; 
 }
 
 h1 {
@@ -101,6 +101,7 @@ footer {
 	position: fixed;
 	left: 0;
 	bottom: 0;
+	text-align: center;
 }
 
 footer:before {
@@ -156,6 +157,7 @@ footer img:hover {
 	text-decoration: none;
 	font-size: 17.5px;
 	display: block;
+	text-align: center;
 }
 
 @media screen and (max-height: 450px) {
@@ -195,6 +197,10 @@ footer img:hover {
 	filter: blur(10px);
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.flagcounternotice {
+	font-size: 15px;
 }
 
 @keyframes FooterUp {
