@@ -1,74 +1,72 @@
-import jinja2
-import PyRSS2Gen
+import jinja2, PyRSS2Gen, dateutil.parser, json, settings
 from aiohttp import web
 from markupsafe import Markup
 from datetime import datetime
-import dateutil.parser
-import json
 
-import settings
 
-def RunServ(serve_static = False, serve_storage = False, serve_js = False):
+def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STORAGE, serve_js=settings.SERVE_JS):
 	app = App()
 
-	# YanDev code g o
+	routes = [
+		('/', page_index),
+		('/projects', page_projects),
+		('/places', page_places),
+		('/downloads', page_downloads),
+		('/downloads/software', page_downloads_software),
+		('/downloads/software/winamp', page_downloads_software_winamp),
+		('/downloads/software/wmp', page_downloads_software_wmp),
+		('/downloads/cursors', page_downloads_cursors),
+		('/about', page_about),
+		('/about/socials', page_socials),
+		('/about/faq', page_faq),
+		('/computers', page_computers),
+		('/computers/desktops/a5ke4', page_computers_desktop_a5ke4),
+		('/computers/desktops/hpp23', page_computers_desktop_hpp23),
+		('/blog', page_blog),
+		('/blog/rss', blog_rss),
+		('/discord', page_discord),
+		('/discord/invite', page_discord_server_redir),
+		('/discord/rules', page_discord_rules),
+		('/services', page_services),
+		('/services/gamesrv', page_game_serv),
+		('/services/gamesrv/gmod', page_gmod),
+		('/services/gamesrv/gmod/addons', page_gmod_addons),
+		('/services/gamesrv/gmod/rules', page_gmod_rules),
+		('/services/gamesrv/mc', page_mc),
+		('/services/gamesrv/mc/latest', page_mc_latest),
+		('/services/gamesrv/mc/125', page_mc_125),
+		('/services/gamesrv/mc/b173', page_mc_b173),
+		('/services/gamesrv/mc/rules', page_mc_rules),
+		('/services/generalsrv', page_general_serv),
+		('/services/vms', page_vmlist),
+		('/projects/pubsite', page_pubsite_details),
+		('/projects/pubsite/ssg', page_pubsite_ssgallery),
+		('/projects/randomapp1', page_randomapp1_details),
+		('/projects/randomapp1/ssg', page_randomapp1_ssgallery),
+		('/projects/hbot', page_hbot_details),
+		('/projects/website', page_website_details),
+		('/projects/website/compatlist', page_website_compatlist),
+	]
 
-	app.router.add_get('/', page_index)
-	app.router.add_get('/projects', page_projects)
-	app.router.add_get('/places', page_places)
-	app.router.add_get('/downloads', page_downloads)
-	app.router.add_get('/downloads/software', page_downloads_software)
-	app.router.add_get('/downloads/software/winamp', page_downloads_software_winamp)
-	app.router.add_get('/downloads/software/wmp', page_downloads_software_wmp)
-	app.router.add_get('/downloads/cursors', page_downloads_cursors)
-	app.router.add_get('/about', page_about)
-	app.router.add_get('/about/socials', page_socials)
-	app.router.add_get('/about/faq', page_faq)
-	app.router.add_get('/computers', page_computers)
-	app.router.add_get("/computers/desktops/a5ke4", page_computers_desktop_a5ke4)
-	app.router.add_get("/computers/desktops/hpp23", page_computers_desktop_hpp23)
-	app.router.add_get('/blog', page_blog)
-	app.router.add_get('/blog/rss', blog_rss)
-	app.router.add_get('/discord', page_discord)
-	app.router.add_get('/discord/invite', page_discord_server_redir)
-	app.router.add_get('/discord/rules', page_discord_rules)
-	app.router.add_get('/services', page_services)
-	app.router.add_get('/services/gamesrv', page_game_serv)
-	app.router.add_get('/services/gamesrv/gmod', page_gmod)
-	app.router.add_get('/services/gamesrv/gmod/addons', page_gmod_addons)
-	app.router.add_get('/services/gamesrv/gmod/rules', page_gmod_rules)
-	app.router.add_get('/services/gamesrv/mc', page_mc)
-	app.router.add_get('/services/gamesrv/mc/latest', page_mc_latest)
-	app.router.add_get('/services/gamesrv/mc/125', page_mc_125)
-	app.router.add_get('/services/gamesrv/mc/b173', page_mc_b173)
-	app.router.add_get('/services/gamesrv/mc/rules', page_mc_rules)
-	app.router.add_get('/services/generalsrv', page_general_serv)
-	app.router.add_get('/services/vms', page_vmlist)
-	app.router.add_get('/projects/pubsite', page_pubsite_details)
-	app.router.add_get('/projects/pubsite/ssg', page_pubsite_ssgallery)
-	app.router.add_get('/projects/randomapp1', page_randomapp1_details)
-	app.router.add_get('/projects/randomapp1/ssg', page_randomapp1_ssgallery)
-	app.router.add_get('/projects/hbot', page_hbot_details)
-	app.router.add_get('/projects/website', page_website_details)
-	app.router.add_get('/projects/website/compatlist', page_website_compatlist)
-	
 	if settings.TESTING:
 		print("Testing mode enabled! Test content (i.e: unfinished content and experiements) is served under /testing")
-		app.router.add_get('/testing', page_testing)
-		app.router.add_get('/testing/too', page_testing_too)
-
-	#if not settings.TESTING:
-	#	app.router.add_get('/foo/bar', page_notready)
+		routes += [
+			('/testing', page_testing),
+			('/testing/too', page_testing_too),
+		]
 
 	if settings.APRILFOOLS_2023:
 		print("April Fools 2023 mode enabled!")
-		app.router.add_get('/why', page_why_af23)
+		routes.append(('/why', page_why_af23))
 
 	if settings.APRILFOOLS_2022:
 		print("April Fools 2022 mode enabled!")
 
 	if settings.APRILFOOLS_2023 and settings.APRILFOOLS_2022:
 		raise Exception("You can only have one holiday mode enabled. Terminating.")
+
+	for route in routes:
+		app.router.add_get(route[0], route[1])
 
 	if serve_static:
 		app.router.add_static('/static', 'static')
@@ -94,12 +92,7 @@ class App(web.Application):
 # YanDev code g o
 
 async def page_index(req):
-	if settings.APRILFOOLS_2022:
-		return render(req, 'index.aprilfools.2022.html')
-	elif settings.APRILFOOLS_2023:
-		return render(req, 'index.aprilfools.2023.html')
-	else:
-		return render(req, 'index.html')
+	return render(req, 'index.aprilfools.2023.html' if settings.APRILFOOLS_2023 else 'index.aprilfools.2022.html' if settings.APRILFOOLS_2022 else 'index.html')
 
 	
 async def page_projects(req):
@@ -168,17 +161,17 @@ async def page_faq(req):
 	})
 	
 async def page_services(req):
-	return render(req, 'services.html', {    
+	return render(req, 'services.html', {	
 		'title': 'HIDNet services'
 	})
 
 async def page_vmlist(req):
-	return render(req, 'services.vmlist.html', {    
+	return render(req, 'services.vmlist.html', {	
 		'title': 'Virtual Machine list | HIDNet services'
 	})
 
 async def page_game_serv(req):
-	return render(req, 'services.gamesrv.html', {    
+	return render(req, 'services.gamesrv.html', {	
 		'title': 'Game servers | HIDNet services'
 	})
 	
@@ -223,7 +216,7 @@ async def page_mc_rules(req):
 	})
 
 async def page_general_serv(req):
-	return render(req, 'services.generalsrv.html', {    
+	return render(req, 'services.generalsrv.html', {	
 		'title': 'General services | HIDNet services'
 	})
 
@@ -291,7 +284,7 @@ async def page_why_af23(req):
 	return render(req, 'why.aprilfools.2023.html')
 
 async def page_notready(req):
-	return render(req, 'nrfs.html', {    
+	return render(req, 'nrfs.html', {	
 		'title': 'NOT READY YET'
 	})
 	
