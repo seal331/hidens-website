@@ -307,8 +307,7 @@ async def page_blog(req):
 
 async def blog_rss(req):
 	with open('json/posts.json', 'rb') as bp:
-		bp_json = json.loads(bp.read())
-		bp.close()
+		bp_json = json.load(bp)
 	
 	rss_items = [
 		RSSItem (
