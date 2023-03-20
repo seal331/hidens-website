@@ -1,8 +1,10 @@
-import jinja2, PyRSS2Gen, dateutil.parser, json, settings
+import jinja2, json, settings
 from aiohttp import web
 from markupsafe import Markup
-from datetime import datetime
-
+from datetime import datetime, timezone
+from PyRSS2Gen import RSS2, RSSItem
+import dateutil
+from dateutil.parser import isoparse
 
 def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STORAGE, serve_js=settings.SERVE_JS):
 	app = App()
@@ -93,8 +95,8 @@ class App(web.Application):
 
 async def page_index(req):
 	context = {
-        'settings': settings
-    }
+		'settings': settings
+	}
 	return render(req, 'index.aprilfools.2023.html' if settings.APRILFOOLS_2023 else 'index.aprilfools.2022.html' if settings.APRILFOOLS_2022 else 'index.html', context)
 
 	
@@ -293,49 +295,42 @@ async def page_notready(req):
 	
 async def page_blog(req):
 	with open('json/posts.json', 'rb') as bp:
-		bp_json = json.loads(bp.read())
-		bp.close()
+		bp_json = json.load(bp)
 	
 	entries = []
 	
 	for date, items in bp_json.items():
-		tmpl = req.app.jinja_env.get_template('blog.post.item.html')
-		items_markup = [tmpl.render(item = Markup(item)) for item in items]
-		
-		tmpl = req.app.jinja_env.get_template('blog.post.html')
-		entries.append(tmpl.render(date = dateutil.parser.isoparse(date).strftime('%Y-%m-%d'), items = Markup('\n'.join(items_markup))))
+		items_markup = [req.app.jinja_env.get_template('blog.post.item.html').render(item = Markup(item)) for item in items]
+		entries.append(req.app.jinja_env.get_template('blog.post.html').render(date = dateutil.parser.isoparse(date).strftime('%Y-%m-%d'), items = Markup('\n'.join(items_markup))))
 	
-	return render(req, 'blog.html', {
-		'title': 'Blog',
-		'entries': Markup('\n'.join(entries))
-	})
+	return render(req, 'blog.html', {'title': 'Blog', 'entries': Markup('\n'.join(entries))})
 
 async def blog_rss(req):
 	with open('json/posts.json', 'rb') as bp:
 		bp_json = json.loads(bp.read())
 		bp.close()
 	
-	rss = PyRSS2Gen.RSS2(
-		title = "HIDEN's Blog",
-		link = "https://hiden.pw/blog",
-		description = "My blog, where I post about... well... things.",
-		generator = "PyRSS2Gen",
-		docs = "https://validator.w3.org/feed/docs/rss2.html",
-		language = "en-us",
-		webMaster = "hiden64@protonmail.com",
-		
-		lastBuildDate = datetime.utcnow(),
-		
-		items = [
-			PyRSS2Gen.RSSItem(
-				title = dateutil.parser.isoparse(date).strftime('%Y-%m-%d'),
-				description = ''.join(['{}\n'.format(entry) for entry in entries]),
-				pubDate = dateutil.parser.isoparse(date),
-			) for date, entries in bp_json.items()
-		]
+	rss_items = [
+		RSSItem (
+			title=f"{isoparse(date).strftime('%Y-%m-%d')}",
+			description = ''.join([f'{entry}\n' for entry in entries]),
+			pubDate=isoparse(date).replace(tzinfo=timezone.utc),
+		) for date, entries in bp_json.items()
+	]
+
+	rss = RSS2(
+		title="HIDEN's Blog",
+		link="https://hiden.pw/blog",
+		description="My blog, where I post about... well... things.",
+		generator="PyRSS2Gen",
+		docs="https://validator.w3.org/feed/docs/rss2.html",
+		language="en-us",
+		webMaster="hiden64@protonmail.com",
+		lastBuildDate=datetime.utcnow().replace(tzinfo=timezone.utc),
+		items=rss_items,
 	)
-	
-	return web.Response(status = 200, content_type = 'text/xml', text = rss.to_xml(encoding = 'utf-8'))
+
+	return web.Response(status=200, content_type='text/xml', text=rss.to_xml(encoding='utf-8'))
 
 async def handle_404(req):
 	return render(req, '404.html', { 
@@ -343,9 +338,8 @@ async def handle_404(req):
 		}, status = 404
 	)
 
-def render(req, tmpl, ctxt = None, status = 200):
-	tmpl = req.app.jinja_env.get_template(tmpl)
-	if ctxt == None:
-		ctxt = {}
-	content = tmpl.render(**ctxt)
-	return web.Response(status = status, content_type = 'text/html', text = content)
+def render(req, tmpl, ctxt=None, status=200):
+    tmpl = req.app.jinja_env.get_template(tmpl)
+    ctxt = ctxt or {}
+    content = tmpl.render(**ctxt)
+    return web.Response(text=content, content_type='text/html', status=status)
