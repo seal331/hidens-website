@@ -4,12 +4,14 @@
 	<meta name="description" content="Some info about me.">
 {%- endblock -%}
 
+{%- block sidebar -%}
+	<a href=/about/faq>FAQ</a>
+	<a href=/about/socials>Socials</a>
+{%- endblock -%}
 {%- block content -%}
 <img class=siteimgabout src=/static/title-art/about.gif alt="About me"><br><br>
 
-<h4>Shitloads of info about me:</h4>
-
-<table class=abouttable>
+<table>
 
 	<tr>
 		<td>
@@ -45,24 +47,6 @@
 		<td>
 			<p>I'm a programmer for <a href=/projects>a couple of projects</a>. For example, I'm the maintainer of <a href=/projects/pubsite>PubSite</a>, <a href=/projects/hbot>HBot</a>, and <a href=/projects/randomapp1>RandomApp1</a>. I also made the site you're visting right now, obviously :P.</p>
 			<p>I also sometimes make YouTube videos. The topics of said videos are rather grab-bag, but mainly it's tech and gaming. It can be found at the social accounts page, which is linked below.</p>
-		</td>
-	</tr>
-
-	<tr>
-		<td>
-			<a href=/about/faq>FAQ</a>
-		</td>
-		<td>
-			<p>These are some not-so-frequently asked questions. Why not :P</p>
-		</td>
-	</tr>
-
-	<tr>
-		<td>
-			<a href=/about/socials>Social accounts</a>
-		</td>
-		<td>
-			<p>These are my social/messaging accounts. If you need to reach me, go nuts.</p>
 		</td>
 	</tr>
 

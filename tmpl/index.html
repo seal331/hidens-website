@@ -6,28 +6,30 @@
 
 
 {%- block sidebar -%}
-<a href=/about>About me</a>
-<a href=/projects>Projects</a>
-<a href=/blog>Blog</a>
-<a href=/computers>Computers</a>
-<a href=/places>Places</a>
-<a href=/downloads>Downloads</a>
-<a href=/services>Services</a>
-<a href=/discord>Discord server</a>
-<a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-32120-c5">Guestbook</a>
-<a href=https://github.com/hiden64/hidens-website>Source code</a>
-{% if settings.TESTING %}
-<hr>
-<a href=/testing>Testing</a>
-{% endif %}
+	<a href=/about>About me</a>
+	<a href=/projects>Projects</a>
+	<a href=/blog>Blog</a>
+	<a href=/computers>Computers</a>
+	<a href=/places>Places</a>
+	<a href=/downloads>Downloads</a>
+	<a href=/services>Services</a>
+	<a href=/discord>Discord server</a>
+	<a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-32120-c5">Guestbook</a>
+	<a href=https://github.com/hiden64/hidens-website>Source code</a>
+{%- endblock -%}
+
+{%- block sidebarend -%}
+	{% if settings.TESTING %}
+		<a href=/testing>Testing</a>
+	{% endif %}
 {%- endblock -%}
 
 {%- block content -%}
-<img class=siteimghome src=/static/title-art/index.gif alt="HIDEN's website"><br><br>
+	<img class=siteimghome src=/static/title-art/index.gif alt="HIDEN's website"><br><br>
 
-<h3>Greetings, stranger.</h3>
-<p>Welcome to the all-new design of my website!</p>
-<p>To begin your journey on my corner of the internet superhighway, just click something on the all-new sidebar. Come on, you know you want to ;)</p>
+	<h3>Greetings, stranger.</h3>
+	<p>Welcome to the all-new design of my website!</p>
+	<p>To begin your journey on my corner of the internet superhighway, just click something on the all-new sidebar. Come on, you know you want to ;)</p>
 
 <!-- 
 <table class=stuffbox>
@@ -71,7 +73,7 @@
 
 -->
 
-<a href="https://info.flagcounter.com/qFmE"><img src="https://s11.flagcounter.com/count2/qFmE/bg_FFFFFF/txt_000000/border_CCCCCC/columns_8/maxflags_32/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Free counters!" border="0"></a>
-<p class=flagcounternotice>If the flag counter isn't visible, turn off your adblocker.</p>
+	<a href="https://info.flagcounter.com/qFmE"><img src="https://s11.flagcounter.com/count2/qFmE/bg_FFFFFF/txt_000000/border_CCCCCC/columns_8/maxflags_32/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Free counters!" border="0"></a>
+	<p class=flagcounternotice>If the flag counter isn't visible, turn off your adblocker.</p>
 {%- endblock -%}
 
