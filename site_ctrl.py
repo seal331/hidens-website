@@ -16,6 +16,7 @@ def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STO
 		('/downloads/software', page_downloads_software),
 		('/downloads/software/winamp', page_downloads_software_winamp),
 		('/downloads/software/wmp', page_downloads_software_wmp),
+		('/downloads/software/vpc', page_downloads_software_vpc),
 		('/downloads/cursors', page_downloads_cursors),
 		('/about', page_about),
 		('/about/socials', page_socials),
@@ -135,6 +136,11 @@ async def page_downloads_software_winamp(req):
 async def page_downloads_software_wmp(req):
 	return render(req, 'downloads.software.wmp.html', {
 		'title': 'WMP version selection'
+	})
+
+async def page_downloads_software_vpc(req):
+	return render(req, 'downloads.software.vpc.html', {
+		'title': 'Win8/10 install instructions | Virtual PC'
 	})
 
 async def page_downloads_cursors(req):
@@ -284,6 +290,7 @@ async def page_website_compatlist(req):
 
 async def page_guestbook(req):
 	entries = load_entries()
+	reventeries = list(reversed(entries))
 	banned_ips = load_banned_ips()
 
 	if req.remote in banned_ips:
@@ -291,7 +298,7 @@ async def page_guestbook(req):
 
 	return render(req, 'guestbook.html', {
 		'title': 'Guestbook',
-		'entries': entries
+		'entries': reventeries
 	})
 
 async def page_testing(req):
@@ -361,8 +368,10 @@ async def gb_submission_handler(req):
 	name = data['name']
 	email = data['email']
 	message = data['message']
+	location = data['location']
+	website = data['website']
 
-	add_entry(req.remote, name, email, message)
+	add_entry(req.remote, name, email, location, website, message)
 
 	return web.HTTPFound('/guestbook')
 
@@ -373,7 +382,7 @@ def load_entries():
 		data = json.load(f)
 		return data
 
-def add_entry(ip_address, name, email, message):
+def add_entry(ip_address, name, email, location, website, message):
 	entries = load_entries()
 	banned_ips = load_banned_ips()
 	if ip_address in banned_ips:
@@ -383,7 +392,9 @@ def add_entry(ip_address, name, email, message):
 		"name": name,
 		"email": email,
 		"message": message,
-		"date": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+		"location": location,
+		"website": website,
+		"date": datetime.now().strftime("%Y-%m-%d, %H:%M:%S")
 	}
 
 	entries.append(new_entry)

@@ -15,6 +15,7 @@ def main():
 
 	# I need to call this multiple times because you can't add more than one positional argumenet to os.path.isfile, 
 	# TLDR: spaghetti code induced by Python bs
+	# I also could theoretically just use 'and', but I'm too lazy to rewrite this accordingly right now
 
 	if not os.path.isfile(gbjsonfile):
 		resp = input("gb.json not found, would you like to create it? (Y/n): ")

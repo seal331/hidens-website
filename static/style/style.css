@@ -203,6 +203,28 @@ footer img:hover {
 	font-size: 15px;
 }
 
+
+.icon {
+	transition-timing-function: ease;
+	-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
+	-moz-transition-duration: 0.5; /* Gecko workaround */
+	-o-transition-duration: 0.5s; /* Presto workaround */
+	transition-duration: 0.5s;
+	width: 64px;
+	height: 64px;
+}
+
+.icon:hover {
+	transition-timing-function: ease;
+	-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
+	-moz-transition-duration: 0.5; /* Gecko workaround */
+	-o-transition-duration: 0.5s; /* Presto workaround */
+	transition-duration: 0.5s;
+	width: 94px;
+	height: 94px;
+	margin: 7px 10px;
+}
+
 @keyframes FooterUp {
 	0% {
 		transform: translateY(100%);

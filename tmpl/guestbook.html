@@ -4,6 +4,12 @@
 	<meta name=description content="HIDEN's guestbook.">
 {%- endblock -%}
 
+{%- block sidebar -%}
+
+<a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-32120-c5">Old Guestbook</a>
+
+{%- endblock -%}
+
 {%- block content -%}
 <h1>Guestbook</h1>
 <form method="post" action="/guestbook/submit">
@@ -15,6 +21,14 @@
 		<label for="email">Email:</label>
 		<input type="email" id="email" name="email" required>
 	</div>
+	<div>
+		<label for="location">Location:</label>
+		<input type="text" id="location" name="location">
+	</div>
+	<div>
+		<label for="website">Website:</label>
+		<input type="url" id="website" name="website">
+	</div>
 	<div>	
 		<label for="message">Message:</label>
 		<textarea id="message" name="message" rows="5" required></textarea>
@@ -25,7 +39,13 @@
 {% if entries %}
 	<ul>
 	{% for entry in entries %}
-		<li>{{ entry.name }} ({{ entry.email }}) on {{ entry.date }}: <br> {{ entry.message }}</li><br><br>
+		<li>Name: {{ entry.name }}</li>
+		<li>Email: {{ entry.email }}</li>
+		<li>Date: {{ entry.date }}</li>
+		<li>Location: {{ entry.location }}</li>
+		<li>Website: <a href={{ entry.website }}>{{ entry.website }}</a></li>
+		<li>Message: {{ entry.message }}</li>
+		<br><br><br><br>
 	{% endfor %}
 	</ul>
 {% else %}
