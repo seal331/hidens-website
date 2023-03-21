@@ -12,7 +12,7 @@ def main():
 		resp = input("gb.json not found, would you like to create it? (Y/n): ")
 		if resp == "" or resp == "y":
 			with open(gbjsonfile, "w") as f:
-				f.write("{}")
+				f.write("[]")
 				print("File created successfully.")
 		elif resp == "n":
 			print("File not created. The guestbook will not work unless you create the file!")
