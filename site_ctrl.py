@@ -287,7 +287,7 @@ async def page_guestbook(req):
 	banned_ips = load_banned_ips()
 
 	if req.remote in banned_ips:
-		return web.Response(text="You are not allowed to post on this guestbook as you've been banned. Email hiden64@protonmail.com for more details or to appeal your ban.")
+		return web.Response(text="You are not allowed to view or post to this guestbook as you've been banned. Email hiden64@protonmail.com for more details or to appeal your ban.")
 
 	return render(req, 'guestbook.html', {
 		'title': 'Guestbook',
@@ -377,7 +377,7 @@ def add_entry(ip_address, name, email, message):
 	entries = load_entries()
 	banned_ips = load_banned_ips()
 	if ip_address in banned_ips:
-		return web.Response(text="You are not allowed to post on this guestbook as you've been banned. Email hiden64@protonmail.com for more details or to appeal your ban.")
+		return web.Response(text="You are not allowed to view or post to this guestbook as you've been banned. Email hiden64@protonmail.com for more details or to appeal your ban.")
 
 	new_entry = {
 		"name": name,
