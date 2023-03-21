@@ -1,15 +1,14 @@
-import jinja2, json, settings
+import jinja2, json, settings, os
 from aiohttp import web
 from markupsafe import Markup
 from datetime import datetime, timezone
 from PyRSS2Gen import RSS2, RSSItem
-import dateutil
 from dateutil.parser import isoparse
 
 def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STORAGE, serve_js=settings.SERVE_JS):
 	app = App()
 
-	routes = [
+	get_routes = [
 		('/', page_index),
 		('/projects', page_projects),
 		('/places', page_places),
@@ -48,18 +47,23 @@ def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STO
 		('/projects/hbot', page_hbot_details),
 		('/projects/website', page_website_details),
 		('/projects/website/compatlist', page_website_compatlist),
+		('/guestbook', page_guestbook),
+	]
+
+	post_routes = [
+		('/guestbook/submit', gb_submission_handler),
 	]
 
 	if settings.TESTING:
 		print("Testing mode enabled! Test content (i.e: unfinished content and experiements) is served under /testing")
-		routes += [
+		get_routes += [
 			('/testing', page_testing),
 			('/testing/too', page_testing_too),
 		]
 
 	if settings.APRILFOOLS_2023:
 		print("April Fools 2023 mode enabled!")
-		routes.append(('/why', page_why_af23))
+		get_routes.append(('/why', page_why_af23))
 
 	if settings.APRILFOOLS_2022:
 		print("April Fools 2022 mode enabled!")
@@ -67,8 +71,11 @@ def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STO
 	if settings.APRILFOOLS_2023 and settings.APRILFOOLS_2022:
 		raise Exception("You can only have one holiday mode enabled. Terminating.")
 
-	for route in routes:
+	for route in get_routes:
 		app.router.add_get(route[0], route[1])
+
+	for route in post_routes:
+		app.router.add_post(route[0], route[1])
 
 	if serve_static:
 		app.router.add_static('/static', 'static')
@@ -275,6 +282,14 @@ async def page_website_compatlist(req):
 		'title': 'Compatibility list | Website | Projects'
 	})
 
+async def page_guestbook(req):
+	entries = load_entries()
+
+	return render(req, 'guestbook.html', {
+		'title': 'Guestbook',
+		'entries': entries
+	})
+
 async def page_testing(req):
 	return render(req, 'testing.html', {
 		'title': 'Testing | Page 1'
@@ -294,19 +309,19 @@ async def page_notready(req):
 	})
 	
 async def page_blog(req):
-	with open('json/posts.json', 'rb') as bp:
+	with open('json/bp.json', 'rb') as bp:
 		bp_json = json.load(bp)
 	
 	entries = []
 	
 	for date, items in bp_json.items():
 		items_markup = [req.app.jinja_env.get_template('blog.post.item.html').render(item = Markup(item)) for item in items]
-		entries.append(req.app.jinja_env.get_template('blog.post.html').render(date = dateutil.parser.isoparse(date).strftime('%Y-%m-%d'), items = Markup('\n'.join(items_markup))))
+		entries.append(req.app.jinja_env.get_template('blog.post.html').render(date = isoparse(date).strftime('%Y-%m-%d'), items = Markup('\n'.join(items_markup))))
 	
 	return render(req, 'blog.html', {'title': 'Blog', 'entries': Markup('\n'.join(entries))})
 
 async def blog_rss(req):
-	with open('json/posts.json', 'rb') as bp:
+	with open('json/bp.json', 'rb') as bp:
 		bp_json = json.load(bp)
 	
 	rss_items = [
@@ -337,8 +352,40 @@ async def handle_404(req):
 		}, status = 404
 	)
 
+async def gb_submission_handler(request):
+	data = await request.post()
+	name = data['name']
+	email = data['email']
+	message = data['message']
+
+	add_entry(name, email, message)
+
+	return web.HTTPFound('/guestbook')
+
+def load_entries():
+    if not os.path.exists('json/gb.json'):
+        return {}
+    with open('json/gb.json', "r") as f:
+        data = json.load(f)
+        return data
+
+def add_entry(name, email, message):
+    entries = load_entries()
+    new_entry = {
+        "name": name,
+        "email": email,
+		"message": message,
+        "date": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    }
+    entries.append(new_entry)
+    save_entries(entries)
+	
+def save_entries(entries):
+	with open('json/gb.json', 'w') as f:
+		json.dump(entries, f)
+	
 def render(req, tmpl, ctxt=None, status=200):
-    tmpl = req.app.jinja_env.get_template(tmpl)
-    ctxt = ctxt or {}
-    content = tmpl.render(**ctxt)
-    return web.Response(text=content, content_type='text/html', status=status)
+	tmpl = req.app.jinja_env.get_template(tmpl)
+	ctxt = ctxt or {}
+	content = tmpl.render(**ctxt)
+	return web.Response(text=content, content_type='text/html', status=status)

@@ -14,7 +14,11 @@
 	<a href=/downloads>Downloads</a>
 	<a href=/services>Services</a>
 	<a href=/discord>Discord server</a>
-	<a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-32120-c5">Guestbook</a>
+	{% if settings.TESTING %}
+		<a href="/guestbook">Guestbook</a>
+	{% else %}
+		<a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-32120-c5">Guestbook</a>
+	{% endif %}
 	<a href=https://github.com/hiden64/hidens-website>Source code</a>
 {%- endblock -%}
 
