@@ -3,3 +3,4 @@ settings_local.py
 __pycache__/
 devel.txt
 gb.json
+gb_bans.json

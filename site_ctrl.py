@@ -284,6 +284,10 @@ async def page_website_compatlist(req):
 
 async def page_guestbook(req):
 	entries = load_entries()
+	banned_ips = load_banned_ips()
+
+	if req.remote in banned_ips:
+		return web.Response(text="You are not allowed to post on this guestbook as you've been banned. Email hiden64@protonmail.com for more details or to appeal your ban.")
 
 	return render(req, 'guestbook.html', {
 		'title': 'Guestbook',
@@ -352,37 +356,49 @@ async def handle_404(req):
 		}, status = 404
 	)
 
-async def gb_submission_handler(request):
-	data = await request.post()
+async def gb_submission_handler(req):
+	data = await req.post()
 	name = data['name']
 	email = data['email']
 	message = data['message']
 
-	add_entry(name, email, message)
+	add_entry(req.remote, name, email, message)
 
 	return web.HTTPFound('/guestbook')
 
 def load_entries():
-    if not os.path.exists('json/gb.json'):
-        return {}
-    with open('json/gb.json', "r") as f:
-        data = json.load(f)
-        return data
+	if not os.path.exists('json/gb.json'):
+		return {}
+	with open('json/gb.json', "r") as f:
+		data = json.load(f)
+		return data
 
-def add_entry(name, email, message):
-    entries = load_entries()
-    new_entry = {
-        "name": name,
-        "email": email,
+def add_entry(ip_address, name, email, message):
+	entries = load_entries()
+	banned_ips = load_banned_ips()
+	if ip_address in banned_ips:
+		return web.Response(text="You are not allowed to post on this guestbook as you've been banned. Email hiden64@protonmail.com for more details or to appeal your ban.")
+
+	new_entry = {
+		"name": name,
+		"email": email,
 		"message": message,
-        "date": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    }
-    entries.append(new_entry)
-    save_entries(entries)
+		"date": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+	}
+
+	entries.append(new_entry)
+	save_entries(entries)
 	
 def save_entries(entries):
 	with open('json/gb.json', 'w') as f:
 		json.dump(entries, f)
+
+def load_banned_ips():
+	if not os.path.exists('json/gb_bans.json'):
+		return []
+	with open ('json/gb_bans.json', 'r') as f:
+		banned_ips = json.load(f)
+		return banned_ips
 	
 def render(req, tmpl, ctxt=None, status=200):
 	tmpl = req.app.jinja_env.get_template(tmpl)
