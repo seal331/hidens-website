@@ -4,12 +4,17 @@
 	<meta name="description" content="My social/messaging accounts. Incase you need to contact me.">
 {%- endblock -%}
 
+{%- block sidebar -%}
+	<a href=/about/faq>FAQ</a>
+	<a href=/about>General stuff about me</a>
+{%- endblock -%}
+
 {%- block content -%}
 <img src=/static/title-art/socials.gif alt="Socials"><br><br>
 
 <h3>Here's all of my social/messaging accuonts:</h3><br>
 
-<table class=socialstable>
+<table class=medtable>
 	
 	<tr>
 		<td>
@@ -59,7 +64,7 @@
 			<p>Telegram</p>
 		</td>
 		<td>
-			<p>My Telegram is <code>@hiden64</code>. I don't use it very often.</p>
+			<p>My Telegram is <code>@hiden64</code>.</p>
 		</td>
 	</tr>
 	
@@ -87,7 +92,7 @@
 
 	<tr>
 		<td>
-			<img class=icon src=/static/icon/socials/youtube.png alt="YouTube icon" title="YouTube icon">
+			<!-- <img class=icon src=/static/icon/socials/youtube.png alt="YouTube icon" title="YouTube icon"> --> <!-- This is commented out due to visual jank, will fix after the update is out -->
 			<p>YouTube channel</p>
 		</td>
 		<td>

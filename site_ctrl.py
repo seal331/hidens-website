@@ -27,7 +27,8 @@ def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STO
 		('/blog', page_blog),
 		('/blog/rss', blog_rss),
 		('/discord', page_discord),
-		('/discord/invite', page_discord_server_redir),
+		('/discord/invite/link', page_discord_server_redir),
+		('/discord/invite', page_discord_server_invite),
 		('/discord/rules', page_discord_rules),
 		('/services', page_services),
 		('/services/gamesrv', page_game_serv),
@@ -273,6 +274,12 @@ async def page_discord_server_redir(req):
 	return render(req, 'discord.serverredir.html', {
 		'title': 'Invite link | Discord server'
 	})
+
+async def page_discord_server_invite(req):
+	return render(req, 'discord.invite.html', {
+		'title': 'Invite link | Discord server'
+	})
+	
 	
 async def page_pubsite_details(req):
 	return render(req, 'projects.pubsite.html', {

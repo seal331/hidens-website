@@ -99,17 +99,17 @@ a:link {
 	text-decoration: none;
 	color: #037ccc;
 }
- 
+
 a:visited {
 	text-decoration: none;
 	color: #9224db;
 }
- 
+
 a:hover {
 	text-decoration: none;
 	color: #3b6d9c;
 }
- 
+
 a:active {
 	text-decoration: none;
 	color: #00268d;
@@ -286,6 +286,10 @@ label, input, textarea {
 
 .highmedtable {
 	width: 62rem;
+}
+
+.codelink {
+	font-size: 100%;
 }
 
 @keyframes FooterUp {
