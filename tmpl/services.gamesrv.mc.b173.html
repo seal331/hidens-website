@@ -1,14 +1,22 @@
 {%- extends 'base.html' -%}
 
 {%- block meta -%}
-	<meta name=description content="My Minecraft server.">
+	<meta name=description content="My Minecraft b1.7.3 server.">
 {%- endblock -%}
+
+{%- block sidebar -%}
+<a href=/services/gamesrv/mc/rules>Rules</a>
+<hr>
+<a href=/services/gamesrv/mc/latest>Latest server</a>
+<a href=/services/gamesrv/mc/125>1.2.5 server</a>
+{%- endblock -%}
+
 
 {%- block content -%}
 
-<img class=siteimgmc src=/static/title-art/mc.gif alt="Minecraft server"><br><br>
+<img src=/static/title-art/mc.gif alt="Minecraft"><br><br>
 
-<table class=mcsrvtable>
+<table class=smalltable>
 	<tr>
 		<td>
 			<p>Version</p>
@@ -36,18 +44,5 @@
 		</td>
 	</tr>
 
-	<tr>
-		<td>
-			<a href=/services/gamesrv/mc/rules>Rules</a>
-		</td>
-		<td>
-			<p>Check these before joining.</p>
-		</td>
-	</tr>
-
 </table>
-
-<br><br>
-
-<a class=votxt href=/services/gamesrv/mc>View other servers</a>
 {%- endblock -%}
