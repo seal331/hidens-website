@@ -166,7 +166,7 @@ button {
 	-webkit-transition-duration: 0.4s; /* Safari */
 	transition-duration: 0.4s;
 }
-  
+
 button:hover {
 	color: black;
 	padding: 15px 32px;
@@ -175,6 +175,19 @@ button:hover {
 	display: inline-block;
 	margin: 5px 3px;
 	box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+label, input, textarea {
+	margin-bottom: 10px;
+	width: 275px;
+	display: block;
+	text-align: left;
 }
 
 .sidebar {
@@ -249,6 +262,10 @@ button:hover {
 
 .slgtlargetxt {
 	font-size: 29px;
+}
+
+.medtxt {
+	font-size: 24px;
 }
 
 .smalltable {
