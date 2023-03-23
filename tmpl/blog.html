@@ -4,18 +4,13 @@
 	<meta name=description content="My blog, where I post about... well... things.">
 {%- endblock -%}
 
+{%- block sidebar-%}
+<a href=/blog/rss>RSS feed</a>
+{%- endblock -%}
 
 {%- block content -%}
 <img class=siteimgblog src=/static/title-art/blog.gif alt="My Blog">
 
-<p class=blogrss>Want to get these posts + future ones in your feed reader? The RSS feed can be found <a class=blogrss href=/blog/rss>here</a>.</p>
-
-<br><br>
-
-
-
 {{ entries }}
-
-
 
 {%- endblock -%}

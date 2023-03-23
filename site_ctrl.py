@@ -1,9 +1,10 @@
-import jinja2, json, settings, os
-from aiohttp import web
+import jinja2, json, settings, os, aiohttp
+from aiohttp import web, request
 from markupsafe import Markup
 from datetime import datetime, timezone
 from PyRSS2Gen import RSS2, RSSItem
 from dateutil.parser import isoparse
+from urllib.parse import parse_qs
 
 def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STORAGE, serve_js=settings.SERVE_JS):
 	app = App()
@@ -36,6 +37,7 @@ def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STO
 		('/services/gamesrv/gmod/rules', page_gmod_rules),
 		('/services/gamesrv/mc', page_mc),
 		('/services/gamesrv/mc/latest', page_mc_latest),
+		('/services/gamesrv/mc/latest/status', page_mc_latest_status),
 		('/services/gamesrv/mc/125', page_mc_125),
 		('/services/gamesrv/mc/b173', page_mc_b173),
 		('/services/gamesrv/mc/rules', page_mc_rules),
@@ -218,6 +220,26 @@ async def page_mc_latest(req):
 		'title': 'MC latest server | Game servers | HIDNet services'
 	})
 
+async def page_mc_latest_status(req):
+	server_ip = settings.MCHOST
+	server_port = settings.MCPORT
+	
+	try:
+		# Attempt to connect to the Minecraft server
+		async with aiohttp.ClientSession() as session:
+			async with session.get(f'https://api.mcsrvstat.us/2/{server_ip}:{server_port}') as resp:
+				if resp.status == 200:
+					server_status = (await resp.json()).get('online', False)
+				else:
+					server_status = False
+	except:
+		server_status = False
+	
+	return render(req, 'services.gamesrv.mc.latest.status.html', {
+		'title': 'MC latest server | Game servers | HIDNet services',
+		'server_status': server_status
+	})
+
 async def page_mc_125(req):
 	return render(req, 'services.gamesrv.mc.125.html', {
 		'title': 'MC 1.2.5 server | Game servers | HIDNet services'
@@ -362,7 +384,7 @@ async def handle_404(req):
 		'title': 'Page not found' 
 		}, status = 404
 	)
-
+	
 async def gb_submission_handler(req):
 	data = await req.post()
 	name = data['name']

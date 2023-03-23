@@ -6,6 +6,8 @@ TESTING = False
 SERVE_STATIC = False
 SERVE_STORAGE = False
 SERVE_JS = False
+MCHOST = 'hiden.pw'
+MCPORT = 25565
 APRILFOOLS_2022 = False
 APRILFOOLS_2023 = False
 
