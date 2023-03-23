@@ -277,7 +277,15 @@ label, input, textarea {
 }
 
 .lowmedtable {
-	width: 32rem;
+	width: 35rem;
+}
+
+.medtable {
+	width: 50rem;
+}
+
+.highmedtable {
+	width: 62rem;
 }
 
 @keyframes FooterUp {
