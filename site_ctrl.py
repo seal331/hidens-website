@@ -1,10 +1,9 @@
 import jinja2, json, settings, os, aiohttp
-from aiohttp import web, request
+from aiohttp import web
 from markupsafe import Markup
 from datetime import datetime, timezone
 from PyRSS2Gen import RSS2, RSSItem
 from dateutil.parser import isoparse
-from urllib.parse import parse_qs
 
 def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STORAGE, serve_js=settings.SERVE_JS):
 	app = App()
