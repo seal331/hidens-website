@@ -231,6 +231,10 @@ label, input, textarea {
 	font-size: 15px;
 }
 
+.verselectortxt {
+	font-size: 29px;
+}
+
 .icon {
 	transition-timing-function: ease;
 	-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
