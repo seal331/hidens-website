@@ -39,6 +39,19 @@
 
 	<tr>
 		<td>
+			<p>Server status</p>
+		</td>
+		<td>
+			{% if server_status %}
+				<p>The server is online!</p>
+			{% else %}
+				<p>The server is offline.</p>
+			{% endif %}
+		</td>
+	</tr>
+
+	<tr>
+		<td>
 			<p>Supports cracked accounts?</p>
 		</td>
 		<td>

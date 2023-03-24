@@ -37,7 +37,6 @@ def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STO
 		('/services/gamesrv/gmod/rules', page_gmod_rules),
 		('/services/gamesrv/mc', page_mc),
 		('/services/gamesrv/mc/latest', page_mc_latest),
-		('/services/gamesrv/mc/latest/status', page_mc_latest_status),
 		('/services/gamesrv/mc/125', page_mc_125),
 		('/services/gamesrv/mc/b173', page_mc_b173),
 		('/services/gamesrv/mc/rules', page_mc_rules),
@@ -216,11 +215,6 @@ async def page_mc(req):
 	})
 
 async def page_mc_latest(req):
-	return render(req, 'services.gamesrv.mc.latest.html', {
-		'title': 'MC latest server | Game servers | HIDNet services'
-	})
-
-async def page_mc_latest_status(req):
 	server_ip = settings.MCHOST
 	server_port = settings.MCPORT
 	
@@ -234,8 +228,8 @@ async def page_mc_latest_status(req):
 					server_status = False
 	except:
 		server_status = False
-	
-	return render(req, 'services.gamesrv.mc.latest.status.html', {
+
+	return render(req, 'services.gamesrv.mc.latest.html', {
 		'title': 'MC latest server | Game servers | HIDNet services',
 		'server_status': server_status
 	})
