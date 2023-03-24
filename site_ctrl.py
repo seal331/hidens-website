@@ -107,7 +107,7 @@ async def page_index(req):
 	context = {
 		'settings': settings
 	}
-	return render(req, 'index.aprilfools.2023.html' if settings.APRILFOOLS_2023 else 'index.aprilfools.2022.html' if settings.APRILFOOLS_2022 else 'index.html', context)
+	return render(req, 'index.aprilfools.2023.html' if settings.APRILFOOLS_2023 else 'index.aprilfools.2022.html' if settings.APRILFOOLS_2022 else 'index.cloudninerollout.html' if settings.ROLLOUT_MODE else 'index.html', context)
 
 	
 async def page_projects(req):

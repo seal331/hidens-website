@@ -252,12 +252,49 @@ label, input, textarea {
 	margin: 7px 10px;
 }
 
+.desktopss {
+	transition-timing-function: ease;
+	-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
+	-moz-transition-duration: 0.5; /* Gecko workaround */
+	-o-transition-duration: 0.5s; /* Presto workaround */
+	transition-duration: 0.5s;
+	width: 1050px;
+	height: 600px;
+}
+
+.desktopss:hover {
+	transition-timing-function: ease;
+	-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
+	-moz-transition-duration: 0.5; /* Gecko workaround */
+	-o-transition-duration: 0.5s; /* Presto workaround */
+	transition-duration: 0.5s;
+	width: 1366px;
+	height: 768px;
+	margin: 3px 5px;
+}
+
 .redtxt {
-	color: red
+	color: red;
 }
 
 .darkgreentxt {
-	color: darkgreen
+	color: darkgreen;
+}
+
+.greentxt {
+	color: green;
+}
+
+.lightgreentxt {
+	color: lightgreen;
+}
+
+.goldtxt {
+	color: gold;
+}
+
+.orangetxt {
+	color: orange;
 }
 
 .slgtlargetxt {
@@ -286,6 +323,18 @@ label, input, textarea {
 
 .highmedtable {
 	width: 62rem;
+}
+
+.lowlargetable {
+	width: 71rem;
+}
+
+.largetable {
+	width: 85rem;
+}
+
+.highlargetable {
+	width: 98rem;
 }
 
 .codelink {
