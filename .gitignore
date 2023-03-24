@@ -1,6 +1,7 @@
 *.db
 settings_local.py
 __pycache__/
+log.txt
 devel.txt
 gb.json
 gb_bans.json
