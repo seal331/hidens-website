@@ -1,0 +1,16 @@
+{%- extends 'base.html' -%}
+
+{%- block meta -%}
+	<meta name=description content="Download software.">
+{%- endblock -%}
+
+{%- block sidebar -%}
+
+<a href=/downloads/cursors>Cursor downloads</a>
+<a href=/downloads/software>Software downloads</a>
+
+{%- endblock -%}
+
+{%- block content -%}
+<p>If you want to run it on Windows 8 or higher, change the setup file's name to something else, do the same thing for the program's executable. If you're running the x86 version of Windows 8 - 10, you don't need to do anything else. However, if you use x64 8/8.1, you also need to replace VMM.sys in your <code>C:\Windows\System32\drivers</code> folder with <a href=/storage/software/vpc/2007/vmm.zip>this updated version</a>. <u>This does not work on the x64 version of Windows 10, only the x86 version. It does not work on Windows 11.</u></p>
+{%- endblock -%}

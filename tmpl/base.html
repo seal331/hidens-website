@@ -19,14 +19,29 @@
 
 </head>
 
+<div class=sidebar>
+	<a href="/">Home</a>
+	<hr>
+	{%- block sidebar -%}
+
+	{%- endblock -%}
+	
+	<hr>
+	<a href="javascript:history.back()">Go back</a>
+
+	{%- block sidebarend -%}
+
+	{%- endblock -%}
+</div>
+
 <body>
 	
 	{%- block content -%}
 
 	{%- endblock -%}
 
-<!-- line breaks go <br> (this is a shitty workaround for an issue with small and/or weird display resolutions where'd some content might be obscured and unclickable. there isn't a better way without padding hell.) -->
-<br><br><br><br><br><br><br><br><br><br><br><br>
+<!-- aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa -->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 {%- extends 'footer.html' -%}
 
