@@ -9,6 +9,8 @@ SERVE_JS = False
 ROLLOUT_MODE = False
 MCHOST = 'hiden.pw'
 MCPORT = 25565
+GMODHOST = 'hiden.pw'
+GMODPORT = 27015
 APRILFOOLS_2022 = False
 APRILFOOLS_2023 = False
 

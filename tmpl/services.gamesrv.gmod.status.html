@@ -1,0 +1,33 @@
+{%- extends 'base.html' -%}
+
+{%- block meta -%}
+	<meta name=description content="My Garry's Mod server.">
+{%- endblock -%}
+
+{%- block sidebar -%}
+<a href=/services/gamesrv/gmod/addons>Addon list</a>
+<a href=/services/gamesrv/gmod/rules>Server rules</a>
+{%- endblock -%}
+
+{%- block content -%}
+
+<img src=/static/title-art/gmod.gif alt="Garry's Mod"><br><br>
+
+{% if server_info %}
+    <h2>{{ server_info.server_name }}, server status</h2>
+    <p>Map: {{ server_info.map_name }}</p>
+    <p>Players: {{ server_info.num_players }}/{{ server_info.max_players }}</p>
+
+    <br>
+
+    <h3>Players currently connected:</h3>
+    <ul>
+        {% for player in server_info.players %}
+            <li>{{ player.name }} ({{ player.score }})</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <h2>Server is currently offline.</h2>
+    {% endif %}
+
+{%- endblock -%}

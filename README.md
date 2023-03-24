@@ -22,9 +22,13 @@ Create `settings_local.py`. The avaliable options are as follows:
 
 `TESTING`: Enables W.I.P. and/or experiemental content. The content is served at `/testing`.
 
-`MCHOST`: What host the Minecraft server status page reports the status on.
+`MCHOST`: What host to try for the Minecraft server.
 
 `MCPORT`: What port the afformentioned host is using for the Minecraft server.
+
+`GMODHOST`: What host to try for the Garry's Mod server.
+
+`GMODPORT`: What port the afformentioned host is using for the Garry's Mod server.
 
 `SERVE_STATIC`: Serves the `/static` directory (images, CSS stylesheets, old stuff).
 

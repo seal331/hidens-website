@@ -1,4 +1,4 @@
-import jinja2, json, settings, os, aiohttp
+import jinja2, json, settings, os, aiohttp, asyncio, a2s, socket
 from aiohttp import web
 from markupsafe import Markup
 from datetime import datetime, timezone
@@ -35,6 +35,7 @@ def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STO
 		('/services/gamesrv/gmod', page_gmod),
 		('/services/gamesrv/gmod/addons', page_gmod_addons),
 		('/services/gamesrv/gmod/rules', page_gmod_rules),
+		('/services/gamesrv/gmod/status', page_gmod_status),
 		('/services/gamesrv/mc', page_mc),
 		('/services/gamesrv/mc/latest', page_mc_latest),
 		('/services/gamesrv/mc/125', page_mc_125),
@@ -196,7 +197,15 @@ async def page_game_serv(req):
 	
 async def page_gmod(req):
 	return render(req, 'services.gamesrv.gmod.html', {
-		'title': 'Garry\'s Mod | Game servers | HIDNet services'
+		'title': 'Garry\'s Mod | Game servers | HIDNet services',
+	})
+
+async def page_gmod_status(req):
+	server_info = await get_gmod_server_info()
+
+	return render(req, 'services.gamesrv.gmod.status.html', {
+		'title': 'Garry\'s Mod status | Game servers | HIDNet services',
+		'server_info': server_info
 	})
 	
 async def page_gmod_addons(req):
@@ -385,6 +394,26 @@ async def handle_404(req):
 		}, status = 404
 	)
 	
+async def get_gmod_server_info():
+	address = (settings.GMODHOST, settings.GMODPORT)
+
+	loop = asyncio.get_event_loop()
+
+	try:
+		info = await loop.run_in_executor(None, a2s.info, address)
+		players = await loop.run_in_executor(None, a2s.players, address)
+
+	except socket.timeout:
+		return None
+
+	return {
+		'server_name': info.server_name,
+		'map_name': info.map_name,
+		'num_players': info.player_count,
+		'max_players': info.max_players,
+		'players': players
+	}
+
 async def gb_submission_handler(req):
 	data = await req.post()
 	name = data['name']

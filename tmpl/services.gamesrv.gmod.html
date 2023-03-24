@@ -4,11 +4,17 @@
 	<meta name=description content="My Garry's Mod server.">
 {%- endblock -%}
 
+{%- block sidebar -%}
+<a href=/services/gamesrv/gmod/addons>Addon list</a>
+<a href=/services/gamesrv/gmod/status>Server status</a>
+<a href=/services/gamesrv/gmod/rules>Server rules</a>
+{%- endblock -%}
+
 {%- block content -%}
 
 <img src=/static/title-art/gmod.gif alt="Garry's Mod"><br><br>
 
-<table class=gmodsrvtable>
+<table class=lowmedtable>
 	
 	<tr>
 		<td>
@@ -27,29 +33,7 @@
 			<p>Open the console, type <code>connect hiden.pw</code>, and press enter</p>
 		</td>
 	</tr>
-	
-	<tr>
-		<td>
-			<a href=/services/gamesrv/gmod/addons>Addon list</a>
-		</td>
-		<td>
-			<p>You can find the list of addons here.</p>
-		</td>
-	</tr>
-	
-	<tr>
-		<td>
-			<a href=/services/gamesrv/gmod/rules>Server rules</a>
-		</td>
-		<td>
-			<p>These are the rules for the server.</p>
-		</td>
-	</tr>
 
 </table>
-
-<br><br>
-
-<a class=votxt href=/services/gamesrv>View other game servers</a>
 
 {%- endblock -%}
