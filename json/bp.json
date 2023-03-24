@@ -1,4 +1,11 @@
 {
+	"2023-03-24T04:01:05": [
+		"The Cloud Nine Update has arrived!",
+		"Featuring a near-total rewrite of the site (both front and back), a new, no-longer-relying-on-a-service-that-may-or-may-not-be-good, <a href=/guestbook>Guestbook</a>, as well as a bunch of other new goodies!",
+		"Infact, the update is so huge that I utilized this fancy-shmancy new thing to annoucne it, called a \"blog post\". An all new, revolutonary technology that lets people \"speak\" or write about what's on their mind. You may have heard of it, but trust me, it's brand-spanking new (not really), and innovative (possibly).",
+		"Anyway, enjoy!"
+	],
+
 	"2023-03-11T07:41:05": [
 		"THE GREAT DATA LOSS OF 2023 - DETAILS:",
 		"On Mar 9, 2023, I made a stupid mistake.",
@@ -22,7 +29,7 @@
 		"I'm gathering feedback about this website and what everyone wants to see changed right now.",
 		"What I <em>won't</em> do: Anything that requires a substantial layout/code-base change across the entire website, this includes (but is not limited to) mobile optimization",
 		"What I <em>will</em> do: Everything else!",
-		"You can submit feedback by using the Guestbook or contacting me at one of <a class=blogpost href=/about/socials>these services</a>."
+		"You can submit feedback by using the Guestbook or contacting me at one of <a href=/about/socials>these services</a>."
 	],
 	
 	"2023-02-23T12:12:32": [
