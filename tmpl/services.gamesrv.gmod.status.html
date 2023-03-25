@@ -14,24 +14,24 @@
 <img src=/static/title-art/gmod.gif alt="Garry's Mod"><br><br>
 
 {% if server_info %}
-    <h2>{{ server_info.server_name }}, server status</h2>
-    <p>Map: {{ server_info.map_name }}</p>
-    <p>Players: {{ server_info.num_players }}/{{ server_info.max_players }}</p>
+	<h2>{{ server_info.server_name }}, server status</h2>
+	<p>Map: {{ server_info.map_name }}</p>
+	<p>Players: {{ server_info.num_players }}/{{ server_info.max_players }}</p>
 
-    <br>
+	<br>
 
-    {% if server_info.num_players == 0 %}
-        <p class=medtxt>No players are currently connected.</p>
-    {% else %}
-        <h3>Players currently connected:</h3>
-        <ul>
-            {% for player in server_info.players %}
-                <li class=slgtmedtxt>{{ player.name }} ({{ player.score }})</li>
-            {% endfor %}
-        </ul>
-    {% endif %}
+	{% if server_info.num_players == 0 %}
+		<p class=medtxt>No players are currently connected.</p>
+	{% else %}
+		<h3>Players currently connected:</h3>
+		<ul>
+			{% for player in server_info.players %}
+				<li class=slgtmedtxt>{{ player.name }} ({{ player.score }})</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
 {% else %}
-    <h2>Server is currently offline.</h2>
+	<h2>Server is currently offline.</h2>
 {% endif %}
 
 {%- endblock -%}

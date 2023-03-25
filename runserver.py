@@ -2,7 +2,6 @@ from aiohttp import web
 from site_ctrl import RunServ
 import logging, settings, sys, os
 
-
 def main():
 		
 	if sys.version_info < (3, 6):
@@ -45,7 +44,7 @@ def main():
 	app = RunServ()
 
 	if settings.ENABLE_LOGGING:
-		logging.basicConfig(filename='log.txt', filemode='a', format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s', datefmt='%H:%M:%S', level=logging.DEBUG) if settings.LOG_TO_FILE else logging.basicConfig(level=logging.DEBUG)
+		logging.basicConfig(filename='aiohttp.log', filemode='a', format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s', datefmt='%H:%M:%S', level=logging.DEBUG) if settings.LOG_TO_FILE else logging.basicConfig(level=logging.DEBUG)
 			
 	web.run_app(app, port=settings.PORT)
 
