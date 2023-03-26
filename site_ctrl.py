@@ -58,7 +58,7 @@ def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STO
 	]
 
 	if settings.TESTING:
-		print("Testing mode enabled! Test content (i.e: unfinished content and experiements) is served under /testing")
+		print("Testing mode enabled! Experiements and W.I.P. content is served under /testing")
 		get_routes += [
 			('/testing', page_testing),
 			('/testing/too', page_testing_too),
@@ -72,7 +72,7 @@ def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STO
 		print("April Fools 2022 mode enabled!")
 
 	if settings.APRILFOOLS_2023 and settings.APRILFOOLS_2022:
-		raise Exception("You can only have one holiday mode enabled. Terminating.")
+		raise Exception("You can't have more than one holiday mode enabled at once. Terminating.")
 
 	for route in get_routes:
 		app.router.add_get(route[0], route[1])
@@ -107,7 +107,7 @@ async def page_index(req):
 	context = {
 		'settings': settings
 	}
-	return render(req, 'index.aprilfools.2023.html' if settings.APRILFOOLS_2023 else 'index.aprilfools.2022.html' if settings.APRILFOOLS_2022 else 'index.cloudninerollout.html' if settings.ROLLOUT_MODE else 'index.html', context)
+	return render(req, 'index.aprilfools.2023.html' if settings.APRILFOOLS_2023 else 'index.aprilfools.2022.html' if settings.APRILFOOLS_2022 else 'index.html', context)
 
 	
 async def page_projects(req):

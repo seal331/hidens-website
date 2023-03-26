@@ -6,7 +6,6 @@ TESTING = False
 SERVE_STATIC = False
 SERVE_STORAGE = False
 SERVE_JS = False
-ROLLOUT_MODE = False
 MCHOST = 'hiden.pw'
 MCPORT = 25565
 GMODHOST = 'hiden.pw'
