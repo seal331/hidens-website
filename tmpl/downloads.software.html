@@ -10,6 +10,31 @@
 
 {%- endblock -%}
 
+{%- block pagestyle -%}
+<!-- TODO: Find a better icon so this mess isn't needed-->
+<style> 
+	.vpcicon {
+		transition-timing-function: ease;
+		-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
+		-moz-transition-duration: 0.5; /* Gecko workaround */
+		-o-transition-duration: 0.5s; /* Presto workaround */
+		transition-duration: 0.5s;
+		height: 76.5px;
+		width: 76.5px;
+	}
+	
+	.vpcicon:hover {
+		transition-timing-function: ease;
+		-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
+		-moz-transition-duration: 0.5; /* Gecko workaround */
+		-o-transition-duration: 0.5s; /* Presto workaround */
+		transition-duration: 0.5s;
+		height: 87px;
+		width: 87px;
+	}
+</style>
+{%- endblock -%}
+
 {%- block content -%}
 <img src=/static/title-art/software.gif alt="Download Software">
 
@@ -84,7 +109,7 @@
 
 	<tr>
 		<td>
-			<!--<img class=icon src=/static/icon/software/vpc.png alt="Windows Virutal PC icon" title="Windows Virtual PC icon">--> <!-- Commented out due to visual jank, will fix later -->
+			<img class=vpcicon src=/static/icon/software/vpc.png alt="Windows Virutal PC icon" title="Windows Virtual PC icon">
 			<p>Virtual PC</p>
 		</td>
 		<td>

@@ -9,6 +9,71 @@
 	<a href=/about>General stuff about me</a>
 {%- endblock -%}
 
+{%- block pagestyle -%}
+<!-- TODO: Find better icons so this mess isn't needed-->
+<style> 
+	.discicon {
+		transition-timing-function: ease;
+		-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
+		-moz-transition-duration: 0.5; /* Gecko workaround */
+		-o-transition-duration: 0.5s; /* Presto workaround */
+		transition-duration: 0.5s;
+		height: 69px;
+		width: 58px;
+	}
+	
+	.discicon:hover {
+		transition-timing-function: ease;
+		-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
+		-moz-transition-duration: 0.5; /* Gecko workaround */
+		-o-transition-duration: 0.5s; /* Presto workaround */
+		transition-duration: 0.5s;
+		height: 90px;
+		width: 77px;
+	}
+	
+	.yticon {
+		transition-timing-function: ease;
+		-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
+		-moz-transition-duration: 0.5; /* Gecko workaround */
+		-o-transition-duration: 0.5s; /* Presto workaround */
+		transition-duration: 0.5s;
+		height: 45px;
+		width: 64px;
+	}
+	
+	.yticon:hover {
+		transition-timing-function: ease;
+		-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
+		-moz-transition-duration: 0.5; /* Gecko workaround */
+		-o-transition-duration: 0.5s; /* Presto workaround */
+		transition-duration: 0.5s;
+		height: 62px;
+		width: 86px;
+	}
+	
+	.twticon {
+		transition-timing-function: ease;
+		-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
+		-moz-transition-duration: 0.5; /* Gecko workaround */
+		-o-transition-duration: 0.5s; /* Presto workaround */
+		transition-duration: 0.5s;
+		height: 80px;
+		width: 82px;	
+	}
+	
+	.twticon:hover {
+		transition-timing-function: ease;
+		-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
+		-moz-transition-duration: 0.5; /* Gecko workaround */
+		-o-transition-duration: 0.5s; /* Presto workaround */
+		transition-duration: 0.5s;
+		height: 95px;
+		width: 98px;	
+	}	
+</style>
+{%- endblock -%}
+
 {%- block content -%}
 <img src=/static/title-art/socials.gif alt="Socials"><br><br>
 
@@ -70,7 +135,7 @@
 	
 	<tr>
 		<td>
-			<img class=icon src=/static/icon/socials/discord.png alt="Discord icon" title="Discord icon">
+			<img class=discicon src=/static/icon/socials/discord.png alt="Discord icon" title="Discord icon">
 			<p>Discord</p>
 		</td>
 		<td> 
@@ -92,7 +157,7 @@
 
 	<tr>
 		<td>
-			<!-- <img class=icon src=/static/icon/socials/youtube.png alt="YouTube icon" title="YouTube icon"> --> <!-- This is commented out due to visual jank, will fix after the update is out -->
+			<img class=yticon src=/static/icon/socials/youtube.png alt="YouTube icon" title="YouTube icon">
 			<p>YouTube channel</p>
 		</td>
 		<td>
@@ -103,7 +168,7 @@
 
 	<tr>
 		<td>
-			<img class=icon src=/static/icon/socials/twitter.png alt="Twitter icon" title="Twitter icon">
+			<img class=twticon src=/static/icon/socials/twitter.png alt="Twitter icon" title="Twitter icon">
 			<p>Twitter</p>
 		</td>
 		<td>
