@@ -4,7 +4,7 @@ This is the source code to my personal website, which you can find at https://hi
 ## Usage instructions
 
 ### Requirements:
-- Python 3.6 or newer
+- Python 3.7 or newer
 - pip
 - Preferably a *nix environment, although Windows works too
 
