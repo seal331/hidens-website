@@ -4,8 +4,8 @@ import logging, settings, sys, os
 
 def main():
 		
-	if sys.version_info < (3, 6):
-		raise Exception("Unsupported Python version. Please use Python 3.6 or later.")
+	if sys.version_info < (3, 7):
+		raise Exception("Unsupported Python version. Please use Python 3.7 or later.")
 
 	gbjsonfile = "json/gb.json"
 	gbbansjsonfile = "json/gb_bans.json"
