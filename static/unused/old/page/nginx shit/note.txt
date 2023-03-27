@@ -1,4 +1,4 @@
-This was from when I was still experiementing with NGINX's configuration with Halen (the former hoster).
+This was from when I was still experiementing with NGINX's configuration with nitrate92 (the first hoster).
 
 Creation date: 2021-05-09
 Scrapped/removal date: 2021-05-10

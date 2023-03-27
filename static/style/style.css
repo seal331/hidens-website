@@ -256,6 +256,27 @@ label, input, textarea {
 	margin: 7px 10px;
 }
 
+.smallicon {
+	transition-timing-function: ease;
+	-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
+	-moz-transition-duration: 0.5; /* Gecko workaround */
+	-o-transition-duration: 0.5s; /* Presto workaround */
+	transition-duration: 0.5s;
+	width: 38px;
+	height: 38px;
+}
+
+.smallicon:hover {
+	transition-timing-function: ease;
+	-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
+	-moz-transition-duration: 0.5; /* Gecko workaround */
+	-o-transition-duration: 0.5s; /* Presto workaround */
+	transition-duration: 0.5s;
+	width: 64px;
+	height: 64px;
+	margin: 7px 10px;
+}
+
 .desktopss {
 	transition-timing-function: ease;
 	-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
