@@ -320,8 +320,7 @@ async def page_website_compatlist(req):
 	})
 
 async def page_guestbook(req):
-	entries = load_entries()
-	reventeries = list(reversed(entries))
+	entries = list(reversed(load_entries()))
 	banned_ips = load_banned_ips()
 
 	if req.remote in banned_ips:
@@ -329,7 +328,7 @@ async def page_guestbook(req):
 
 	return render(req, 'guestbook.html', {
 		'title': 'Guestbook',
-		'entries': reventeries
+		'entries': entries
 	})
 
 async def page_testing(req):
@@ -416,12 +415,15 @@ async def get_gmod_server_info():
 
 async def gb_submission_handler(req):
 	data = await req.post()
+#	ip_address = req.remote
+#	ip_address = data['ip_address']
 	name = data['name']
 	email = data['email']
 	message = data['message']
 	location = data['location']
 	website = data['website']
 
+	#add_entry(req.remote, ip_address, name, email, location, website, message)
 	add_entry(req.remote, name, email, location, website, message)
 
 	return web.HTTPFound('/guestbook')
@@ -440,6 +442,7 @@ def add_entry(ip_address, name, email, location, website, message):
 		return web.Response(text="You are not allowed to view or post to this guestbook as you've been banned. Email hiden64@protonmail.com for more details or to appeal your ban.")
 
 	new_entry = {
+#		"ip_address": ip_address,
 		"name": name,
 		"email": email,
 		"message": message,
