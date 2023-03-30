@@ -374,7 +374,7 @@ async def blog_rss(req):
 	]
 
 	rss = RSS2(
-		title="HIDEN's Blog",
+		title="HIDEN's Blog (RSS)",
 		link="https://hiden.pw/blog",
 		description="My blog, where I post about... well... things.",
 		generator="PyRSS2Gen",
