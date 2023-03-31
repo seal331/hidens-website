@@ -14,7 +14,7 @@ This is the source code to my personal website, which you can find at https://hi
 - Debian 9 or newer
 - Ubuntu 18.04 or newer
 - Fedora 29 or newer
-- Any other Linux dstribution that supports Python 3.7+
+- Any other Linux distribution that supports Python 3.7+
 
 You will not recieve technical assistance if you are using an unsupported OS, or if you're using a workaround to run this on an unsupported OS (such as Cygwin on older versions of Windows.)
 
