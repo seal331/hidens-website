@@ -231,10 +231,6 @@ label, input, textarea {
 	font-size: 15px;
 }
 
-.verselectortxt {
-	font-size: 29px;
-}
-
 .icon {
 	transition-timing-function: ease;
 	-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
@@ -277,7 +273,7 @@ label, input, textarea {
 	margin: 7px 10px;
 }
 
-.desktopss {
+.img1 {
 	transition-timing-function: ease;
 	-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
 	-moz-transition-duration: 0.5; /* Gecko workaround */
@@ -287,7 +283,7 @@ label, input, textarea {
 	height: 600px;
 }
 
-.desktopss:hover {
+.img1:hover {
 	transition-timing-function: ease;
 	-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
 	-moz-transition-duration: 0.5; /* Gecko workaround */
@@ -295,6 +291,27 @@ label, input, textarea {
 	transition-duration: 0.5s;
 	width: 1366px;
 	height: 768px;
+	margin: 3px 5px;
+}
+
+.img2 {
+	transition-timing-function: ease;
+	-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
+	-moz-transition-duration: 0.5; /* Gecko workaround */
+	-o-transition-duration: 0.5s; /* Presto workaround */
+	transition-duration: 0.5s;
+	height: 500px;
+	width: 750px;
+}
+
+.img2:hover {
+	transition-timing-function: ease;
+	-webkit-transition-duration: 0.5s; /* WebKit/Blink workaround */
+	-moz-transition-duration: 0.5; /* Gecko workaround */
+	-o-transition-duration: 0.5s; /* Presto workaround */
+	transition-duration: 0.5s;
+	height: 675px;
+	width: 1012.5px;
 	margin: 3px 5px;
 }
 
@@ -332,6 +349,10 @@ label, input, textarea {
 
 .slghtmedtxt {
 	font-size: 22px;
+}
+
+.highsmalltxt {
+	font-size: 17px;
 }
 
 .smalltxt {
