@@ -8,6 +8,16 @@ This is the source code to my personal website, which you can find at https://hi
 - pip
 - Preferably a *nix environment, although Windows works too
 
+# Officially supported OSes:
+- Windows 7 or newer
+- macOS 10.9 or newer
+- Debian 9 or newer
+- Ubuntu 18.04 or newer
+- Fedora 29 or newer
+- Any other Linux dstribution that supports Python 3.7+
+
+You will not recieve technical assistance if you are using an unsupported OS, or if you're using a workaround to run this on an unsupported OS (such as Cygwin on older versions of Windows.)
+
 ### Installing the required packages
 Install the requirements using pip: `pip install -r requirements .txt`. If you don't have pip, install it.
 
