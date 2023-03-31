@@ -8,7 +8,7 @@ This is the source code to my personal website, which you can find at https://hi
 - pip
 - Preferably a *nix environment, although Windows works too
 
-# Officially supported OSes:
+#### Officially supported OSes:
 - Windows 7 or newer
 - macOS 10.9 or newer
 - Debian 9 or newer
