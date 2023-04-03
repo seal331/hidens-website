@@ -16,7 +16,7 @@ This is the source code to my personal website, which you can find at https://hi
 - Fedora 29 or newer
 - Any other Linux distribution that supports Python 3.7+
 
-You will not recieve technical assistance if you are using an unsupported OS, or if you're using a workaround to run this on an unsupported OS (such as Cygwin on older versions of Windows.)
+You will not receive technical assistance if you are using an unsupported OS, or if you're using a workaround to run this on an unsupported OS (such as Cygwin on older versions of Windows.)
 
 ### Installing the required packages
 Install the requirements using pip: `pip install -r requirements .txt`. If you don't have pip, install it.
@@ -48,7 +48,9 @@ Create `settings_local.py`. The avaliable options are as follows:
 
 `APRILFOOLS_2022`: Enables the April Fools day holiday page that was used in 2022.
 
-`APRILFOOLS_2023`: Enables the April Fools day holiday page that will be used in 2023.
+`APRILFOOLS_2023`: Enables the April Fools day holiday page was inteded to be used in 2023, but was cancelled due to a tornado hitting my city at the time.
+
+`APRILFOOLS_2024`: Enables the April FOols day holiday page that will be used in 2024.
 
 You must create `settings_local.py` to start the server. However, you do not need to add content the the file. If the file is empty, the default options in `settings.py` will be used instead.
 
