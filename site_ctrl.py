@@ -63,6 +63,9 @@ def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STO
 			('/testing', page_testing),
 			('/testing/too', page_testing_too),
 		]
+	
+	if settings.APRILFOOLS_2024:
+		print("April Fools 2024 mode enabled!")
 
 	if settings.APRILFOOLS_2023:
 		print("April Fools 2023 mode enabled!")
@@ -71,10 +74,9 @@ def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STO
 	if settings.APRILFOOLS_2022:
 		print("April Fools 2022 mode enabled!")
 
-	# TODO: Fix this so that having only 2 enabled still triggers the exception
-	if settings.APRILFOOLS_2024 and settings.APRILFOOLS_2023 and settings.APRILFOOLS_2022:
+	if (settings.APRILFOOLS_2024 + settings.APRILFOOLS_2023 + settings.APRILFOOLS_2022) >= 2:
 		raise Exception("You can only have one holiday mode enabled at a time. Terminating.")
-
+	
 	for route in get_routes:
 		app.router.add_get(route[0], route[1])
 
