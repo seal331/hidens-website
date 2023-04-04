@@ -1,5 +1,5 @@
 # HIDEN's personal website
-This is the source code to my personal website, which you can find at https://hiden.pw. Because why not.
+This is the source code to my personal website, which you can find at https://hiden.pw. Because why not, as well as a reference point for an aiohttp+jinja2 website.
 
 ## Usage instructions
 
@@ -58,6 +58,12 @@ You must create `settings_local.py` to start the server. However, you do not nee
 Once confiugration is done, start the server with `runserver.py`.
 
 If you'd like to mimic [the production enviornment](https://hiden.pw), you may set up an NGINX reverse proxy. Caddy works too, although [Apache does not](https://github.com/aio-libs/aiohttp/issues/2687). The one I personally recommend most is NGINX.
+
+After this, you should be ready to go!
+
+## Tackling things
+
+Stuck on what exactly you want to add and/or fix? There is a list of [things that are wanted](WANTED.md) that would greatly help development. Why not start with some? :P
 
 ## Reporting problems
 
