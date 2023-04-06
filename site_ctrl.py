@@ -24,6 +24,7 @@ def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STO
 		('/computers', page_computers),
 		('/computers/desktops/a5ke4', page_computers_desktop_a5ke4),
 		('/computers/desktops/hpp23', page_computers_desktop_hpp23),
+		('/computers/desktops/hpts17', page_computers_desktop_hpts17),
 		('/blog', page_blog),
 		('/blog/rss', blog_rss),
 		('/discord', page_discord),
@@ -160,12 +161,17 @@ async def page_computers(req):
 
 async def page_computers_desktop_a5ke4(req):
 	return render(req, 'computers.desktops.a5ke4.html', {
-		'title': 'Gigabyte AORUS 5 KE4 Desktop | My computers'
+		'title': 'GIGABYTE AORUS 5 KE4 Desktop | My computers'
 	})
 
 async def page_computers_desktop_hpp23(req):
 	return render(req, 'computers.desktops.hpp23.html', {
 		'title': 'HP Pavilion 23 Desktop | My computers'
+	})
+
+async def page_computers_desktop_hpts17(req):
+	return render(req, 'computers.desktops.hpts17.html', {
+		'title': 'HP Pavilion TS 17 Desktop | My computers'
 	})
 
 async def page_about(req):
@@ -231,7 +237,6 @@ async def page_mc_latest(req):
 	server_port = settings.MCPORT
 	
 	try:
-		# Attempt to connect to the Minecraft server
 		async with aiohttp.ClientSession() as session:
 			async with session.get(f'https://api.mcsrvstat.us/2/{server_ip}:{server_port}') as resp:
 				if resp.status == 200:
