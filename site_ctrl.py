@@ -331,6 +331,8 @@ async def page_guestbook(req):
 	entries = list(reversed(load_entries()))
 	banned_ips = load_banned_ips()
 
+	# This is broken if the site is behind a reverse proxy, due to iPs not being properly recognized in that scenario
+	# TODO: Implement passing through X-Real-IP & X-Forwarded-For and update this accordingly
 	if req.remote in banned_ips:
 		return web.Response(text="You are not allowed to view or post to this guestbook as you've been banned. Email hiden64@protonmail.com for more details or to appeal your ban.")
 
@@ -423,15 +425,12 @@ async def get_gmod_server_info():
 
 async def gb_submission_handler(req):
 	data = await req.post()
-#	ip_address = req.remote
-#	ip_address = data['ip_address']
 	name = data['name']
 	email = data['email']
 	message = data['message']
 	location = data['location']
 	website = data['website']
 
-	#add_entry(req.remote, ip_address, name, email, location, website, message)
 	add_entry(req.remote, name, email, location, website, message)
 
 	return web.HTTPFound('/guestbook')
@@ -446,11 +445,13 @@ def load_entries():
 def add_entry(ip_address, name, email, location, website, message):
 	entries = load_entries()
 	banned_ips = load_banned_ips()
+
+	# This is broken if the site is behind a reverse proxy, due to iPs not being properly recognized in that scenario
+	# TODO: Implement passing through X-Real-IP & X-Forwarded-For and update this accordingly
 	if ip_address in banned_ips:
 		return web.Response(text="You are not allowed to view or post to this guestbook as you've been banned. Email hiden64@protonmail.com for more details or to appeal your ban.")
 
 	new_entry = {
-#		"ip_address": ip_address,
 		"name": name,
 		"email": email,
 		"message": message,
