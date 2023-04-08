@@ -12,6 +12,8 @@ def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STO
 		('/', page_index),
 		('/projects', page_projects),
 		('/places', page_places),
+		('/places/friends', page_friendsplaces),
+		('/places/misc', page_miscplaces),
 		('/downloads', page_downloads),
 		('/downloads/software', page_downloads_software),
 		('/downloads/software/winamp', page_downloads_software_winamp),
@@ -122,6 +124,16 @@ async def page_projects(req):
 async def page_places(req):
 	return render(req, 'places.html', {
 		'title': 'Places'
+	})
+
+async def page_friendsplaces(req):
+	return render(req, 'places.friends.html', {
+		'title': 'Friends\' sites | Places'
+	})
+
+async def page_miscplaces(req):
+	return render(req, 'places.misc.html', {
+		'title': 'Misc sites | Places'
 	})
 
 async def page_downloads(req):
@@ -290,13 +302,12 @@ async def page_discord_server_invite(req):
 	return render(req, 'discord.invite.html', {
 		'title': 'Invite link | Discord server'
 	})
-	
-	
+
 async def page_pubsite_details(req):
 	return render(req, 'projects.pubsite.html', {
 		'title': 'Pubsite | Projects'
 	})
-	
+
 async def page_pubsite_ssgallery(req):
 	return render(req, 'projects.pubsite.ssgallery.html', {
 		'title': 'Screenshot Gallery | Pubsite | Projects'
@@ -462,7 +473,8 @@ def add_entry(ip_address, name, email, location, website, message):
 
 	entries.append(new_entry)
 	save_entries(entries)
-	
+
+
 def save_entries(entries):
 	with open('json/gb.json', 'w') as f:
 		json.dump(entries, f)
