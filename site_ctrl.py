@@ -5,8 +5,20 @@ from datetime import datetime, timezone
 from PyRSS2Gen import RSS2, RSSItem
 from dateutil.parser import isoparse
 
+async def forward_headers_middleware(app, handler):
+    async def middleware_handler(request):
+        headers_to_forward = ['X-Real-IP', 'X-Forwarded-For']
+        for header in headers_to_forward:
+            if header in request.headers:
+                real_ip = request.headers[header]
+                request.headers['X-Real-IP'] = real_ip
+                request.headers['X-Forwarded-For'] = real_ip
+        return await handler(request)
+
+    return middleware_handler
+
 def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STORAGE, serve_js=settings.SERVE_JS):
-	app = App()
+	app = App(middlewares=[forward_headers_middleware])
 
 	get_routes = [
 		('/', page_index),
