@@ -6,17 +6,17 @@ from PyRSS2Gen import RSS2, RSSItem
 from dateutil.parser import isoparse
 
 async def forward_headers_middleware(app, handler):
-    async def middleware_handler(request):
-        headers = request.headers.copy()
-        real_ip = headers.get('X-Real-IP', request.remote)
-        x_forwarded_for = headers.get('X-Forwarded-For', '')
-        if x_forwarded_for:
-            x_forwarded_for += ', '
-        headers['X-Forwarded-For'] = x_forwarded_for + real_ip
-        request = request.clone(headers=headers)
-        return await handler(request)
+	async def middleware_handler(request):
+		headers = request.headers.copy()
+		real_ip = headers.get('X-Real-IP', request.remote)
+		x_forwarded_for = headers.get('X-Forwarded-For', '')
+		if x_forwarded_for:
+			x_forwarded_for += ', '
+		headers['X-Forwarded-For'] = x_forwarded_for + real_ip
+		request = request.clone(headers=headers)
+		return await handler(request)
 
-    return middleware_handler
+	return middleware_handler
 
 def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STORAGE, serve_js=settings.SERVE_JS):
 	app = App(middlewares=[forward_headers_middleware])
