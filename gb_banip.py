@@ -10,4 +10,4 @@ with open('json/gb_bans.json', 'r') as f:
 with open('json/gb_bans.json', 'w') as f:
 	json.dump(banned_ips, f)
 
-print(f"{ip} has been banned.")
+print(f"{ip} has been banned from the Guestbook.")

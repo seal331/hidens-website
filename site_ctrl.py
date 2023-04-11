@@ -342,9 +342,8 @@ async def page_guestbook(req):
 	entries = list(reversed(load_entries()))
 	banned_ips = load_banned_ips()
 
-	# This is broken if the site is behind a reverse proxy, due to iPs not being properly recognized in that scenario
-	# TODO: Implement passing through X-Real-IP & X-Forwarded-For and update this accordingly
-	if req.remote in banned_ips:
+	client_ip = req.headers.get('X-Real-IP') or req.headers.get('X-Forwarded-For') or req.remote
+	if client_ip in banned_ips:
 		return web.Response(text="You are not allowed to view or post to this guestbook as you've been banned. Email hiden64@protonmail.com for more details or to appeal your ban.")
 
 	return render(req, 'guestbook.html', {
@@ -453,12 +452,11 @@ def load_entries():
 		data = json.load(f)
 		return data
 
-def add_entry(ip_address, name, email, location, website, message):
+def add_entry(req, ip_address, name, email, location, website, message):
 	entries = load_entries()
 	banned_ips = load_banned_ips()
 
-	# This is broken if the site is behind a reverse proxy, due to iPs not being properly recognized in that scenario
-	# TODO: Implement passing through X-Real-IP & X-Forwarded-For and update this accordingly
+	ip_address = req.headers.get('X-Real-IP') or req.headers.get('X-Forwarded-For') or req.remote
 	if ip_address in banned_ips:
 		return web.Response(text="You are not allowed to view or post to this guestbook as you've been banned. Email hiden64@protonmail.com for more details or to appeal your ban.")
 
