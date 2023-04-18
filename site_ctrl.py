@@ -127,7 +127,6 @@ async def page_index(req):
 		'settings': settings
 	}
 	return render(req, 'index.aprilfools.2024.html' if settings.APRILFOOLS_2024 else 'index.aprilfools.2023.html' if settings.APRILFOOLS_2023 else 'index.aprilfools.2022.html' if settings.APRILFOOLS_2022 else 'index.html', context)
-
 	
 async def page_projects(req):
 	return render(req, 'projects.html', {
@@ -157,11 +156,10 @@ async def page_downloads(req):
 async def page_downloads_software(req):
 	# THIS SHIT DOESN'T WORK. WHY??? HAS I EVER????
 	context = {
-		'settings': settings
-	}
-	return render(req, 'downloads.software.html', {
+		'settings': settings,
 		'title': 'Downloads | Software'
-	}, context)
+	}
+	return render(req, 'downloads.software.html', context)
 
 async def page_downloads_software_winamp(req):
 	return render(req, 'downloads.software.winamp.html', {
@@ -179,13 +177,11 @@ async def page_downloads_software_vpc(req):
 	})
 
 async def page_downloads_cursors(req):
-	# THIS SHIT DOESN'T WORK. WHY??? HAS I EVER????
 	context = {
-		'settings': settings
-	}
-	return render(req, 'downloads.cursors.html', {
+		'settings': settings,
 		'title': 'Downloads | Cursors'
-	}, context)
+	}
+	return render(req, 'downloads.cursors.html', context)
 
 async def page_computers(req):
 	return render(req, 'computers.html', {
@@ -357,11 +353,10 @@ async def page_website_details(req):
 async def page_website_compatlist(req): 
 	# THIS SHIT DOESN'T WORK. WHY??? HAS I EVER????
 	context = {
-		'settings': settings
-	}
-	return render(req, 'projects.website.compatlist.html', {
+		'settings': settings,
 		'title': 'Compatibility list | Website | Projects'
-	}, context)
+	}
+	return render(req, 'projects.website.compatlist.html', context)
 
 async def page_guestbook(req):
 	entries = list(reversed(load_entries()))
