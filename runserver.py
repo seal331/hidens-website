@@ -36,7 +36,7 @@ def main():
 	app = RunServ()
 
 	if settings.ENABLE_LOGGING:
-		logging.basicConfig(filename='aiohttp.log', filemode='a', format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s', datefmt='%H:%M:%S', level=logging.DEBUG) if settings.LOG_TO_FILE else logging.basicConfig(level=logging.DEBUG)
+		logging.basicConfig(filename='access.log', filemode='a', format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s', datefmt='%H:%M:%S', level=logging.DEBUG) if settings.LOG_TO_FILE else logging.basicConfig(level=logging.DEBUG)
 			
 	web.run_app(app, port=settings.PORT)
 

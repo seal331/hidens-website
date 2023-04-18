@@ -2,7 +2,7 @@
 PORT = 80
 ENABLE_LOGGING = False
 LOG_TO_FILE = False
-TESTING = False
+DEV_MODE = False
 SERVE_STATIC = False
 SERVE_STORAGE = False
 SERVE_JS = False

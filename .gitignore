@@ -1,7 +1,6 @@
 *.db
 settings_local.py
 __pycache__/
-aiohttp.log
-devel.txt
+access.log
 gb.json
 gb_bans.json

@@ -73,11 +73,11 @@ def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STO
 		('/guestbook/submit', gb_submission_handler),
 	]
 
-	if settings.TESTING:
-		print("Testing mode enabled! Experiements and W.I.P. content is served under /testing")
+	if settings.DEV_MODE:
+		print("Development mode enabled! Experiements and W.I.P. content is served under /dev")
 		get_routes += [
-			('/testing', page_testing),
-			('/testing/too', page_testing_too),
+			('/dev', page_development),
+			('/dev/too', page_development_too),
 		]
 	
 	if settings.APRILFOOLS_2024:
@@ -371,12 +371,12 @@ async def page_guestbook(req):
 		'entries': entries
 	})
 
-async def page_testing(req):
+async def page_development(req):
 	return render(req, 'testing.html', {
 		'title': 'Testing | Page 1'
 	})
 
-async def page_testing_too(req): 
+async def page_development_too(req): 
 	return render(req, 'testing.too.html', {
 		'title': 'Testing | Page 2'
 	})
