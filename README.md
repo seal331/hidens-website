@@ -30,7 +30,7 @@ Create `settings_local.py`. The avaliable options are as follows:
 
 `LOG_TO_FILE`: Outputs the afformentioned connection logs to a file instead. You must set `ENABLE_LOGGING` to `True` as well to use this.
 
-`TESTING`: Enables W.I.P. and/or experiemental content. The content is served at `/testing`.
+`TESTING`: Enables W.I.P. and/or experiemental content. The content is served at `/testing`. **NOTE FOR DEVELOPERS**: Enabling this is highly recommended.
 
 `MCHOST`: What host to try for the Minecraft server.
 

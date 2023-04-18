@@ -35,6 +35,9 @@
 			<p>Connection details</p>
 		</th>
 		<th>
+			<p>Tester</p>
+		</th>
+		<th>
 			<p>Elaboration</p>
 		</th>
 		<th> 
@@ -60,6 +63,9 @@
 		</td>
 		<td>
 			<p>5GHz Wi-Fi, 250Mbps/20Mbps</p>
+		</td>
+		<td>
+			<p>HIDEN</p>
 		</td>
 		<td>
 			<p>An adblocker is on by default, which breaks the flag counter. Fully working otherwise.</p>
@@ -89,6 +95,9 @@
 			<p>5GHz Wi-Fi, 250Mbps/20Mbps</p>
 		</td>
 		<td>
+			<p>HIDEN</p>
+		</td>
+		<td>
 			<p>Fully works out of the box.</p>
 		</td>
 		<td>
@@ -98,5 +107,15 @@
 	
 </table>
 
-<strong><p>NOTE:</strong> <em>These were tested with the live instance. Your mileage may vary on different client/server configurations.</em></p>
+{% if settings.TESTING %}
+	<strong><p>NOTE:</strong> <em>These were tested with the live instance. Your mileage may vary on different client/server configurations.</em></p>
+
+	<h4>To test the site:</h4>
+	<ul>
+		<li>Open the site in your browser+OS+device configuration of choice</li>
+		<li>View most, or all pages, and gather a general consensus on how well they appear and function</li>
+		<li>Make note of the hyper-specific device make+model, browser version, OS build, and HTTPS connection details if available</li>
+		<li>Send your collected data to me at one of <a href=/abour/socials>these</a>, and I'll add it here</li>
+	</ul>
+{% endif %}
 {%- endblock -%}

@@ -155,9 +155,13 @@ async def page_downloads(req):
 	})
 
 async def page_downloads_software(req):
+	# THIS SHIT DOESN'T WORK. WHY??? HAS I EVER????
+	context = {
+		'settings': settings
+	}
 	return render(req, 'downloads.software.html', {
 		'title': 'Downloads | Software'
-	})
+	}, context)
 
 async def page_downloads_software_winamp(req):
 	return render(req, 'downloads.software.winamp.html', {
@@ -175,9 +179,13 @@ async def page_downloads_software_vpc(req):
 	})
 
 async def page_downloads_cursors(req):
+	# THIS SHIT DOESN'T WORK. WHY??? HAS I EVER????
+	context = {
+		'settings': settings
+	}
 	return render(req, 'downloads.cursors.html', {
 		'title': 'Downloads | Cursors'
-	})
+	}, context)
 
 async def page_computers(req):
 	return render(req, 'computers.html', {
@@ -347,9 +355,13 @@ async def page_website_details(req):
 	})
 
 async def page_website_compatlist(req): 
+	# THIS SHIT DOESN'T WORK. WHY??? HAS I EVER????
+	context = {
+		'settings': settings
+	}
 	return render(req, 'projects.website.compatlist.html', {
 		'title': 'Compatibility list | Website | Projects'
-	})
+	}, context)
 
 async def page_guestbook(req):
 	entries = list(reversed(load_entries()))
