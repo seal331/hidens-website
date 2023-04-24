@@ -1,4 +1,22 @@
 {
+	"2023-04-24T18:10:57": [
+		"You may have noticed some services have been offline for an extended period of time.",
+		"Due to internal issues relating to my ISP being shitty, I am temporarily using another server (provided by <a href=https://dkay.xyz>dkay</a>) until that is resolved.",
+		"This issue should be resolved soon, but hopefully no later than 2023-05-11.",
+		"<h3>LONG VERSION:</h3>",
+		"<h4>Cablelynx - Giving Comcast a run for it's money</h4>",
+		"My ISP has been known to me to be shitty for a while. However, it seems they have raised the stakes on the shit scale 5-fold in the last 2-3 months.",
+		"Uptimes are extremely shitty, it's been up less often than it hasn't, and it's WAYY overpriced for what I'm getting. Personally, I don't think $400 a month for 250mbps down/20mbps up internet that barely works is worth it. But, it's not completely the issue.",
+		"<h4>Bill bloat</h4>",
+		"Upon further research, it seems that it's actually the Cable TV we don't use that has been inflating the bill. So one of these actions will be what happens:",
+		"<ul>",
+		"<li>We keep this ISP, pay the current bill, then take off the Cable TV, then keep that until Woodruff (another local ISP, but actually good) is avaliable in our area</li>",
+		"<li>We use mobile hotspots for data until AT&T is avaliable in our area, which should happen no sooner or later than May 11, 2023</li>",
+		"<li>We say fuck it and go amish :P</li>",
+		"</ul>",
+		"But yeah. There's your reason why shit's been down over the past week (and will contine to be so for a while, most likely.)"
+	],
+
 	"2023-04-13T09:37:50": [
 		"My monitor broke due to excellent engineering on Sceptre's part.",
 		"The stand just randomly gave out and my monitor fell over while I was asleep, so I have to go back to using my TV as a secondary monitor for now. Fuck."
