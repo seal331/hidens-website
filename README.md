@@ -48,14 +48,14 @@ Create `settings_local.py`. The avaliable options are as follows:
 
 `APRILFOOLS_2022`: Enables the April Fools day holiday page that was used in 2022.
 
-`APRILFOOLS_2023`: Enables the April Fools day holiday page was inteded to be used in 2023, but was cancelled due to a tornado hitting my city at the time.
+`APRILFOOLS_2023`: Enables the April Fools day holiday page was intended to be used in 2023, but was cancelled due to a tornado hitting my city at the time.
 
-`APRILFOOLS_2024`: Enables the April FOols day holiday page that will be used in 2024.
+`APRILFOOLS_2024`: Enables the April Fools day holiday page that will be used in 2024.
 
 You must create `settings_local.py` to start the server. However, you do not need to add content the the file. If the file is empty, the default options in `settings.py` will be used instead.
 
 ### Post-configuration
-Once confiugration is done, start the server with `runserver.py`.
+Once configuration is done, start the server with `runserver.py`.
 
 If you'd like to mimic [the production enviornment](https://hiden.pw), you may set up an NGINX reverse proxy. Caddy works too, although [Apache does not](https://github.com/aio-libs/aiohttp/issues/2687). The one I personally recommend most is NGINX.
 
