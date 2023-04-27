@@ -1,14 +1,10 @@
-var txt = ['WHAT H', 'Foo', 'Bar', 'h', 'H', 'Test-Text-For-A-Test-Thing', 'gentoo balls', 'Foobar', 'norton'];
-var i = 0;
+const textSequence = ['WHAT H', 'Foo', 'Bar', 'h', 'H', 'Test-Text-For-A-Test-Thing', 'gentoo balls', 'Foobar', 'norton'];
+let index = 0;
 
-document.getElementById("sequence").innerHTML = txt[i];
-		
-setInterval(function() {
-	if (i < txt.length - 1) {
-		i++;
-	} else {
-		i = 0;
-	}
-	
-	document.getElementById("sequence").innerHTML = txt[i];
-}, 1000);
+const sequenceElement = document.getElementById("sequence");
+sequenceElement.textContent = textSequence[index];
+
+setInterval(() => {
+  index = (index + 1) % textSequence.length;
+  sequenceElement.textContent = textSequence[index];
+}, 500);

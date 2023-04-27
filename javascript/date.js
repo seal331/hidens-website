@@ -1,32 +1,7 @@
-now = new Date();
-day = new Object();
-month = new Object();
+const dayOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+const monthOfYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
+const today = new Date();
+const year = today.getFullYear();
 
-day[0] = "Sunday";
-day[1] = "Monday";
-day[2] = "Tuesday";
-day[3] = "Wednesday";
-day[4] = "Thursday";
-day[5] = "Friday";
-day[6] = "Saturday";
-
-month[0] = "January";
-month[1] = "February";
-month[2] = "March";
-month[3] = "April";
-month[4] = "May";
-month[5] = "June";
-month[6] = "July";
-month[7] = "August";
-month[8] = "September";
-month[9] = "October";
-month[10] = "November";
-month[11] = "December";
-
-
-year = now.getYear();
-
-if (year < 1000) year += 1900
-
-document.write("<br>" + day[now.getDay()] + ", " + month[now.getMonth()] + " " + now.getDate() + ", " + year);
+document.write(`<br>${dayOfWeek[today.getDay()]}, ${monthOfYear[today.getMonth()]} ${today.getDate()}, ${year}`);
