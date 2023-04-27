@@ -1,6 +1,6 @@
 import json
 
-ip = input("Enter an IP address to ban: ")
+ip = input("Enter an IP address: ")
 
 with open('json/gb_bans.json', 'r') as f:
 	banned_ips = json.load(f)
