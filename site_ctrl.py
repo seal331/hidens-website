@@ -4,6 +4,7 @@ from markupsafe import Markup
 from datetime import datetime, timezone
 from PyRSS2Gen import RSS2, RSSItem
 from dateutil.parser import isoparse
+from pytz import UTC
 
 async def forward_headers_middleware(app, handler):
 	async def middleware_handler(request):
@@ -390,26 +391,26 @@ async def page_notready(req):
 	})
 	
 async def page_blog(req):
-	with open('json/bp.json', 'rb') as bp:
+	with open('json/bp.json', 'r') as bp:
 		bp_json = json.load(bp)
-	
+		
 	entries = []
-	
+		
 	for date, items in bp_json.items():
-		items_markup = [req.app.jinja_env.get_template('blog.post.item.html').render(item = Markup(item)) for item in items]
-		entries.append(req.app.jinja_env.get_template('blog.post.html').render(date = isoparse(date).strftime('%Y-%m-%d'), items = Markup('\n'.join(items_markup))))
+		items_markup = [req.app.jinja_env.get_template('blog.post.item.html').render(item=Markup(item)) for item in items]
+		entries.append(req.app.jinja_env.get_template('blog.post.html').render(date=isoparse(date).strftime('%Y-%m-%d'), items=Markup('\n'.join(items_markup))))
 	
 	return render(req, 'blog.html', {'title': 'Blog', 'entries': Markup('\n'.join(entries))})
 
 async def blog_rss(req):
-	with open('json/bp.json', 'rb') as bp:
+	with open('json/bp.json', 'r') as bp:
 		bp_json = json.load(bp)
 	
 	rss_items = [
-		RSSItem (
-			title=f"{isoparse(date).strftime('%Y-%m-%d')}",
-			description = ''.join([f'{entry}\n' for entry in entries]),
-			pubDate=isoparse(date).replace(tzinfo=timezone.utc),
+		RSSItem(
+			title=isoparse(date).strftime('%Y-%m-%d'),
+			description=''.join([f'{entry}\n' for entry in entries]),
+			pubDate=isoparse(date).replace(tzinfo=UTC),
 		) for date, entries in bp_json.items()
 	]
 
@@ -421,7 +422,7 @@ async def blog_rss(req):
 		docs="https://validator.w3.org/feed/docs/rss2.html",
 		language="en-us",
 		webMaster="hiden64@protonmail.com",
-		lastBuildDate=datetime.utcnow().replace(tzinfo=timezone.utc),
+		lastBuildDate=datetime.utcnow().replace(tzinfo=UTC),
 		items=rss_items,
 	)
 
