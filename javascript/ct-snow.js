@@ -44,7 +44,7 @@ sty = new Array();
 snowsrc = (snowsrc.indexOf("dynamicdrive.com") != -1) ? "snow.gif" : snowsrc
 for (i = 0; i < no; ++i) {
 	dx[i] = 0; // set coordinate variables
-	xp[i] = Math.random() * (doc_width - 50); // set position variables
+	xp[i] = Math.random() * (doc_width); // set position variables
 	yp[i] = Math.random() * doc_height;
 	am[i] = Math.random() * 20; // set amplitude variables
 	stx[i] = 0.02 + Math.random() / 10; // set step variables
