@@ -1,10 +1,7 @@
-import asyncio, logging, os, sys
-
+import logging, os, sys
 from aiohttp import web
-
 from site_ctrl import RunServ
 import settings
-
 
 def main():
 	if sys.version_info < (3, 7):
