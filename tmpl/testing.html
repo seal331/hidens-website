@@ -4,6 +4,10 @@
 	<meta name=description content="A bunch of work in progress stuff that's being tested, and experiements.">
 {%- endblock -%}
 
+{%- block head -%}
+	<script src=toggle-script-button.js></script>
+{%- endblock -%}
+
 {%- block sidebar -%}
 <a href=/dev/too>Next page</a>
 {%- endblock -%}
@@ -67,6 +71,26 @@
 			<div id=sequence>
 				<p><script src=/js/txtchange.js></script></p>
 			</div>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<p>Christimas Music Player</p>
+		</td>
+		<td>
+			<script src=/js/ct-music.js></script>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<p>Winter snow</p>
+		</td>
+		<td>
+			<p>(this button currently does not function)</p>
+			<button onclick=toggleScript()>Toggle</button>
+			<script id=script-to-toggle src=/js/ct-snow.js></script>
 		</td>
 	</tr>
 

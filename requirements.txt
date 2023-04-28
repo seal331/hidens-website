@@ -3,3 +3,4 @@ jinja2
 PyRSS2Gen
 python-dateutil
 python-a2s
+pytz
