@@ -493,7 +493,6 @@ def add_entry(req, ip_address, name, email, location, website, message):
 	entries.append(new_entry)
 	save_entries(entries)
 
-
 def save_entries(entries):
 	with open('json/gb.json', 'w') as f:
 		json.dump(entries, f)
