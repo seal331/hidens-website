@@ -155,7 +155,6 @@ async def page_downloads(req):
 	})
 
 async def page_downloads_software(req):
-	# THIS SHIT DOESN'T WORK. WHY??? HAS I EVER????
 	context = {
 		'settings': settings,
 		'title': 'Downloads | Software'
@@ -352,7 +351,6 @@ async def page_website_details(req):
 	})
 
 async def page_website_compatlist(req): 
-	# THIS SHIT DOESN'T WORK. WHY??? HAS I EVER????
 	context = {
 		'settings': settings,
 		'title': 'Compatibility list | Website | Projects'
@@ -458,11 +456,13 @@ async def gb_submission_handler(req):
 	data = await req.post()
 	name = data['name']
 	email = data['email']
-	message = data['message']
 	location = data['location']
 	website = data['website']
+	message = data['message']
 
-	add_entry(req.remote, name, email, location, website, message)
+	null = None # workaround so that postnig works properly
+
+	add_entry(req.remote, null, name, email, location, website, message)
 
 	return web.HTTPFound('/guestbook')
 
@@ -477,16 +477,18 @@ def add_entry(req, ip_address, name, email, location, website, message):
 	entries = load_entries()
 	banned_ips = load_banned_ips()
 
-	ip_address = req.headers.get('X-Real-IP') or req.headers.get('X-Forwarded-For') or req.remote
+	if isinstance(req, aiohttp.web.Request): # another workaround so that posting works correctly
+		ip_address = req.headers.get('X-Real-IP') or req.headers.get('X-Forwarded-For') or req.remote
+
 	if ip_address in banned_ips:
 		return web.Response(text="You are not allowed to view or post to this guestbook as you've been banned. Email hiden64@protonmail.com for more details or to appeal your ban.")
 
 	new_entry = {
 		"name": name,
 		"email": email,
-		"message": message,
 		"location": location,
 		"website": website,
+		"message": message,
 		"date": datetime.now().strftime("%Y-%m-%d, %H:%M:%S")
 	}
 
