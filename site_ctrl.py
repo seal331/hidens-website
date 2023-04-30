@@ -77,6 +77,7 @@ def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STO
 	if settings.DEV_MODE:
 		print("Development mode enabled! Experiements and W.I.P. content is served under /dev")
 		get_routes += [
+			('/projects/autowin', page_autowin_details),
 			('/dev', page_development),
 			('/dev/too', page_development_too),
 		]
@@ -356,6 +357,11 @@ async def page_website_compatlist(req):
 		'title': 'Compatibility list | Website | Projects'
 	}
 	return render(req, 'projects.website.compatlist.html', context)
+
+async def page_autowin_details(req):
+	return render(req, 'projects.autowin.html', {
+		'title' : 'Autowin | Projects'
+	})
 
 async def page_guestbook(req):
 	entries = list(reversed(load_entries()))
