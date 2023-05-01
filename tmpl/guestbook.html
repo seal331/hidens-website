@@ -1,13 +1,23 @@
 {%- extends 'base.html' -%}
 
 {%- block meta -%}
-	<meta name=description content="HIDEN's guestbook.">
+	<meta name=description content="My guestbook.">
 {%- endblock -%}
 
 {%- block sidebar -%}
+	<a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-32120-c5">Old Guestbook</a>
+{%- endblock -%}
 
-<a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-32120-c5">Old Guestbook</a>
+{%- block pagestyle -%}
+	.gbsubmissionbutton {
+		padding-left: 120px;
+		padding-right: 120px;
+	}
 
+	.gbsubmissionbutton:hover {
+		padding-left: 120px;
+		padding-right: 120px;	
+	}	
 {%- endblock -%}
 
 {%- block content -%}
@@ -36,12 +46,13 @@
 		<textarea id="message" name="message" rows="5" required></textarea>
 	</div>
 	<p class=smalltxt>*This field is required.</p>
-	<button type="submit">Submit</button>
+	<button class=gbsubmissionbutton type="submit">Submit</button>
 </form>
 
 <br><br>
 
 <h2>Entries:</h2>
+<p class=highsmalltxt><em>NOTE: Dates are in CST/CDT</em></p>
 {% if entries %}
 	<ul>
 	{% for entry in entries %}

@@ -45,7 +45,7 @@ table, tr, th, td {
 }
 
 table {
-	box-shadow: 0 0 3.5rem 0 rgba(0, 0, 0, .5); 
+	box-shadow: 0 0 2.5rem 0 rgba(0, 0, 0, .5); 
 	border-radius: 4px;
 	position: relative;
 	z-index: 1;
@@ -66,7 +66,6 @@ table:before {
 	margin-left: auto;
 	margin-right: auto;
 }
-
 
 td {
 	padding: 3.75px;
@@ -116,7 +115,7 @@ a:active {
 }
 
 footer {
-	animation: 0.6s ease 0s 1 FooterUp;
+	animation: 0.3s ease 0s 1 FooterUp;
 	box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, .5); 
 	z-index: 1;
 	background: inherit;
@@ -191,9 +190,9 @@ label, input, textarea {
 }
 
 .sidebar {
-	animation: 0.6s ease 0s 1 SidebarUp;
+	animation: 0.3s ease 0s 1 SidebarUp;
 	height: 100%;
-	width: 220px;
+	width: 215px;
 	position: fixed;
 	z-index: 1;
 	top: 0;
@@ -219,7 +218,7 @@ label, input, textarea {
 }
 
 .sidebartxt {
-	padding: 0.5px 16px;
+	text-align: center;
 	font-size: 19.5px;
 }
 
@@ -353,6 +352,10 @@ label, input, textarea {
 
 .highsmalltxt {
 	font-size: 17px;
+}
+
+.medsmalltxt {
+	font-size: 15px;
 }
 
 .smalltxt {

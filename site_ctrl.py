@@ -25,6 +25,14 @@ def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STO
 	get_routes = [
 		('/', page_index),
 		('/projects', page_projects),
+		('/projects/pubsite', page_pubsite_details),
+		('/projects/pubsite/ssg', page_pubsite_ssgallery),
+		('/projects/randomapp1', page_randomapp1_details),
+		('/projects/randomapp1/ssg', page_randomapp1_ssgallery),
+		('/projects/hbot', page_hbot_details),
+		('/projects/website', page_website_details),
+		('/projects/website/compatlist', page_website_compatlist),
+		('/projects/autowin', page_autowin_details),
 		('/places', page_places),
 		('/places/friends', page_friendsplaces),
 		('/places/misc', page_miscplaces),
@@ -60,13 +68,6 @@ def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STO
 		('/services/gamesrv/mc/rules', page_mc_rules),
 		('/services/generalsrv', page_general_serv),
 		('/services/vms', page_vmlist),
-		('/projects/pubsite', page_pubsite_details),
-		('/projects/pubsite/ssg', page_pubsite_ssgallery),
-		('/projects/randomapp1', page_randomapp1_details),
-		('/projects/randomapp1/ssg', page_randomapp1_ssgallery),
-		('/projects/hbot', page_hbot_details),
-		('/projects/website', page_website_details),
-		('/projects/website/compatlist', page_website_compatlist),
 		('/guestbook', page_guestbook),
 	]
 
@@ -356,6 +357,11 @@ async def page_website_compatlist(req):
 		'title': 'Compatibility list | Website | Projects'
 	}
 	return render(req, 'projects.website.compatlist.html', context)
+
+async def page_autowin_details(req):
+	return render(req, 'projects.autowin.html', {
+		'title' : 'AutoWin | Projects'
+	})
 
 async def page_guestbook(req):
 	entries = list(reversed(load_entries()))
