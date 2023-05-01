@@ -1,0 +1,57 @@
+{%- extends 'base.html' -%}
+
+{%- block meta -%}
+	<meta name=description content="My Minecraft server.">
+{%- endblock -%}
+
+{%- block sidebar -%}
+	<a href=/services/gamesrv/mc/125>1.2.5 server</a>
+	<a href=/services/gamesrv/mc/b173>b1.7.3 server</a>
+{%- endblock -%}
+
+{%- block pagestyle -%}
+
+.servericon {
+	height: 96px;
+	width: 96px;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+  }
+  
+.text-container {
+	margin-left: 20px;
+}
+
+{%- endblock -%}
+
+{%- block content -%}
+
+
+{% if server_status %}
+    <div class=container>
+	    {% if icon_url %}
+		    <img class=servericon src={{ icon_url }}> 
+	    {% endif %}
+	    <div class=text-container>
+		    <h1>{{ server_name }}</h1>
+		    <p class=slghtmedtxt>{{ address }}</p>
+	    </div>
+    </div>
+	{% if player_list %}
+		<h4> {{ player_list | length }} player(s) currently connected:</h4>
+		<ul>
+		{% for player in player_list %}
+			<li class=slghtmedtxt>{{ player }}</li>
+		{% endfor %}
+		</ul>
+	{% else %}
+    <p class=medtxt>No players are currently connected.</p>
+	{% endif %}
+{% else %}
+	<h1>The server is offline.</h1>
+{% endif %}
+
+{%- endblock -%}

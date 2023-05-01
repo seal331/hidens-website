@@ -1,7 +1,7 @@
 {%- extends 'base.html' -%}
 
 {%- block meta -%}
-	<meta name=description content="My Minecraft 1.19.3 server.">
+	<meta name=description content="My Minecraft server.">
 {%- endblock -%}
 
 {%- block sidebar -%}
@@ -34,19 +34,6 @@
 		</td>
 		<td>
 			<p>hiden.pw:25565</p>
-		</td>
-	</tr>
-
-	<tr>
-		<td>
-			<p>Server status</p>
-		</td>
-		<td> <!-- TODO: Make a detailed page for this like with Garry's Mod -->
-			{% if server_status %}
-				<p>Online</p>
-			{% else %}
-				<p>Offline</p>
-			{% endif %}
 		</td>
 	</tr>
 

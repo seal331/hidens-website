@@ -1,4 +1,4 @@
-import jinja2, json, settings, os, aiohttp, asyncio, a2s, socket
+import jinja2, json, settings, os, aiohttp, asyncio, a2s, socket, base64
 from aiohttp import web
 from markupsafe import Markup
 from datetime import datetime, timezone
@@ -63,6 +63,7 @@ def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STO
 		('/services/gamesrv/gmod/status', page_gmod_status),
 		('/services/gamesrv/mc', page_mc),
 		('/services/gamesrv/mc/latest', page_mc_latest),
+		('/services/gamesrv/mc/latest/status', page_mc_latest_status),
 		('/services/gamesrv/mc/125', page_mc_125),
 		('/services/gamesrv/mc/b173', page_mc_b173),
 		('/services/gamesrv/mc/rules', page_mc_rules),
@@ -263,22 +264,37 @@ async def page_mc(req):
 	})
 
 async def page_mc_latest(req):
+	return render(req, 'services.gamesrv.mc.latest.html', {
+		'title': 'MC latest server | Game servers | HIDNet services'
+	})
+
+async def page_mc_latest_status(req):
 	server_ip = settings.MCHOST
 	server_port = settings.MCPORT
-	
 	try:
-		async with aiohttp.ClientSession() as session:
-			async with session.get(f'https://api.mcsrvstat.us/2/{server_ip}:{server_port}') as resp:
-				if resp.status == 200:
-					server_status = (await resp.json()).get('online', False)
-				else:
-					server_status = False
+		server_info = await get_mc_server_info(server_ip, server_port)
+		server_status = server_info.get('status', False)
+		server_name = server_info.get('name', '')
+		player_list = server_info.get('players', [])
+		icon_b64 = server_info.get('icon', '')
+		icon_url = ''
+		if icon_b64:
+			icon_url = f"data:image/png;base64,{icon_b64}"
+		address = server_info.get('address', '')
+		print(player_list)  # Debugging garbage
 	except:
+		server_name = ''
 		server_status = False
+		player_list = []
+		icon_url = ''
 
-	return render(req, 'services.gamesrv.mc.latest.html', {
-		'title': 'MC latest server | Game servers | HIDNet services',
-		'server_status': server_status
+	return render(req, 'services.gamesrv.mc.latest.status.html', {
+		'title': 'MC server status | Game servers | HIDNet services',
+		'server_status': server_status,
+		'server_name': server_name,
+		'player_list': player_list,
+		'icon_url': icon_url,
+		'address': address
 	})
 
 async def page_mc_125(req):
@@ -511,6 +527,24 @@ def load_banned_ips():
 	with open ('json/gb_bans.json', 'r') as f:
 		banned_ips = json.load(f)
 		return banned_ips
+
+async def get_mc_server_info(server_ip, server_port):
+	async with aiohttp.ClientSession() as session:
+		async with session.get(f'https://api.mcsrvstat.us/2/{server_ip}:{server_port}') as resp:
+			if resp.status == 200:
+				data = await resp.json()
+				if data['online']:
+					return {
+						'status': True,
+						'name': data['motd']['clean'][0],
+						'players': data['players']['list'] if 'list' in data['players'] else [],
+						'icon': data['icon'].replace('data:image/png;base64,', '') if 'icon' in data else '',
+						'address': data['hostname'] if 'hostname' in data else ''
+					}
+				else:
+					return {'status': False}
+			else:
+				return {'status': False}	
 	
 def render(req, tmpl, ctxt=None, status=200):
 	tmpl = req.app.jinja_env.get_template(tmpl)
