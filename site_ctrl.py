@@ -549,8 +549,8 @@ async def get_mc_server_info(server_ip, server_port):
 
 async def hbot_check_update(req):
 	ver = req.query.get('version')
-	latest_ver = '1.8.0'
-	rel_date = date(2023, 5, 4)
+	latest_ver = '1.8.0-sum23dev'
+	rel_date = date(2023, 5, 6)
 
 	if ver == latest_ver:
 		return web.json_response({'update_available': False})
