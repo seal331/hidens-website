@@ -553,9 +553,9 @@ async def hbot_check_update(req):
 	rel_date = date(2023, 5, 4)
 
 	if ver == latest_ver:
-		return web.json_response({'upadte_available': False})
+		return web.json_response({'update_available': False})
 	else:
-		return web.json_response({'upadte_available': True, 'latest_version': latest_ver, 'release_date': rel_date.isoformat()})
+		return web.json_response({'update_available': True, 'latest_version': latest_ver, 'release_date': rel_date.isoformat()})
 	
 def render(req, tmpl, ctxt=None, status=200):
 	tmpl = req.app.jinja_env.get_template(tmpl)
