@@ -1,7 +1,7 @@
 import jinja2, json, settings, os, aiohttp, asyncio, a2s, socket, base64
 from aiohttp import web
 from markupsafe import Markup
-from datetime import datetime, timezone
+from datetime import datetime, timezone, date
 from PyRSS2Gen import RSS2, RSSItem
 from dateutil.parser import isoparse
 from pytz import UTC
@@ -70,6 +70,7 @@ def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STO
 		('/services/generalsrv', page_general_serv),
 		('/services/vms', page_vmlist),
 		('/guestbook', page_guestbook),
+		('/api/hbot/check-update', hbot_check_update),
 	]
 
 	post_routes = [
@@ -544,7 +545,17 @@ async def get_mc_server_info(server_ip, server_port):
 				else:
 					return {'status': False}
 			else:
-				return {'status': False}	
+				return {'status': False}
+
+async def hbot_check_update(req):
+	ver = req.query.get('version')
+	latest_ver = '1.8.0'
+	rel_date = date(2023, 5, 4)
+
+	if ver == latest_ver:
+		return web.json_response({'upadte_available': False})
+	else:
+		return web.json_response({'upadte_available': True, 'latest_version': latest_ver, 'release_date': rel_date.isoformat()})
 	
 def render(req, tmpl, ctxt=None, status=200):
 	tmpl = req.app.jinja_env.get_template(tmpl)
