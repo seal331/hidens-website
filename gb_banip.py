@@ -1,3 +1,5 @@
+# This script bans an IP address from the Guestbook. Only tested and verified to work with IPv4 addresses.
+
 import json
 
 ip = input("Enter an IP address: ")

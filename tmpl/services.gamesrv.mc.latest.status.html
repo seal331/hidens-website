@@ -31,15 +31,15 @@
 
 
 {% if server_status %}
-    <div class=container>
-	    {% if icon_url %}
-		    <img class=servericon src={{ icon_url }}> 
-	    {% endif %}
-	    <div class=text-container>
-		    <h1>{{ server_name }}</h1>
-		    <p class=slghtmedtxt>{{ address }}</p>
-	    </div>
-    </div>
+	<div class=container>
+		{% if icon_url %}
+			<img class=servericon src={{ icon_url }}> 
+		{% endif %}
+		<div class=text-container>
+			<h1>{{ server_name }}</h1>
+			<p class=slghtmedtxt>{{ address }}</p>
+		</div>
+	</div>
 	{% if player_list %}
 		<h4> {{ player_list | length }} player(s) currently connected:</h4>
 		<ul>
@@ -48,7 +48,7 @@
 		{% endfor %}
 		</ul>
 	{% else %}
-    <p class=medtxt>No players are currently connected.</p>
+	<p class=medtxt>No players are currently connected.</p>
 	{% endif %}
 {% else %}
 	<h1>The server is offline.</h1>

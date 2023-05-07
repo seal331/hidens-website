@@ -8,18 +8,6 @@
 	<a href="http://users3.smartgb.com/g/g.php?a=s&i=g36-32120-c5">Old Guestbook</a>
 {%- endblock -%}
 
-{%- block pagestyle -%}
-	.gbsubmissionbutton {
-		padding-left: 120px;
-		padding-right: 120px;
-	}
-
-	.gbsubmissionbutton:hover {
-		padding-left: 120px;
-		padding-right: 120px;	
-	}	
-{%- endblock -%}
-
 {%- block content -%}
 
 <img src=/static/title-art/guestbook.gif alt="Guestbook"><br><br>
@@ -46,7 +34,7 @@
 		<textarea id="message" name="message" rows="5" required></textarea>
 	</div>
 	<p class=smalltxt>*This field is required.</p>
-	<button class=gbsubmissionbutton type="submit">Submit</button>
+	<button class=submissionbutton type="submit">Submit</button>
 </form>
 
 <br><br>

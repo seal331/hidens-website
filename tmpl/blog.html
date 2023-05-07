@@ -1,17 +1,23 @@
-{%- extends 'base.html' -%}
+{% extends 'base.html' %}
 
-{%- block meta -%}
-	<meta name=description content="My blog, where I post about... well... things.">
-	<link rel="alternate" type="application/rss+xml" title="HIDEN's Blog (RSS)" href="/blog/rss">
-{%- endblock -%}
+{% block meta %}
+	<meta name="description" content="My blog, where I post about... well... things.">
+	<link rel="alternate" type="application/rss+xml" title="HIDEN's Blog (RSS)" href="/blog/rss.xml">
+{% endblock %}
 
-{%- block sidebar-%}
-<a href=/blog/rss>RSS feed</a>
-{%- endblock -%}
+{% block sidebar %}
+	<a href="/blog/rss.xml">RSS feed</a>
+{% endblock %}
 
-{%- block content -%}
+{% block content %}
 <img src=/static/title-art/blog.gif alt="My Blog">
+<br><br><br>
 
-{{ entries }}
-
-{%- endblock -%}
+  {% for post in posts %}
+		  <a class=blogtitle href="/blog/post/{{ post.id }}">{{ post.title }}</a>
+		  <p>{{ post.content | safe }}</p>
+		  <em><h5>Posted on {{ post.date }}</h5></em>
+		  <br><br><br>
+  {% endfor %}
+<a href="/blog/add_post">Add Post</a>
+{% endblock %}

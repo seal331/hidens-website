@@ -394,6 +394,20 @@ label, input, textarea {
 	font-size: 100%;
 }
 
+.blogtitle {
+	font-size: 27px; 
+}
+
+.submissionbutton {
+	padding-left: 120px;
+	padding-right: 120px;
+}
+
+.submissionbutton:hover {
+	padding-left: 120px;
+	padding-right: 120px;	
+}	
+
 @keyframes FooterUp {
 	0% {
 		transform: translateY(100%);

@@ -8,6 +8,7 @@ def main():
 		raise Exception("Unsupported Python version. Please use Python 3.7 or later.")
 
 	json_files = {
+		"json/bp.json": "bp.json not found, would you like to create it? (Y/n): ",
 		"json/gb.json": "gb.json not found, would you like to create it? (Y/n): ",
 		"json/gb_bans.json": "gb_bans.json not found, would you like to create it? (Y/n): ",
 	}

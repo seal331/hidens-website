@@ -1,5 +1,35 @@
-<h1>{{ date }}</h1>
+{% extends "base.html" %}
 
-	{{ items }}
-
-<br><br><br><br>
+{% block content %}
+<h1>{{ post.title | safe }}</h1>
+<p>{{ post.content | safe }}</p>
+<em><h5>Posted on {{ post.date }}</h5></em>
+<hr>
+<h2>Comments:</h2>
+{% if post.comments %}
+<ul>
+	{% for comment in post.comments %}
+			<li><em>{{ comment.name }}</em>:</li>
+			<li>{{ comment.comment }}</li>
+			<li>on {{ comment.date }}</li>
+      <br>
+	{% endfor %}
+</ul>
+{% else %}
+<p>No comments yet.</p>
+{% endif %}
+<hr>
+<form method="POST" action="/blog/post/{{ post.id }}">
+	<h2>Add Comment:</h2>
+	<label for="name">Name:</label><br>
+	<input type="text" id="name" name="name"><br>
+  <label for="name">Email:</label><br>
+	<input type="email" id="email" name="email"><br>
+	<label for="comment">Comment:</label><br>
+	<textarea id="comment" name="comment" rows="4" cols="50"></textarea><br>
+	<button class=submissionbutton type="submit">Submit</button>
+</form>
+<hr>
+<a href="/blog">Back to blog</a>
+  </form>
+{% endblock %}
