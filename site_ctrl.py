@@ -479,7 +479,7 @@ async def add_post_action(request: Request):
 	return web.HTTPFound('/blog')
 
 async def blog_rss(request):
-	posts = get_posts()
+	posts = get_posts(is_rss=True)
 	items = []
 	for post in posts:
 		item = PyRSS2Gen.RSSItem(
@@ -607,16 +607,18 @@ async def hbot_check_update(req):
 	else:
 		return web.json_response({'update_available': True, 'latest_version': latest_ver, 'release_date': rel_date.isoformat()})
 
-def get_posts():
+def get_posts(is_rss=False):
     with open('json/bp.json', 'r') as f:
         posts = json.load(f)
         for post in posts:
-            try:
-                post['date'] = datetime.strptime(post['date'], '%Y-%m-%dT%H:%M:%S').strftime('%B %d, %Y')
-            except ValueError:
-                pass
+            if not is_rss:
+                try:
+                    post['date'] = datetime.strptime(post['date'], '%Y-%m-%dT%H:%M:%S').strftime('%B %d, %Y')
+                except ValueError:
+                    pass
             post['content'] = '<p>' + post['content'].replace('\n', '</p><p>') + '</p>'
         return posts
+
 		
 def save_posts(posts):
 	with open('json/bp.json', 'w') as f:

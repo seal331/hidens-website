@@ -10,6 +10,6 @@ content = input("Enter the content of the new post: ")
 add_post(posts, title, content)
 
 with open('json/bp.json', 'w') as f:
-    json.dump(posts, f)
+	json.dump(posts, f)
 
 print("New post added successfully.")
