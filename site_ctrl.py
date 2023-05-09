@@ -86,11 +86,13 @@ def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STO
 		get_routes += [
 			('/dev', page_development),
 			('/dev/too', page_development_too),
-			('/blog/add_post', blog_add_post), # Having this run in prod is an extremely awful idea.
+			# Having this run in prod is an extremely awful idea, until the auth system is implemetned
+			('/blog/add_post', blog_add_post), 
 		]
 
 		post_routes += [
-			('/blog/add_post', blog_add_post), # Having this run in prod is an extremely awful idea.
+			# Having this run in prod is an extremely awful idea, until the auth system is implemetned
+			('/blog/add_post', blog_add_post),
 		]
 	
 	if settings.APRILFOOLS_2024:
@@ -294,7 +296,8 @@ async def page_mc_latest_status(req):
 		if icon_b64:
 			icon_url = f"data:image/png;base64,{icon_b64}"
 		address = server_info.get('address', '')
-		print(player_list)  # Debugging garbage
+		# Debugging garbage
+		# print(player_list)  
 	except:
 		server_name = ''
 		server_status = False
@@ -532,8 +535,8 @@ async def gb_submission_handler(req):
 	location = data['location']
 	website = data['website']
 	message = data['message']
-
-	null = None # workaround so that postnig works properly
+	# workaround so that posting works properly
+	null = None 
 
 	add_entry(req.remote, null, name, email, location, website, message)
 
@@ -550,7 +553,8 @@ def add_entry(req, ip_address, name, email, location, website, message):
 	entries = load_entries()
 	banned_ips = load_banned_ips()
 
-	if isinstance(req, aiohttp.web.Request): # another workaround so that posting works correctly
+	# another workaround so that posting works correctly
+	if isinstance(req, aiohttp.web.Request): 
 		ip_address = req.headers.get('X-Real-IP') or req.headers.get('X-Forwarded-For') or req.remote
 
 	if ip_address in banned_ips:
@@ -608,16 +612,16 @@ async def hbot_check_update(req):
 		return web.json_response({'update_available': True, 'latest_version': latest_ver, 'release_date': rel_date.isoformat()})
 
 def get_posts(is_rss=False):
-    with open('json/bp.json', 'r') as f:
-        posts = json.load(f)
-        for post in posts:
-            if not is_rss:
-                try:
-                    post['date'] = datetime.strptime(post['date'], '%Y-%m-%dT%H:%M:%S').strftime('%B %d, %Y')
-                except ValueError:
-                    pass
-            post['content'] = '<p>' + post['content'].replace('\n', '</p><p>') + '</p>'
-        return posts
+	with open('json/bp.json', 'r') as f:
+		posts = json.load(f)
+		for post in posts:
+			if not is_rss:
+				try:
+					post['date'] = datetime.strptime(post['date'], '%Y-%m-%dT%H:%M:%S').strftime('%B %d, %Y')
+				except ValueError:
+					pass
+			post['content'] = '<p>' + post['content'].replace('\n', '</p><p>') + '</p>'
+		return posts
 
 		
 def save_posts(posts):

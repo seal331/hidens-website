@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block sidebar %}
+	<a href="/blog">Post list</a>
+{% endblock %}
+
 {% block content %}
 <h1>{{ post.title | safe }}</h1>
 <p>{{ post.content | safe }}</p>
@@ -29,7 +33,4 @@
 	<textarea id="comment" name="comment" rows="4" cols="50"></textarea><br>
 	<button class=submissionbutton type="submit">Submit</button>
 </form>
-<hr>
-<a href="/blog">Back to blog</a>
-  </form>
 {% endblock %}
