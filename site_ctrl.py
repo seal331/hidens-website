@@ -442,27 +442,28 @@ async def blog_post(request):
 	return render(request, 'blog.post.html', context)
 
 async def blog_comment(request):
-	post_id = request.match_info['post_id']
-	posts = get_posts()
-	post = get_post_by_id(posts, post_id)
-	if not post:
-		raise HTTPBadRequest(text='Invalid post ID')
+    post_id = request.match_info['post_id']
+    posts = get_posts(no_convert=True)
+    post = get_post_by_id(posts, post_id)
+    if not post:
+        raise HTTPBadRequest(text='Invalid post ID')
 
-	form_data = await request.post()
-	name = form_data['name']
-	email = form_data['email']
-	content = form_data['content']
-	now = datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
-	comment = {
-		'name': name,
-		'email': email,
-		'content': content,
-		'date': datetime.strptime(now, '%Y-%m-%dT%H:%M:%S').strftime('%B %d, %Y')
-	}
-	post['comments'].append(comment)
-	save_posts(posts)
+    form_data = await request.post()
+    name = form_data['name']
+    email = form_data['email']
+    content = form_data['content']
+    now = datetime.now().replace(microsecond=0).isoformat()
+    comment = {
+        "name": name,
+        "email": email,
+        "content": content,
+        "date": now
+    }
+    post["comments"].append(comment)
+    save_posts(posts)
 
-	return web.HTTPFound(f'/blog/post/{post_id}')
+    return web.HTTPFound(f'/blog/post/{post_id}')
+
 
 async def blog_add_post(request):
 	return render(request, 'blog.add_post.html')
@@ -481,7 +482,7 @@ async def add_post_action(request: Request):
 	return web.HTTPFound('/blog')
 
 async def blog_rss(request):
-	posts = get_posts(rss=True)
+	posts = get_posts(no_convert=True)
 	items = []
 	for post in posts:
 		item = PyRSS2Gen.RSSItem(
@@ -610,22 +611,29 @@ async def hbot_check_update(req):
 	else:
 		return web.json_response({'update_available': True, 'latest_version': latest_ver, 'release_date': rel_date.isoformat()})
 
-def get_posts(rss=False):
-	with open('json/bp.json', 'r') as f:
-		posts = json.load(f)
-		for post in posts:
-			if not rss:
-				try:
-					post['date'] = datetime.strptime(post['date'], '%Y-%m-%dT%H:%M:%S').strftime('%B %d, %Y')
-				except ValueError:
-					pass
-			post['content'] = '<p>' + post['content'].replace('\n', '</p><p>') + '</p>'
-		return posts
+# dumb shit go
+def get_posts(no_convert=False):
+    with open('json/bp.json', 'r') as f:
+        posts = json.load(f)
+        for post in posts:
+            if not no_convert:
+                try:
+                    post['date'] = datetime.fromisoformat(post['date']).strftime('%B %d, %Y')
+                except ValueError:
+                    pass
+            post['content'] = post['content'].replace('<p>', '').replace('</p>', '\n')
+            for comment in post['comments']:
+                if 'date' in comment:
+                    try:
+                        if not no_convert:
+                            comment['date'] = datetime.fromisoformat(comment['date']).strftime('%B %d, %Y')
+                    except ValueError:
+                        pass
+        return posts
 
-		
 def save_posts(posts):
 	with open('json/bp.json', 'w') as f:
-		json.dump(posts, f, indent=4)
+		json.dump(posts, f, ensure_ascii=False, indent=4, default=str)
 
 def get_post_by_id(posts, post_id):
 	try:
