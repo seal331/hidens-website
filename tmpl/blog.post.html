@@ -4,6 +4,12 @@
 	<a href="/blog">Post list</a>
 {% endblock %}
 
+{% block pagestyle %}
+	li {
+		font-size: 20.5px;
+		padding: 2px;
+	}
+{% endblock %}
 {% block content %}
 <h1>{{ post.title | safe }}</h1>
 <p>{{ post.content | safe }}</p>
@@ -13,9 +19,8 @@
 {% if post.comments %}
 <ul>
 	{% for comment in post.comments %}
-			<li><em>{{ comment.name }}</em>:</li>
-			<li>{{ comment.comment }}</li>
-			<li>on {{ comment.date }}</li>
+			<li><em>{{ comment.name }} - {{ comment.date }}</em>:</li>
+			<li>{{ comment.content }}</li>
 	  <br>
 	{% endfor %}
 </ul>
@@ -29,8 +34,8 @@
 	<input type="text" id="name" name="name"><br>
   <label for="name">Email:</label><br>
 	<input type="email" id="email" name="email"><br>
-	<label for="comment">Comment:</label><br>
-	<textarea id="comment" name="comment" rows="4" cols="50"></textarea><br>
+	<label for="content">Comment:</label><br>
+	<textarea id="content" name="content" rows="4" cols="50"></textarea><br>
 	<button class=submissionbutton type="submit">Submit</button>
 </form>
 {% endblock %}

@@ -2,7 +2,7 @@ import jinja2, json, settings, os, aiohttp, asyncio, a2s, socket, base64, uuid, 
 from aiohttp import web
 from aiohttp.web import Request
 from aiohttp.web_exceptions import HTTPBadRequest
-from aiohttp.web_urldispatcher import UrlDispatcher
+#from aiohttp.web_urldispatcher import UrlDispatcher
 from markupsafe import Markup
 from datetime import datetime, timezone, date
 from dateutil.parser import isoparse
