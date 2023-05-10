@@ -487,7 +487,7 @@ async def blog_rss(request):
 	for post in posts:
 		item = PyRSS2Gen.RSSItem(
 			title=post['title'],
-			link=f'{request.scheme}://{request.host}/blog/post/{post["id"]}',
+			link=f'{request.scheme}://{request.host}/{post["id"]}',
 			description=post['content'],
 			pubDate=datetime.fromisoformat(post['date'])
 		)
