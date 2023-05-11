@@ -1,4 +1,4 @@
-import jinja2, json, settings, os, aiohttp, asyncio, a2s, socket, base64, uuid, PyRSS2Gen
+import jinja2, json, settings, os, aiohttp, asyncio, a2s, socket, base64, uuid, PyRSS2Gen, random
 from aiohttp import web
 from aiohttp.web import Request
 from aiohttp.web_exceptions import HTTPBadRequest
@@ -73,6 +73,7 @@ def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STO
 		('/services/vms', page_vmlist),
 		('/guestbook', page_guestbook),
 		('/api/hbot/check-update', hbot_check_update),
+		('/api/hbot/random-cat', hbot_random_cat),
 	]
 
 	post_routes = [
@@ -610,6 +611,13 @@ async def hbot_check_update(req):
 		return web.json_response({'update_available': False})
 	else:
 		return web.json_response({'update_available': True, 'latest_version': latest_ver, 'release_date': rel_date.isoformat()})
+
+async def hbot_random_cat(request): # switch this to my own host once that's ready
+    async with aiohttp.ClientSession() as session:
+        response = await session.get('https://cataas.com/cat')
+        photo_data = await response.read()
+    photo_base64 = 'data:image/jpeg;base64,' + base64.b64encode(photo_data).decode('utf-8')
+    return web.json_response({'img_url': photo_base64})
 
 # dumb shit go
 def get_posts(no_convert=False):
