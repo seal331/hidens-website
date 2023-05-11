@@ -13,7 +13,7 @@
 {% if post.comments %}
 	<ul>
 	{% for comment in post.comments %}
-		<li><em>{{ comment.name }} - {{ comment.date }}</em>:</li>
+		<li><em>{{ comment.name }} ({{ comment.email}}) - {{ comment.date }}</em>:</li>
 		<li>{{ comment.content }}</li>
 		<br>
 	{% endfor %}
@@ -25,12 +25,13 @@
 <hr>
 <form method="POST" action=/blog/post/{{ post.id }}>
 	<h2>Add Comment:</h2>
-	<label for="name">Name:</label><br>
-	<input type="text" id="name" name="name"><br>
-  	<label for="name">Email:</label><br>
-	<input type="email" id="email" name="email"><br>
-	<label for="content">Comment:</label><br>
-	<textarea id="content" name="content" rows="4" cols="50"></textarea><br>
+	<label for="name">Name*:</label><br>
+	<input type="text" id="name" name="name" required><br>
+  	<label for="name">Email*:</label><br>
+	<input type="email" id="email" name="email" required><br>
+	<label for="content">Comment*:</label><br>
+	<textarea id="content" name="content" rows="4" cols="50" required></textarea><br>
+	<p class=smalltxt>*This field is required.</p>
 	<button class=submissionbutton type="submit">Submit</button>
 </form>
 {% endblock %}
