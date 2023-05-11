@@ -1,11 +1,8 @@
-import jinja2, json, settings, os, aiohttp, asyncio, a2s, socket, base64, uuid, PyRSS2Gen, random
+import jinja2, json, settings, os, aiohttp, asyncio, a2s, socket, base64, PyRSS2Gen
 from aiohttp import web
 from aiohttp.web import Request
 from aiohttp.web_exceptions import HTTPBadRequest
-from markupsafe import Markup
-from datetime import datetime, timezone, date
-from dateutil.parser import isoparse
-from pytz import UTC
+from datetime import datetime, date
 
 async def forward_headers_middleware(app, handler):
 	async def middleware_handler(request):
