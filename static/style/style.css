@@ -4,7 +4,7 @@ body {
 	background-attachment: fixed;
 	font-family: 'Trebuchet MS', sans-serif;
 	text-align: left;
-	margin-left: 235px; 
+	margin-left: 255px; 
 }
 
 h1 {
@@ -114,52 +114,6 @@ a:active {
 	color: #00268d;
 }
 
-footer {
-	animation: 0.3s ease 0s 1 FooterUp;
-	box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, .5); 
-	z-index: 1;
-	background: inherit;
-	overflow: hidden;
-	padding: 5px;
-	position: fixed;
-	left: 0;
-	bottom: 0;
-	text-align: center;
-}
-
-footer:before {
-	position: absolute;
-	background: inherit;
-	z-index: -1;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	filter: blur(10px);
-	margin: -20px;
-}
-
-footer img {
-	transition-timing-function: ease;
-	-webkit-transition-duration: 0.4s; /* WebKit/Blink workaround */
-	-moz-transition-duration: 0.4s; /* Gecko workaround */
-	-o-transition-duration: 0.4s; /* Presto workaround */
-	transition-duration: 0.4s;
-	width: 81px;
-	height: 33px;
-}
-
-footer img:hover {
-	transition-timing-function: ease;
-	-webkit-transition-duration: 0.4s; /* WebKit/Blink workaround */
-	-moz-transition-duration: 0.4s; /* Gecko workaround */
-	-o-transition-duration: 0.4s; /* Presto workaround */
-	transition-duration: 0.4s;
-	height: 42.9px;
-	width: 114.4px;
-	margin: 5.5px 3px;
-}
-
 button {
 	cursor: pointer;
 	-webkit-transition-duration: 0.4s; /* Safari */
@@ -189,37 +143,81 @@ label, input, textarea {
 	text-align: left;
 }
 
+
+footer {
+    animation: 0.45s ease FooterUp;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5); 
+    z-index: 0;
+    background: inherit;
+    overflow: hidden;
+    padding: 5px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+	width: 70%;
+    margin-bottom: 10px;
+	margin-left: 15%;
+	border-radius: 10.5px;
+	transition: transform 0.3s ease-out;
+}
+
+footer.hidden {
+	transform: translateY(50px);
+  }
+
+footer img {
+	transition-timing-function: ease;
+	-webkit-transition-duration: 0.4s; /* WebKit/Blink workaround */
+	-moz-transition-duration: 0.4s; /* Gecko workaround */
+	transition-duration: 0.4s;
+	width: 81px;
+	height: 33px;
+}
+
+footer img:hover {
+	transition-timing-function: ease;
+	-webkit-transition-duration: 0.4s; /* WebKit/Blink workaround */
+	-moz-transition-duration: 0.4s; /* Gecko workaround */
+	-o-transition-duration: 0.4s; /* Presto workaround */
+	transition-duration: 0.4s;
+	height: 42.9px;
+	width: 114.4px;
+	margin: 5.5px 3px;
+}
+
 .sidebar {
-	animation: 0.3s ease 0s 1 SidebarUp;
-	height: 100%;
-	width: 215px;
-	position: fixed;
-	z-index: 1;
-	top: 0;
-	left: 0;
-	overflow-x: hidden;
-	padding-top: 20px;
-	background: inherit; 
-	box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, .5); 
-	z-index: 1;
+    animation: 0.45s ease 0s 1 SidebarUp;
+    height: 100%;
+    width: 215px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+    background: inherit; 
+    z-index: 1;
+    margin-bottom: -10px;
+	box-shadow: 1px 0px rgba(0,0,0,0.24),0 17px 50px rgba(0,0,0,0.19);
 }
 
 .sidebar a {
-	padding: 6px 8px 6px 16px;
-	text-decoration: none;
-	font-size: 17.5px;
-	display: block;
-	text-align: center;
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 17.5px;
+    display: block;
+    text-align: center;
 }
 
 @media screen and (max-height: 450px) {
-	.sidebar {padding-top: 15px;}
-	.sidebar a {font-size: 12px;}
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 12px;}
 }
 
 .sidebartxt {
-	text-align: center;
-	font-size: 19.5px;
+    text-align: center;
+    font-size: 19.5px;
 }
 
 .testlinks {
@@ -406,7 +404,11 @@ label, input, textarea {
 .submissionbutton:hover {
 	padding-left: 120px;
 	padding-right: 120px;	
-}	
+}
+
+.hidden {
+	display: hidden;
+}
 
 @keyframes FooterUp {
 	0% {

@@ -440,27 +440,27 @@ async def blog_post(request):
 	return render(request, 'blog.post.html', context)
 
 async def blog_comment(request):
-    post_id = request.match_info['post_id']
-    posts = get_posts(no_convert=True)
-    post = get_post_by_id(posts, post_id)
-    if not post:
-        raise HTTPBadRequest(text='Invalid post ID')
+	post_id = request.match_info['post_id']
+	posts = get_posts(no_convert=True)
+	post = get_post_by_id(posts, post_id)
+	if not post:
+		raise HTTPBadRequest(text='Invalid post ID')
 
-    form_data = await request.post()
-    name = form_data['name']
-    email = form_data['email']
-    content = form_data['content']
-    now = datetime.now().replace(microsecond=0).isoformat()
-    comment = {
-        "name": name,
-        "email": email,
-        "content": content,
-        "date": now
-    }
-    post["comments"].append(comment)
-    save_posts(posts)
+	form_data = await request.post()
+	name = form_data['name']
+	email = form_data['email']
+	content = form_data['content']
+	now = datetime.now().replace(microsecond=0).isoformat()
+	comment = {
+		"name": name,
+		"email": email,
+		"content": content,
+		"date": now
+	}
+	post["comments"].append(comment)
+	save_posts(posts)
 
-    return web.HTTPFound(f'/blog/post/{post_id}')
+	return web.HTTPFound(f'/blog/post/{post_id}')
 
 
 async def blog_add_post(request):
@@ -601,7 +601,7 @@ async def get_mc_server_info(server_ip, server_port):
 
 async def hbot_check_update(req):
 	ver = req.query.get('version')
-	latest_ver = '1.8.0-sum23dev'
+	latest_ver = '1.8.0-staging'
 	rel_date = date(2023, 5, 6)
 
 	if ver == latest_ver:
@@ -610,31 +610,31 @@ async def hbot_check_update(req):
 		return web.json_response({'update_available': True, 'latest_version': latest_ver, 'release_date': rel_date.isoformat()})
 
 async def hbot_random_cat(request): # switch this to my own host once that's ready
-    async with aiohttp.ClientSession() as session:
-        response = await session.get('https://cataas.com/cat')
-        photo_data = await response.read()
-    photo_base64 = 'data:image/jpeg;base64,' + base64.b64encode(photo_data).decode('utf-8')
-    return web.json_response({'img_url': photo_base64})
+	async with aiohttp.ClientSession() as session:
+		response = await session.get('https://cataas.com/cat')
+		photo_data = await response.read()
+	photo_base64 = 'data:image/jpeg;base64,' + base64.b64encode(photo_data).decode('utf-8')
+	return web.json_response({'img_url': photo_base64})
 
 # dumb shit go
 def get_posts(no_convert=False):
-    with open('json/bp.json', 'r') as f:
-        posts = json.load(f)
-        for post in posts:
-            if not no_convert:
-                try:
-                    post['date'] = datetime.fromisoformat(post['date']).strftime('%B %d, %Y')
-                except ValueError:
-                    pass
-            post['content'] = post['content'].replace('<p>', '').replace('</p>', '\n')
-            for comment in post['comments']:
-                if 'date' in comment:
-                    try:
-                        if not no_convert:
-                            comment['date'] = datetime.fromisoformat(comment['date']).strftime('%B %d, %Y')
-                    except ValueError:
-                        pass
-        return posts
+	with open('json/bp.json', 'r') as f:
+		posts = json.load(f)
+		for post in posts:
+			if not no_convert:
+				try:
+					post['date'] = datetime.fromisoformat(post['date']).strftime('%B %d, %Y')
+				except ValueError:
+					pass
+			post['content'] = post['content'].replace('<p>', '').replace('</p>', '\n')
+			for comment in post['comments']:
+				if 'date' in comment:
+					try:
+						if not no_convert:
+							comment['date'] = datetime.fromisoformat(comment['date']).strftime('%B %d, %Y')
+					except ValueError:
+						pass
+		return posts
 
 def save_posts(posts):
 	with open('json/bp.json', 'w') as f:

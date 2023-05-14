@@ -9,7 +9,7 @@
 <p>{{ post.content | safe }}</p>
 <em><h5>Posted on {{ post.date }}</h5></em>
 <hr>
-<h2>Comments:</h2>
+<h3>Comments:</h3>
 {% if post.comments %}
 	<ul>
 	{% for comment in post.comments %}
@@ -24,7 +24,7 @@
 
 <hr>
 <form method="POST" action=/blog/post/{{ post.id }}>
-	<h2>Add Comment:</h2>
+	<h3>Add Comment:</h3>
 	<label for="name">Name*:</label><br>
 	<input type="text" id="name" name="name" required><br>
   	<label for="name">Email*:</label><br>
