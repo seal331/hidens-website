@@ -13,6 +13,7 @@ GMODPORT = 27015
 APRILFOOLS_2022 = False
 APRILFOOLS_2023 = False
 APRILFOOLS_2024 = False
+ROLLOUT_MODE = False
 
 # Import settings from settings_local.py. If settings_local.py is not present, terminate
 try:
