@@ -3,8 +3,7 @@ body {
 	background-size: cover;
 	background-attachment: fixed;
 	font-family: 'Trebuchet MS', sans-serif;
-	text-align: left;
-	margin-left: 255px; 
+	margin-left: 240px;
 }
 
 h1 {
@@ -143,7 +142,6 @@ label, input, textarea {
 	text-align: left;
 }
 
-
 footer {
     animation: 0.45s ease FooterUp;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5); 
@@ -157,14 +155,10 @@ footer {
     text-align: center;
 	width: 70%;
     margin-bottom: 10px;
-	margin-left: 15%;
-	border-radius: 10.5px;
+	margin-left: 17%;
+	border-radius: 11px;
 	transition: transform 0.3s ease-out;
 }
-
-footer.hidden {
-	transform: translateY(50px);
-  }
 
 footer img {
 	transition-timing-function: ease;
@@ -187,11 +181,10 @@ footer img:hover {
 }
 
 .sidebar {
-    animation: 0.45s ease 0s 1 SidebarUp;
     height: 100%;
     width: 215px;
     position: fixed;
-    z-index: 1;
+    z-index: -1;
     top: 0;
     left: 0;
     overflow-x: hidden;
@@ -416,14 +409,5 @@ footer img:hover {
 	}
 	100% {
 		transform: translateY(0);
-	}
-}
-
-@keyframes SidebarUp {
-	0% {
-		transform: translateX(-100%);
-	}
-	100% {
-		transform: translateX(0);
 	}
 }
