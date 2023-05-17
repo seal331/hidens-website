@@ -7,15 +7,15 @@ def main():
 	if sys.version_info < (3, 7):
 		raise Exception("Unsupported Python version. Please use Python 3.7 or later.")
 
-	json_files = {
+	files = {
 		"json/bp.json": "bp.json not found, would you like to create it? (Y/n): ",
 		"json/gb.json": "gb.json not found, would you like to create it? (Y/n): ",
 		"json/gb_bans.json": "gb_bans.json not found, would you like to create it? (Y/n): ",
 	}
 
-	print("Checking JSON file integrity...")
+	print("Checking file integrity...")
 
-	for filename, prompt_msg in json_files.items():
+	for filename, prompt_msg in files.items():
 		if not os.path.isfile(filename):
 			resp = input(prompt_msg)
 			if resp.lower() in {"y", ""}:

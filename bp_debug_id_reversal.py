@@ -1,3 +1,6 @@
+# Revereses the ID list for the blog posts.
+# Meant to be used in tandem with bp_migration, since that has a quirk where the ID list is reversed from how it should be.
+
 import json
 
 with open('json/bp.json', 'r') as f:

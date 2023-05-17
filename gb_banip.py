@@ -1,4 +1,4 @@
-# This script bans an IP address from the Guestbook. Only tested and verified to work with IPv4 addresses.
+# Ban an IP address from the guestbook. Optimized for IPv4; IPv6 is untested.
 
 import json
 

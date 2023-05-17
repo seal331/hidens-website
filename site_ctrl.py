@@ -601,11 +601,13 @@ async def get_mc_server_info(server_ip, server_port):
 
 async def hbot_check_update(req):
 	ver = req.query.get('version')
-	latest_ver = '1.8.0-rc'
-	rel_date = date(2023, 5, 16)
+	latest_ver = '1.8.0'
+	rel_date = date(2023, 5, 17)
 
 	if ver == latest_ver:
 		return web.json_response({'update_available': False})
+	elif ver == None or ver > latest_ver:
+		raise HTTPBadRequest(text="Invalid version number") 
 	else:
 		return web.json_response({'update_available': True, 'latest_version': latest_ver, 'release_date': rel_date.isoformat()})
 

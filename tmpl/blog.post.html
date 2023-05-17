@@ -1,5 +1,10 @@
 {%- extends 'base.html' -%}
 
+{%- block meta -%}
+	<meta name=description content="My blog, where I post about... well... things.">
+	<link rel="alternate" type="application/rss+xml" title="HIDEN's Blog (RSS)" href="/blog/rss.xml">
+{%- endblock -%}
+
 {%- block sidebar -%}
 	<a href=/blog>Post list</a>
 {%- endblock -%}
@@ -27,11 +32,15 @@
 	<h3>Add Comment:</h3>
 	<label for="name">Name*:</label><br>
 	<input type="text" id="name" name="name" required><br>
+
   	<label for="name">Email*:</label><br>
 	<input type="email" id="email" name="email" required><br>
+
 	<label for="content">Comment*:</label><br>
 	<textarea id="content" name="content" rows="4" cols="50" required></textarea><br>
+
 	<p class=smalltxt>*This field is required.</p>
+
 	<button class=submissionbutton type="submit">Submit</button>
 </form>
 <br>

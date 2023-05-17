@@ -1,3 +1,5 @@
+# Add a post to the blog.
+
 from site_ctrl import add_post, get_posts
 import json
 from datetime import datetime
