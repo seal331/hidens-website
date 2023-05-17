@@ -22,7 +22,7 @@ function stickFooterToBottom() {
     footer.style.bottom = '100%'
     footer.style.position = 'relative';
     footer.style.marginLeft = '0%'
-    footer.style.width = '95%'
+    footer.style.width = '92.5%'
   } else {
     footer.style.position = 'fixed';
   }
