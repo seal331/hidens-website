@@ -145,7 +145,7 @@ label, input, textarea {
 footer {
     animation: 0.45s ease FooterUp;
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5); 
-    z-index: 0;
+    z-index: 2;
     background: inherit;
     overflow: hidden;
     padding: 5px;
