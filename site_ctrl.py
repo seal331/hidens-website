@@ -1,10 +1,8 @@
-import jinja2, json, settings, os, aiohttp, asyncio, a2s, socket, base64
+import jinja2, json, settings, os, aiohttp, asyncio, a2s, socket, base64, PyRSS2Gen
 from aiohttp import web
-from markupsafe import Markup
-from datetime import datetime, timezone
-from PyRSS2Gen import RSS2, RSSItem
-from dateutil.parser import isoparse
-from pytz import UTC
+from aiohttp.web import Request
+from aiohttp.web_exceptions import HTTPBadRequest
+from datetime import datetime, date
 
 async def forward_headers_middleware(app, handler):
 	async def middleware_handler(request):
@@ -50,7 +48,8 @@ def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STO
 		('/computers/desktops/hpp23', page_computers_desktop_hpp23),
 		('/computers/desktops/hpts17', page_computers_desktop_hpts17),
 		('/blog', page_blog),
-		('/blog/rss', blog_rss),
+		('/blog/post/{post_id:\d+}', blog_post),
+		('/blog/rss.xml', blog_rss),
 		('/discord', page_discord),
 		('/discord/invite/link', page_discord_server_redir),
 		('/discord/invite', page_discord_server_invite),
@@ -70,10 +69,13 @@ def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STO
 		('/services/generalsrv', page_general_serv),
 		('/services/vms', page_vmlist),
 		('/guestbook', page_guestbook),
+		('/api/hbot/check-update', hbot_check_update),
+		('/api/hbot/random-cat', hbot_random_cat),
 	]
 
 	post_routes = [
 		('/guestbook/submit', gb_submission_handler),
+		('/blog/post/{post_id:\d+}', blog_comment),
 	]
 
 	if settings.DEV_MODE:
@@ -81,6 +83,13 @@ def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STO
 		get_routes += [
 			('/dev', page_development),
 			('/dev/too', page_development_too),
+			# Having this run in prod is an extremely awful idea, until the auth system is implemetned
+			('/blog/add_post', blog_add_post), 
+		]
+
+		post_routes += [
+			# Having this run in prod is an extremely awful idea, until the auth system is implemetned
+			('/blog/add_post', blog_add_post),
 		]
 	
 	if settings.APRILFOOLS_2024:
@@ -113,12 +122,15 @@ def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STO
 
 	app.jinja_env = jinja2.Environment(
 		loader = jinja2.FileSystemLoader('tmpl'),
-		autoescape = jinja2.select_autoescape(default = True),
+		autoescape = jinja2.select_autoescape(default = True)
 	)
+
+	app.jinja_env.globals.update({
+		'datetime': datetime
+	})
 	
 	return app
 
-	
 class App(web.Application):
 	def __init__(self, *args, **kwargs):
 		super().__init__(*args, **kwargs)
@@ -129,7 +141,7 @@ async def page_index(req):
 	context = {
 		'settings': settings
 	}
-	return render(req, 'index.aprilfools.2024.html' if settings.APRILFOOLS_2024 else 'index.aprilfools.2023.html' if settings.APRILFOOLS_2023 else 'index.aprilfools.2022.html' if settings.APRILFOOLS_2022 else 'index.html', context)
+	return render(req, 'index.aprilfools.2024.html' if settings.APRILFOOLS_2024 else 'index.aprilfools.2023.html' if settings.APRILFOOLS_2023 else 'index.aprilfools.2022.html' if settings.APRILFOOLS_2022 else 'index.updaterollout.html' if settings.ROLLOUT_MODE else 'index.html', context)
 	
 async def page_projects(req):
 	return render(req, 'projects.html', {
@@ -281,7 +293,8 @@ async def page_mc_latest_status(req):
 		if icon_b64:
 			icon_url = f"data:image/png;base64,{icon_b64}"
 		address = server_info.get('address', '')
-		print(player_list)  # Debugging garbage
+		# Debugging garbage
+		# print(player_list)  
 	except:
 		server_name = ''
 		server_status = False
@@ -410,43 +423,82 @@ async def page_notready(req):
 		'title': 'NOT READY YET'
 	})
 	
-async def page_blog(req):
-	with open('json/bp.json', 'r') as bp:
-		bp_json = json.load(bp)
-		
-	entries = []
-		
-	for date, items in bp_json.items():
-		items_markup = [req.app.jinja_env.get_template('blog.post.item.html').render(item=Markup(item)) for item in items]
-		entries.append(req.app.jinja_env.get_template('blog.post.html').render(date=isoparse(date).strftime('%Y-%m-%d'), items=Markup('\n'.join(items_markup))))
-	
-	return render(req, 'blog.html', {'title': 'Blog', 'entries': Markup('\n'.join(entries))})
+async def page_blog(request):
+	posts = get_posts()
+	context = {
+		'posts': posts
+	}
+	return render(request, 'blog.html', context)
 
-async def blog_rss(req):
-	with open('json/bp.json', 'r') as bp:
-		bp_json = json.load(bp)
-	
-	rss_items = [
-		RSSItem(
-			title=isoparse(date).strftime('%Y-%m-%d'),
-			description=''.join([f'{entry}\n' for entry in entries]),
-			pubDate=isoparse(date).replace(tzinfo=UTC),
-		) for date, entries in bp_json.items()
-	]
+async def blog_post(request):
+	post_id = request.match_info['post_id']
+	posts = get_posts()
+	post = get_post_by_id(posts, post_id)
+	if not post:
+		raise HTTPBadRequest(text='Invalid post ID')
+	context = {'post': post}
+	return render(request, 'blog.post.html', context)
 
-	rss = RSS2(
+async def blog_comment(request):
+	post_id = request.match_info['post_id']
+	posts = get_posts(no_convert=True)
+	post = get_post_by_id(posts, post_id)
+	if not post:
+		raise HTTPBadRequest(text='Invalid post ID')
+
+	form_data = await request.post()
+	name = form_data['name']
+	email = form_data['email']
+	content = form_data['content']
+	now = datetime.now().replace(microsecond=0).isoformat()
+	comment = {
+		"name": name,
+		"email": email,
+		"content": content,
+		"date": now
+	}
+	post["comments"].append(comment)
+	save_posts(posts)
+
+	return web.HTTPFound(f'/blog/post/{post_id}')
+
+
+async def blog_add_post(request):
+	return render(request, 'blog.add_post.html')
+
+async def add_post_action(request: Request):
+	form = await request.post()
+	title = form.get('title')
+	content = form.get('content')
+	if not title or not content:
+		raise HTTPBadRequest(text='Invalid post format.')
+
+	posts = get_posts()
+	add_post(posts, title, content)
+	save_posts(posts)
+
+	return web.HTTPFound('/blog')
+
+async def blog_rss(request):
+	posts = get_posts(no_convert=True)
+	items = []
+	for post in posts:
+		item = PyRSS2Gen.RSSItem(
+			title=post['title'],
+			link=f'{request.scheme}://{request.host}/blog/post/{post["id"]}',
+			description=post['content'],
+			pubDate=datetime.fromisoformat(post['date'])
+		)
+		items.append(item)
+	rss = PyRSS2Gen.RSS2(
 		title="HIDEN's Blog (RSS)",
-		link="https://hiden.pw/blog",
-		description="My blog, where I post about... well... things.",
-		generator="PyRSS2Gen",
-		docs="https://validator.w3.org/feed/docs/rss2.html",
-		language="en-us",
-		webMaster="hiden64@protonmail.com",
-		lastBuildDate=datetime.utcnow().replace(tzinfo=UTC),
-		items=rss_items,
+		link=f'{request.scheme}://{request.host}',
+		description="My personal blog.",
+		lastBuildDate=datetime.now(),
+		items=items
 	)
-
-	return web.Response(status=200, content_type='text/xml', text=rss.to_xml(encoding='utf-8'))
+	rssString = rss.to_xml()
+	return web.Response(text=rssString, content_type='application/rss+xml')
 
 async def handle_404(req):
 	return render(req, '404.html', { 
@@ -481,8 +533,8 @@ async def gb_submission_handler(req):
 	location = data['location']
 	website = data['website']
 	message = data['message']
-
-	null = None # workaround so that postnig works properly
+	# workaround so that posting works properly
+	null = None 
 
 	add_entry(req.remote, null, name, email, location, website, message)
 
@@ -499,7 +551,8 @@ def add_entry(req, ip_address, name, email, location, website, message):
 	entries = load_entries()
 	banned_ips = load_banned_ips()
 
-	if isinstance(req, aiohttp.web.Request): # another workaround so that posting works correctly
+	# another workaround so that posting works correctly
+	if isinstance(req, aiohttp.web.Request): 
 		ip_address = req.headers.get('X-Real-IP') or req.headers.get('X-Forwarded-For') or req.remote
 
 	if ip_address in banned_ips:
@@ -544,10 +597,79 @@ async def get_mc_server_info(server_ip, server_port):
 				else:
 					return {'status': False}
 			else:
-				return {'status': False}	
+				return {'status': False}
+
+async def hbot_check_update(req):
+	ver = req.query.get('version')
+	latest_ver = '1.8.0'
+	rel_date = date(2023, 5, 17)
+
+	if ver == latest_ver:
+		return web.json_response({'update_available': False})
+	elif ver == None or ver > latest_ver:
+		raise HTTPBadRequest(text="Invalid version number") 
+	else:
+		return web.json_response({'update_available': True, 'latest_version': latest_ver, 'release_date': rel_date.isoformat()})
+
+async def hbot_random_cat(request): # switch this to my own host once that's ready
+	async with aiohttp.ClientSession() as session:
+		response = await session.get('https://cataas.com/cat')
+		photo_data = await response.read()
+	photo_base64 = 'data:image/jpeg;base64,' + base64.b64encode(photo_data).decode('utf-8')
+	return web.json_response({'img_url': photo_base64})
+
+# dumb shit go
+def get_posts(no_convert=False):
+	with open('json/bp.json', 'r') as f:
+		posts = json.load(f)
+		for post in posts:
+			if not no_convert:
+				try:
+					post['date'] = datetime.fromisoformat(post['date']).strftime('%B %d, %Y')
+				except ValueError:
+					pass
+			post['content'] = post['content'].replace('<p>', '').replace('</p>', '\n')
+			for comment in post['comments']:
+				if 'date' in comment:
+					try:
+						if not no_convert:
+							comment['date'] = datetime.fromisoformat(comment['date']).strftime('%B %d, %Y')
+					except ValueError:
+						pass
+		return posts
+
+def save_posts(posts):
+	with open('json/bp.json', 'w') as f:
+		json.dump(posts, f, ensure_ascii=False, indent=4, default=str)
+
+def get_post_by_id(posts, post_id):
+	try:
+		post_id_int = int(post_id)
+	except ValueError:
+		return None
+	for post in posts:
+		if post['id'] == post_id_int:
+			return post
+	return None
+
+def add_comment_to_post(post, comment):
+	if 'comments' not in post:
+		post['comments'] = []
+	post['comments'].append(comment)
+
+def add_post(posts, title, content):
+	now = datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
+	post_id = len(posts) + 1
+	post = {
+		'id': post_id,
+		'title': title,
+		'content': content,
+		'date': now,
+		'comments': []
+	}
+	posts.insert(0, post)
 	
-def render(req, tmpl, ctxt=None, status=200):
+def render(req, tmpl, context=None, status=200, content_type='text/html'):
 	tmpl = req.app.jinja_env.get_template(tmpl)
-	ctxt = ctxt or {}
-	content = tmpl.render(**ctxt)
-	return web.Response(text=content, content_type='text/html', status=status)
+	content = tmpl.render(context or {}, request=req)
+	return web.Response(text=content, content_type=content_type, status=status)

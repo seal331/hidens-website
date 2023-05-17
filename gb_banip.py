@@ -1,3 +1,5 @@
+# Ban an IP address from the guestbook. Optimized for IPv4; IPv6 is untested.
+
 import json
 
 ip = input("Enter an IP address: ")

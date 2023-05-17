@@ -1,5 +1,47 @@
-<h1>{{ date }}</h1>
+{%- extends 'base.html' -%}
 
-	{{ items }}
+{%- block meta -%}
+	<meta name=description content="My blog, where I post about... well... things.">
+	<link rel="alternate" type="application/rss+xml" title="HIDEN's Blog (RSS)" href="/blog/rss.xml">
+{%- endblock -%}
 
-<br><br><br><br>
+{%- block sidebar -%}
+	<a href=/blog>Post list</a>
+{%- endblock -%}
+
+{%- block content -%}
+<h1>{{ post.title | safe }}</h1>
+<p>{{ post.content | safe }}</p>
+<em><h5>Posted on {{ post.date }}</h5></em>
+<hr>
+<h3>Comments:</h3>
+{% if post.comments %}
+	<ul>
+	{% for comment in post.comments %}
+		<li><em>{{ comment.name }} ({{ comment.email}}) - {{ comment.date }}</em>:</li>
+		<li>{{ comment.content }}</li>
+		<br>
+	{% endfor %}
+	</ul>
+	{% else %}
+		<p>No comments yet.</p>
+{% endif %}
+
+<hr>
+<form method="POST" action=/blog/post/{{ post.id }}>
+	<h3>Add Comment:</h3>
+	<label for="name">Name*:</label><br>
+	<input type="text" id="name" name="name" required><br>
+
+  	<label for="name">Email*:</label><br>
+	<input type="email" id="email" name="email" required><br>
+
+	<label for="content">Comment*:</label><br>
+	<textarea id="content" name="content" rows="4" cols="50" required></textarea><br>
+
+	<p class=smalltxt>*This field is required.</p>
+
+	<button class=submissionbutton type="submit">Submit</button>
+</form>
+<br>
+{% endblock %}

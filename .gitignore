@@ -2,5 +2,4 @@
 settings_local.py
 __pycache__/
 access.log
-gb.json
-gb_bans.json
+*.json

@@ -27,7 +27,8 @@ const actions = [
 	"I've gained effective root access to your ",
 	"I'm gaining root access to ",
 	"I've hacked the ",
-	"I broke into the "
+	"I broke into the ",
+	"I have inflitrated the "
   ];
   
 const getRandomItem = (array) => array[Math.floor(Math.random() * array.length)];

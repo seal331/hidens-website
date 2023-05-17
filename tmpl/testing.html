@@ -5,7 +5,7 @@
 {%- endblock -%}
 
 {%- block head -%}
-	<script src=toggle-script-button.js></script>
+	<script src=/js/snow-toggle.js></script>
 {%- endblock -%}
 
 {%- block sidebar -%}
@@ -21,7 +21,7 @@
 {%- block content -%}
 <img src=/static/title-art/testing.gif alt=Testing>
 
-<strong><p>TODO: Redo this page</p></strong>
+<!-- TODO: Redo this page -->
 <table class=lowlargetable>
 
 	<tr>
@@ -89,8 +89,8 @@
 		</td>
 		<td>
 			<p>(this button currently does not function)</p>
-			<button onclick=toggleScript()>Toggle</button>
-			<script id=script-to-toggle src=/js/ct-snow.js></script>
+			<button onclick=toggleSnow()>Toggle</button>
+			<script id=snow-script src=/js/ct-snow.js></script>
 			<br><br>
 		</td>
 	</tr>

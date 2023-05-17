@@ -1,0 +1,23 @@
+{%- extends 'base.html' -%}
+
+{%- block meta -%}
+	<meta name=description content="My blog, where I post about... well... things.">
+	<link rel="alternate" type="application/rss+xml" title="HIDEN's Blog (RSS)" href="/blog/rss.xml">
+{%- endblock -%}
+
+{%- block sidebar-%}
+<a href=/blog>Posts list</a>
+{%- endblock -%}
+
+{%- block content -%}
+	<h1>Add Post</h1>
+	<form method="POST" action="/blog/add_post">
+		<label for="title">Title:</label><br>
+		<input type="text" id="title" name="title"><br>
+		<label for="content">Content:</label><br>
+		<textarea id="content" name="content" rows="4" cols="50"></textarea><br>
+		<button class=submissionbutton type="submit">Submit</button>
+	</form>
+	<hr>
+	<a href="/blog">Back to blog</a>
+{%- endblock -%}
