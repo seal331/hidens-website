@@ -89,7 +89,7 @@ def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STO
 
 		post_routes += [
 			# Having this run in prod is an extremely awful idea, until the auth system is implemetned
-			('/blog/add_post', blog_add_post),
+			('/blog/add_post', add_post_action),
 		]
 	
 	if settings.APRILFOOLS_2024:
