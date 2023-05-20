@@ -30,7 +30,7 @@ def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STO
 		('/projects/hbot', page_hbot_details),
 		('/projects/website', page_website_details),
 		('/projects/website/compatlist', page_website_compatlist),
-		('/projects/autowin', page_autowin_details),
+		('/projects/autos', page_autos_details),
 		('/places', page_places),
 		('/places/friends', page_friendsplaces),
 		('/places/misc', page_miscplaces),
@@ -387,9 +387,9 @@ async def page_website_compatlist(req):
 	}
 	return render(req, 'projects.website.compatlist.html', context)
 
-async def page_autowin_details(req):
-	return render(req, 'projects.autowin.html', {
-		'title' : 'AutoWin | Projects'
+async def page_autos_details(req):
+	return render(req, 'projects.autos.html', {
+		'title' : 'AutOS | Projects'
 	})
 
 async def page_guestbook(req):
