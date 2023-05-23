@@ -44,9 +44,6 @@ def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STO
 		('/about/socials', page_socials),
 		('/about/faq', page_faq),
 		('/computers', page_computers),
-		('/computers/desktops/a5ke4', page_computers_desktop_a5ke4),
-		('/computers/desktops/hpp23', page_computers_desktop_hpp23),
-		('/computers/desktops/hpts17', page_computers_desktop_hpts17),
 		('/blog', page_blog),
 		('/blog/post/{post_id:\d+}', blog_post),
 		('/blog/rss.xml', blog_rss),
@@ -201,22 +198,7 @@ async def page_computers(req):
 	return render(req, 'computers.html', {
 		'title': 'My computers'
 	})
-
-async def page_computers_desktop_a5ke4(req):
-	return render(req, 'computers.desktops.a5ke4.html', {
-		'title': 'GIGABYTE AORUS 5 KE4 Desktop | My computers'
-	})
-
-async def page_computers_desktop_hpp23(req):
-	return render(req, 'computers.desktops.hpp23.html', {
-		'title': 'HP Pavilion 23 Desktop | My computers'
-	})
-
-async def page_computers_desktop_hpts17(req):
-	return render(req, 'computers.desktops.hpts17.html', {
-		'title': 'HP Pavilion TS 17 Desktop | My computers'
-	})
-
+	
 async def page_about(req):
 	return render(req, 'about.html', {
 		'title': 'About me'
