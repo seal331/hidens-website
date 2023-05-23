@@ -143,27 +143,34 @@ label, input, textarea {
 }
 
 footer {
-    animation: 0.45s ease FooterUp;
-    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5); 
-    z-index: 2;
-    background: inherit;
-    overflow: hidden;
-    padding: 5px;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    text-align: center;
-	width: 70%;
-    margin-bottom: 10px;
-	margin-left: 17%;
-	border-radius: 11px;
-	transition: transform 0.3s ease-out;
+	animation: 0.3s ease 0s 1 FooterUp;
+	z-index: 1;
+	box-shadow: 0 0 0.15rem 0 rgba(0, 0, 0, .5); 
+	background: inherit;
+	overflow: hidden;
+	padding: 5px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	text-align: center;
+}
+
+footer:before {
+	position: absolute;
+	background: inherit;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	filter: blur(10px);
 }
 
 footer img {
 	transition-timing-function: ease;
 	-webkit-transition-duration: 0.4s; /* WebKit/Blink workaround */
 	-moz-transition-duration: 0.4s; /* Gecko workaround */
+	-o-transition-duration: 0.4s; /* Presto workaround */
 	transition-duration: 0.4s;
 	width: 81px;
 	height: 33px;
@@ -175,43 +182,42 @@ footer img:hover {
 	-moz-transition-duration: 0.4s; /* Gecko workaround */
 	-o-transition-duration: 0.4s; /* Presto workaround */
 	transition-duration: 0.4s;
-	height: 42.9px;
-	width: 114.4px;
-	margin: 5.5px 3px;
+	height: 33.635px;
+	width: 90.05px;
+	margin: 6.5px 3.25px;
 }
 
 .sidebar {
-    height: 100%;
-    width: 215px;
-    position: fixed;
-    z-index: -1;
-    top: 0;
-    left: 0;
-    overflow-x: hidden;
-    padding-top: 20px;
-    background: inherit; 
-    z-index: 1;
-    margin-bottom: -10px;
-	box-shadow: 0.5px 0px rgba(0,0,0,0.24),0 17px 50px rgba(0,0,0,0.19);
-	outline: solid 2px rgb(128, 128, 128);
+	animation: 0.3s ease 0s 1 SidebarUp;
+	height: 100%;
+	width: 215px;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	overflow-x: hidden;
+	padding-top: 20px;
+	background: inherit; 
+	box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, .5); 
+	z-index: 1;
 }
 
 .sidebar a {
-    padding: 6px 8px 6px 16px;
-    text-decoration: none;
-    font-size: 17.5px;
-    display: block;
-    text-align: center;
+	padding: 6px 8px 6px 16px;
+	text-decoration: none;
+	font-size: 17.5px;
+	display: block;
+	text-align: center;
 }
 
 @media screen and (max-height: 450px) {
-    .sidebar {padding-top: 15px;}
-    .sidebar a {font-size: 12px;}
+	.sidebar {padding-top: 15px;}
+	.sidebar a {font-size: 12px;}
 }
 
 .sidebartxt {
-    text-align: center;
-    font-size: 19.5px;
+	text-align: center;
+	font-size: 19.5px;
 }
 
 .testlinks {
@@ -414,5 +420,14 @@ footer img:hover {
 	}
 	100% {
 		transform: translateY(0);
+	}
+}
+
+@keyframes SidebarUp {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0);
 	}
 }
