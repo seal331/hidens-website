@@ -1,6 +1,7 @@
 # Debugging script used while I was fixing a bug regarding the ISO -> Human-readable date conversion in the blog.
 # This converts the time from said human-readable format, back to ISO.
 # There used to be a bug where vice-versa would happen if someone had posted a comment to a blog post. which has since been fixed.
+# This bug is still present with posting to the blog, however. I will look into a fix at a later date.
 
 import json
 from datetime import datetime

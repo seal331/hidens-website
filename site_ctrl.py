@@ -408,7 +408,8 @@ async def page_notready(req):
 async def page_blog(request):
 	posts = get_posts()
 	context = {
-		'posts': posts
+		'posts': posts,
+		'title': "Blog"
 	}
 	return render(request, 'blog.html', context)
 
@@ -418,7 +419,10 @@ async def blog_post(request):
 	post = get_post_by_id(posts, post_id)
 	if not post:
 		raise HTTPBadRequest(text='Invalid post ID')
-	context = {'post': post}
+	context = { 
+		'post': post,
+		'title': post['title']
+	}
 	return render(request, 'blog.post.html', context)
 
 async def blog_comment(request):
