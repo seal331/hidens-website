@@ -4,7 +4,7 @@ from site_ctrl import add_post, get_posts, save_posts
 import json
 from datetime import datetime
 
-posts = get_posts()
+posts = get_posts(no_convert=True)
 
 title = input("Enter the title of the new post: ")
 content = input("Enter the content of the new post: ")

@@ -459,7 +459,7 @@ async def add_post_action(request: Request):
 	if not title or not content:
 		raise HTTPBadRequest(text='Invalid post format.')
 
-	posts = get_posts()
+	posts = get_posts(no_convert=True)
 	add_post(posts, title, content)
 	save_posts(posts)
 
