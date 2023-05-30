@@ -14,6 +14,8 @@ APRILFOOLS_2022 = False
 APRILFOOLS_2023 = False
 APRILFOOLS_2024 = False
 ROLLOUT_MODE = False
+CAT_API_KEY = ''
+ENABLE_HBOT_APIS = False
 
 # Import settings from settings_local.py. If settings_local.py is not present, terminate
 try:

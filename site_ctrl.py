@@ -1,7 +1,7 @@
 import jinja2, json, settings, os, aiohttp, asyncio, a2s, socket, base64, PyRSS2Gen
 from aiohttp import web
 from aiohttp.web import Request
-from aiohttp.web_exceptions import HTTPBadRequest
+from aiohttp.web_exceptions import HTTPBadRequest, HTTPBadGateway
 from datetime import datetime, date
 
 async def forward_headers_middleware(app, handler):
@@ -66,14 +66,18 @@ def RunServ(serve_static=settings.SERVE_STATIC, serve_storage=settings.SERVE_STO
 		('/services/generalsrv', page_general_serv),
 		('/services/vms', page_vmlist),
 		('/guestbook', page_guestbook),
-		('/api/hbot/check-update', hbot_check_update),
-		('/api/hbot/random-cat', hbot_random_cat),
 	]
 
 	post_routes = [
 		('/guestbook/submit', gb_submission_handler),
 		('/blog/post/{post_id:\d+}', blog_comment),
 	]
+
+	if settings.ENABLE_HBOT_APIS:
+		get_routes += [
+			('/api/hbot/check-update', hbot_check_update),
+			('/api/hbot/random-cat', hbot_random_cat),
+		]
 
 	if settings.DEV_MODE:
 		print("Development mode enabled! Experiements and W.I.P. content is served under /dev")
@@ -587,8 +591,8 @@ async def get_mc_server_info(server_ip, server_port):
 
 async def hbot_check_update(req):
 	ver = req.query.get('version')
-	latest_ver = '1.8.2'
-	rel_date = date(2023, 5, 27)
+	latest_ver = '1.8.3'
+	rel_date = date(2023, 5, 30)
 
 	if ver == latest_ver:
 		return web.json_response({'update_available': False})
@@ -597,11 +601,24 @@ async def hbot_check_update(req):
 	else:
 		return web.json_response({'update_available': True, 'latest_version': latest_ver, 'release_date': rel_date.isoformat()})
 
-async def hbot_random_cat(request): # switch this to my own host once that's ready
-	async with aiohttp.ClientSession() as session:
-		response = await session.get('https://cataas.com/cat')
-		photo_data = await response.read()
-	photo_base64 = 'data:image/jpeg;base64,' + base64.b64encode(photo_data).decode('utf-8')
+# i could just work this into HBot itself, but this is funnier
+# anyway, i should really make my own sometime soon, if i get a proper storage server/VM
+# TODO: do that
+async def hbot_random_cat(request):
+	try:
+		async with aiohttp.ClientSession() as session:
+			response = await session.get('https://cataas.com/cat')
+			photo_data = await response.read()
+		photo_base64 = 'data:image/jpeg;base64,' + base64.b64encode(photo_data).decode('utf-8')
+	except: # fallback to thecatapi, necessary due to the recent instabilities of cataas
+		url = f'https://api.thecatapi.com/v1/images/search?api_key={settings.CAT_API_KEY}'
+		async with aiohttp.ClientSession() as session:
+			response = await session.get(url)
+			json_data = await response.json()
+		if json_data:
+			photo_base64 = json_data[0]['url']
+		else:
+			raise HTTPBadGateway(text='API failure. Please try again later.')
 	return web.json_response({'img_url': photo_base64})
 
 # dumb shit go

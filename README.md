@@ -52,6 +52,10 @@ Create `settings_local.py`. The avaliable options are as follows:
 
 `APRILFOOLS_2024`: Enables the April Fools day holiday page that will be used in 2024.
 
+`ENABLE_HBOT_APIS`: Enables APIs used by HBot.
+
+`CAT_API_KEY`: Used for supplying an API key for the cat API.
+
 You must create `settings_local.py` to start the server. However, you do not need to add content the the file. If the file is empty, the default options in `settings.py` will be used instead.
 
 ### Post-configuration
