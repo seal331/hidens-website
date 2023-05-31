@@ -148,12 +148,11 @@ footer {
 	box-shadow: 0 0 0.15rem 0 rgba(0, 0, 0, .5); 
 	background: inherit;
 	overflow: hidden;
-	padding: 5px;
 	position: fixed;
 	left: 0;
 	bottom: 0;
 	text-align: center;
-	padding: 6.525px;
+	padding: 15.05px;
 }
 
 footer:before {
