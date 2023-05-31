@@ -199,9 +199,11 @@ async def page_downloads_cursors(req):
 	return render(req, 'downloads.cursors.html', context)
 
 async def page_computers(req):
-	return render(req, 'computers.html', {
-		'title': 'My computers'
-	})
+	context = {
+		'settings': settings,
+		'title': 'Computers'
+	}
+	return render(req, 'computers.html', context)
 	
 async def page_about(req):
 	return render(req, 'about.html', {

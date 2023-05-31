@@ -9,6 +9,10 @@
 <img src=/static/title-art/computers.gif alt="My Computers">
 <h3>Here are all the computers I own:</h3>
 
+{% if settings.DEV_MODE %}
+	<strong><p>NOTE:</strong> <em>I'm unsure if I'll take pictures of the computers themselves, or use pictures available online for them, for the photos section.</em></p>
+{% endif %}
+
 <table class=highlargetable>
 
 	<tr>
@@ -39,6 +43,11 @@
 		<th>
 			<p>Fetch</p>
 		</th>
+		{% if settings.DEV_MODE %}
+			<th>
+				<p>Photo</p>
+			</th>
+		{% endif %}
 		<th>
 			<p>Notes</p>
 		</th>
