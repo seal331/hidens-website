@@ -191,7 +191,7 @@ footer img:hover {
 }
 
 .sidebar {
-	animation: 0.3s ease 0s 1 SidebarUp;
+	animation: 0.45s ease 0s 1 SidebarUp;
 	height: 100%;
 	width: 215px;
 	position: fixed;
