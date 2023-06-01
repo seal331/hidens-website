@@ -1,0 +1,5 @@
+These were debug scripts used during the development and rollout of the Pollen Pandemonium update.
+
+bp_migration was used to migrate from the old blog to the new one. They used completely different formatting, so this script was made to automate migration.
+bp_debug_id_reversal is intended to be used after the previous script, to alleviate a quirk where it would reverse the ID list from how it should be.
+bp_debug_isoconvert was used to convert the time from a human-readable format to ISO. This was for debugging an issue where adding a post or comment would convert the time in all previous posts/comments in the JSON file to said human-readable format instead of keeping it in ISO, which has since been fixed.
