@@ -144,7 +144,7 @@ label, input, textarea {
 
 footer {
 	animation: 0.45s ease 0s 1 FooterUp;
-	z-index: 1;
+	z-index: 2;
 	box-shadow: 0 0 0.15rem 0 rgba(0, 0, 0, .5); 
 	background: inherit;
 	overflow: hidden;
@@ -202,7 +202,7 @@ footer img:hover {
 	padding-top: 20px;
 	background: inherit; 
 	box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, .5); 
-	z-index: 1;
+	z-index: 2;
 }
 
 .sidebar a {
