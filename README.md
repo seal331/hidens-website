@@ -10,7 +10,7 @@ This is the source code to my personal website, which you can find at https://hi
 
 #### Officially supported OSes:
 - Windows 7 or newer
-- macOS 10.9 or newer
+- macOS 10.6 or newer
 - Debian 9 or newer
 - Ubuntu 18.04 or newer
 - Fedora 29 or newer

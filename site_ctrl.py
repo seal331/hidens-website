@@ -657,11 +657,6 @@ def get_post_by_id(posts, post_id):
 			return post
 	return None
 
-def add_comment_to_post(post, comment):
-	if 'comments' not in post:
-		post['comments'] = []
-	post['comments'].append(comment)
-
 def add_post(posts, title, content):
 	now = datetime.now().strftime('%Y-%m-%dT%H:%M:%S')
 	post_id = len(posts) + 1
