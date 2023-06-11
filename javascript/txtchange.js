@@ -1,4 +1,4 @@
-const textSequence = ['WHAT H', 'Foo', 'Bar', 'h', 'H', 'Test-Text-For-A-Test-Thing', 'gentoo balls', 'Foobar', 'norton'];
+const textSequence = ['WHAT H', 'Foo', 'Bar', 'h', 'H', 'Test-Text-For-A-Test-Thing', 'Foobar', 'norton'];
 let index = 0;
 
 const sequenceElement = document.getElementById("sequence");
